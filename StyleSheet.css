@@ -22,7 +22,6 @@ header
 {
      border: 2px solid rgb(9, 92, 247);
      color: black;
-     float: right;
      padding: 15px 32px;
      text-align: center;
      text-decoration: none;
@@ -32,6 +31,16 @@ header
      cursor: pointer;
      background-color: rgb(8, 94, 243);
      
+ }
+
+ .Next
+ {
+   float:right;
+ }
+
+ .Back
+ {
+   float:left;
  }
 
 
@@ -154,12 +163,17 @@ h1
 h2
 {
  font-size:1em;
- color: rgb(224, 19, 19);
+ color: rgb(0, 0, 0);
 }
 
 h2 + p
 {
  text-align:center;
+}
+
+hr
+{
+  width:90%;text-align:left;margin-left:0
 }
 
 
@@ -198,7 +212,7 @@ a
  font-weight:bold;
 }
 a:link{color:white;}
-a:visited{color:rgb(51, 97, 196);}
+a:visited{color:white;}
 a:focus{color:rgb(85, 19, 133); background-color: whitesmoke;}
 a:hover{color:rgb(89, 18, 182); background-color: whitesmoke;}
 a:active{color:rgb(151, 12, 12);}
