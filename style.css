@@ -128,16 +128,7 @@ header
  }
 
 
-/*Style for position and color of table*/
-table
-{
-  margin-left:auto;
-  margin-right:auto;
-  border: 1px solid rgb(153, 32, 32);
-}
 
-/*Style for color of table*/
-td, th {border: 1px solid rgb(153, 32, 32);}
 
 
 /*Style for images*/
@@ -147,29 +138,6 @@ img
   margin: 0 1em 1em 0;
 }
 
-img[src*="../Pictures/Harold-Shipman.jpg"]
-{
-  width: 400px;
-  height: 270px;
-}
-
-img[src*="../Pictures/Luis-Garavito.jpg"]
-{
-  width: 400px;
-  height: 270px;
-}
-
-img[src*="../Pictures/pedro-lopez.png"]
-{
-  float:left;
-}
-
-img[src*= "../Pictures/Ted-Bundy.jpg"]
-{
-  float:left;
-  width: 400px;
-  height: 270px;
-}
 
 /*Styles for 3 Columns on Home Page*/
 
@@ -230,11 +198,7 @@ img[src*= "../Pictures/Ted-Bundy.jpg"]
   color: red;
 }
 
-/*Style for facts on Thrilling Facts page*/
-.facts
-{
-   text-align:center;
-}
+
 
 /*Styles for various font elements*/
 h1
