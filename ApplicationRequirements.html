@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-  <!--Basic Setup for Document-->
-  <head>
-  <meta charset = "utf-8">
-  <title>Online Application Form</title>
-  <!--Gives a style sheet for the website-->
-  <link rel = "stylesheet" href = "StyleSheet.css">
-  </head>
+	<!--Basic Setup for Document-->
+	<head>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+		<title>Online Application Form</title>
+		<!--Gives a style sheet for the website-->
+	</head>
 
 
  
 
-<body>
-<div class = "column left">  
-    <p></p>  
-</div>
-<div class = "column middle">
+	<body>
+	<!--Hamburger menu-->
+		<div id="menu-bar">
+			<div id="menu" onclick="onClickMenu()">
+				<div id="bar1" class="bar"></div>
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>			
+		</div>
+		<div class="menu-bg" id="menu-bg">
+		<div class="nav" id="nav">
+			<a href="index.html">Home</a>
+			<a href="services.html">Services</a>
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
+			<a href="apply.html">Apply Now!</a>
+		</div></div>
+		<script src="script.js"></script>
+	<!--/Hamburger menu-->
+	<!--Banner-->
+		<div class="banner">
+			<img src="./assets/banner.jpg" alt="Company Logo" title="Company Logo>
+		</div>
+	<!--/Banner-->
+		<div class = "column left">  
+		<p></p>  
+		</div>
+		<div class = "column middle">
 
 
-   <!--Application Starting Paragraph-->
-   <div class = "Application Starting Paragraph">
+	<!--Application Starting Paragraph-->
+	<div class = "Application Starting Paragraph">
        <!--Pictue of Company Logo-->
        <img src = "../Pictures/Logo.jpg" alt = "[Company Name] Logo">
 
@@ -48,18 +72,18 @@
        </ul>
        </div>
        
-   <br>
-   <br>
+	<br>
+	<br>
 
-   </div>
-   <!--Back Button-->
-   <a href = "apply.html" class = "Back Button"> Back</a>
-   &ensp;
+	</div>
+		<!--Back Button-->
+		<a href = "apply.html" class = "Back Button"> Back</a>
+		&ensp;
 
-   <!-- Next Button-->
-   <a href = "PersonalInformation.html" class = "Next Button"> Next</a>
-   &ensp; 
-</div>
+		<!-- Next Button-->
+		<a href = "PersonalInformation.html" class = "Next Button"> Next</a>
+		&ensp; 
+	</div>
 
 <!--Form
  <form action = "mailto:gp8623@wayne.edu" method= "POST">
