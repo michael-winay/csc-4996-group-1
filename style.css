@@ -22,27 +22,14 @@ body{
 #bar3{
 	transform: translateY(4px);
 }
-/*.nav li a{
-	display: block;
-	color: #fff;
-	text-decoration: none;
-}
-.nav li a:hover{
-	font-weight: bold;
-	background: #121212;
-}
-.nav li{
-	list-style: none;
-	margin: 16px 0;
-}*/
 .nav{
-	margin: 100px 0px 0px 330px;
-	padding: 0;
+	margin-top: 100px;
 	transition: 0.3s ease;
 	display: none;
 }
 .nav a {
-	background: #121212;
+	text-align: center;
+	background: #444444;
 	color: #fff;
 	display: block;
 	padding: 12px;
@@ -60,18 +47,16 @@ body{
 	z-index: 1;
 	width: 0;
 	height: 0;
-	/*margin: 0px 0px 0px;*/
 	/*background: linear-gradient();*/
 	background: #444444;
-	transition: 0.3s ease;
+	transition: width 0.3s ease;
 }
 #menu-bar{
 	z-index: 2;	
 }
 .change-bg{
-	width: 550px;
+	width: 220px;
 	height: 100%;
-	transform: translate(-60%,0%);
 }
 .change .bar{
 	background-color: white;
