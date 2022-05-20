@@ -1,0 +1,235 @@
+/*Styles for body*/
+body
+{
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  background-image: url(../Pictures/background-slate.jpg) 
+}
+
+/*Styles for header*/
+header
+{
+ margin-top: 0;
+ padding: 3em 1em 2em 1em;
+ text-align:center;
+ opacity: 65%;
+ background-image: url(../Pictures/magnify.png);
+}
+
+
+
+.Button 
+{
+     border: 2px solid rgb(9, 92, 247);
+     color: black;
+     float: right;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     background-color: rgb(8, 94, 243);
+     
+ }
+
+
+/*Style for position and color of table*/
+table
+{
+  margin-left:auto;
+  margin-right:auto;
+  border: 1px solid rgb(153, 32, 32);
+}
+
+/*Style for color of table*/
+td, th {border: 1px solid rgb(153, 32, 32);}
+
+
+/*Style for images*/
+img
+{
+  float:right;
+  margin: 0 1em 1em 0;
+}
+
+img[src*="../Pictures/Harold-Shipman.jpg"]
+{
+  width: 400px;
+  height: 270px;
+}
+
+img[src*="../Pictures/Luis-Garavito.jpg"]
+{
+  width: 400px;
+  height: 270px;
+}
+
+img[src*="../Pictures/pedro-lopez.png"]
+{
+  float:left;
+}
+
+img[src*= "../Pictures/Ted-Bundy.jpg"]
+{
+  float:left;
+  width: 400px;
+  height: 270px;
+}
+
+/*Styles for 3 Columns on Home Page*/
+
+
+.left
+{
+  box-sizing: border-box;
+  float: left;
+  text-align:center;
+  width:30%;
+  background-color:rgb(255, 255, 255);
+  
+}
+.middle
+{
+  
+  box-sizing: border-box;
+  float: left;
+  
+  width:40%;
+  background-color:rgb(255, 255, 255);
+  border: 2px solid black;
+  
+}
+
+.astrick
+{
+  color: red;
+}
+
+.Application
+{
+  margin-left:20%;
+  margin-right: 10%
+}
+.right
+{
+  text-align:center;
+  width: 30%;
+  background-color:rgb(149, 169, 235);
+}
+
+.tab
+{
+  margin-left: 40px
+}
+
+/*Style for footer of Website*/
+.footer
+{
+  text-align:left;
+  width:100%;
+
+}
+
+.astrick
+{
+  color: red;
+}
+
+/*Style for facts on Thrilling Facts page*/
+.facts
+{
+   text-align:center;
+}
+
+/*Styles for various font elements*/
+h1
+{
+ font-family: "Marko One", Georgia, serif;
+ font-size:3em;
+ color: rgb(235, 32, 17);
+}
+
+h2
+{
+ font-size:1em;
+ color: rgb(224, 19, 19);
+}
+
+h2 + p
+{
+ text-align:center;
+}
+
+
+
+/* Styles for various list*/
+dt 
+{
+ color:rgb(153, 32, 32);
+}
+
+ul
+{
+ list-style-type: none;
+ margin: 0;
+ padding:0;
+}
+
+li
+{
+  padding-left : 1 em;
+  text-indent: -1em;
+}
+
+li:before
+{
+  content: "✓";
+  color: green;
+  padding-right: 5 px;
+}
+
+
+/*Style for links*/
+a
+{
+ text-decoration:none;
+ font-weight:bold;
+}
+a:link{color:white;}
+a:visited{color:rgb(51, 97, 196);}
+a:focus{color:rgb(85, 19, 133); background-color: whitesmoke;}
+a:hover{color:rgb(89, 18, 182); background-color: whitesmoke;}
+a:active{color:rgb(151, 12, 12);}
+
+
+/*Media Elemnts for Smaller Screens*/
+@media screen and (max-width: 600px)
+ {
+   /*Style for header for screen of minimum 940px*/
+   header
+   {grid-area:banner;}
+
+   /*Style for main for screen of minimum 940px*/
+   body{grid-area:main;}
+
+   /*Style for footer for screen of minimum 940px*/
+   footer{grid-area:footer;}
+
+   /*Style elements for columns on main page*/
+   .left
+   {
+     width: 100%;
+   }
+
+   .middle
+   {
+     width: 100%;
+   }
+
+   .right
+   {
+     width:100%;
+   }
+ }
