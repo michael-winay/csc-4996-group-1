@@ -73,3 +73,7 @@ body{
 .change{
 	display: block;
 }
+.banner{
+	text-align: center;
+	width: 100%;
+}
