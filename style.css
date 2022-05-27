@@ -1,3 +1,7 @@
+html { 
+	overflow-y: scroll; 
+}
+
 body
 {
 	font-family: Verdana, sans-serif;
@@ -137,8 +141,9 @@ body
 	position: relative;
 }
 
-.content-box-left {
+.content-box-left1 {
 	position: absolute;
+	margin-top: 100px;
 	left: 10%;
 	height: 350px;
 	width: 30%;
@@ -147,12 +152,15 @@ body
 	color: white;
 }
 
-.content-box-left img {
+.content-box-left1 img {
 	float: left;
+	max-width: 350px;
+	max-height: 350px;
 }
 
-.content-box-right {
+.content-box-right1 {
 	position: absolute;
+	margin-top: 550px;
 	left: 60%;
 	height: 350px;
 	width: 30%;
@@ -161,9 +169,29 @@ body
 	color: white;
 }
 
-.content-box-right img {
+.content-box-right1 img {
 	float: left;
+	max-width: 350px;
+	max-height: 350px;
 }
+
+.content-box-left2 {
+	position: absolute;
+	margin-top: 1000px;
+	left: 10%;
+	height: 350px;
+	width: 30%;
+	text-align: left;
+	border: 4px solid white;
+	color: white;
+}
+
+.content-box-left2 img {
+	float: left;
+	max-width: 350px;
+	max-height: 350px;
+}
+
 /*Styles for Buttons on Apply Page*/
 
  .Next
