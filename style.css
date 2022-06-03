@@ -5,9 +5,11 @@ html {
 body
 {
 	background-image: url(./assets/background.png);
+	background-attachment: fixed;
 	font-family: Verdana, sans-serif;
     font-size: 100%;
-	background-color: #121212;
+	/*background-color: #121212;*/
+	background-color: #ffffff;
 	margin: 0;
 }
 
