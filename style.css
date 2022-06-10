@@ -191,10 +191,11 @@ body
 
 .footer {
 	background-color: #121212;
+	bottom: 0;
 	width: 100%;
 	border-top: 3px solid white;
 	margin-top: 250px;
-	position: absolute;
+	position: fixed;
 	height: 100px;
 }
 
