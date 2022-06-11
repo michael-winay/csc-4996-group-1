@@ -19,6 +19,14 @@ body
 	border-bottom: 3px solid white;
 }
 
+.Weather
+{
+	 position: absolute;
+   left: 96%;
+	 top: 0%;
+	 background-color: #121212;
+}
+
 #menu
 {
 	width: 35px;
