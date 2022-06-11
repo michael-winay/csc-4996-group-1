@@ -220,13 +220,19 @@ body
 
 /*Styles for columns on Apply Page*/
 
+.logo
+{
+	margin-left:20%;
+  margin-right: 10%;
+	
+}
+
 .left
 {
   box-sizing: border-box;
   float: left;
   text-align:center;
   width:30%;
-  background-color:rgb(255, 255, 255);
   margin: 15px;
 }
 
