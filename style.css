@@ -317,8 +317,9 @@ ul
 
 li
 {
-  padding-left : 1 em;
-  text-indent: -1em;
+	color:white;
+	padding-left : 1 em;
+	text-indent: -1em;
 }
 
 li:before
