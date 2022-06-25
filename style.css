@@ -109,11 +109,31 @@ body
  .Next
  {
    float:right;
+	 border: 2px solid rgb(9, 92, 247);
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgb(8, 94, 243);
  }
 
  .Back
  {
    float:left;
+   border: 2px solid rgb(9, 92, 247);
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgb(8, 94, 243);
  }
 
 
@@ -147,6 +167,23 @@ body
   margin: 15px;
 }
 
+.page {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	overflow-y: auto;
+	z-index: 0;
+	background-image: url(./assets/background.png);
+	background-color: #121212;
+}
+
+.page:target
+{
+	left: 0vw;
+	z-index: 1;
+}
 
 /*Style for paragraph on Apply page*/
 .astrick
