@@ -54,6 +54,11 @@ body
 	border-top: 3px solid white;
 	border-bottom: 3px solid white;
 	margin-top: 300px;
+	margin-bottom: 300px;
+}
+
+.col {
+	color: white;
 }
 
 .content-box-left {
