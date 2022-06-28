@@ -25,6 +25,7 @@ body
 
 .bg-vdark {
 	background-color: #121212;
+	color: white;
 }
 
 .col a {
@@ -65,8 +66,8 @@ body
 
 .col {
 	border: 10px solid pink;
-}
-*/
+}*/
+
 
 .label {
 	color: white;
