@@ -13,13 +13,6 @@ body
 	margin: 0;
 }
 
-.banner {
-	width: 100%;
-	text-align: center;
-	background-color: #121212;
-	border-bottom: 3px solid white;
-}
-
 .navbar-dark {
 	background-color: #121212;
 }
