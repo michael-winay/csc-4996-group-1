@@ -14,6 +14,7 @@ body
 }
 
 .banner {
+	width: 100%;
 	text-align: center;
 	background-color: #121212;
 	border-bottom: 3px solid white;
