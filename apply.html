@@ -48,7 +48,8 @@
     <!--/Menu-->
 
 
-    
+<!--Replace with email given after testing-->
+<form name = "form1" action="mailto: nighwalker876@gmail.com" method="get" enctype = "application/x-www-form-urlencoded" onselect="required()">  
       <div class="column left">
         <p></p>
       </div>
@@ -201,9 +202,9 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
-
+                
+                
+                <div class = "page1" id="testform"> 
                     <h2>Personal Information</h2>
                     <hr>
 
@@ -255,9 +256,9 @@
                         <label for="birthday">Birthday:</label>
                         <input type="date" id="birthday" name="birthday">
                         
-                    </form>
+               
 
-                    
+                    </form>
                     <br>
                     <br>
 
@@ -706,19 +707,48 @@
 
 
 
-                </form>
+                
 
                 <br>
                 <br>
 
-            </div>
-            <!--Back Button-->
-            <a href="#two" class="Back Button"> Back</a>
-            &ensp;
+                </div>
+                <!--Back Button-->
+                <a href="#two" class="Back Button"> Back</a>
+                &ensp;
 
-            <!-- Next Button-->
-            <a href="#four" class="Next Button"> Next</a>
-            &ensp;
+                <!-- Next Button-->
+               <!-- <input type = "submit">-->
+               
+                <a href="#four"  class="Next Button" onclick="return required();" > Next</a>
+               &ensp;
+               </div>
+
+               <script>
+                
+            function required()
+            {
+                 let empt = document.getElementById("form-firstname").value;
+                 let empt2 = document.getElementById("form-lastname").value;
+                 let empt3 = document.getElementById("form-SSN").value;
+                 let empt4 = document.getElementById("form-streetaddress1").value;
+                 let empt5 = document.getElementById("form-city").value;
+                 let empt6 = document.getElementById("form-zip").value;
+                 let empt7 = document.getElementById("form-primphone").value;
+                 let empt8 = document.getElementById("form-cemail").value;
+                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "")
+                 {
+                     alert("Please input a Value");
+                     return false;
+                  } 
+                 else 
+                 {
+                   alert('Code has accepted : you can try another');
+                   return true;  
+                  }
+                 
+            }
+               </script>
         </div>
     </div>
 
@@ -753,7 +783,7 @@
                 <br>
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <h2>General Information</h2>
                     <hr>
@@ -924,7 +954,7 @@
                     <br>
                     <br>
 
-                </form>
+               
 
                 <br>
                 <br>
@@ -969,7 +999,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+                
 
                     <p> Please provide all license you have held within the last 3 years</p>
 
@@ -1067,7 +1097,7 @@
 
 
 
-                </form>
+                
 
                 <br>
                 <br>
@@ -1114,7 +1144,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+                
 
                     <br>
                     <br>
@@ -1133,7 +1163,7 @@
 
 
 
-                </form>
+             
 
                 <br>
                 <br>
@@ -1178,7 +1208,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1197,7 +1227,7 @@
 
 
 
-                </form>
+          
 
                 <br>
                 <br>
@@ -1242,7 +1272,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1261,7 +1291,7 @@
 
 
 
-                </form>
+                
 
                 <br>
                 <br>
@@ -1306,7 +1336,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+                
 
                     <br>
                     <br>
@@ -1325,7 +1355,7 @@
 
 
 
-                </form>
+            
 
                 <br>
                 <br>
@@ -1370,7 +1400,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1389,7 +1419,7 @@
 
 
 
-                </form>
+      
 
                 <br>
                 <br>
@@ -1434,7 +1464,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1448,7 +1478,7 @@
 
 
 
-                </form>
+             
 
                 <br>
                 <br>
@@ -1493,7 +1523,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+              
 
                     <br>
                     <br>
@@ -1507,7 +1537,7 @@
 
 
 
-                </form>
+             
 
                 <br>
                 <br>
@@ -1552,7 +1582,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+              
 
                     <br>
                     <br>
@@ -1566,7 +1596,7 @@
 
 
 
-                </form>
+            
 
                 <br>
                 <br>
@@ -1611,7 +1641,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1625,7 +1655,7 @@
 
 
 
-                </form>
+             
 
                 <br>
                 <br>
@@ -1670,7 +1700,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
+               
 
                     <br>
                     <br>
@@ -1684,7 +1714,6 @@
 
 
 
-                </form>
 
                 <br>
                 <br>
@@ -1729,8 +1758,7 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-                <form action="mailto: nighwalker876@gmail.com" method="POST">
-
+              
                     <br>
                     <br>
                     <br>
@@ -1743,7 +1771,7 @@
 
 
 
-                </form>
+
 
                 <br>
                 <br>
@@ -1756,6 +1784,6 @@
 
         </div>
     </div>
-
+</form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
