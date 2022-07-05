@@ -210,21 +210,21 @@
 
                     <!--First Name Input-->
                     <label for="form-firstname"> First Name <span class="astrick">*</span> </label><br>
-                    <input type="text" name="FirstName" id="form-firstname" required>
+                    <input type="text" name="FirstName" id="form-firstname" placeholder = "First Name" required>
 
                     <br>
                     <br>
 
                     <!--Middle Name Input-->
                     <label for="form-middlename"> Middle Name</label><br>
-                    <input type="text" name="MiddleName" id="form-middlename">
+                    <input type="text" name="MiddleName" placeholder = "Middle Name" id="form-middlename">
 
                     <br>
                     <br>
 
                     <!--Last Name Input-->
                     <label for="form-lastname"> Last Name <span class="astrick">*</span> </label><br>
-                    <input type="text" name="LastName" id="form-lastname" required>
+                    <input type="text" name="LastName" id="form-lastname" placeholder = "Last Name" required>
 
                     <br>
                     <br>
@@ -246,19 +246,15 @@
 
                     <!--SSN/SIN-->
                     <label for="form-SSN"> SSN/SIN <span class="astrick">*</span> </label><br>
-                    <input type="text" name="SSN" id="form-SSN" required>
+                    <input type="text" name="SSN" id="form-SSN" placeholder = "### ## ####"required>
 
                     <br>
                     <br>
 
                     <!--Date of Birth-->
-                    <form action="/action_page.php">
-                        <label for="birthday">Birthday:</label>
-                        <input type="date" id="birthday" name="birthday">
-                        
-               
-
-                    </form>
+                    <label for="form-birthday">Birthday: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-birthday" name="birthday" placeholder = "mm/dd/yyyy" required>
+                    
                     <br>
                     <br>
 
@@ -267,7 +263,7 @@
 
                     <!--Current Street Address (line 1)-->
                     <label for="form-streetaddress1"> Current Street Address (line 1)<span class="astrick">*</span> </label><br>
-                    <input type="text" name="StreetAddress1" id="form-streetaddress1" required>
+                    <input type="text" name="StreetAddress1" id="form-streetaddress1" placeholder = "123 Something Street"required>
 
                     <br>
                     <br>
@@ -279,16 +275,22 @@
                     <br>
                     <br>
                     
+                    <!--Apartment/Suite/Other-->
+                    <label for="form-aptnum"> Apartment/Suite/Other</label><br>
+                    <input type="text" name="aptnum" id="form-aptnum">
+
+                    <br>
+                    <br>
 
                     <!--Country-->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                        
 
                     <label for="form-country">Country <span class="astrick">*</span></label><br>
-                    <select name="country">
+                    <select name="country" id = "form-country" required>
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
-                <option value="Åland Islands" rel="three">Åland Islands</option>
+                   <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
                 <option value="Algeria" rel="three">Algeria</option>
                 <option value="American Samoa" rel="three">American Samoa</option>
@@ -539,7 +541,7 @@
 
                     <!--City-->
                     <label for="form-city"> City <span class="astrick">*</span> </label><br>
-                    <input type="text" name="City" id="form-city" required>
+                    <input type="text" name="City" id="form-city" placeholder = "New Haven" required>
 
                     <br>
                     <br>
@@ -547,13 +549,15 @@
                     <!--State/Province-->
                     
                     <label for="form-state">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="state" name="state" class="cascade" required >
-                        <option value="-1">Select</option>
-                            <option class="three"></option>
+                    <select id="form-state" name="state" class="cascade" required >
+                            <option value="-1">Select</option>
+                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value="oth"></option>
+                            <option class="two" value = "NULL"> Select</option>
                             <option value="AK" class="two">Alaska</option>
-                            <option value="AL"  class ="two">Alabama</option>
-                            <option value="AR"  class ="two">Arkansas</option>
-                            <option value="AZ"  class ="two">Arizona</option>
+                            <option value="AL" class ="two">Alabama</option>
+                            <option value="AR" class ="two">Arkansas</option>
+                            <option value="AZ" class ="two">Arizona</option>
                             <option value="CA" class ="two">California</option>
                             <option value="CO" class ="two">Colorado</option>
                             <option value="CT" class ="two">Connecticut</option>
@@ -601,7 +605,8 @@
                             <option value="WA" class ="two">Washington</option>
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
-                            <option value="WY" class ="two">Wyoming</option>    
+                            <option value="WY" class ="two">Wyoming</option>
+                            <option class="one" value = "NULL"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -648,7 +653,7 @@
 
                     <!--Zip/Postal Code-->
                     <label for="form-zip"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                    <input type="text" name="Zip" id="form-zip" required>
+                    <input type="text" name="Zip" id="form-zip" placeholder="54309" required>
 
                 
                     <br>
@@ -661,25 +666,25 @@
 
                     <!--Primary Phone-->
                     <label for="form-primphone"> Primary Phone <span class="astrick">*</span> </label><br>
-                    <input type="text" name="pphone" id="form-primphone" required>
+                    <input type="text" name="pphone" id="form-primphone" placeholder = "784 872 8982"required>
 
                     <br>
 
                     <!--Cell Phone-->
                     <label for="form-cphone"> Cell Phone</label><br>
-                    <input type="text" name="cellphone" id="form-cphone">
+                    <input type="text" name="cellphone" id="form-cphone" placeholder = "923 289 0238">
 
                     <br>
 
                     <!--Email Address-->
                     <label for="form-email"> Email</label><br>
-                    <input type="text" name="email" id="form-email">
+                    <input type="text" name="email" id="form-email" placeholder="somewhere@gmail.com" required>
 
                     <br>
                     
                     <!--Confirm Email Address-->
                     <label for="form-cemail"> Confirm Email Address <span class="astrick">*</span> </label><br>
-                    <input type="text" name="cemail" id="form-cemail" required>
+                    <input type="text" name="cemail" id="form-cemail" placeholder = "somewhere@gmail.com" required>
 
                     <br>
                     <br>
@@ -713,21 +718,28 @@
                 <br>
 
                 </div>
+                
+               </div>
+
                 <!--Back Button-->
                 <a href="#two" class="Back Button"> Back</a>
                 &ensp;
 
                 <!-- Next Button-->
-               <!-- <input type = "submit">-->
-               
                 <a href="#four"  class="Next Button" onclick="return required();" > Next</a>
                &ensp;
-               </div>
 
                <script>
                 
             function required()
             {
+                 var letters = /^[A-Za-z, ]+$/;
+                 var last = /^[A-Za-z, ,-]+$/;
+                 var num = /^[0-9]*$/;
+                 var numsp = /^[0-9 ]*$/;
+                 var add = /^[a-zA-z0-9 ]*$/gm;
+                 var em = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                 var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
                  let empt = document.getElementById("form-firstname").value;
                  let empt2 = document.getElementById("form-lastname").value;
                  let empt3 = document.getElementById("form-SSN").value;
@@ -736,15 +748,368 @@
                  let empt6 = document.getElementById("form-zip").value;
                  let empt7 = document.getElementById("form-primphone").value;
                  let empt8 = document.getElementById("form-cemail").value;
-                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "")
-                 {
+                 let empt9 = document.getElementById("form-country").value;
+                 let empy10 = document.getElementById("form-state").value;
+                 let empt11 = document.getElementById("form-birthday").value;
+                 let empt12 = document.getElementById("form-aptnum").value;
+                 let empt13 = document.getElementById("form-middlename").value;
+                 let empt14 = document.getElementById("form-streetaddress2").value;
+                 let empt15 = document.getElementById("form-cphone").value;
+                 let empt16 = document.getElementById("form-email").value;
+                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "" || empt9 == "-1" || empt11 == "" || empt16 == "") 
+                 {   
+                     
                      alert("Please input a Value");
                      return false;
                   } 
                  else 
-                 {
-                   alert('Code has accepted : you can try another');
-                   return true;  
+                 {   
+                    if(empt.match(letters))
+                    {
+                        if(empt2.match(last))
+                        {
+                            if(empt3.match(num))
+                            {
+                                if(empt4.match(add))
+                                {
+                                    if(empt5.match(letters))
+                                    {
+                                        if(empt6.match(add))
+                                        {
+                                            if(empt7.match(numsp))
+                                            {
+                                                if(empt8.match(em))
+                                                {
+                                                    if(empt16.match(em))
+                                                    {
+                                                        if(empt16 == empt8)
+                                                        {
+                                                          if(empt11.match(birt))
+                                                    {
+                                                        //If apartment number is blank
+                                                        if(empt12 == "")
+                                                        {
+                                                            //If apartment number is blank and middle name is blank
+                                                            if(empt13 == "")
+                                                            {
+                                                                //If apartment number is blank middle name is blank and second line address is blank
+                                                                if(empt14 == "")
+                                                                {
+                                                                   //If apartment number is blank middle name is blank second line address is blank and cellphone is blank
+                                                                   if(empt15 == "")
+                                                                   {
+                                                                      return true;
+                                                                   }
+                                                                   //If apartment number is blank middle name is blank second line address is blank and cellphone is not blank
+                                                                   else
+                                                                   {
+                                                                      if(empt15.match(numsp))
+                                                                      {
+                                                                        return true;
+                                                                      }
+                                                                      else
+                                                                      {
+                                                                         alert("The cellphone number contains unaccepted characters");
+                                                                         return false;
+                                                                      }
+                                                                   }
+                                                                }
+                                                                //If apartment number is blank middle name is blank and second line address is not blank
+                                                                else
+                                                                {
+                                                                   if(empt14.match(add))
+                                                                   {
+                                                                      //If apartment number is blank middle name is blank second line address not is blank and cellphone is blank
+                                                                       if(empt15 == "")
+                                                                       {
+                                                                          return true;
+                                                                        }
+                                                                       //If apartment number is blank middle name is blank second line address is not blank and cellphone is not blank
+                                                                       else
+                                                                       {
+                                                                           if(empt15.match(numsp))
+                                                                           {
+                                                                              return true;
+                                                                           }
+                                                                           else
+                                                                           {
+                                                                              alert("The cellphone number contains unaccepted characters");
+                                                                              return false;
+                                                                           }
+                                                                        }
+                                                                    }
+                                                                   else
+                                                                   {
+                                                                     alert("The second line address contains unaccepted characters");
+                                                                     return false;
+                                                                   }
+                                                                }
+                                                            }
+                                                            //If apartment number is blank and middle name is not blank
+                                                            else
+                                                            {
+                                                                  
+                                                                  if(empt13.match(letters))
+                                                                  {
+                                                                       //If apartment number is blank and middle name is not blank and street address 2 is blank
+                                                                       if(empt14 == "")
+                                                                       {
+                                                                          //If apartment number is blank middle name is not blank second line address is blank and cellphone is blank
+                                                                          if(empt15 == "")
+                                                                          {
+                                                                            return true;
+                                                                           }
+                                                                          //If apartment number is blank middle name is not blank second line address is blank and cellphone is not blank
+                                                                          else
+                                                                          {
+                                                                              if(empt15.match(numsp))
+                                                                              {
+                                                                                 return true;
+                                                                              }
+                                                                              else
+                                                                              {
+                                                                                alert("The cellphone number contains unaccepted characters");
+                                                                                return false;
+                                                                              }
+                                                                          }
+                                                                       }
+                                                                       //If apartment number is blank and middle name is not blank and street address 2 is not blank
+                                                                       else
+                                                                       {
+                                                                          if(empt14.match(add))
+                                                                          {
+                                                                             //If apartment number is blank middle name is not blank second line address is not blank and cellphone is blank
+                                                                             if(empt15 == "")
+                                                                             {
+                                                                               return true;
+                                                                             }
+                                                                             //If apartment number is blank middle name is not blank second line address is not blank and cellphone is not blank
+                                                                             else
+                                                                             {
+                                                                                 if(empt15.match(numsp))
+                                                                                 {
+                                                                                    return true;
+                                                                                  }
+                                                                                  else
+                                                                                  {
+                                                                                     alert("The cellphone number contains unaccepted characters");
+                                                                                     return false;
+                                                                                  }
+                                                                             }
+                                                                          }
+                                                                          else
+                                                                          {
+                                                                             alert("The second line address contains unaccepted characters");
+                                                                             return false;
+                                                                          }
+                                                                       }
+                                                                   }
+                                                                   else
+                                                                   {
+                                                                     alert("The middle name contains unaccepted characters");
+                                                                     return false;
+                                                                   }
+                                                             }
+                                                        }
+                                                        //If apartment number is not blank
+                                                        else
+                                                        {
+                                                            if(empt12.match(add))
+                                                            {
+                                                                //If apartment number is not blank and middle name is blank
+                                                                if(empt13 == "")
+                                                                {
+                                                                      //If apartment number is not blank middle name is blank and second line address is blank
+                                                                      if(empt14 == "")
+                                                                      {
+                                                                            //If apartment number is not blank middle name is blank second line address is blank and cellphone is blank
+                                                                            if(empt15 == "")
+                                                                            {
+                                                                                return true;
+                                                                             }
+                                                                            //If apartment number is not blank middle name is blank second line address is blank and cellphone is not blank
+                                                                            else
+                                                                            {
+                                                                               if(empt15.match(numsp))
+                                                                               {
+                                                                                  return true;
+                                                                               }
+                                                                            else
+                                                                            {
+                                                                                alert("The cellphone number contains unaccepted characters");
+                                                                                return false;
+                                                                             }
+                                                                            }
+                                                                       }
+                                                                      //If apartment number is not blank middle name is blank and second line address is not blank
+                                                                      else
+                                                                      {
+                                                                         if(empt14.match(add))
+                                                                         {
+                                                                            //If apartment number is not blank middle name is blank second line address is not blank and cellphone is blank
+                                                                             if(empt15 == "")
+                                                                              {
+                                                                                 return true;
+                                                                              }
+                                                                            //If apartment number is not blank middle name is blank second line address is not blank and cellphone is not blank
+                                                                              else
+                                                                              {
+                                                                                  if(empt15.match(numsp))
+                                                                                  {
+                                                                                    return true;
+                                                                                  }
+                                                                                  else
+                                                                                  {
+                                                                                      alert("The cellphone number contains unaccepted characters");
+                                                                                      return false;
+                                                                                  }
+                                                                              }
+                                                                         }
+                                                                         else
+                                                                         {
+                                                                             alert("The second line address contains unaccepted characters");
+                                                                             return false;
+                                                                         }
+                                                                       }
+                                                                 }
+                                                                //If apartment number is not blank and middle name is not blank
+                                                                else
+                                                                {
+
+                                                                    if(empt13.match(letters))
+                                                                    {
+                                                                         //If apartment number is not blank middle name is not blank and second line address is blank
+                                                                         if(empt14 == "")
+                                                                         {
+                                                                            //If apartment number is not blank middle name is not blank second line address is blank and cellphone is blank
+                                                                            if(empt15 == "")
+                                                                            {
+                                                                              return true;
+                                                                            }
+                                                                            //If apartment number is blank middle name is blank second line address is blank and cellphone is not blank
+                                                                            else
+                                                                            {
+                                                                                if(empt15.match(numsp))
+                                                                                {
+                                                                                   return true;
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    alert("The cellphone number contains unaccepted characters");
+                                                                                    return false;
+                                                                                }
+                                                                            }
+                                                                         }
+                                                                         //If apartment number is not blank middle name is not blank and second line address is not blank
+                                                                         else
+                                                                         {
+                                                                            if(empt14.match(add))
+                                                                            {
+                                                                               //If apartment number is not blank middle name is not blank second line address is not blank and cellphone is blank
+                                                                               if(empt15 == "")
+                                                                                {
+                                                                                  return true;
+                                                                                }
+                                                                                //If apartment number is not blank middle name is not blank second line address is not blank and cellphone is not blank
+                                                                                else
+                                                                                {
+                                                                                     if(empt15.match(numsp))
+                                                                                     {
+                                                                                        return true;
+                                                                                     }
+                                                                                     else
+                                                                                     {
+                                                                                         alert("The cellphone number contains unaccepted characters");
+                                                                                         return false;
+                                                                                     }
+                                                                                }
+                                                                            }
+                                                                             else
+                                                                            {
+                                                                               alert("The second line address contains unaccepted characters");
+                                                                                return false;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                       alert("The middle name contains unaccepted characters");
+                                                                         return false;
+                                                                     }
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                alert("The apartment contains unaccepted characters");
+                                                                return false;
+                                                            }
+                                                        }
+                                                    }
+                                                          else
+                                                          {
+                                                           alert("The birthday is not in the correct format");
+                                                            return false;
+                                                          }
+                                                        }
+                                                        else
+                                                        {
+                                                            alert("The confirmed email address does not match the email address provided");
+                                                            return false;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        alert("The email address is invalid");
+                                                        return false;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    alert("The confirmed email address is invalid");
+                                                    return false;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                alert("The primary phone number contains unaccepted characters");
+                                                return false;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            alert("The zip code contains unaccepted characters");
+                                            return false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        alert("The city contains unaccepted characters");
+                                        return false;
+                                    }
+                                }
+                                else
+                                {
+                                    alert("The address contains unaccepted characters");
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                alert("The SSN contains unaccepted characters");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            alert("The last name contains unaccepted characters");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        alert("The first name contains unaccepted characters");
+                        return false;
+                    }
                   }
                  
             }
