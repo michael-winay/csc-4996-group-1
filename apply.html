@@ -3315,6 +3315,7 @@
                 var add = /^[a-zA-z0-9 ]*$/gm;
                 var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
       
+                
                 let mil = document.getElementById("branchservice").value;
                 let mil2 = document.getElementById("form-militarystart").value;
                 let mil3 = document.getElementById("form-militaryend").value;
@@ -3324,7 +3325,7 @@
       
                 if (mil5 == true)
                 {
-                    if(mil1 == "" || mil2 == "" || mil3 == "")
+                    if(mil == "" || mil2 == "" || mil3 == "")
                     {
                         alert("Please input a Value");
                         return false;
