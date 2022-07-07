@@ -768,7 +768,7 @@
                     {
                         if(empt2.match(last))
                         {
-                            if(empt3.match(num))
+                            if(empt3.match(numsp))
                             {
                                 if(empt4.match(add))
                                 {
@@ -1155,7 +1155,7 @@
 
                     <!--What position are you applying for?-->
                     <label for="form-position">What position are you applying for?<span class="astrick">*</span></label><br>	
-                    <select name="position">
+                    <select name="position" id="form-position">
                      <option value=""></option>
                      <option value="stn" >Company Driver</options>
                      <option value="sto" >Owner Operator</options>
@@ -1165,11 +1165,12 @@
 
                     <br>
                     <br>
+
                     <!--If you answered "Owner Operator" or "Fleet Owner", select yes-->
                     <div class="container">
                         <div class="row">
                           <div class="col-xs-12">
-                            <span>If you answered "Owner Operator" or "Fleet Owner", select yes </span>
+                            <span>If you answered "Owner Operator" or "Fleet Owner", select yes <span class="astrick">*</span></span>
                        
                               <input name="collapseGroup" type="radio" value="yes" required/> Yes
                        
@@ -1183,35 +1184,35 @@
                                 <div id="collapseOne" class="panel-collapse collapse">
                                   <div class="panel-body">
                                     <hr>
-                                    <h1>Equipment (Owner/Operators Only)</h1>
-                                    <h2>Equipment Description (Tractor):</h2>
+                                    <h3>Equipment (Owner/Operators Only)</h3>
+                                    <h3>Equipment Description (Tractor):</h3>
 
                                     <label for="form-tracttype"> Type: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tracttype" id="form-tracttype" required>
+                                    <input type="text" name="tracttype" id="form-tracttype" >
 
                                     <br>
                                     <br>
 
                                     <label for="form-tractyear"> Year: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tractyear" id="form-tractyear" required>
+                                    <input type="text" name="tractyear" id="form-tractyear" >
 
                                     <br>
                                     <br>
 
                                     <label for="form-tractmake"> Make: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tractmake" id="form-tractmake" required>
+                                    <input type="text" name="tractmake" id="form-tractmake" >
 
                                     <br>
                                     <br>
 
                                     <label for="form-tractmodel"> Model: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tractmodel" id="form-tractmodel" required>
+                                    <input type="text" name="tractmodel" id="form-tractmodel" >
 
                                     <br>
                                     <br>
 
                                     <label for="form-tractcolor"> Color: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tractcolor" id="form-tractcolor" required>
+                                    <input type="text" name="tractcolor" id="form-tractcolor" >
 
                                     <br>
                                     <br>
@@ -1235,7 +1236,7 @@
                                     <br>
 
                                     <label for="form-tractfifthheight"> Fifth Wheel Height: <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="tractfifthheight" id="form-tractfifthheight" required>
+                                    <input type="text" name="tractfifthheight" id="form-tractfifthheight">
 
 
                                   </div>
@@ -1257,6 +1258,8 @@
                           });
                     </script>
 
+                    <br>
+                    <br>
 
                     <!--What location are you applying for?-->
                     <label for="form-locapply"> What location are you applying for?</label><br>
@@ -1381,8 +1384,8 @@
                     <br>
 
                     <!--Straight Truck-->
-                    <label for="form-strtruck">Straight Truck:</label><br>	
-                    <select name="strtruck">
+                    <label for="form-strtruck">Straight Truck: <span class="astrick">*</span> </label><br>	
+                    <select name="strtruck" required>
                      <option value=""></option>
                      <option value="stn" >None</options>
                      <option value="sto" >Less than 1 year</options>
@@ -1402,8 +1405,8 @@
                     <br>
 
                     <!--Tractor and Semi-Trailer-->
-                    <label for="form-tracsemi">Tractor and Semi-Trailer:</label><br>	
-                    <select name="tracsemi">
+                    <label for="form-tracsemi">Tractor and Semi-Trailer: <span class="astrick">*</span></label><br>	
+                    <select name="tracsemi" required>
                      <option value=""></option>
                      <option value="trn" >None</options>
                      <option value="tro" >Less than 1 year</options>
@@ -1423,8 +1426,8 @@
                     <br>
 
                     <!--Tractor - Two Trailers-->
-                    <label for="form-tractwo">Tractor - Two Trailers:</label><br>	
-                    <select name="tractwo">
+                    <label for="form-tractwo">Tractor - Two Trailers: <span class="astrick">*</span></label><br>	
+                    <select name="tractwo" required>
                      <option value=""></option>
                      <option value="ttn" >None</options>
                      <option value="tto" >Less than 1 year</options>
@@ -1461,10 +1464,53 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#five" class="Next Button"> Next</a>
+            <a href="#five" class="Next Button" onclick="return requiredpg2();"> Next</a>
             &ensp;
+
+            <script>
+            function requiredpg2()
+            {
+                var letters = /^[A-Za-z, ]+$/;
+                var letters = /^[A-Za-z, ]+$/;
+                var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+                let empt17 = document.getElementById("form-position").value;
+                let empt18 = document.getElementById("form-firstname").value;
+                let empt19 = document.getElementById("form-firstname").value;
+                let empt20 = document.getElementById("form-firstname").value;
+                let empt21 = document.getElementById("form-firstname").value;
+                let empt22 = document.getElementById("form-firstname").value;
+                let empt23 = document.getElementById("form-firstname").value;
+                let empt24 = document.getElementById("form-firstname").value;
+                let empt25 = document.getElementById("form-firstname").value;
+                let empt26 = document.getElementById("form-firstname").value;
+                let empt27 = document.getElementById("form-firstname").value;
+                let empy28 = document.getElementById("form-firstname").value;
+                let empt29 = document.getElementById("form-firstname").value;
+                let empt30 = document.getElementById("form-firstname").value;
+                let empt31 = document.getElementById("form-firstname").value;
+                let empt32 = document.getElementById("form-firstname").value;
+                let empt33 = document.getElementById("form-firstname").value;
+                let empt34 = document.getElementById("form-firstname").value;
+                let empt35 = document.getElementById("form-firstname").value;
+                let empt36 = document.getElementById("form-firstname").value;
+                let empt37 = document.getElementById("form-firstname").value;
+                let empt38 = document.getElementById("form-firstname").value;
+                let empt39 = document.getElementById("form-firstname").value;
+                let empt40 = document.getElementById("form-firstname").value;
+                let empt41 = document.getElementById("form-firstname").value;
+                let empt42 = document.getElementById("form-firstname").value;
+                let empt43 = document.getElementById("form-firstname").value;
+                let empt44 = document.getElementById("form-firstname").value;
+            
+            
+            
+            }
+            </script>
         </div>
     </div>
+
+
 
     <div class="page" id="five">
         <div class="column left">
@@ -1494,12 +1540,8 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
-                
 
-                    <p> Please provide all license you have held within the last 3 years</p>
-
-
+                <div class = "page3" id="testform">
                     <br>
 
                     <h2>License Details</h2>
@@ -1507,105 +1549,1616 @@
 
                     <!--License Number-->
                     <label for="form-licenseNum"> License Number <span class="astrick">*</span> </label><br>
-                    <input type="text" name="LicenseNum" id="form-licenseNum" required>
+                    <input type="text" name="licenseNum" id="form-licenseNum" required>
 
                     <br>
                     <br>
 
                     <!--Country-->
-                    <!--Requires BootStrap-->
-                    <!--Make sure this is required-->
-                    <!--https://www.youtube.com/watch?v=xhUUzl7-vRg-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                       
+
+                    <label for="form-liccountry">Country <span class="astrick">*</span></label><br>
+                    <select name="liccountry" id = "form-liccountry" required>
+                        <option value="-1">Select</option>
+                        <option value="Afghanistan" rel="three">Afghanistan</option>
+                   <option value="Åland Islands" rel="three">Åland Islands</option>
+                <option value="Albania" rel="three">Albania</option>
+                <option value="Algeria" rel="three">Algeria</option>
+                <option value="American Samoa" rel="three">American Samoa</option>
+                <option value="Andorra" rel="three">Andorra</option>
+                <option value="Angola" rel="three">Angola</option>
+                <option value="Anguilla" rel="three">Anguilla</option>
+                <option value="Antarctica" rel="three">Antarctica</option>
+                <option value="Antigua and Barbuda" rel="three">Antigua and Barbuda</option>
+                <option value="Argentina" rel="three">Argentina</option>
+                <option value="Armenia" rel="three">Armenia</option>
+                <option value="Aruba" rel="three">Aruba</option>
+                <option value="Australia" rel="three">Australia</option>
+                <option value="Austria" rel="three">Austria</option>
+                <option value="Azerbaijan" rel="three">Azerbaijan</option>
+                <option value="Bahamas" rel="three">Bahamas</option>
+                <option value="Bahrain" rel="three">Bahrain</option>
+                <option value="Bangladesh" rel="three">Bangladesh</option>
+                <option value="Barbados" rel="three">Barbados</option>
+                <option value="Belarus" rel="three">Belarus</option>
+                <option value="Belgium" rel="three">Belgium</option>
+                <option value="Belize" rel="three">Belize</option>
+                <option value="Benin" rel="three">Benin</option>
+                <option value="Bermuda" rel="three">Bermuda</option>
+                <option value="Bhutan" rel="three">Bhutan</option>
+                <option value="Bolivia" rel="three">Bolivia</option>
+                <option value="Bosnia and Herzegovina" rel="three">Bosnia and Herzegovina</option>
+                <option value="Botswana" rel="three">Botswana</option>
+                <option value="Bouvet Island" rel="three">Bouvet Island</option>
+                <option value="Brazil" rel="three">Brazil</option>
+                <option value="British Indian Ocean Territory" rel="three">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam" rel="three">Brunei Darussalam</option>
+                <option value="Bulgaria" rel="three">Bulgaria</option>
+                <option value="Burkina Faso" rel="three">Burkina Faso</option>
+                <option value="Burundi" rel="three">Burundi</option>
+                <option value="Cambodia" rel="three">Cambodia</option>
+                <option value="Cameroon" rel="three">Cameroon</option>
+                <option value="Canada" rel="one">Canada</option>
+                <option value="Cape Verde" rel="three">Cape Verde</option>
+                <option value="Cayman Islands" rel="three">Cayman Islands</option>
+                <option value="Central African Republic" rel="three">Central African Republic</option>
+                <option value="Chad" rel="three">Chad</option>
+                <option value="Chile" rel="three">Chile</option>
+                <option value="China" rel="three">China</option>
+                <option value="Christmas Island" rel="three">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands" rel="three">Cocos (Keeling) Islands</option>
+                <option value="Colombia" rel="three">Colombia</option>
+                <option value="Comoros" rel="three">Comoros</option>
+                <option value="Congo" rel="three">Congo</option>
+                <option value="Congo, The Democratic Republic of The" rel="three">Congo, The Democratic Republic of The</option>
+                <option value="Cook Islands" rel="three">Cook Islands</option>
+                <option value="Costa Rica" rel="three">Costa Rica</option>
+                <option value="Cote D'ivoire" rel="three">Cote D'ivoire</option>
+                <option value="Croatia" rel="three">Croatia</option>
+                <option value="Cuba" rel="three">Cuba</option>
+                <option value="Cyprus" rel="three">Cyprus</option>
+                <option value="Czech Republic" rel="three">Czech Republic</option>
+                <option value="Denmark" rel="three">Denmark</option>
+                <option value="Djibouti" rel="three">Djibouti</option>
+                <option value="Dominica" rel="three">Dominica</option>
+                <option value="Dominican Republic" rel="three">Dominican Republic</option>
+                <option value="Ecuador" rel="three">Ecuador</option>
+                <option value="Egypt" rel="three">Egypt</option>
+                <option value="El Salvador" rel="three">El Salvador</option>
+                <option value="Equatorial Guinea" rel="three">Equatorial Guinea</option>
+                <option value="Eritrea" rel="three">Eritrea</option>
+                <option value="Estonia" rel="three">Estonia</option>
+                <option value="Ethiopia" rel="three">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)" rel="three">Falkland Islands (Malvinas)</option>
+                <option value="Faroe Islands" rel="three">Faroe Islands</option>
+                <option value="Fiji" rel="three">Fiji</option>
+                <option value="Finland" rel="three">Finland</option>
+                <option value="France" rel="three">France</option>
+                <option value="French Guiana" rel="three">French Guiana</option>
+                <option value="French Polynesia" rel="three">French Polynesia</option>
+                <option value="French Southern Territories" rel="three">French Southern Territories</option>
+                <option value="Gabon" rel="three">Gabon</option>
+                <option value="Gambia" rel="three">Gambia</option>
+                <option value="Georgia" rel="three">Georgia</option>
+                <option value="Germany" rel="three">Germany</option>
+                <option value="Ghana" rel="three">Ghana</option>
+                <option value="Gibraltar" rel="three">Gibraltar</option>
+                <option value="Greece" rel="three">Greece</option>
+                <option value="Greenland" rel="three">Greenland</option>
+                <option value="Grenada" rel="three">Grenada</option>
+                <option value="Guadeloupe"rel="three">Guadeloupe</option>
+                <option value="Guam" rel="three">Guam</option>
+                <option value="Guatemala" rel="three">Guatemala</option>
+                <option value="Guernsey" rel="three">Guernsey</option>
+                <option value="Guinea" rel="three">Guinea</option>
+                <option value="Guinea-bissau" rel="three">Guinea-bissau</option>
+                <option value="Guyana" rel="three">Guyana</option>
+                <option value="Haiti" rel="three">Haiti</option>
+                <option value="Heard Island and Mcdonald Islands" rel="three">Heard Island and Mcdonald Islands</option>
+                <option value="Holy See (Vatican City State)" rel="three">Holy See (Vatican City State)</option>
+                <option value="Honduras" rel="three">Honduras</option>
+                <option value="Hong Kong" rel="three">Hong Kong</option>
+                <option value="Hungary" rel="three">Hungary</option>
+                <option value="Iceland" rel="three">Iceland</option>
+                <option value="India" rel="three">India</option>
+                <option value="Indonesia" rel="three">Indonesia</option>
+                <option value="Iran, Islamic Republic of" rel="three">Iran, Islamic Republic of</option>
+                <option value="Iraq" rel="three">Iraq</option>
+                <option value="Ireland" rel="three">Ireland</option>
+                <option value="Isle of Man" rel="three">Isle of Man</option>
+                <option value="Israel" rel="three">Israel</option>
+                <option value="Italy" rel="three">Italy</option>
+                <option value="Jamaica" rel="three">Jamaica</option>
+                <option value="Japan" rel="three">Japan</option>
+                <option value="Jersey" rel="three">Jersey</option>
+                <option value="Jordan" rel="three">Jordan</option>
+                <option value="Kazakhstan" rel="three">Kazakhstan</option>
+                <option value="Kenya" rel="three">Kenya</option>
+                <option value="Kiribati" rel="three">Kiribati</option>
+                <option value="Korea, Democratic People's Republic of" rel="three">Korea, Democratic People's Republic of</option>
+                <option value="Korea, Republic of" rel="three">Korea, Republic of</option>
+                <option value="Kuwait" rel="three">Kuwait</option>
+                <option value="Kyrgyzstan" rel="three">Kyrgyzstan</option>
+                <option value="Lao People's Democratic Republic" rel="three">Lao People's Democratic Republic</option>
+                <option value="Latvia" rel="three">Latvia</option>
+                <option value="Lebanon" rel="three">Lebanon</option>
+                <option value="Lesotho" rel="three">Lesotho</option>
+                <option value="Liberia" rel="three">Liberia</option>
+                <option value="Libyan Arab Jamahiriya" rel="three">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein" rel="three">Liechtenstein</option>
+                <option value="Lithuania" rel="three">Lithuania</option>
+                <option value="Luxembourg" rel="three">Luxembourg</option>
+                <option value="Macao" rel="three">Macao</option>
+                <option value="Macedonia, The Former Yugoslav Republic of" rel="three">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Madagascar" rel="three">Madagascar</option>
+                <option value="Malawi" rel="three">Malawi</option>
+                <option value="Malaysia" rel="three">Malaysia</option>
+                <option value="Maldives" rel="three">Maldives</option>
+                <option value="Mali" rel="three">Mali</option>
+                <option value="Malta" rel="three">Malta</option>
+                <option value="Marshall Islands" rel="three">Marshall Islands</option>
+                <option value="Martinique" rel="three">Martinique</option>
+                <option value="Mauritania" rel="three">Mauritania</option>
+                <option value="Mauritius" rel="three">Mauritius</option>
+                <option value="Mayotte" rel="three">Mayotte</option>
+                <option value="Mexico" rel="three">Mexico</option>
+                <option value="Micronesia, Federated States of" rel="three">Micronesia, Federated States of</option>
+                <option value="Moldova, Republic of" rel="three">Moldova, Republic of</option>
+                <option value="Monaco" rel="three">Monaco</option>
+                <option value="Mongolia" rel="three">Mongolia</option>
+                <option value="Montenegro" rel="three">Montenegro</option>
+                <option value="Montserrat" rel="three">Montserrat</option>
+                <option value="Morocco" rel="three">Morocco</option>
+                <option value="Mozambique" rel="three">Mozambique</option>
+                <option value="Myanmar" rel="three">Myanmar</option>
+                <option value="Namibia" rel="three">Namibia</option>
+                <option value="Nauru" rel="three">Nauru</option>
+                <option value="Nepal" rel="three">Nepal</option>
+                <option value="Netherlands" rel="three">Netherlands</option>
+                <option value="Netherlands Antilles" rel="three">Netherlands Antilles</option>
+                <option value="New Caledonia" rel="three">New Caledonia</option>
+                <option value="New Zealand" rel="three">New Zealand</option>
+                <option value="Nicaragua" rel="three">Nicaragua</option>
+                <option value="Niger" rel="three">Niger</option>
+                <option value="Nigeria" rel="three">Nigeria</option>
+                <option value="Niue" rel="three">Niue</option>
+                <option value="Norfolk Island" rel="three">Norfolk Island</option>
+                <option value="Northern Mariana Islands" rel="three">Northern Mariana Islands</option>
+                <option value="Norway" rel="three">Norway</option>
+                <option value="Oman" rel="three">Oman</option>
+                <option value="Pakistan" rel="three">Pakistan</option>
+                <option value="Palau" rel="three">Palau</option>
+                <option value="Palestinian Territory, Occupied" rel="three">Palestinian Territory, Occupied</option>
+                <option value="Panama" rel="three">Panama</option>
+                <option value="Papua New Guinea" rel="three">Papua New Guinea</option>
+                <option value="Paraguay" rel="three">Paraguay</option>
+                <option value="Peru" rel="three">Peru</option>
+                <option value="Philippines" rel="three">Philippines</option>
+                <option value="Pitcairn" rel="three">Pitcairn</option>
+                <option value="Poland" rel="three">Poland</option>
+                <option value="Portugal" rel="three">Portugal</option>
+                <option value="Puerto Rico" rel="three">Puerto Rico</option>
+                <option value="Qatar" rel="three">Qatar</option>
+                <option value="Reunion" rel="three">Reunion</option>
+                <option value="Romania" rel="three">Romania</option>
+                <option value="Russian Federation" rel="three">Russian Federation</option>
+                <option value="Rwanda" rel="three">Rwanda</option>
+                <option value="Saint Helena" rel="three">Saint Helena</option>
+                <option value="Saint Kitts and Nevis" rel="three">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia" rel="three">Saint Lucia</option>
+                <option value="Saint Pierre and Miquelon" rel="three">Saint Pierre and Miquelon</option>
+                <option value="Saint Vincent and The Grenadines" rel="three">Saint Vincent and The Grenadines</option>
+                <option value="Samoa" rel="three">Samoa</option>
+                <option value="San Marino" rel="three">San Marino</option>
+                <option value="Sao Tome and Principe" rel="three">Sao Tome and Principe</option>
+                <option value="Saudi Arabia" rel="three">Saudi Arabia</option>
+                <option value="Senegal" rel="three">Senegal</option>
+                <option value="Serbia" rel="three">Serbia</option>
+                <option value="Seychelles" rel="three">Seychelles</option>
+                <option value="Sierra Leone" rel="three">Sierra Leone</option>
+                <option value="Singapore" rel="three">Singapore</option>
+                <option value="Slovakia" rel="three">Slovakia</option>
+                <option value="Slovenia" rel="three">Slovenia</option>
+                <option value="Solomon Islands" rel="three">Solomon Islands</option>
+                <option value="Somalia" rel="three">Somalia</option>
+                <option value="South Africa" rel="three">South Africa</option>
+                <option value="South Georgia and The South Sandwich Islands" rel="three">South Georgia and The South Sandwich Islands</option>
+                <option value="Spain" rel="three">Spain</option>
+                <option value="Sri Lanka" rel="three">Sri Lanka</option>
+                <option value="Sudan" rel="three">Sudan</option>
+                <option value="Suriname" rel="three">Suriname</option>
+                <option value="Svalbard and Jan Mayen" rel="three">Svalbard and Jan Mayen</option>
+                <option value="Swaziland" rel="three">Swaziland</option>
+                <option value="Sweden" rel="three">Sweden</option>
+                <option value="Switzerland" rel="three">Switzerland</option>
+                <option value="Syrian Arab Republic" rel="three">Syrian Arab Republic</option>
+                <option value="Taiwan" rel="three">Taiwan</option>
+                <option value="Tajikistan" rel="three">Tajikistan</option>
+                <option value="Tanzania, United Republic of" rel="three">Tanzania, United Republic of</option>
+                <option value="Thailand" rel="three">Thailand</option>
+                <option value="Timor-leste" rel="three">Timor-leste</option>
+                <option value="Togo" rel="three">Togo</option>
+                <option value="Tokelau" rel="three">Tokelau</option>
+                <option value="Tonga" rel="three">Tonga</option>
+                <option value="Trinidad and Tobago" rel="three">Trinidad and Tobago</option>
+                <option value="Tunisia" rel="three">Tunisia</option>
+                <option value="Turkey" rel="three">Turkey</option>
+                <option value="Turkmenistan" rel="three">Turkmenistan</option>
+                <option value="Turks and Caicos Islands" rel="three">Turks and Caicos Islands</option>
+                <option value="Tuvalu" rel="three">Tuvalu</option>
+                <option value="Uganda" rel="three">Uganda</option>
+                <option value="Ukraine" rel="three">Ukraine</option>
+                <option value="United Arab Emirates" rel="three">United Arab Emirates</option>
+                <option value="United Kingdom" rel="three">United Kingdom</option>
+                <option value="United States" rel="two">United States</option>
+                <option value="United States Minor Outlying Islands" rel="three">United States Minor Outlying Islands</option>
+                <option value="Uruguay" rel="three">Uruguay</option>
+                <option value="Uzbekistan" rel="three">Uzbekistan</option>
+                <option value="Vanuatu" rel="three">Vanuatu</option>
+                <option value="Venezuela" rel="three">Venezuela</option>
+                <option value="Viet Nam" rel="three">Viet Nam</option>
+                <option value="Virgin Islands, British" rel="three">Virgin Islands, British</option>
+                <option value="Virgin Islands, U.S." rel="three">Virgin Islands, U.S.</option>
+                <option value="Wallis and Futuna" rel="three">Wallis and Futuna</option>
+                <option value="Western Sahara" rel="three">Western Sahara</option>
+                <option value="Yemen" rel="three">Yemen</option>
+                <option value="Zambia" rel="three">Zambia</option>
+                <option value="Zimbabwe" rel="three">Zimbabwe</option>
+                    </select>
+
 
                     <br>
                     <br>
 
-                    <!--Liense State/Province-->
-                    <!--Requires BootStrap-->
-                    <!--Make sure this is required-->
-                    <!--Responsive to which country is chosen-->
-                    <!--https://www.youtube.com/watch?v=xhUUzl7-vRg-->
+                <!--License State and Province-->
+                    <label for="form-licstate">State/Province: <span class="astrick">*</span></label><br>
+                    <select id="form-licstate" name="licstate" class="cascade" required >
+                            <option value="-1">Select</option>
+                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value="oth"></option>
+                            <option class="two" value = "NULL"> Select</option>
+                            <option value="AK" class="two">Alaska</option>
+                            <option value="AL" class ="two">Alabama</option>
+                            <option value="AR" class ="two">Arkansas</option>
+                            <option value="AZ" class ="two">Arizona</option>
+                            <option value="CA" class ="two">California</option>
+                            <option value="CO" class ="two">Colorado</option>
+                            <option value="CT" class ="two">Connecticut</option>
+                            <option value="DC" class ="two">District of Columbia</option>
+                            <option value="DE" class ="two">Delaware</option>
+                            <option value="FL" class ="two">Florida</option>
+                            <option value="GA" class ="two">Georgia</option>
+                            <option value="HI" class ="two">Hawaii</option>
+                            <option value="IA" class ="two">Iowa</option>
+                            <option value="ID" class ="two">Idaho</option>
+                            <option value="IL" class ="two">Illinois</option>
+                            <option value="IN" class ="two">Indiana</option>
+                            <option value="KS" class ="two">Kansas</option>
+                            <option value="KY" class ="two">Kentucky</option>
+                            <option value="LA" class ="two">Louisiana</option>
+                            <option value="MA" class ="two">Massachusetts</option>
+                            <option value="MD" class ="two">Maryland</option>
+                            <option value="ME" class ="two">Maine</option>
+                            <option value="MI" class ="two">Michigan</option>
+                            <option value="MN" class ="two">Minnesota</option>
+                            <option value="MO" class ="two">Missouri</option>
+                            <option value="MS" class ="two">Mississippi</option>
+                            <option value="MT" class ="two">Montana</option>
+                            <option value="NC" class ="two">North Carolina</option>
+                            <option value="ND" class ="two">North Dakota</option>
+                            <option value="NE" class ="two">Nebraska</option>
+                            <option value="NH" class ="two">New Hampshire</option>
+                            <option value="NJ" class ="two">New Jersey</option>
+                            <option value="NM" class ="two">New Mexico</option>
+                            <option value="NV" class ="two">Nevada</option>
+                            <option value="NY" class ="two">New York</option>
+                            <option value="OH" class ="two">Ohio</option>
+                            <option value="OK" class ="two">Oklahoma</option>
+                            <option value="OR" class ="two">Oregon</option>
+                            <option value="PA" class ="two">Pennsylvania</option>
+                            <option value="PR" class ="two">Puerto Rico</option>
+                            <option value="RI" class ="two">Rhode Island</option>
+                            <option value="SC" class ="two">South Carolina</option>
+                            <option value="SD" class ="two">South Dakota</option>
+                            <option value="TN" class ="two">Tennessee</option>
+                            <option value="TX" class ="two">Texas</option>
+                            <option value="UT" class ="two">Utah</option>
+                            <option value="VA" class ="two">Virginia</option>
+                            <option value="VT" class ="two">Vermont</option>
+                            <option value="WA" class ="two">Washington</option>
+                            <option value="WI" class ="two">Wisconsin</option>
+                            <option value="WV" class ="two">West Virginia</option>
+                            <option value="WY" class ="two">Wyoming</option>
+                            <option class="one" value = "NULL"> Select</option>    
+                            <option value="AB" class ="one">Alberta</option>
+                            <option value="BC" class ="one">British Columbia</option>
+                            <option value="MB" class ="one">Manitoba</option>
+                            <option value="NB" class ="one">New Brunswick</option>
+                            <option value="NF" class ="one">Newfoundland</option>
+                            <option value="NT" class ="one">Northwest Territories</option>
+                            <option value="NS" class ="one">Nova Scotia</option>
+                            <option value="NU" class ="one">Nunavut</option>
+                            <option value="ON" class ="one">Ontario</option>
+                            <option value="PE" class ="one">Prince Edward Island</option>
+                            <option value="QC" class ="one">Quebec</option>
+                            <option value="SK" class ="one">Saskatchewan</option>
+                            <option value="YT" class ="one">Yukon Territory</option>
+
+                    </select>
+                    
+                    <!--Script for Cascading dropdown of Country and State/Province-->
+                    <script>
+                        $(document).ready(function(){
+                            var $cat = $('select[name=liccountry]'),
+                             $items = $('select[name=licstate]');
+
+                         $cat.change(function(){
+        
+                        var $this = $(this).find(':selected'),
+                          rel = $this.attr('rel');
+                
+                       // Hide all
+                          $items.find("option").hide();
+          
+                               // Find all matching accessories
+                            // Show all the correct accesories
+                            // Select the first accesory
+                             $set = $items.find('option.' + rel);
+                               $set.show().first().prop('selected', true);
+        
+                            });
+                        });
+
+                    </script>
+
 
                     <br>
                     <br>
 
                     <!--License Expiration-->
-                    <!--Requires Bootstrap-->
-                    <!--Make sure this is required-->
+                    <label for="form-licexp">License Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licexp" name="licexp" placeholder = "mm/dd/yyyy" required>
 
                     <br>
                     <br>
 
                     <!--Physical Expiration-->
-                    <!--Requires Bootstrap-->
+                    <label for="form-licphexp">Physical Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licphexp" name="licphexp" placeholder = "mm/dd/yyyy" required>
 
                     <br>
                     <br>
 
                     <!--Is this your current driver license?-->
                     <p> Is this your current driver license? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
+                    <div class="currentlic required">
+                    <input type="checkbox" id="currentlic" name="currentlic" value="yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
+                    <input type="checkbox" id="currentlic" name="currentlic" value="no">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Is this your commercial driver license-->
+                    <div class="commlic required">
                     <p> Is this your commercial driver license? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c9" name="licensecheck" value="c9">
+                    <input type="checkbox" id="commlic" name="commlic" value="yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c9" name="licensecheck" value="c9">
+                    <input type="checkbox" id="commlic" name="commlic" value="no">
                     <label for="No"> No </label>
+                    </div>
 
 
-                    <!--Makes sure the check boxes are all required-->
-                    <script>
-                        document.getElementsByName("licensecheck").required = true;
-                    </script>
+                    <br>
+                    <br>
+
+                    <label for="form-licclass">License Class<span class="astrick">*</span></label><br>	
+                    <select name="licclass" id = "licclass" required>
+                     <option value=""></option>
+                     <option value="class a" >Class A</options>
+                     <option value="class az" >Class AZ</options>
+                     <option value="class b" >Class B</options>
+                     <option value="class c">Class C</option>
+                     <option value="class d" >Class D</options>
+                     <option value="class e" >Class E</options>
+                     <option value="class f" >Class F</options>
+                     <option value="class o" >Class O</options>
+                     <option value="class r" >Class R</options>
+                     <option value="class 1" >Class 1</options>
+                     <option value="class 2" >Class 2</options>
+                     <option value="class 3" >Class 3</options>
+                     <option value="class 4" >Class 4</options>
+                     <option value="class 5" >Class 5</options>
+                    </select>
 
                     <br>
                     <br>
 
                     <!--Endorsements-->
                     <p>Endorsements</p>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="None">
                     <label for="None"> None </label>
                     <br>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="Other">
                     <label for="Other"> Other </label>
                     <br>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="Tanker">
                     <label for="Tanker"> Tanker </label>
                     <br>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="Doubles">
                     <label for="Doubles/Triples"> Doubles / Triples </label>
                     <br>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="XEndorsement">
                     <label for="XEndorsement"> X Endorsement </label>
                     <br>
-                    <input type="checkbox" id="c10" name="endorsements" value="c10">
+                    <input type="checkbox" id="endorsements" name="endorsements" value="HaxMat">
                     <label for="HazMat"> HazMat </label>
 
 
 
 
+                  <!--Do you own a second license-->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>If you have another license that you would like to enter please click the Expand button, otherwise you are free to move on to the next page.</span>
+                          <div class ="license2 required">
+                          <input name="collapseGroup2" type="checkbox" value="yes"/> Expand
+                          </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <hr>
+                                <h2> 2nd License Details</h2>
+                    <hr>
+
+                    <!--License Number-->
+                    <label for="form-licenseNum2"> License Number <span class="astrick">*</span> </label><br>
+                    <input type="text" name="licenseNum2" id="form-licenseNum2" required>
+
+                    <br>
+                    <br>
+
+                    <!--Country-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                       
+
+                    <label for="form-liccountry2">Country <span class="astrick">*</span></label><br>
+                    <select name="liccountry2" id = "form-liccountry2" required>
+                        <option value="-1">Select</option>
+                        <option value="Afghanistan" rel="three">Afghanistan</option>
+                   <option value="Åland Islands" rel="three">Åland Islands</option>
+                <option value="Albania" rel="three">Albania</option>
+                <option value="Algeria" rel="three">Algeria</option>
+                <option value="American Samoa" rel="three">American Samoa</option>
+                <option value="Andorra" rel="three">Andorra</option>
+                <option value="Angola" rel="three">Angola</option>
+                <option value="Anguilla" rel="three">Anguilla</option>
+                <option value="Antarctica" rel="three">Antarctica</option>
+                <option value="Antigua and Barbuda" rel="three">Antigua and Barbuda</option>
+                <option value="Argentina" rel="three">Argentina</option>
+                <option value="Armenia" rel="three">Armenia</option>
+                <option value="Aruba" rel="three">Aruba</option>
+                <option value="Australia" rel="three">Australia</option>
+                <option value="Austria" rel="three">Austria</option>
+                <option value="Azerbaijan" rel="three">Azerbaijan</option>
+                <option value="Bahamas" rel="three">Bahamas</option>
+                <option value="Bahrain" rel="three">Bahrain</option>
+                <option value="Bangladesh" rel="three">Bangladesh</option>
+                <option value="Barbados" rel="three">Barbados</option>
+                <option value="Belarus" rel="three">Belarus</option>
+                <option value="Belgium" rel="three">Belgium</option>
+                <option value="Belize" rel="three">Belize</option>
+                <option value="Benin" rel="three">Benin</option>
+                <option value="Bermuda" rel="three">Bermuda</option>
+                <option value="Bhutan" rel="three">Bhutan</option>
+                <option value="Bolivia" rel="three">Bolivia</option>
+                <option value="Bosnia and Herzegovina" rel="three">Bosnia and Herzegovina</option>
+                <option value="Botswana" rel="three">Botswana</option>
+                <option value="Bouvet Island" rel="three">Bouvet Island</option>
+                <option value="Brazil" rel="three">Brazil</option>
+                <option value="British Indian Ocean Territory" rel="three">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam" rel="three">Brunei Darussalam</option>
+                <option value="Bulgaria" rel="three">Bulgaria</option>
+                <option value="Burkina Faso" rel="three">Burkina Faso</option>
+                <option value="Burundi" rel="three">Burundi</option>
+                <option value="Cambodia" rel="three">Cambodia</option>
+                <option value="Cameroon" rel="three">Cameroon</option>
+                <option value="Canada" rel="one">Canada</option>
+                <option value="Cape Verde" rel="three">Cape Verde</option>
+                <option value="Cayman Islands" rel="three">Cayman Islands</option>
+                <option value="Central African Republic" rel="three">Central African Republic</option>
+                <option value="Chad" rel="three">Chad</option>
+                <option value="Chile" rel="three">Chile</option>
+                <option value="China" rel="three">China</option>
+                <option value="Christmas Island" rel="three">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands" rel="three">Cocos (Keeling) Islands</option>
+                <option value="Colombia" rel="three">Colombia</option>
+                <option value="Comoros" rel="three">Comoros</option>
+                <option value="Congo" rel="three">Congo</option>
+                <option value="Congo, The Democratic Republic of The" rel="three">Congo, The Democratic Republic of The</option>
+                <option value="Cook Islands" rel="three">Cook Islands</option>
+                <option value="Costa Rica" rel="three">Costa Rica</option>
+                <option value="Cote D'ivoire" rel="three">Cote D'ivoire</option>
+                <option value="Croatia" rel="three">Croatia</option>
+                <option value="Cuba" rel="three">Cuba</option>
+                <option value="Cyprus" rel="three">Cyprus</option>
+                <option value="Czech Republic" rel="three">Czech Republic</option>
+                <option value="Denmark" rel="three">Denmark</option>
+                <option value="Djibouti" rel="three">Djibouti</option>
+                <option value="Dominica" rel="three">Dominica</option>
+                <option value="Dominican Republic" rel="three">Dominican Republic</option>
+                <option value="Ecuador" rel="three">Ecuador</option>
+                <option value="Egypt" rel="three">Egypt</option>
+                <option value="El Salvador" rel="three">El Salvador</option>
+                <option value="Equatorial Guinea" rel="three">Equatorial Guinea</option>
+                <option value="Eritrea" rel="three">Eritrea</option>
+                <option value="Estonia" rel="three">Estonia</option>
+                <option value="Ethiopia" rel="three">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)" rel="three">Falkland Islands (Malvinas)</option>
+                <option value="Faroe Islands" rel="three">Faroe Islands</option>
+                <option value="Fiji" rel="three">Fiji</option>
+                <option value="Finland" rel="three">Finland</option>
+                <option value="France" rel="three">France</option>
+                <option value="French Guiana" rel="three">French Guiana</option>
+                <option value="French Polynesia" rel="three">French Polynesia</option>
+                <option value="French Southern Territories" rel="three">French Southern Territories</option>
+                <option value="Gabon" rel="three">Gabon</option>
+                <option value="Gambia" rel="three">Gambia</option>
+                <option value="Georgia" rel="three">Georgia</option>
+                <option value="Germany" rel="three">Germany</option>
+                <option value="Ghana" rel="three">Ghana</option>
+                <option value="Gibraltar" rel="three">Gibraltar</option>
+                <option value="Greece" rel="three">Greece</option>
+                <option value="Greenland" rel="three">Greenland</option>
+                <option value="Grenada" rel="three">Grenada</option>
+                <option value="Guadeloupe"rel="three">Guadeloupe</option>
+                <option value="Guam" rel="three">Guam</option>
+                <option value="Guatemala" rel="three">Guatemala</option>
+                <option value="Guernsey" rel="three">Guernsey</option>
+                <option value="Guinea" rel="three">Guinea</option>
+                <option value="Guinea-bissau" rel="three">Guinea-bissau</option>
+                <option value="Guyana" rel="three">Guyana</option>
+                <option value="Haiti" rel="three">Haiti</option>
+                <option value="Heard Island and Mcdonald Islands" rel="three">Heard Island and Mcdonald Islands</option>
+                <option value="Holy See (Vatican City State)" rel="three">Holy See (Vatican City State)</option>
+                <option value="Honduras" rel="three">Honduras</option>
+                <option value="Hong Kong" rel="three">Hong Kong</option>
+                <option value="Hungary" rel="three">Hungary</option>
+                <option value="Iceland" rel="three">Iceland</option>
+                <option value="India" rel="three">India</option>
+                <option value="Indonesia" rel="three">Indonesia</option>
+                <option value="Iran, Islamic Republic of" rel="three">Iran, Islamic Republic of</option>
+                <option value="Iraq" rel="three">Iraq</option>
+                <option value="Ireland" rel="three">Ireland</option>
+                <option value="Isle of Man" rel="three">Isle of Man</option>
+                <option value="Israel" rel="three">Israel</option>
+                <option value="Italy" rel="three">Italy</option>
+                <option value="Jamaica" rel="three">Jamaica</option>
+                <option value="Japan" rel="three">Japan</option>
+                <option value="Jersey" rel="three">Jersey</option>
+                <option value="Jordan" rel="three">Jordan</option>
+                <option value="Kazakhstan" rel="three">Kazakhstan</option>
+                <option value="Kenya" rel="three">Kenya</option>
+                <option value="Kiribati" rel="three">Kiribati</option>
+                <option value="Korea, Democratic People's Republic of" rel="three">Korea, Democratic People's Republic of</option>
+                <option value="Korea, Republic of" rel="three">Korea, Republic of</option>
+                <option value="Kuwait" rel="three">Kuwait</option>
+                <option value="Kyrgyzstan" rel="three">Kyrgyzstan</option>
+                <option value="Lao People's Democratic Republic" rel="three">Lao People's Democratic Republic</option>
+                <option value="Latvia" rel="three">Latvia</option>
+                <option value="Lebanon" rel="three">Lebanon</option>
+                <option value="Lesotho" rel="three">Lesotho</option>
+                <option value="Liberia" rel="three">Liberia</option>
+                <option value="Libyan Arab Jamahiriya" rel="three">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein" rel="three">Liechtenstein</option>
+                <option value="Lithuania" rel="three">Lithuania</option>
+                <option value="Luxembourg" rel="three">Luxembourg</option>
+                <option value="Macao" rel="three">Macao</option>
+                <option value="Macedonia, The Former Yugoslav Republic of" rel="three">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Madagascar" rel="three">Madagascar</option>
+                <option value="Malawi" rel="three">Malawi</option>
+                <option value="Malaysia" rel="three">Malaysia</option>
+                <option value="Maldives" rel="three">Maldives</option>
+                <option value="Mali" rel="three">Mali</option>
+                <option value="Malta" rel="three">Malta</option>
+                <option value="Marshall Islands" rel="three">Marshall Islands</option>
+                <option value="Martinique" rel="three">Martinique</option>
+                <option value="Mauritania" rel="three">Mauritania</option>
+                <option value="Mauritius" rel="three">Mauritius</option>
+                <option value="Mayotte" rel="three">Mayotte</option>
+                <option value="Mexico" rel="three">Mexico</option>
+                <option value="Micronesia, Federated States of" rel="three">Micronesia, Federated States of</option>
+                <option value="Moldova, Republic of" rel="three">Moldova, Republic of</option>
+                <option value="Monaco" rel="three">Monaco</option>
+                <option value="Mongolia" rel="three">Mongolia</option>
+                <option value="Montenegro" rel="three">Montenegro</option>
+                <option value="Montserrat" rel="three">Montserrat</option>
+                <option value="Morocco" rel="three">Morocco</option>
+                <option value="Mozambique" rel="three">Mozambique</option>
+                <option value="Myanmar" rel="three">Myanmar</option>
+                <option value="Namibia" rel="three">Namibia</option>
+                <option value="Nauru" rel="three">Nauru</option>
+                <option value="Nepal" rel="three">Nepal</option>
+                <option value="Netherlands" rel="three">Netherlands</option>
+                <option value="Netherlands Antilles" rel="three">Netherlands Antilles</option>
+                <option value="New Caledonia" rel="three">New Caledonia</option>
+                <option value="New Zealand" rel="three">New Zealand</option>
+                <option value="Nicaragua" rel="three">Nicaragua</option>
+                <option value="Niger" rel="three">Niger</option>
+                <option value="Nigeria" rel="three">Nigeria</option>
+                <option value="Niue" rel="three">Niue</option>
+                <option value="Norfolk Island" rel="three">Norfolk Island</option>
+                <option value="Northern Mariana Islands" rel="three">Northern Mariana Islands</option>
+                <option value="Norway" rel="three">Norway</option>
+                <option value="Oman" rel="three">Oman</option>
+                <option value="Pakistan" rel="three">Pakistan</option>
+                <option value="Palau" rel="three">Palau</option>
+                <option value="Palestinian Territory, Occupied" rel="three">Palestinian Territory, Occupied</option>
+                <option value="Panama" rel="three">Panama</option>
+                <option value="Papua New Guinea" rel="three">Papua New Guinea</option>
+                <option value="Paraguay" rel="three">Paraguay</option>
+                <option value="Peru" rel="three">Peru</option>
+                <option value="Philippines" rel="three">Philippines</option>
+                <option value="Pitcairn" rel="three">Pitcairn</option>
+                <option value="Poland" rel="three">Poland</option>
+                <option value="Portugal" rel="three">Portugal</option>
+                <option value="Puerto Rico" rel="three">Puerto Rico</option>
+                <option value="Qatar" rel="three">Qatar</option>
+                <option value="Reunion" rel="three">Reunion</option>
+                <option value="Romania" rel="three">Romania</option>
+                <option value="Russian Federation" rel="three">Russian Federation</option>
+                <option value="Rwanda" rel="three">Rwanda</option>
+                <option value="Saint Helena" rel="three">Saint Helena</option>
+                <option value="Saint Kitts and Nevis" rel="three">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia" rel="three">Saint Lucia</option>
+                <option value="Saint Pierre and Miquelon" rel="three">Saint Pierre and Miquelon</option>
+                <option value="Saint Vincent and The Grenadines" rel="three">Saint Vincent and The Grenadines</option>
+                <option value="Samoa" rel="three">Samoa</option>
+                <option value="San Marino" rel="three">San Marino</option>
+                <option value="Sao Tome and Principe" rel="three">Sao Tome and Principe</option>
+                <option value="Saudi Arabia" rel="three">Saudi Arabia</option>
+                <option value="Senegal" rel="three">Senegal</option>
+                <option value="Serbia" rel="three">Serbia</option>
+                <option value="Seychelles" rel="three">Seychelles</option>
+                <option value="Sierra Leone" rel="three">Sierra Leone</option>
+                <option value="Singapore" rel="three">Singapore</option>
+                <option value="Slovakia" rel="three">Slovakia</option>
+                <option value="Slovenia" rel="three">Slovenia</option>
+                <option value="Solomon Islands" rel="three">Solomon Islands</option>
+                <option value="Somalia" rel="three">Somalia</option>
+                <option value="South Africa" rel="three">South Africa</option>
+                <option value="South Georgia and The South Sandwich Islands" rel="three">South Georgia and The South Sandwich Islands</option>
+                <option value="Spain" rel="three">Spain</option>
+                <option value="Sri Lanka" rel="three">Sri Lanka</option>
+                <option value="Sudan" rel="three">Sudan</option>
+                <option value="Suriname" rel="three">Suriname</option>
+                <option value="Svalbard and Jan Mayen" rel="three">Svalbard and Jan Mayen</option>
+                <option value="Swaziland" rel="three">Swaziland</option>
+                <option value="Sweden" rel="three">Sweden</option>
+                <option value="Switzerland" rel="three">Switzerland</option>
+                <option value="Syrian Arab Republic" rel="three">Syrian Arab Republic</option>
+                <option value="Taiwan" rel="three">Taiwan</option>
+                <option value="Tajikistan" rel="three">Tajikistan</option>
+                <option value="Tanzania, United Republic of" rel="three">Tanzania, United Republic of</option>
+                <option value="Thailand" rel="three">Thailand</option>
+                <option value="Timor-leste" rel="three">Timor-leste</option>
+                <option value="Togo" rel="three">Togo</option>
+                <option value="Tokelau" rel="three">Tokelau</option>
+                <option value="Tonga" rel="three">Tonga</option>
+                <option value="Trinidad and Tobago" rel="three">Trinidad and Tobago</option>
+                <option value="Tunisia" rel="three">Tunisia</option>
+                <option value="Turkey" rel="three">Turkey</option>
+                <option value="Turkmenistan" rel="three">Turkmenistan</option>
+                <option value="Turks and Caicos Islands" rel="three">Turks and Caicos Islands</option>
+                <option value="Tuvalu" rel="three">Tuvalu</option>
+                <option value="Uganda" rel="three">Uganda</option>
+                <option value="Ukraine" rel="three">Ukraine</option>
+                <option value="United Arab Emirates" rel="three">United Arab Emirates</option>
+                <option value="United Kingdom" rel="three">United Kingdom</option>
+                <option value="United States" rel="two">United States</option>
+                <option value="United States Minor Outlying Islands" rel="three">United States Minor Outlying Islands</option>
+                <option value="Uruguay" rel="three">Uruguay</option>
+                <option value="Uzbekistan" rel="three">Uzbekistan</option>
+                <option value="Vanuatu" rel="three">Vanuatu</option>
+                <option value="Venezuela" rel="three">Venezuela</option>
+                <option value="Viet Nam" rel="three">Viet Nam</option>
+                <option value="Virgin Islands, British" rel="three">Virgin Islands, British</option>
+                <option value="Virgin Islands, U.S." rel="three">Virgin Islands, U.S.</option>
+                <option value="Wallis and Futuna" rel="three">Wallis and Futuna</option>
+                <option value="Western Sahara" rel="three">Western Sahara</option>
+                <option value="Yemen" rel="three">Yemen</option>
+                <option value="Zambia" rel="three">Zambia</option>
+                <option value="Zimbabwe" rel="three">Zimbabwe</option>
+                    </select>
+
+
+                    <br>
+                    <br>
+
+                <!--License State and Province-->
+                    <label for="form-licstate2">State/Province: <span class="astrick">*</span></label><br>
+                    <select id="form-licstate2" name="licstate2" class="cascade" required >
+                            <option value="-1">Select</option>
+                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value="oth"></option>
+                            <option class="two" value = "NULL"> Select</option>
+                            <option value="AK" class="two">Alaska</option>
+                            <option value="AL" class ="two">Alabama</option>
+                            <option value="AR" class ="two">Arkansas</option>
+                            <option value="AZ" class ="two">Arizona</option>
+                            <option value="CA" class ="two">California</option>
+                            <option value="CO" class ="two">Colorado</option>
+                            <option value="CT" class ="two">Connecticut</option>
+                            <option value="DC" class ="two">District of Columbia</option>
+                            <option value="DE" class ="two">Delaware</option>
+                            <option value="FL" class ="two">Florida</option>
+                            <option value="GA" class ="two">Georgia</option>
+                            <option value="HI" class ="two">Hawaii</option>
+                            <option value="IA" class ="two">Iowa</option>
+                            <option value="ID" class ="two">Idaho</option>
+                            <option value="IL" class ="two">Illinois</option>
+                            <option value="IN" class ="two">Indiana</option>
+                            <option value="KS" class ="two">Kansas</option>
+                            <option value="KY" class ="two">Kentucky</option>
+                            <option value="LA" class ="two">Louisiana</option>
+                            <option value="MA" class ="two">Massachusetts</option>
+                            <option value="MD" class ="two">Maryland</option>
+                            <option value="ME" class ="two">Maine</option>
+                            <option value="MI" class ="two">Michigan</option>
+                            <option value="MN" class ="two">Minnesota</option>
+                            <option value="MO" class ="two">Missouri</option>
+                            <option value="MS" class ="two">Mississippi</option>
+                            <option value="MT" class ="two">Montana</option>
+                            <option value="NC" class ="two">North Carolina</option>
+                            <option value="ND" class ="two">North Dakota</option>
+                            <option value="NE" class ="two">Nebraska</option>
+                            <option value="NH" class ="two">New Hampshire</option>
+                            <option value="NJ" class ="two">New Jersey</option>
+                            <option value="NM" class ="two">New Mexico</option>
+                            <option value="NV" class ="two">Nevada</option>
+                            <option value="NY" class ="two">New York</option>
+                            <option value="OH" class ="two">Ohio</option>
+                            <option value="OK" class ="two">Oklahoma</option>
+                            <option value="OR" class ="two">Oregon</option>
+                            <option value="PA" class ="two">Pennsylvania</option>
+                            <option value="PR" class ="two">Puerto Rico</option>
+                            <option value="RI" class ="two">Rhode Island</option>
+                            <option value="SC" class ="two">South Carolina</option>
+                            <option value="SD" class ="two">South Dakota</option>
+                            <option value="TN" class ="two">Tennessee</option>
+                            <option value="TX" class ="two">Texas</option>
+                            <option value="UT" class ="two">Utah</option>
+                            <option value="VA" class ="two">Virginia</option>
+                            <option value="VT" class ="two">Vermont</option>
+                            <option value="WA" class ="two">Washington</option>
+                            <option value="WI" class ="two">Wisconsin</option>
+                            <option value="WV" class ="two">West Virginia</option>
+                            <option value="WY" class ="two">Wyoming</option>
+                            <option class="one" value = "NULL"> Select</option>    
+                            <option value="AB" class ="one">Alberta</option>
+                            <option value="BC" class ="one">British Columbia</option>
+                            <option value="MB" class ="one">Manitoba</option>
+                            <option value="NB" class ="one">New Brunswick</option>
+                            <option value="NF" class ="one">Newfoundland</option>
+                            <option value="NT" class ="one">Northwest Territories</option>
+                            <option value="NS" class ="one">Nova Scotia</option>
+                            <option value="NU" class ="one">Nunavut</option>
+                            <option value="ON" class ="one">Ontario</option>
+                            <option value="PE" class ="one">Prince Edward Island</option>
+                            <option value="QC" class ="one">Quebec</option>
+                            <option value="SK" class ="one">Saskatchewan</option>
+                            <option value="YT" class ="one">Yukon Territory</option>
+
+                    </select>
+                    
+                    <!--Script for Cascading dropdown of Country and State/Province-->
+                    <script>
+                        $(document).ready(function(){
+                            var $cat = $('select[name=liccountry2]'),
+                             $items = $('select[name=licstate2]');
+
+                         $cat.change(function(){
+        
+                        var $this = $(this).find(':selected'),
+                          rel = $this.attr('rel');
+                
+                       // Hide all
+                          $items.find("option").hide();
+          
+                               // Find all matching accessories
+                            // Show all the correct accesories
+                            // Select the first accesory
+                             $set = $items.find('option.' + rel);
+                               $set.show().first().prop('selected', true);
+        
+                            });
+                        });
+
+                    </script>
+
+
+                    <br>
+                    <br>
+
+                    <!--License Expiration-->
+                    <label for="form-licexp2">License Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licexp2" name="licexp2" placeholder = "mm/dd/yyyy" required>
+
+                    <br>
+                    <br>
+
+                    <!--Physical Expiration-->
+                    <label for="form-licexp2">Physical Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licphexp2" name="licphexp2" placeholder = "mm/dd/yyyy" required>
+
+                    <br>
+                    <br>
+
+                    <!--Is this your current driver license?-->
+                    <p> Is this your current driver license? <span class="astrick">*</span></p>
+                    <div class="currentlic2 required">
+                    <input type="checkbox" id="currentlic2" name="currentlic2" value="yes" required>
+                    <label for="Yes"> Yes </label>
+                    <br>
+                    <input type="checkbox" id="currentlic2" name="currentlic2" value="no">
+                    <label for="No"> No </label>
+                    </div>
+                    <br>
+                    <br>
+
+                    <!--Is this your commercial driver license-->
+                    <p> Is this your commercial driver license? <span class="astrick">*</span></p>
+                    <div class="commlic2 required">
+                    <input type="checkbox" id="commlic2" name="commlic2" value="yes" required>
+                    <label for="Yes"> Yes </label>
+                    <br>
+                    <input type="checkbox" id="commlic2" name="commlic2" value="no">
+                    <label for="No"> No </label>
+                    </div>
+
+
+                    <br>
+                    <br>
+
+                    <label for="form-licclass2">License Class<span class="astrick">*</span></label><br>	
+                    <select name="licclass2" id = "licclass2" required>
+                     <option value=""></option>
+                     <option value="class a" >Class A</options>
+                     <option value="class az" >Class AZ</options>
+                     <option value="class b" >Class B</options>
+                     <option value="class c">Class C</option>
+                     <option value="class d" >Class D</options>
+                     <option value="class e" >Class E</options>
+                     <option value="class f" >Class F</options>
+                     <option value="class o" >Class O</options>
+                     <option value="class r" >Class R</options>
+                     <option value="class 1" >Class 1</options>
+                     <option value="class 2" >Class 2</options>
+                     <option value="class 3" >Class 3</options>
+                     <option value="class 4" >Class 4</options>
+                     <option value="class 5" >Class 5</options>
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <!--Endorsements-->
+                    <p>Endorsements</p>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="None" >
+                    <label for="None"> None </label>
+                    <br>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Other">
+                    <label for="Other"> Other </label>
+                    <br>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Tanker">
+                    <label for="Tanker"> Tanker </label>
+                    <br>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Doubles">
+                    <label for="Doubles/Triples"> Doubles / Triples </label>
+                    <br>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="XEndorsement">
+                    <label for="XEndorsement"> X Endorsement </label>
+                    <br>
+                    <input type="checkbox" id="endorsements2" name="endorsements2" value="HazMat">
+                    <label for="HazMat"> HazMat </label>
+
+
+
+                    <!--Do you own a third license-->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>If you have another license that you would like to enter please click the Expand button, otherwise you are free to move on to the next page.</span>
+                        <div class ="license3 required">
+                        <input name="collapseGroup3" type="checkbox" value="yes"/> Expand
+                        </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <hr>
+                                <h2> 3rd License Details</h2>
+                    <hr>
+
+                    <!--License Number-->
+                    <label for="form-licenseNum3"> License Number <span class="astrick">*</span> </label><br>
+                    <input type="text" name="licenseNum3" id="form-licenseNum3" required>
+
+                    <br>
+                    <br>
+
+                    <!--Country-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                       
+
+                    <label for="form-liccountry3">Country <span class="astrick">*</span></label><br>
+                    <select name="liccountry3" id = "form-liccountry3" required>
+                        <option value="-1">Select</option>
+                        <option value="Afghanistan" rel="three">Afghanistan</option>
+                   <option value="Åland Islands" rel="three">Åland Islands</option>
+                <option value="Albania" rel="three">Albania</option>
+                <option value="Algeria" rel="three">Algeria</option>
+                <option value="American Samoa" rel="three">American Samoa</option>
+                <option value="Andorra" rel="three">Andorra</option>
+                <option value="Angola" rel="three">Angola</option>
+                <option value="Anguilla" rel="three">Anguilla</option>
+                <option value="Antarctica" rel="three">Antarctica</option>
+                <option value="Antigua and Barbuda" rel="three">Antigua and Barbuda</option>
+                <option value="Argentina" rel="three">Argentina</option>
+                <option value="Armenia" rel="three">Armenia</option>
+                <option value="Aruba" rel="three">Aruba</option>
+                <option value="Australia" rel="three">Australia</option>
+                <option value="Austria" rel="three">Austria</option>
+                <option value="Azerbaijan" rel="three">Azerbaijan</option>
+                <option value="Bahamas" rel="three">Bahamas</option>
+                <option value="Bahrain" rel="three">Bahrain</option>
+                <option value="Bangladesh" rel="three">Bangladesh</option>
+                <option value="Barbados" rel="three">Barbados</option>
+                <option value="Belarus" rel="three">Belarus</option>
+                <option value="Belgium" rel="three">Belgium</option>
+                <option value="Belize" rel="three">Belize</option>
+                <option value="Benin" rel="three">Benin</option>
+                <option value="Bermuda" rel="three">Bermuda</option>
+                <option value="Bhutan" rel="three">Bhutan</option>
+                <option value="Bolivia" rel="three">Bolivia</option>
+                <option value="Bosnia and Herzegovina" rel="three">Bosnia and Herzegovina</option>
+                <option value="Botswana" rel="three">Botswana</option>
+                <option value="Bouvet Island" rel="three">Bouvet Island</option>
+                <option value="Brazil" rel="three">Brazil</option>
+                <option value="British Indian Ocean Territory" rel="three">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam" rel="three">Brunei Darussalam</option>
+                <option value="Bulgaria" rel="three">Bulgaria</option>
+                <option value="Burkina Faso" rel="three">Burkina Faso</option>
+                <option value="Burundi" rel="three">Burundi</option>
+                <option value="Cambodia" rel="three">Cambodia</option>
+                <option value="Cameroon" rel="three">Cameroon</option>
+                <option value="Canada" rel="one">Canada</option>
+                <option value="Cape Verde" rel="three">Cape Verde</option>
+                <option value="Cayman Islands" rel="three">Cayman Islands</option>
+                <option value="Central African Republic" rel="three">Central African Republic</option>
+                <option value="Chad" rel="three">Chad</option>
+                <option value="Chile" rel="three">Chile</option>
+                <option value="China" rel="three">China</option>
+                <option value="Christmas Island" rel="three">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands" rel="three">Cocos (Keeling) Islands</option>
+                <option value="Colombia" rel="three">Colombia</option>
+                <option value="Comoros" rel="three">Comoros</option>
+                <option value="Congo" rel="three">Congo</option>
+                <option value="Congo, The Democratic Republic of The" rel="three">Congo, The Democratic Republic of The</option>
+                <option value="Cook Islands" rel="three">Cook Islands</option>
+                <option value="Costa Rica" rel="three">Costa Rica</option>
+                <option value="Cote D'ivoire" rel="three">Cote D'ivoire</option>
+                <option value="Croatia" rel="three">Croatia</option>
+                <option value="Cuba" rel="three">Cuba</option>
+                <option value="Cyprus" rel="three">Cyprus</option>
+                <option value="Czech Republic" rel="three">Czech Republic</option>
+                <option value="Denmark" rel="three">Denmark</option>
+                <option value="Djibouti" rel="three">Djibouti</option>
+                <option value="Dominica" rel="three">Dominica</option>
+                <option value="Dominican Republic" rel="three">Dominican Republic</option>
+                <option value="Ecuador" rel="three">Ecuador</option>
+                <option value="Egypt" rel="three">Egypt</option>
+                <option value="El Salvador" rel="three">El Salvador</option>
+                <option value="Equatorial Guinea" rel="three">Equatorial Guinea</option>
+                <option value="Eritrea" rel="three">Eritrea</option>
+                <option value="Estonia" rel="three">Estonia</option>
+                <option value="Ethiopia" rel="three">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)" rel="three">Falkland Islands (Malvinas)</option>
+                <option value="Faroe Islands" rel="three">Faroe Islands</option>
+                <option value="Fiji" rel="three">Fiji</option>
+                <option value="Finland" rel="three">Finland</option>
+                <option value="France" rel="three">France</option>
+                <option value="French Guiana" rel="three">French Guiana</option>
+                <option value="French Polynesia" rel="three">French Polynesia</option>
+                <option value="French Southern Territories" rel="three">French Southern Territories</option>
+                <option value="Gabon" rel="three">Gabon</option>
+                <option value="Gambia" rel="three">Gambia</option>
+                <option value="Georgia" rel="three">Georgia</option>
+                <option value="Germany" rel="three">Germany</option>
+                <option value="Ghana" rel="three">Ghana</option>
+                <option value="Gibraltar" rel="three">Gibraltar</option>
+                <option value="Greece" rel="three">Greece</option>
+                <option value="Greenland" rel="three">Greenland</option>
+                <option value="Grenada" rel="three">Grenada</option>
+                <option value="Guadeloupe"rel="three">Guadeloupe</option>
+                <option value="Guam" rel="three">Guam</option>
+                <option value="Guatemala" rel="three">Guatemala</option>
+                <option value="Guernsey" rel="three">Guernsey</option>
+                <option value="Guinea" rel="three">Guinea</option>
+                <option value="Guinea-bissau" rel="three">Guinea-bissau</option>
+                <option value="Guyana" rel="three">Guyana</option>
+                <option value="Haiti" rel="three">Haiti</option>
+                <option value="Heard Island and Mcdonald Islands" rel="three">Heard Island and Mcdonald Islands</option>
+                <option value="Holy See (Vatican City State)" rel="three">Holy See (Vatican City State)</option>
+                <option value="Honduras" rel="three">Honduras</option>
+                <option value="Hong Kong" rel="three">Hong Kong</option>
+                <option value="Hungary" rel="three">Hungary</option>
+                <option value="Iceland" rel="three">Iceland</option>
+                <option value="India" rel="three">India</option>
+                <option value="Indonesia" rel="three">Indonesia</option>
+                <option value="Iran, Islamic Republic of" rel="three">Iran, Islamic Republic of</option>
+                <option value="Iraq" rel="three">Iraq</option>
+                <option value="Ireland" rel="three">Ireland</option>
+                <option value="Isle of Man" rel="three">Isle of Man</option>
+                <option value="Israel" rel="three">Israel</option>
+                <option value="Italy" rel="three">Italy</option>
+                <option value="Jamaica" rel="three">Jamaica</option>
+                <option value="Japan" rel="three">Japan</option>
+                <option value="Jersey" rel="three">Jersey</option>
+                <option value="Jordan" rel="three">Jordan</option>
+                <option value="Kazakhstan" rel="three">Kazakhstan</option>
+                <option value="Kenya" rel="three">Kenya</option>
+                <option value="Kiribati" rel="three">Kiribati</option>
+                <option value="Korea, Democratic People's Republic of" rel="three">Korea, Democratic People's Republic of</option>
+                <option value="Korea, Republic of" rel="three">Korea, Republic of</option>
+                <option value="Kuwait" rel="three">Kuwait</option>
+                <option value="Kyrgyzstan" rel="three">Kyrgyzstan</option>
+                <option value="Lao People's Democratic Republic" rel="three">Lao People's Democratic Republic</option>
+                <option value="Latvia" rel="three">Latvia</option>
+                <option value="Lebanon" rel="three">Lebanon</option>
+                <option value="Lesotho" rel="three">Lesotho</option>
+                <option value="Liberia" rel="three">Liberia</option>
+                <option value="Libyan Arab Jamahiriya" rel="three">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein" rel="three">Liechtenstein</option>
+                <option value="Lithuania" rel="three">Lithuania</option>
+                <option value="Luxembourg" rel="three">Luxembourg</option>
+                <option value="Macao" rel="three">Macao</option>
+                <option value="Macedonia, The Former Yugoslav Republic of" rel="three">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Madagascar" rel="three">Madagascar</option>
+                <option value="Malawi" rel="three">Malawi</option>
+                <option value="Malaysia" rel="three">Malaysia</option>
+                <option value="Maldives" rel="three">Maldives</option>
+                <option value="Mali" rel="three">Mali</option>
+                <option value="Malta" rel="three">Malta</option>
+                <option value="Marshall Islands" rel="three">Marshall Islands</option>
+                <option value="Martinique" rel="three">Martinique</option>
+                <option value="Mauritania" rel="three">Mauritania</option>
+                <option value="Mauritius" rel="three">Mauritius</option>
+                <option value="Mayotte" rel="three">Mayotte</option>
+                <option value="Mexico" rel="three">Mexico</option>
+                <option value="Micronesia, Federated States of" rel="three">Micronesia, Federated States of</option>
+                <option value="Moldova, Republic of" rel="three">Moldova, Republic of</option>
+                <option value="Monaco" rel="three">Monaco</option>
+                <option value="Mongolia" rel="three">Mongolia</option>
+                <option value="Montenegro" rel="three">Montenegro</option>
+                <option value="Montserrat" rel="three">Montserrat</option>
+                <option value="Morocco" rel="three">Morocco</option>
+                <option value="Mozambique" rel="three">Mozambique</option>
+                <option value="Myanmar" rel="three">Myanmar</option>
+                <option value="Namibia" rel="three">Namibia</option>
+                <option value="Nauru" rel="three">Nauru</option>
+                <option value="Nepal" rel="three">Nepal</option>
+                <option value="Netherlands" rel="three">Netherlands</option>
+                <option value="Netherlands Antilles" rel="three">Netherlands Antilles</option>
+                <option value="New Caledonia" rel="three">New Caledonia</option>
+                <option value="New Zealand" rel="three">New Zealand</option>
+                <option value="Nicaragua" rel="three">Nicaragua</option>
+                <option value="Niger" rel="three">Niger</option>
+                <option value="Nigeria" rel="three">Nigeria</option>
+                <option value="Niue" rel="three">Niue</option>
+                <option value="Norfolk Island" rel="three">Norfolk Island</option>
+                <option value="Northern Mariana Islands" rel="three">Northern Mariana Islands</option>
+                <option value="Norway" rel="three">Norway</option>
+                <option value="Oman" rel="three">Oman</option>
+                <option value="Pakistan" rel="three">Pakistan</option>
+                <option value="Palau" rel="three">Palau</option>
+                <option value="Palestinian Territory, Occupied" rel="three">Palestinian Territory, Occupied</option>
+                <option value="Panama" rel="three">Panama</option>
+                <option value="Papua New Guinea" rel="three">Papua New Guinea</option>
+                <option value="Paraguay" rel="three">Paraguay</option>
+                <option value="Peru" rel="three">Peru</option>
+                <option value="Philippines" rel="three">Philippines</option>
+                <option value="Pitcairn" rel="three">Pitcairn</option>
+                <option value="Poland" rel="three">Poland</option>
+                <option value="Portugal" rel="three">Portugal</option>
+                <option value="Puerto Rico" rel="three">Puerto Rico</option>
+                <option value="Qatar" rel="three">Qatar</option>
+                <option value="Reunion" rel="three">Reunion</option>
+                <option value="Romania" rel="three">Romania</option>
+                <option value="Russian Federation" rel="three">Russian Federation</option>
+                <option value="Rwanda" rel="three">Rwanda</option>
+                <option value="Saint Helena" rel="three">Saint Helena</option>
+                <option value="Saint Kitts and Nevis" rel="three">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia" rel="three">Saint Lucia</option>
+                <option value="Saint Pierre and Miquelon" rel="three">Saint Pierre and Miquelon</option>
+                <option value="Saint Vincent and The Grenadines" rel="three">Saint Vincent and The Grenadines</option>
+                <option value="Samoa" rel="three">Samoa</option>
+                <option value="San Marino" rel="three">San Marino</option>
+                <option value="Sao Tome and Principe" rel="three">Sao Tome and Principe</option>
+                <option value="Saudi Arabia" rel="three">Saudi Arabia</option>
+                <option value="Senegal" rel="three">Senegal</option>
+                <option value="Serbia" rel="three">Serbia</option>
+                <option value="Seychelles" rel="three">Seychelles</option>
+                <option value="Sierra Leone" rel="three">Sierra Leone</option>
+                <option value="Singapore" rel="three">Singapore</option>
+                <option value="Slovakia" rel="three">Slovakia</option>
+                <option value="Slovenia" rel="three">Slovenia</option>
+                <option value="Solomon Islands" rel="three">Solomon Islands</option>
+                <option value="Somalia" rel="three">Somalia</option>
+                <option value="South Africa" rel="three">South Africa</option>
+                <option value="South Georgia and The South Sandwich Islands" rel="three">South Georgia and The South Sandwich Islands</option>
+                <option value="Spain" rel="three">Spain</option>
+                <option value="Sri Lanka" rel="three">Sri Lanka</option>
+                <option value="Sudan" rel="three">Sudan</option>
+                <option value="Suriname" rel="three">Suriname</option>
+                <option value="Svalbard and Jan Mayen" rel="three">Svalbard and Jan Mayen</option>
+                <option value="Swaziland" rel="three">Swaziland</option>
+                <option value="Sweden" rel="three">Sweden</option>
+                <option value="Switzerland" rel="three">Switzerland</option>
+                <option value="Syrian Arab Republic" rel="three">Syrian Arab Republic</option>
+                <option value="Taiwan" rel="three">Taiwan</option>
+                <option value="Tajikistan" rel="three">Tajikistan</option>
+                <option value="Tanzania, United Republic of" rel="three">Tanzania, United Republic of</option>
+                <option value="Thailand" rel="three">Thailand</option>
+                <option value="Timor-leste" rel="three">Timor-leste</option>
+                <option value="Togo" rel="three">Togo</option>
+                <option value="Tokelau" rel="three">Tokelau</option>
+                <option value="Tonga" rel="three">Tonga</option>
+                <option value="Trinidad and Tobago" rel="three">Trinidad and Tobago</option>
+                <option value="Tunisia" rel="three">Tunisia</option>
+                <option value="Turkey" rel="three">Turkey</option>
+                <option value="Turkmenistan" rel="three">Turkmenistan</option>
+                <option value="Turks and Caicos Islands" rel="three">Turks and Caicos Islands</option>
+                <option value="Tuvalu" rel="three">Tuvalu</option>
+                <option value="Uganda" rel="three">Uganda</option>
+                <option value="Ukraine" rel="three">Ukraine</option>
+                <option value="United Arab Emirates" rel="three">United Arab Emirates</option>
+                <option value="United Kingdom" rel="three">United Kingdom</option>
+                <option value="United States" rel="two">United States</option>
+                <option value="United States Minor Outlying Islands" rel="three">United States Minor Outlying Islands</option>
+                <option value="Uruguay" rel="three">Uruguay</option>
+                <option value="Uzbekistan" rel="three">Uzbekistan</option>
+                <option value="Vanuatu" rel="three">Vanuatu</option>
+                <option value="Venezuela" rel="three">Venezuela</option>
+                <option value="Viet Nam" rel="three">Viet Nam</option>
+                <option value="Virgin Islands, British" rel="three">Virgin Islands, British</option>
+                <option value="Virgin Islands, U.S." rel="three">Virgin Islands, U.S.</option>
+                <option value="Wallis and Futuna" rel="three">Wallis and Futuna</option>
+                <option value="Western Sahara" rel="three">Western Sahara</option>
+                <option value="Yemen" rel="three">Yemen</option>
+                <option value="Zambia" rel="three">Zambia</option>
+                <option value="Zimbabwe" rel="three">Zimbabwe</option>
+                    </select>
+
+
+                    <br>
+                    <br>
+
+                <!--License State and Province-->
+                    <label for="form-licstate3">State/Province: <span class="astrick">*</span></label><br>
+                    <select id="form-licstate3" name="licstate3" class="cascade" required >
+                            <option value="-1">Select</option>
+                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value="oth"></option>
+                            <option class="two" value = "NULL"> Select</option>
+                            <option value="AK" class="two">Alaska</option>
+                            <option value="AL" class ="two">Alabama</option>
+                            <option value="AR" class ="two">Arkansas</option>
+                            <option value="AZ" class ="two">Arizona</option>
+                            <option value="CA" class ="two">California</option>
+                            <option value="CO" class ="two">Colorado</option>
+                            <option value="CT" class ="two">Connecticut</option>
+                            <option value="DC" class ="two">District of Columbia</option>
+                            <option value="DE" class ="two">Delaware</option>
+                            <option value="FL" class ="two">Florida</option>
+                            <option value="GA" class ="two">Georgia</option>
+                            <option value="HI" class ="two">Hawaii</option>
+                            <option value="IA" class ="two">Iowa</option>
+                            <option value="ID" class ="two">Idaho</option>
+                            <option value="IL" class ="two">Illinois</option>
+                            <option value="IN" class ="two">Indiana</option>
+                            <option value="KS" class ="two">Kansas</option>
+                            <option value="KY" class ="two">Kentucky</option>
+                            <option value="LA" class ="two">Louisiana</option>
+                            <option value="MA" class ="two">Massachusetts</option>
+                            <option value="MD" class ="two">Maryland</option>
+                            <option value="ME" class ="two">Maine</option>
+                            <option value="MI" class ="two">Michigan</option>
+                            <option value="MN" class ="two">Minnesota</option>
+                            <option value="MO" class ="two">Missouri</option>
+                            <option value="MS" class ="two">Mississippi</option>
+                            <option value="MT" class ="two">Montana</option>
+                            <option value="NC" class ="two">North Carolina</option>
+                            <option value="ND" class ="two">North Dakota</option>
+                            <option value="NE" class ="two">Nebraska</option>
+                            <option value="NH" class ="two">New Hampshire</option>
+                            <option value="NJ" class ="two">New Jersey</option>
+                            <option value="NM" class ="two">New Mexico</option>
+                            <option value="NV" class ="two">Nevada</option>
+                            <option value="NY" class ="two">New York</option>
+                            <option value="OH" class ="two">Ohio</option>
+                            <option value="OK" class ="two">Oklahoma</option>
+                            <option value="OR" class ="two">Oregon</option>
+                            <option value="PA" class ="two">Pennsylvania</option>
+                            <option value="PR" class ="two">Puerto Rico</option>
+                            <option value="RI" class ="two">Rhode Island</option>
+                            <option value="SC" class ="two">South Carolina</option>
+                            <option value="SD" class ="two">South Dakota</option>
+                            <option value="TN" class ="two">Tennessee</option>
+                            <option value="TX" class ="two">Texas</option>
+                            <option value="UT" class ="two">Utah</option>
+                            <option value="VA" class ="two">Virginia</option>
+                            <option value="VT" class ="two">Vermont</option>
+                            <option value="WA" class ="two">Washington</option>
+                            <option value="WI" class ="two">Wisconsin</option>
+                            <option value="WV" class ="two">West Virginia</option>
+                            <option value="WY" class ="two">Wyoming</option>
+                            <option class="one" value = "NULL"> Select</option>    
+                            <option value="AB" class ="one">Alberta</option>
+                            <option value="BC" class ="one">British Columbia</option>
+                            <option value="MB" class ="one">Manitoba</option>
+                            <option value="NB" class ="one">New Brunswick</option>
+                            <option value="NF" class ="one">Newfoundland</option>
+                            <option value="NT" class ="one">Northwest Territories</option>
+                            <option value="NS" class ="one">Nova Scotia</option>
+                            <option value="NU" class ="one">Nunavut</option>
+                            <option value="ON" class ="one">Ontario</option>
+                            <option value="PE" class ="one">Prince Edward Island</option>
+                            <option value="QC" class ="one">Quebec</option>
+                            <option value="SK" class ="one">Saskatchewan</option>
+                            <option value="YT" class ="one">Yukon Territory</option>
+
+                    </select>
+                    
+                    <!--Script for Cascading dropdown of Country and State/Province-->
+                    <script>
+                        $(document).ready(function(){
+                            var $cat = $('select[name=liccountry3]'),
+                             $items = $('select[name=licstate3]');
+
+                         $cat.change(function(){
+        
+                        var $this = $(this).find(':selected'),
+                          rel = $this.attr('rel');
+                
+                       // Hide all
+                          $items.find("option").hide();
+          
+                               // Find all matching accessories
+                            // Show all the correct accesories
+                            // Select the first accesory
+                             $set = $items.find('option.' + rel);
+                               $set.show().first().prop('selected', true);
+        
+                            });
+                        });
+
+                    </script>
+
+
+                    <br>
+                    <br>
+
+                    <!--License Expiration-->
+                    <label for="form-licexp3">License Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licexp3" name="licexp3" placeholder = "mm/dd/yyyy" required>
+
+                    <br>
+                    <br>
+
+                    <!--Physical Expiration-->
+                    <label for="form-licexp3">Physical Expiration: <span class="astrick">*</span> </label>
+                    <input type="text" id="form-licphexp3" name="licphexp3" placeholder = "mm/dd/yyyy" required>
+
+                    <br>
+                    <br>
+
+                    <!--Is this your current driver license?-->
+                    <p> Is this your current driver license? <span class="astrick">*</span></p>
+                    <div class = "currentlic3 required">
+                    <input type="checkbox" id="currentlic3" name="currentlic3" value="yes" required>
+                    <label for="Yes"> Yes </label>
+                    <br>
+                    <input type="checkbox" id="currentlic3" name="currentlic3" value="no">
+                    <label for="No"> No </label>
+                    </div>
+                    <br>
+                    <br>
+
+                    <!--Is this your commercial driver license-->
+                    <p> Is this your commercial driver license? <span class="astrick">*</span></p>
+                    <div class="commlic3 requied">
+                    <input type="checkbox" id="commlic3" name="commlic3" value="yes" required>
+                    <label for="Yes"> Yes </label>
+                    <br>
+                    <input type="checkbox" id="commlic3" name="commlic3" value="no">
+                    <label for="No"> No </label>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <label for="form-licclass3">License Class<span class="astrick">*</span></label><br>	
+                    <select name="licclass3" id = "licclass3" required>
+                     <option value=""></option>
+                     <option value="class a" >Class A</options>
+                     <option value="class az" >Class AZ</options>
+                     <option value="class b" >Class B</options>
+                     <option value="class c">Class C</option>
+                     <option value="class d" >Class D</options>
+                     <option value="class e" >Class E</options>
+                     <option value="class f" >Class F</options>
+                     <option value="class o" >Class O</options>
+                     <option value="class r" >Class R</options>
+                     <option value="class 1" >Class 1</options>
+                     <option value="class 2" >Class 2</options>
+                     <option value="class 3" >Class 3</options>
+                     <option value="class 4" >Class 4</options>
+                     <option value="class 5" >Class 5</options>
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <!--Endorsements-->
+                    <p>Endorsements</p>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="None" >
+                    <label for="None"> None </label>
+                    <br>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Other">
+                    <label for="Other"> Other </label>
+                    <br>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Tanker">
+                    <label for="Tanker"> Tanker </label>
+                    <br>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Doubles">
+                    <label for="Doubles/Triples"> Doubles / Triples </label>
+                    <br>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="XEndorsement">
+                    <label for="XEndorsement"> X Endorsement </label>
+                    <br>
+                    <input type="checkbox" id="endorsements3" name="endorsements3" value="HazMat">
+                    <label for="HazMat"> HazMat </label>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
+
+                <script>
+                    $('[name="collapseGroup3"]').on('change', function(){  
+                    if($(this).val()  === "yes"){
+                       $('#collapseThree').collapse('show')
+                     }else{
+                        $('#collapseThree').collapse('hide')
+                      }
+                      });
+                </script>
+
                 
 
-                <br>
-                <br>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
 
+                <script>
+                    $('[name="collapseGroup2"]').on('click', function(){  
+                    if($(this).val()  === "yes"){
+                       $('#collapseTwo').collapse('show')
+                     }else{
+                        $('#collapseTwo').collapse('hide')
+                      }
+                      });
+                </script>
+
+
+
+                <br>
+                <br>
+                
+                </div>
             </div>
             <!--Back Button-->
             <a href="#four" class="Back Button"> Back</a>
             &ensp;
 
-            <!-- Next Button-->
-            <a href="#six" class="Next Button"> Next</a>
-            &ensp;
+               <!-- Next Button-->
+               <a href="#six"  class="Next Button" onclick="return requiredpg5();" > Next</a>
+               &ensp;
+
+
+            <script>
+            function requiredpg5()
+            {
+                var add = /^[a-zA-z0-9 ]*$/gm;
+                var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+              let lic = document.getElementById("form-licenseNum").value;
+              let lic2 = document.getElementById("form-liccountry").value;
+              let lic3 = document.getElementById("form-licstate").value;
+              let lic4 = document.getElementById("form-licexp").value;
+              let lic5 = document.getElementById("form-licphexp").value;
+              let lic6 = document.getElementById("currentlic").value;
+              let lic7 = document.getElementById("commlic").value;
+              let lic8 = document.getElementById("licclass").value;
+              let lic9 = document.getElementById("endorsements").value;
+              let lic10 = document.getElementById("form-licenseNum2").value;
+              let lic11 = document.getElementById("form-liccountry2").value;
+              let lic12 = document.getElementById("form-licstate2").value;
+              let lic13 = document.getElementById("form-licexp2").value;
+              let lic14 = document.getElementById("form-licphexp2").value;
+              let lic15 = document.getElementById("currentlic2").value;
+              let lic16 = document.getElementById("commlic2").value;
+              let lic17 = document.getElementById("licclass2").value;
+              let lic18 = document.getElementById("endorsements2").value;
+              let lic19 = document.getElementById("form-licenseNum3").value;
+              let lic20 = document.getElementById("form-liccountry3").value;
+              let lic21 = document.getElementById("form-licstate3").value;
+              let lic22 = document.getElementById("form-licexp3").value;
+              let lic23 = document.getElementById("form-licphexp3").value;
+              let lic24 = document.getElementById("currentlic3").value;
+              let lic25 = document.getElementById("commlic3").value;
+              let lic26 = document.getElementById("licclass3").value;
+              let lic27 = document.getElementById("endorsements3").value;
+              let lic28 = document.getElementsByName("collapseGroup2").value;
+              let lic29 = document.getElementsByName("collapseGroup3").value;
+            
+              let lic30 = $('div.currentlic.required :checkbox:checked').length > 0;
+              let lic31 =  $('div.commlic.required :checkbox:checked').length > 0;
+              let lic32 =  $('div.license2.required :checkbox:checked').length > 0;
+              let lic33 = $('div.currentlic2.required :checkbox:checked').length > 0;
+              let lic34 =  $('div.commlic2.required :checkbox:checked').length > 0;
+              let lic35 = $('div.currentlic3.required :checkbox:checked').length > 0;
+              let lic36 =  $('div.commlic3.required :checkbox:checked').length > 0;
+              let lic37 =  $('div.license3.required :checkbox:checked').length > 0;
+              
+              
+            if(lic == "" || lic2 == "" || lic3 == "" || lic4 == "" || lic5 == "" || lic30 == false || lic31 == false || lic8 == "")
+            {
+                alert("Please input a Value");
+                return false;
+            }
+            else
+            {
+                if(lic.match(add))
+                {
+                     if(lic4.match(birt))
+                     {
+                           if(lic5.match(birt))
+                           {
+                                 if(lic32 == true)
+                                 {
+                                    if(lic10 == "" || lic11 == "" || lic12 == "" || lic13 == "" || lic14 == "" || lic33 == false || lic34 == false || lic17 == "")
+                                    {
+                                        alert("Please input a Value");
+                                        return false;
+                                    }
+                                    else
+                                    {
+                                        if(lic10.match(add))
+                                        {
+                                             if(lic13.match(birt))
+                                             {
+                                                if(lic14.match(birt))
+                                                {
+                                                     if(lic37 == true)
+                                                     {
+                                                        if(lic19 == "" || lic20 == "" || lic21 == "" || lic22 == "" || lic23 == "" || lic35 == false || lic36 == false || lic26 == "")
+                                                         {
+                                                             alert("Please input a Value");
+                                                             return false;
+                                                         }
+                                                         else
+                                                         {
+                                                            if(lic19.match(add))
+                                                            {
+                                                                 if(lic22.match(birt))
+                                                                 {
+                                                                    if(lic23.match(birt))
+                                                                    {
+                                                                        return true;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        alert("The 3rd physical license expiration date is in the improper format.");
+                                                                        return false;
+                                                                    }
+                                                                 }
+                                                                 else
+                                                                 {
+                                                                    alert("The 3rd license expiration date is in the improper format.");
+                                                                    return false;
+                                                                 }
+                                                            }
+                                                            else
+                                                            {
+                                                                alert("The 3rd license number contains unaccepted characters.");
+                                                                return false;
+                                                            }
+                                                         }
+                                                     }
+                                                     else
+                                                     {
+                                                        return true;
+                                                     }
+                                                }
+                                                else
+                                                {
+                                                    alert("The 2nd physical license expiration date is in the improper format.");
+                                                    return false;
+
+                                                }
+                                             }
+                                             else
+                                             {
+                                                alert("The 2nd license expiration date is in the improper format.");
+                                                return false;
+                                             }
+                                        }
+                                        else
+                                        {
+                                            alert("The 2nd license number contains unaccepted characters.");
+                                            return false;
+                                        }
+                                    }
+                                 }
+                                 else
+                                 {
+                                    return true;
+                                 }
+                           }
+                           else
+                           {
+                              alert("This physical license expiration date is in the improper format.");
+                              return false;
+                           }
+                     }
+                     else
+                     {
+                        alert("The license expiration date is in the improper format.");
+                        return false;
+                     }
+                }
+                else
+                {
+                    alert("The license number contains unaccepted characters.");
+                    return false;
+                }
+            }
+        }
+            </script>
         </div>
 
     </div>
@@ -1616,64 +3169,213 @@
             <p></p>
         </div>
         <div class="column middle">
-
-
+      
+      
             <!--Application Starting Paragraph-->
             <div class="Application Starting Paragraph">
                 <div class="logo">
-
+      
                     <!--Picture of Company Logo-->
                     <img src="assets/extra small truck logo.png" alt="Assad Logistics Logo">
                     <div class="tab">
                         <h2>Assad Logistics</h2>
                     </div>
                 </div>
-
+      
                 <br>
                 <br>
-
-                <!--Javascript to make this picture the right one-->
+      
+                
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:35%" alt="Progress Bar 35%">35%</div>
                 </div>
-
+      
                 <br>
-                <!--Replace with email given after testing-->
                 
-
+      
                     <br>
                     <br>
                     <br>
-
+      
                     <!--Were you ever in the U.S. military?-->
-                    <p> Were you ever in the U.S. military? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
-                    <label for="Yes"> Yes </label>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <span>If you have ever served in the U.S. military please click the Expand button, otherwise you are free to move on to the next page.</span>
+                            <div class ="military required">
+                            <input name="collapseGroup4" type="checkbox" value="yes"/> Expand
+                            </div>
+                            <div class="panel-group" id="accordion">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                   
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                    <br>
+                                    <h3> U.S. Military Service</h3>
+                                     <hr>
+      
+                                     <label for="form-branchservice">Branch of Service<span class="astrick">*</span></label><br>	
+                                     <select name="branchservice" id = "branchservice" required>
+                                      <option value=""></option>
+                                      <option value="army" >Army</options>
+                                      <option value="army reserve" >Army Reserve</options>
+                                      <option value="army national guard" >Army National Guard</options>
+                                      <option value="air force">Air Force</option>
+                                      <option value="air force reserve" >Air Force Reserve</options>
+                                      <option value="air national guards" >Ait National Guards</options>
+                                      <option value="marines" >Marines</options>
+                                      <option value="marines corps reserve" >Marines Corps Reserve</options>
+                                      <option value="navy" >Navy</options>
+                                      <option value="navy reserve" >Navy Reserve</options>
+                                      <option value="coast guard" >Coast Guard</options>
+                                      <option value="coast guard reserve" >Coast Guard Reserves</options>
+                                      <option value="merchant marines" >Merchant Marines</options>
+                                      <option value="national guard" >Narional Guard</options>
+                                     </select>
+      
+      
+                                     <br>
+                                     <br>
+                 
+                                     <!--Start Date-->
+                                     <label for="form-militarystart">Start Date <span class="astrick">*</span> </label>
+                                     <input type="text" id="form-militarystart" name="militarystart" placeholder = "mm/yyyy" required>
+      
+                                     <br>
+                                     <br>
+      
+                                     <!--End Date-->
+                                     <label for="form-militaryend">End Date <span class="astrick">*</span> </label>
+                                     <input type="text" id="form-militaryend" name="militaryend" placeholder = "mm/yyyy" required>
+      
+                                     <br>
+                                     <br>
+      
+                                     <!--Rank at discharge-->
+                                    <label for="form-dischargerank"> Rank at discharge </label><br>
+                                     <input type="text" name="dischargerank" id="form-dischargerank">
+      
+                                     <br>
+                                     <br>
+      
+                                     <!--Can you obtain your DD214?-->
+                                     <div class="dd214 required">
+                                        <p> Can you obtain your DD214?</p>
+                                        <input type="checkbox" id="dd214" name="dd214" value="yes">
+                                        <label for="Yes"> Yes </label>
+                                        <br>
+                                        <input type="checkbox" id="dd214" name="dd214" value="no">
+                                        <label for="No"> No </label>
+                                        </div>
+      
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                       
+                          </div>
+                        </div>
+                      </div>
+      
+                    <script>
+                        $('[name="collapseGroup4"]').on('change', function(){  
+                        if($(this).val()  === "yes"){
+                           $('#collapseFour').collapse('show')
+                         }else{
+                            $('#collapseFour').collapse('hide')
+                          }
+                          });
+                    </script>
+      
                     <br>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
-                    <label for="No"> No </label>
-
                     <br>
-                    <br>
-
-
-
+      
+      
+      
              
-
+      
                 <br>
                 <br>
-
+      
             </div>
             <!--Back Button-->
             <a href="#five" class="Back Button"> Back</a>
             &ensp;
-
-            <!-- Next Button-->
-            <a href="#seven" class="Next Button"> Next</a>
-            &ensp;
+      
+          <!-- Next Button-->
+          <a href="#seven"  class="Next Button" onclick="return requiredpg6();" > Next</a>
+          &ensp;
+      
+          <script>
+               function requiredpg6()
+               {
+                var add = /^[a-zA-z0-9 ]*$/gm;
+                var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+      
+                let mil = document.getElementById("branchservice").value;
+                let mil2 = document.getElementById("form-militarystart").value;
+                let mil3 = document.getElementById("form-militaryend").value;
+                let mil4 = document.getElementById("form-dischargerank").value;
+      
+                let mil5 =  $('div.military.required :checkbox:checked').length > 0;
+      
+                if (mil5 == true)
+                {
+                    if(mil1 == "" || mil2 == "" || mil3 == "")
+                    {
+                        alert("Please input a Value");
+                        return false;
+                    }
+                    else
+                    {
+                        if(mil2.match(rel))
+                        {
+                            if(mil3.match(rel))
+                            {
+                               if(mil4 == "")
+                               {
+                                 return true;
+                               }
+                               else
+                               {
+                                  if(mil4.match(add))
+                                  {
+                                    return true;
+                                  }
+                                  else
+                                  {
+                                    alert("The military rank at dispatch contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                            }
+                            else
+                            {
+                                alert("The military end time is in the improper format");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            alert("The military start time is in the improper format");
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+      
+      
+               }
+          </script>
         </div>
-    </div>
+      </div>
+      
 
     <div class="page" id="seven">
         <div class="column left">
