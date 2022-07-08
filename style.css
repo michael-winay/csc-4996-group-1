@@ -86,6 +86,9 @@ body
 	width: 100%;
 	border-top: 3px solid white;
 	margin-top: 250px;
+	margin-left: 0px;
+	padding-left: 25px;
+	padding-top: 10px;
 	position: fixed;
 	height: 100px;
 }
