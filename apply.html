@@ -7810,8 +7810,12 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#eleven" class="Next Button"> Next</a>
+            <a href="#eleven" class="Next Button" onclick="return rquiredpg10();"> Next</a>
             &ensp;
+
+            <script>
+
+            </script>
         </div>
     </div>
 
@@ -7843,7 +7847,6 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
                
 
                     <br>
@@ -7857,11 +7860,273 @@
                     <br>
 
 
+                    <!--FMCSR Question 1-->                                
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span>If under FMSCR 391.15, you are currently disqualified from driving a commercial motor vehicle [49 CFR 391.15] please press the expand button.</span>
+                          <div class ="FMCSR1 required">
+                          <input name="collapseGroup19" type="checkbox" value="yes"/> Expand
+                          </div>
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 
+                              </div>
+                              <div id="collapseNineteen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  
+                                   <!--Please Explain-->
+                                  <label for="form-FMCSR1explain"> Please provide additional detail: <span class="astrick">*</span></label><br>
+                                  <input type="text" name="FMCSR1explain" id="form-FMCSR1explain">
+                                  
+                                  
+    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                     
+                        </div>
+                      </div>
+                    </div>
 
-             
 
-                <br>
-                <br>
+
+                                 <script>
+                                    $('[name="collapseGroup19"]').on('change', function(){  
+                                     if($(this).val()  === "yes"){
+                                        $('#collapseNineteen').collapse('show')
+                                        }else{
+                                          $('#collapseNineteen').collapse('hide')
+                                          }
+                                       });
+                                  </script>
+
+                   <br>
+                   <br>
+
+                   <!--FMCSR Question 2-->
+                   <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>If your license, permit, or privilege to drive has ever been suspended or revoked for any reason [49 CFR 391.21(b)(9)] please press the expand button.</span>
+                        <div class ="FMCSR2 required">
+                        <input name="collapseGroup20" type="checkbox" value="yes"/> Expand
+                        </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseTwenty" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                
+                                 <!--Please Explain-->
+                                <label for="form-FMCSR2explain"> Please provide additional details, including dates: <span class="astrick">*</span></label><br>
+                                <input type="text" name="FMCSR2explain" id="form-FMCSR2explain">
+                                
+                                
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                               <script>
+                                  $('[name="collapseGroup20"]').on('change', function(){  
+                                   if($(this).val()  === "yes"){
+                                      $('#collapseTwenty').collapse('show')
+                                      }else{
+                                        $('#collapseTwenty').collapse('hide')
+                                        }
+                                     });
+                                </script>
+
+                   <br>
+                   <br>
+
+
+                   <!--FMCSR Question 3-->
+                   <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>If you have ever been denied a license, permit, or privilege to operator a motor vehicle [49 CFR 391.21(b)(9) please press the expand button.</span>
+                        <div class ="FMCSR3 required">
+                        <input name="collapseGroup21" type="checkbox" value="yes"/> Expand
+                        </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseTwentyOne" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                
+                                 <!--Please Explain-->
+                                <label for="form-FMCSR1explain"> Please provide additional details, including dates: <span class="astrick">*</span></label><br>
+                                <input type="text" name="FMCSR1explain" id="form-FMCSR1explain">
+                                
+                                
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                               <script>
+                                  $('[name="collapseGroup21"]').on('change', function(){  
+                                   if($(this).val()  === "yes"){
+                                      $('#collapseTwentyOne').collapse('show')
+                                      }else{
+                                        $('#collapseTwentyOne').collapse('hide')
+                                        }
+                                     });
+                                </script>
+                  
+                  <br>
+                  <br>
+
+
+                  <!--FMCSR Question 4-->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>If within the past two years, you have tested positive, or refused to test, on a pre-employment drug or alcohol test by an emploter to whom you applied, but did not obtain, safety-sensitive transportation work covered by DOT agency drug and alcohol testing rules [49 CFR 40.25(j)] please press the expand button.</span>
+                        <div class ="FMCSR4 required">
+                        <input name="collapseGroup22" type="checkbox" value="yes"/> Expand
+                        </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseTwentyTwo" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                
+                                 <!--Please Explain-->
+                                <label for="form-FMCSR4explain"> Please provide additional detail about what occured: <span class="astrick">*</span></label><br>
+                                <input type="text" name="FMCSR4explain" id="form-FMCSR4explain">
+
+                                <br>
+                                <br>
+
+                                <!--Date of last positive or refusal-->
+                                <label for="form-FMCSR4date">End Date <span class="astrick">*</span> </label>
+                                <input type="text" id="form-FMCSR4date" name="FMCSR4date" placeholder = "mm/dd/yyyy" required>
+                                
+                                
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                               <script>
+                                  $('[name="collapseGroup22"]').on('change', function(){  
+                                   if($(this).val()  === "yes"){
+                                      $('#collapseTwentyTwo').collapse('show')
+                                      }else{
+                                        $('#collapseTwentyTwo').collapse('hide')
+                                        }
+                                     });
+                                </script>
+
+                  <br>
+                  <br>
+
+
+                  <!--FMCSR Question 5-->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span>In the past three years, have you been convicted of any of the following offenses commited during on-duty time [49 C.F.R. 391.15 and 49 C.F.R. 395.2]:
+                          <ul>
+                            <li>Driving a commercial motor vehicle with a blood alcohol concentration of .04 or more</li>
+                            <li>Driving under the influence of alcohol, as prescribed by state law</li>
+                            <li>Refusal to undergo drug and alcohol testing as required by any jurisdiction for the enforcment of Federal Motor Carrier Safety Act regulations</li>
+                            <li>Driving a commercial motor vehicle under the influence of any 21 C.F.R. 1308.11 Schedule I indentified controlled substance, an amphetamine, a narcotic drug, a formulation of an amphetamine, or a derivative of a narcotic drug</li>
+                            <li>Transport, possession, or unlawful use of a 21 C.F.R 1308.11 Schedule I controlled substance, amphetamines, narcotic drugs, formulations of an amphetamine, or derivatives of narcotic drugs while you were on duty driving for a motor carrier</li>
+                            <li>Leaving the scene of an accident while operating a commercial motor behicle</li>
+                            <li>Or any other gelony involving the use of a commercial motor vehicle</li>
+                          </ul>
+                        </span>
+                        <div class ="FMCSR5 required">
+                        <input name="collapseGroup23" type="checkbox" value="yes"/> Expand
+                        </div>
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                               
+                            </div>
+                            <div id="collapseTwentyThree" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                
+                                  <!--Have you had other occurences that you've broken within three years prior?-->
+                                  <div class="conviction3years required">
+                                    <p> In the three years before the conviction you identified above, had you been convicted on a separate occasion for either the same offense or one of the other offenses listed above? [49 C.F.R. 391.15(c)(3)]</p>
+                                    <input type="checkbox" id="conviction3years" name="conviction3years" value="yes">
+                                    <label for="Yes"> Yes </label>
+                                    <br>
+                                    <input type="checkbox" id="conviction3years" name="conviction3years" value="no">
+                                    <label for="No"> No </label>
+                                    </div>
+
+                                <br>
+                                <br>
+
+                                <!--Date of most recent conviction-->
+                                <label for="form-FMCSR5date">Date of most recent conviction from the list above <span class="astrick">*</span> </label>
+                                <input type="text" id="form-FMCSR5date" name="FMCSR5date" placeholder = "mm/dd/yyyy" required>
+
+                                <br>
+                                <br>
+
+                                 <!--Please Explain-->
+                                 <label for="form-FMCSR5explain"> Please provide additional detail about each conviction that you replied "yes" for in the list above: <span class="astrick">*</span></label><br>
+                                 <input type="text" name="FMCSR5explain" id="form-FMCSR5explain">
+                                
+                                
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                               <script>
+                                  $('[name="collapseGroup23"]').on('change', function(){  
+                                   if($(this).val()  === "yes"){
+                                      $('#collapseTwentyThree').collapse('show')
+                                      }else{
+                                        $('#collapseTwentyThree').collapse('hide')
+                                        }
+                                     });
+                                </script>
+
 
             </div>
             <!--Back Button-->
