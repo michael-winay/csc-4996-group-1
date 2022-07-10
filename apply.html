@@ -3839,7 +3839,7 @@
 
                                     <!--Zip/Postal-->
                                     <label for="form-companyzip"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companyZip" id="form-copmanyzip" placeholder="54309" required>
+                                    <input type="text" name="companyZip" id="form-companyzip" placeholder="54309" required>
 
                                     <br>
                                     <br>
@@ -4090,7 +4090,7 @@
                                         <div class="row">
                                           <div class="col-xs-12">
                                             <span>If you would like to enter a second job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
-                                            <div class ="work required">
+                                            <div class ="work2 required">
                                             <input name="collapseGroup8" type="checkbox" value="yes"/> Expand
                                             </div>
                                             <div class="panel-group" id="accordion">
@@ -4544,7 +4544,7 @@
                                         <div class="row">
                                           <div class="col-xs-12">
                                             <span>If you were terminated, discharged, laid off from this job please press the expand button, otherwise you are free to move on.</span>
-                                            <div class ="terminated required">
+                                            <div class ="terminated2 required">
                                             <input name="collapseGroup9" type="checkbox" value="yes"/> Expand
                                             </div>
                                             <div class="panel-group" id="accordion">
@@ -4616,7 +4616,7 @@
                                                         <div class="row">
                                                           <div class="col-xs-12">
                                                             <span>If you operated a commercial motor vehicle at this job please press the expand button, otherwise you are free to move on.</span>
-                                                            <div class ="opercommprev required">
+                                                            <div class ="opercommprev2 required">
                                                             <input name="collapseGroup10" type="checkbox" value="yes"/> Expand
                                                             </div>
                                                             <div class="panel-group" id="accordion">
@@ -4765,7 +4765,7 @@
                                         <div class="row">
                                           <div class="col-xs-12">
                                             <span>If you would like to enter a third job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
-                                            <div class ="work required">
+                                            <div class ="work3 required">
                                             <input name="collapseGroup11" type="checkbox" value="yes"/> Expand
                                             </div>
                                             <div class="panel-group" id="accordion">
@@ -4811,8 +4811,8 @@
                                                     <br>
                 
                                                     <!--Street Address-->
-                                                    <label for="form-companystreetaddress5"> Street Address<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companystreetaddress5" id="form-companystreetaddress5" placeholder = "123 Something Street"required>
+                                                    <label for="form-companystreetaddress6"> Street Address<span class="astrick">*</span> </label><br>
+                                                    <input type="text" name="companystreetaddress6" id="form-companystreetaddress6" placeholder = "123 Something Street"required>
                 
                                                     <br>
                                                     <br>
@@ -5219,7 +5219,7 @@
                                         <div class="row">
                                           <div class="col-xs-12">
                                             <span>If you were terminated, discharged, laid off from this job please press the expand button, otherwise you are free to move on.</span>
-                                            <div class ="terminated required">
+                                            <div class ="terminated3 required">
                                             <input name="collapseGroup12" type="checkbox" value="yes"/> Expand
                                             </div>
                                             <div class="panel-group" id="accordion">
@@ -5291,7 +5291,7 @@
                                                         <div class="row">
                                                           <div class="col-xs-12">
                                                             <span>If you operated a commercial motor vehicle at this job please press the expand button, otherwise you are free to move on.</span>
-                                                            <div class ="opercommprev required">
+                                                            <div class ="opercommprev3 required">
                                                             <input name="collapseGroup13" type="checkbox" value="yes"/> Expand
                                                             </div>
                                                             <div class="panel-group" id="accordion">
@@ -5510,8 +5510,83 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#eight" class="Next Button"> Next</a>
+            <a href="#eight" class="Next Button" onclick=""return requiredpg7();> Next</a>
             &ensp;
+
+            <script>
+                function requriedpg7()
+                {
+                    let wor1 = document.getElementById("form-companyname").value;
+                    let wor2 = document.getElementById("form-companystart").value;
+                    let wor3 = document.getElementById("form-companyend").value;
+                    let wor4 = document.getElementById("form-companystreetaddress").value;
+                    let wor5 = document.getElementById("form-companystreetaddress2").value;
+                    let wor6 = document.getElementById("form-companycountry").value;
+                    let wor7 = document.getElementById("form-companycity").value;
+                    let wor8 = document.getElementById("form-companystate").value;
+                    let wor9 = document.getElementById("form-companyzip").value;
+                    let wor10 = document.getElementById("form-companytelephone").value;
+                    let wor11 = document.getElementById("form-companyposition").value;
+                    let wor12 = document.getElementById("form-readonforleaving").value;
+                    let wor13 = document.getElementById("form-termpleaseexplain").value;
+                    let wor14 = document.getElementById("currentemployer").value;
+                    let wor15 = document.getElementById("form-licenseNum").value;
+                    let wor16 = document.getElementById("form-licenseNum").value;
+                    let wor17 = document.getElementById("form-licenseNum").value;
+                    let wor18 = document.getElementById("form-licenseNum").value;
+                    let wor19 = document.getElementById("form-licenseNum").value;
+                    let wor20 = document.getElementById("form-licenseNum").value;
+                    let wor21 = document.getElementById("form-licenseNum").value;
+                    let wor22 = document.getElementById("form-licenseNum").value;
+                    let wor23 = document.getElementById("form-licenseNum").value;
+                    let wor24 = document.getElementById("form-licenseNum").value;
+                    let wor25 = document.getElementById("form-licenseNum").value;
+                    let wor26 = document.getElementById("form-licenseNum").value;
+                    let wor27 = document.getElementById("form-licenseNum").value;
+                    let wor28 = document.getElementById("form-licenseNum").value;
+                    let wor29 = document.getElementById("form-licenseNum").value;
+                    let wor30 = document.getElementById("form-licenseNum").value;
+                    let wor31 = document.getElementById("form-licenseNum").value;
+                    let wor32 = document.getElementById("form-licenseNum").value;
+                    let wor33 = document.getElementById("form-licenseNum").value;
+                    let wor34 = document.getElementById("form-licenseNum").value;
+                    let wor35 = document.getElementById("form-licenseNum").value;
+                    let wor36 = document.getElementById("form-licenseNum").value;
+                    let wor37 = document.getElementById("form-licenseNum").value;
+                    let wor38 = document.getElementById("form-licenseNum").value;
+                    let wor39 = document.getElementById("form-licenseNum").value;
+                    let wor40 = document.getElementById("form-licenseNum").value;
+                    let wor41 = document.getElementById("form-licenseNum").value;
+                    let wor42 = document.getElementById("form-licenseNum").value;
+                    let wor43 = document.getElementById("form-licenseNum").value;
+                    let wor44 = document.getElementById("form-licenseNum").value;
+                    let wor45 = document.getElementById("form-licenseNum").value;
+                    let wor46 = document.getElementById("form-licenseNum").value;
+                    let wor47 = document.getElementById("form-licenseNum").value;
+                    let wor48 = document.getElementById("form-licenseNum").value;
+                    let wor49 = document.getElementById("form-licenseNum").value;
+                    let wor50 = document.getElementById("form-licenseNum").value;
+                    let wor51 = document.getElementById("form-licenseNum").value;
+                    let wor52 = document.getElementById("form-licenseNum").value;
+                    let wor53 = document.getElementById("form-licenseNum").value;
+                    let wor54 = document.getElementById("form-licenseNum").value;
+                    let wor55 = document.getElementById("form-licenseNum").value;
+                    let wor56 = document.getElementById("form-licenseNum").value;
+                    
+                  
+
+                    let lic60 = $('div.terminated.required :checkbox:checked').length > 0;
+                    let lic61 = $('div.terminated2.required :checkbox:checked').length > 0;
+                    let lic62 = $('div.terminated3.required :checkbox:checked').length > 0;
+                    let lic63 = $('div.work.required :checkbox:checked').length > 0;
+                    let lic64 = $('div.work2.required :checkbox:checked').length > 0;
+                    let lic65 = $('div.work3.required :checkbox:checked').length > 0;
+                    let lic66 = $('div.opercommprev.required :checkbox:checked').length > 0;
+                    let lic67 = $('div.opercommprev2.required :checkbox:checked').length > 0;
+                    let lic68 = $('div.opercommprev3.required :checkbox:checked').length > 0;
+
+                }
+            </script>
         </div>
     </div>
 
