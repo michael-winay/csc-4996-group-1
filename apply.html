@@ -7692,7 +7692,7 @@
             &ensp;
 
             <script>
-              
+
             </script>
         </div>
     </div>
@@ -7725,7 +7725,7 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
+                
                
 
                     <br>
@@ -7733,12 +7733,66 @@
                     <br>
 
                     <!--Umeployment-->
-                    <p> Within the last ten years have you been unemployed? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
-                    <label for="Yes"> Yes </label>
-                    <br>
-                    <input type="checkbox" id="c8" name="licensecheck" value="c8">
-                    <label for="No"> No </label>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span>If you have been unemployed within the last 10 years please click the Expand button, otherwise you are free to move on to the next page.</span>
+                          <div class ="unemployment required">
+                          <input name="collapseGroup18" type="checkbox" value="yes"/> Expand
+                          </div>
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 
+                              </div>
+                              <div id="collapseEighteen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <br>
+                                  <h3> Unemployment Information</h3>
+                                   <hr>
+    
+                    
+                                   <br>
+                                   <br>
+               
+                                   <!--Start Date-->
+                                   <label for="form-unemploymentstart">Start Date <span class="astrick">*</span> </label>
+                                   <input type="text" id="form-unemploymentstart" name="unemploymentstart" placeholder = "mm/yyyy" required>
+    
+                                   <br>
+                                   <br>
+    
+                                   <!--End Date-->
+                                   <label for="form-unemploymentend">End Date <span class="astrick">*</span> </label>
+                                   <input type="text" id="form-unemploymentend" name="unemploymentend" placeholder = "mm/yyyy" required>
+    
+                                   <br>
+                                   <br>
+    
+                                   <!--Comments-->
+                                   <label for="form-unemploymentcomments"> Comments </label><br>
+                                   <input type="text" name="unemploymentcomments" id="form-unemploymentcomments">
+    
+                                   
+    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                     
+                        </div>
+                      </div>
+                    </div>
+    
+                  <script>
+                      $('[name="collapseGroup18"]').on('change', function(){  
+                      if($(this).val()  === "yes"){
+                         $('#collapseEighteen').collapse('show')
+                       }else{
+                          $('#collapseEighteen').collapse('hide')
+                        }
+                        });
+                  </script>
 
                     <br>
                     <br>
