@@ -8167,15 +8167,440 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
+                
               
 
                     <br>
                     <br>
                     <br>
 
-                    <h2>Traffics Violations/Convictions/Accidents</h2>
-                    <hr>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span>If you have any moving violations, traffic convictions within the last three years please click the Expand button, otherwise you are free to move on to the next page.</span>
+                          <div class ="military required">
+                          <input name="collapseGroup24" type="checkbox" value="yes"/> Expand
+                          </div>
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 
+                              </div>
+                              <div id="collapseTwentyFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <br>
+                                  <h3> Traffics Violations/Convictions</h3>
+                                   <hr>
+
+                                   <br>
+                                   <br>
+
+                                     <!--Violation Date-->
+                                     <label for="form-violationdate">Start Date <span class="astrick">*</span> </label>
+                                     <input type="text" id="form-violationdate" name="violationdate" placeholder = "mm/yyyy">
+      
+                                     <br>
+                                     <br>
+    
+                                     <!--Charge/Description-->
+                                   <label for="form-charge">Charge / Description<span class="astrick">*</span></label><br>	
+                                   <select name="charge" id = "charge" required>
+                                    <option value=""></option>
+                                    <option value="careless/reckless" >Careless/Reckless</options>
+                                    <option value="driving without a license" >Driving Without A License</options>
+                                    <option value="DUI/OWI" >DUI/OWI</options>
+                                    <option value="failure to obey signal">Failure to Obey Signal</option>
+                                    <option value="following too closely" >Following Too Closely</options>
+                                    <option value="improper lane change" >Improper Lane Change</options>
+                                    <option value="seat belt" >Seat Belt</options>
+                                    <option value="speeding" >Speeding</options>
+                                    <option value="too fast for conditions" >Too Fast for Conditions</options>
+                                    <option value="violation resulting from accident" >Violation Resulting from Accident</options>
+                                    <option value="driving with suspended accident" >Driving with Suspended Accident</options>
+                                    <option value="failure to report accident" >Failure to Report Accident</options>
+                                    <option value="failure to yield" >Failure to Yield</options>
+                                    <option value="improper passing" >Improper Passing</options>
+                                    <option value="improper turn" >Improper Turn</options>
+                                    <option value="improper backing" >Improper Backing</options>
+                                    <option value="no insurance/proof of insurance" >No Insurance / Proof of Insurance</options>
+                                    <option value="leaving scene of accident" >Leaving Scene of Accident</options>
+                                    <option value="defective equipment" >Defective Equipment</options>
+                                    <option value="hazmat violations" >Hazmat Violation</options>
+                                    <option value="lane violation" >Lane Violation</options>
+                                    <option value="overweight" >Overweight</options>
+                                    <option value="cell phone usage" >Cell Phone Usage</options>
+                                    <option value="texting while driving" >Texting While Driving</options>
+                                    <option value="inattentive driving" >Inattentive Driving</options>
+                                    <option value="hours of service" >Hours of Service</options>
+                                    <option value="other" >Other</options>
+                                   </select>
+    
+    
+                                   <br>
+                                   <br>
+
+                                   
+                                   <!--State/Province-->
+                                   <label for="form-convictionstate">State/Province: <span class="astrick">*</span></label><br>
+                                   <select id="form-convictionstate" name="convictionstate" class="cascade" required >
+                                           <option value="-1">Select</option>
+                                           <option class="three" value = "NULL"> Select</option>
+                                           <option class="three" value="oth"></option>
+                                           <option class="two" value = "NULL"> Select</option>
+                                           <option value="AK" class="two">Alaska</option>
+                                           <option value="AL" class ="two">Alabama</option>
+                                           <option value="AR" class ="two">Arkansas</option>
+                                           <option value="AZ" class ="two">Arizona</option>
+                                           <option value="CA" class ="two">California</option>
+                                           <option value="CO" class ="two">Colorado</option>
+                                           <option value="CT" class ="two">Connecticut</option>
+                                           <option value="DC" class ="two">District of Columbia</option>
+                                           <option value="DE" class ="two">Delaware</option>
+                                           <option value="FL" class ="two">Florida</option>
+                                           <option value="GA" class ="two">Georgia</option>
+                                           <option value="HI" class ="two">Hawaii</option>
+                                           <option value="IA" class ="two">Iowa</option>
+                                           <option value="ID" class ="two">Idaho</option>
+                                           <option value="IL" class ="two">Illinois</option>
+                                           <option value="IN" class ="two">Indiana</option>
+                                           <option value="KS" class ="two">Kansas</option>
+                                           <option value="KY" class ="two">Kentucky</option>
+                                           <option value="LA" class ="two">Louisiana</option>
+                                           <option value="MA" class ="two">Massachusetts</option>
+                                           <option value="MD" class ="two">Maryland</option>
+                                           <option value="ME" class ="two">Maine</option>
+                                           <option value="MI" class ="two">Michigan</option>
+                                           <option value="MN" class ="two">Minnesota</option>
+                                           <option value="MO" class ="two">Missouri</option>
+                                           <option value="MS" class ="two">Mississippi</option>
+                                           <option value="MT" class ="two">Montana</option>
+                                           <option value="NC" class ="two">North Carolina</option>
+                                           <option value="ND" class ="two">North Dakota</option>
+                                           <option value="NE" class ="two">Nebraska</option>
+                                           <option value="NH" class ="two">New Hampshire</option>
+                                           <option value="NJ" class ="two">New Jersey</option>
+                                           <option value="NM" class ="two">New Mexico</option>
+                                           <option value="NV" class ="two">Nevada</option>
+                                           <option value="NY" class ="two">New York</option>
+                                           <option value="OH" class ="two">Ohio</option>
+                                           <option value="OK" class ="two">Oklahoma</option>
+                                           <option value="OR" class ="two">Oregon</option>
+                                           <option value="PA" class ="two">Pennsylvania</option>
+                                           <option value="PR" class ="two">Puerto Rico</option>
+                                           <option value="RI" class ="two">Rhode Island</option>
+                                           <option value="SC" class ="two">South Carolina</option>
+                                           <option value="SD" class ="two">South Dakota</option>
+                                           <option value="TN" class ="two">Tennessee</option>
+                                           <option value="TX" class ="two">Texas</option>
+                                           <option value="UT" class ="two">Utah</option>
+                                           <option value="VA" class ="two">Virginia</option>
+                                           <option value="VT" class ="two">Vermont</option>
+                                           <option value="WA" class ="two">Washington</option>
+                                           <option value="WI" class ="two">Wisconsin</option>
+                                           <option value="WV" class ="two">West Virginia</option>
+                                           <option value="WY" class ="two">Wyoming</option>
+                                           <option class="one" value = "NULL"> Select</option>    
+                                           <option value="AB" class ="one">Alberta</option>
+                                           <option value="BC" class ="one">British Columbia</option>
+                                           <option value="MB" class ="one">Manitoba</option>
+                                           <option value="NB" class ="one">New Brunswick</option>
+                                           <option value="NF" class ="one">Newfoundland</option>
+                                           <option value="NT" class ="one">Northwest Territories</option>
+                                           <option value="NS" class ="one">Nova Scotia</option>
+                                           <option value="NU" class ="one">Nunavut</option>
+                                           <option value="ON" class ="one">Ontario</option>
+                                           <option value="PE" class ="one">Prince Edward Island</option>
+                                           <option value="QC" class ="one">Quebec</option>
+                                           <option value="SK" class ="one">Saskatchewan</option>
+                                           <option value="YT" class ="one">Yukon Territory</option>
+               
+                                   </select>
+               
+                                   <br>
+                                   <br>
+    
+                                   <!--Were you in a Commercial Vehicle?-->
+                                   <div class="commercialvehicle required">
+                                      <p> Were you in a Commercial Vehicle?<span class="astrick">*</span></p>
+                                      <input type="checkbox" id="commercialvehicle" name="commercialvehicle" value="yes">
+                                      <label for="Yes"> Yes </label>
+                                      <br>
+                                      <input type="checkbox" id="commericalvehicle" name="commercialvehicle" value="no">
+                                      <label for="No"> No </label>
+                                      </div>
+    
+                                  
+                                    <!--Penalty/Fine-->
+                                     <p>Penalty/Fine (Check all that apply) <span class="astrick">*</span></p>
+                                      <input type="checkbox" id="penalty" name="penalty" value="fine">
+                                      <label for="fine"> Fine </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty" name="penalty" value="suspension">
+                                      <label for="suspension"> Suspension </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty" name="penalty" value="revocation">
+                                      <label for="revocation"> Revocation </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty" name="penalty" value="community services">
+                                      <label for="community services"> Community Servies </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty" name="penalty" value="other">
+                                      <label for="other"> Other </label>
+                                      <br>
+
+                                      <br>
+                                     <br>
+    
+                                     <!--Fine Amount-->
+                                   <label for="form-fineamount">Fine Amount (if applicable)</label><br>	
+                                   <select name="Fine Amount" id = "Fine Amount" required>
+                                    <option value=""></option>
+                                    <option value="$0-$99" >$0-$99</options>
+                                    <option value="$100-$199" >$100-$199</options>
+                                    <option value="$200-$299" >$200-$299</options>
+                                    <option value="$300-$399">$300-$399</option>
+                                    <option value="$400-$499" >$400-$499</options>
+                                    <option value="$500+" >$500+</options>
+                                    <option value="$1000+" >$1000+</options>
+                                   </select>
+
+                                   <!--Comments-->
+                                   <label for="form-violationscomment"> Comments (If you answered "Other" to any of the above questions please elaborate here) </label><br>
+                                   <input type="text" name="violationscomment" id="form-violationscomment">
+                                      
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                     
+                        </div>
+                      </div>
+                    </div>
+
+                    <br>
+                    
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <span>If you had any accidents within the last five years please click the Expand button, otherwise you are free to move on to the next page.</span>
+                          <div class ="military required">
+                          <input name="collapseGroup25" type="checkbox" value="yes"/> Expand
+                          </div>
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 
+                              </div>
+                              <div id="collapseTwentyFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <br>
+                                  <h3> Accidents</h3>
+                                   <hr>
+
+                                   <br>
+                                   <br>
+
+                                     <!--Date of Accident/Incident-->
+                                     <label for="form-accidentdate">Date of Accident/Incident <span class="astrick">*</span> </label>
+                                     <input type="text" id="form-accidentdate" name="accidentdate" placeholder = "mm/yyyy">
+      
+                                     <br>
+                                     <br>
+    
+                                     <!--Charge/Description-->
+                                   <label for="form-accidentcharge">Charge / Description<span class="astrick">*</span></label><br>	
+                                   <select name="accidentcharge" id = "accidentcharge" required>
+                                    <option value=""></option>
+                                    <option value="non-inquiry" >Non-inquiry</options>
+                                    <option value="injury" >Injury</options>
+                                    <option value="fatiality" >Fatality</options>
+                                   </select>
+    
+                                   <br>
+                                   <br>
+
+                                    <!--Hazmat Accident/Incident-->
+                                    <div class="hazmataccident required">
+                                      <p> Hazmat Accident/Incident</p>
+                                      <input type="checkbox" id="hazmataccident" name="hazmataccident" value="yes">
+                                      <label for="Yes"> Yes </label>
+                                      <br>
+                                      <input type="checkbox" id="hazmataccident" name="hazmataccident" value="no">
+                                      <label for="No"> No </label>
+                                      </div>
+
+    
+                                   <br>
+                                   <br>
+
+                                    <!--Was the Vehicle towed Away-->
+                                    <div class="vehicletowed required">
+                                      <p> Was the vehicle towed away?</p>
+                                      <input type="checkbox" id="vehicletowed" name="vehicletowed" value="yes">
+                                      <label for="Yes"> Yes </label>
+                                      <br>
+                                      <input type="checkbox" id="vehicletowed" name="vehicletowed" value="no">
+                                      <label for="No"> No </label>
+                                      </div>
+                                   
+                                   <br>
+                                   <br>
+
+                                    <!--City-->
+                                    <label for="form-accidentcity"> City </label><br>
+                                    <input type="text" name="accidentCity" id="form-accidentcity" placeholder = "New Haven">
+                                   
+                                    <br>
+                                    <br>
+
+                                   <!--State/Province-->
+                                   <label for="form-accidentstate">State/Province: <span class="astrick">*</span></label><br>
+                                   <select id="form-accidentstate" name="accidentstate" class="cascade" required >
+                                           <option value="-1">Select</option>
+                                           <option class="three" value = "NULL"> Select</option>
+                                           <option class="three" value="oth"></option>
+                                           <option class="two" value = "NULL"> Select</option>
+                                           <option value="AK" class="two">Alaska</option>
+                                           <option value="AL" class ="two">Alabama</option>
+                                           <option value="AR" class ="two">Arkansas</option>
+                                           <option value="AZ" class ="two">Arizona</option>
+                                           <option value="CA" class ="two">California</option>
+                                           <option value="CO" class ="two">Colorado</option>
+                                           <option value="CT" class ="two">Connecticut</option>
+                                           <option value="DC" class ="two">District of Columbia</option>
+                                           <option value="DE" class ="two">Delaware</option>
+                                           <option value="FL" class ="two">Florida</option>
+                                           <option value="GA" class ="two">Georgia</option>
+                                           <option value="HI" class ="two">Hawaii</option>
+                                           <option value="IA" class ="two">Iowa</option>
+                                           <option value="ID" class ="two">Idaho</option>
+                                           <option value="IL" class ="two">Illinois</option>
+                                           <option value="IN" class ="two">Indiana</option>
+                                           <option value="KS" class ="two">Kansas</option>
+                                           <option value="KY" class ="two">Kentucky</option>
+                                           <option value="LA" class ="two">Louisiana</option>
+                                           <option value="MA" class ="two">Massachusetts</option>
+                                           <option value="MD" class ="two">Maryland</option>
+                                           <option value="ME" class ="two">Maine</option>
+                                           <option value="MI" class ="two">Michigan</option>
+                                           <option value="MN" class ="two">Minnesota</option>
+                                           <option value="MO" class ="two">Missouri</option>
+                                           <option value="MS" class ="two">Mississippi</option>
+                                           <option value="MT" class ="two">Montana</option>
+                                           <option value="NC" class ="two">North Carolina</option>
+                                           <option value="ND" class ="two">North Dakota</option>
+                                           <option value="NE" class ="two">Nebraska</option>
+                                           <option value="NH" class ="two">New Hampshire</option>
+                                           <option value="NJ" class ="two">New Jersey</option>
+                                           <option value="NM" class ="two">New Mexico</option>
+                                           <option value="NV" class ="two">Nevada</option>
+                                           <option value="NY" class ="two">New York</option>
+                                           <option value="OH" class ="two">Ohio</option>
+                                           <option value="OK" class ="two">Oklahoma</option>
+                                           <option value="OR" class ="two">Oregon</option>
+                                           <option value="PA" class ="two">Pennsylvania</option>
+                                           <option value="PR" class ="two">Puerto Rico</option>
+                                           <option value="RI" class ="two">Rhode Island</option>
+                                           <option value="SC" class ="two">South Carolina</option>
+                                           <option value="SD" class ="two">South Dakota</option>
+                                           <option value="TN" class ="two">Tennessee</option>
+                                           <option value="TX" class ="two">Texas</option>
+                                           <option value="UT" class ="two">Utah</option>
+                                           <option value="VA" class ="two">Virginia</option>
+                                           <option value="VT" class ="two">Vermont</option>
+                                           <option value="WA" class ="two">Washington</option>
+                                           <option value="WI" class ="two">Wisconsin</option>
+                                           <option value="WV" class ="two">West Virginia</option>
+                                           <option value="WY" class ="two">Wyoming</option>
+                                           <option class="one" value = "NULL"> Select</option>    
+                                           <option value="AB" class ="one">Alberta</option>
+                                           <option value="BC" class ="one">British Columbia</option>
+                                           <option value="MB" class ="one">Manitoba</option>
+                                           <option value="NB" class ="one">New Brunswick</option>
+                                           <option value="NF" class ="one">Newfoundland</option>
+                                           <option value="NT" class ="one">Northwest Territories</option>
+                                           <option value="NS" class ="one">Nova Scotia</option>
+                                           <option value="NU" class ="one">Nunavut</option>
+                                           <option value="ON" class ="one">Ontario</option>
+                                           <option value="PE" class ="one">Prince Edward Island</option>
+                                           <option value="QC" class ="one">Quebec</option>
+                                           <option value="SK" class ="one">Saskatchewan</option>
+                                           <option value="YT" class ="one">Yukon Territory</option>
+               
+                                   </select>
+               
+                                   <br>
+                                   <br>
+    
+                                   <!--Were you in a Commercial Vehicle?-->
+                                   <div class="acccommercialvehicle required">
+                                      <p> Were you in a Commercial Vehicle?<span class="astrick">*</span></p>
+                                      <input type="checkbox" id="acccommercialvehicle" name="acccommercialvehicle" value="yes">
+                                      <label for="Yes"> Yes </label>
+                                      <br>
+                                      <input type="checkbox" id="acccommericalvehicle" name="acccommercialvehicle" value="no">
+                                      <label for="No"> No </label>
+                                      </div>
+    
+            
+                                     <br>
+                                     <br>
+    
+                                      <!--Were you at fault?-->
+                                   <div class="atfault required">
+                                    <p> Were you at fault?<span class="astrick">*</span></p>
+                                    <input type="checkbox" id="atfault" name="atfault" value="yes">
+                                    <label for="Yes"> Yes </label>
+                                    <br>
+                                    <input type="checkbox" id="atfault" name="atfault" value="no">
+                                    <label for="No"> No </label>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+                                    <!--Were you ticketed?-->
+                                   <div class="ticketed required">
+                                    <p> Were you ticketed?<span class="astrick">*</span></p>
+                                    <input type="checkbox" id="ticketed" name="ticketed" value="yes">
+                                    <label for="Yes"> Yes </label>
+                                    <br>
+                                    <input type="checkbox" id="ticketed" name="ticketed" value="no">
+                                    <label for="No"> No </label>
+                                    </div>
+                                    
+
+                                   <!--Comments-->
+                                   <label for="form-accidentcomments"> Please enter detailed information about this accident, whether this accident was chargable, recorable, reportable, or your fault </label><br>
+                                   <input type="text" name="accidentcomment" id="form-accidentcomment">
+                                      
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                     
+                        </div>
+                      </div>
+                    </div>
+    
+                    <script>
+                      $('[name="collapseGroup24"]').on('change', function(){  
+                      if($(this).val()  === "yes"){
+                         $('#collapseTwentyFour').collapse('show')
+                       }else{
+                          $('#collapseTwentyFour').collapse('hide')
+                        }
+                        });
+                  </script>
+                  <script>
+                      $('[name="collapseGroup25"]').on('change', function(){  
+                      if($(this).val()  === "yes"){
+                         $('#collapseTwentyFive').collapse('show')
+                       }else{
+                          $('#collapseTwentyFive').collapse('hide')
+                        }
+                        });
+                  </script>
 
                     <br>
                     <br>
