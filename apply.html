@@ -8409,9 +8409,9 @@
                                    <label for="form-convictionstate">State/Province: <span class="astrick">*</span></label><br>
                                    <select id="form-convictionstate" name="convictionstate" class="cascade" required >
                                            <option value="-1">Select</option>
-                                           <option class="three" value = "NULL"> Select</option>
+                                           <option class="three" value = "-1"> Select</option>
                                            <option class="three" value="oth"></option>
-                                           <option class="two" value = "NULL"> Select</option>
+                                           <option class="two" value = "-1"> Select</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
                                            <option value="AR" class ="two">Arkansas</option>
@@ -8464,7 +8464,7 @@
                                            <option value="WI" class ="two">Wisconsin</option>
                                            <option value="WV" class ="two">West Virginia</option>
                                            <option value="WY" class ="two">Wyoming</option>
-                                           <option class="one" value = "NULL"> Select</option>    
+                                           <option class="one" value = "-1"> Select</option>    
                                            <option value="AB" class ="one">Alberta</option>
                                            <option value="BC" class ="one">British Columbia</option>
                                            <option value="MB" class ="one">Manitoba</option>
@@ -8487,10 +8487,10 @@
                                    <!--Were you in a Commercial Vehicle?-->
                                    <div class="commercialvehicle required">
                                       <p> Were you in a Commercial Vehicle?<span class="astrick">*</span></p>
-                                      <input type="checkbox" id="commercialvehicle" name="commercialvehicle" value="yes">
+                                      <input type="checkbox" id="commercialvehicleyes" name="commercialvehicle" value="Yes">
                                       <label for="Yes"> Yes </label>
                                       <br>
-                                      <input type="checkbox" id="commericalvehicle" name="commercialvehicle" value="no">
+                                      <input type="checkbox" id="commericalvehicleno" name="commercialvehicle" value="No">
                                       <label for="No"> No </label>
                                       </div>
     
@@ -8587,10 +8587,10 @@
                                     <!--Hazmat Accident/Incident-->
                                     <div class="hazmataccident required">
                                       <p> Hazmat Accident/Incident</p>
-                                      <input type="checkbox" id="hazmataccident" name="hazmataccident" value="yes">
+                                      <input type="checkbox" id="hazmataccidentyes" name="hazmataccident" value="Yes">
                                       <label for="Yes"> Yes </label>
                                       <br>
-                                      <input type="checkbox" id="hazmataccident" name="hazmataccident" value="no">
+                                      <input type="checkbox" id="hazmataccidentno" name="hazmataccident" value="No">
                                       <label for="No"> No </label>
                                       </div>
 
@@ -8601,10 +8601,10 @@
                                     <!--Was the Vehicle towed Away-->
                                     <div class="vehicletowed required">
                                       <p> Was the vehicle towed away?</p>
-                                      <input type="checkbox" id="vehicletowed" name="vehicletowed" value="yes">
+                                      <input type="checkbox" id="vehicletowedyes" name="vehicletowed" value="Yes">
                                       <label for="Yes"> Yes </label>
                                       <br>
-                                      <input type="checkbox" id="vehicletowed" name="vehicletowed" value="no">
+                                      <input type="checkbox" id="vehicletowedno" name="vehicletowed" value="No">
                                       <label for="No"> No </label>
                                       </div>
                                    
@@ -8622,9 +8622,9 @@
                                    <label for="form-accidentstate">State/Province: <span class="astrick">*</span></label><br>
                                    <select id="form-accidentstate" name="accidentstate" class="cascade" required >
                                            <option value="-1">Select</option>
-                                           <option class="three" value = "NULL"> Select</option>
+                                           <option class="three" value = "-1"> Select</option>
                                            <option class="three" value="oth"></option>
-                                           <option class="two" value = "NULL"> Select</option>
+                                           <option class="two" value = "-1"> Select</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
                                            <option value="AR" class ="two">Arkansas</option>
@@ -8677,7 +8677,7 @@
                                            <option value="WI" class ="two">Wisconsin</option>
                                            <option value="WV" class ="two">West Virginia</option>
                                            <option value="WY" class ="two">Wyoming</option>
-                                           <option class="one" value = "NULL"> Select</option>    
+                                           <option class="one" value = "-1"> Select</option>    
                                            <option value="AB" class ="one">Alberta</option>
                                            <option value="BC" class ="one">British Columbia</option>
                                            <option value="MB" class ="one">Manitoba</option>
@@ -8700,10 +8700,10 @@
                                    <!--Were you in a Commercial Vehicle?-->
                                    <div class="acccommercialvehicle required">
                                       <p> Were you in a Commercial Vehicle?<span class="astrick">*</span></p>
-                                      <input type="checkbox" id="acccommercialvehicle" name="acccommercialvehicle" value="yes">
+                                      <input type="checkbox" id="acccommercialvehicleyes" name="acccommercialvehicle" value="Yes">
                                       <label for="Yes"> Yes </label>
                                       <br>
-                                      <input type="checkbox" id="acccommericalvehicle" name="acccommercialvehicle" value="no">
+                                      <input type="checkbox" id="acccommericalvehicleno" name="acccommercialvehicle" value="No">
                                       <label for="No"> No </label>
                                       </div>
     
@@ -8714,10 +8714,10 @@
                                       <!--Were you at fault?-->
                                    <div class="atfault required">
                                     <p> Were you at fault?<span class="astrick">*</span></p>
-                                    <input type="checkbox" id="atfault" name="atfault" value="yes">
+                                    <input type="checkbox" id="atfaultyes" name="atfault" value="Yes">
                                     <label for="Yes"> Yes </label>
                                     <br>
-                                    <input type="checkbox" id="atfault" name="atfault" value="no">
+                                    <input type="checkbox" id="atfaultno" name="atfault" value="No">
                                     <label for="No"> No </label>
                                     </div>
 
@@ -8727,10 +8727,10 @@
                                     <!--Were you ticketed?-->
                                    <div class="ticketed required">
                                     <p> Were you ticketed?<span class="astrick">*</span></p>
-                                    <input type="checkbox" id="ticketed" name="ticketed" value="yes">
+                                    <input type="checkbox" id="ticketedyes" name="ticketed" value="Yes">
                                     <label for="Yes"> Yes </label>
                                     <br>
-                                    <input type="checkbox" id="ticketed" name="ticketed" value="no">
+                                    <input type="checkbox" id="ticketedno" name="ticketed" value="No">
                                     <label for="No"> No </label>
                                     </div>
                                     
@@ -8783,8 +8783,18 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#thirteen" class="Next Button"> Next</a>
+            <a href="#thirteen" class="Next Button" onclick="return pg12();"> Next</a>
             &ensp;
+
+
+
+            <script>
+              function pg12()
+              {
+                  let empt = document.getElementById("form-violationdate").value;
+                  
+              }
+            </script>
         </div>
     </div>
 
