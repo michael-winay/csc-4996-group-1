@@ -174,6 +174,7 @@
         </div>
     </div>
 
+    <!--Personal Information (Complete)-->
     <div class="page" id="three">
         <div class="column left">
             <p></p>
@@ -195,7 +196,7 @@
                 <br>
                 <br>
 
-                <!--Javascript to make this picture the right one-->
+               
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:14%" alt="Progress Bar 14%">14%</div>
@@ -263,7 +264,7 @@
 
                     <!--Current Street Address (line 1)-->
                     <label for="form-streetaddress1"> Current Street Address (line 1)<span class="astrick">*</span> </label><br>
-                    <input type="text" name="StreetAddress1" id="form-streetaddress1" placeholder = "123 Something Street"required>
+                    <input type="text" name="StreetAddress1" id="form-streetaddress1" placeholder = "123 Elizabeth Street" required>
 
                     <br>
                     <br>
@@ -551,9 +552,9 @@
                     <label for="form-state">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-state" name="state" class="cascade" required >
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -606,7 +607,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -662,7 +663,7 @@
 
                     <h2>Contact</h2>
                     <hr>
-                    <p>If your cell phone is also your primary phone, enter it in both fields below.</p>
+                    
 
                     <!--Primary Phone-->
                     <label for="form-primphone"> Primary Phone <span class="astrick">*</span> </label><br>
@@ -677,7 +678,7 @@
                     <br>
 
                     <!--Email Address-->
-                    <label for="form-email"> Email</label><br>
+                    <label for="form-email"> Email <span class="astrick">*</span></label><br>
                     <input type="text" name="email" id="form-email" placeholder="somewhere@gmail.com" required>
 
                     <br>
@@ -691,10 +692,10 @@
 
                     <!--Preferred method of contact-->
                      <label for="form-prefcontact">Preferred method of contact</label><br>	
-                     <select name="prefcontact" id="prefcontact">
-                      <option value="prefprimaryphone" >Primary Phone</options>
-                      <option value="prefcellphone" >Cell Phone</options>
-                      <option value="prefemail" >Email</options>
+                     <select name="pref contact" id="prefcontact">
+                      <option value="pref primary phone" >Primary Phone</options>
+                      <option value="pref cellphone" >Cell Phone</options>
+                      <option value="pref email" >Email</options>
                      </select>
 
                      <br>
@@ -702,11 +703,11 @@
                 
                     <!--Best time to contact you-->
                      <label for="form-besttime">Best time to contact you</label><br>	
-                     <select name="besttime">
-                      <option value="btany" >Any</options>
-                      <option value="btmorning" >Morning</options>
-                      <option value="btafternoon" >Afternoon</options>
-                      <option value="btnight">Night</option>
+                     <select name="besttime" id="besttime">
+                      <option value="any" >Any</options>
+                      <option value="morning" >Morning</options>
+                      <option value="afternoon" >Afternoon</options>
+                      <option value="night">Night</option>
                      </select>
                     
 
@@ -733,6 +734,7 @@
                 
             function required()
             {
+                 //Formatting
                  var letters = /^[A-Za-z, ]+$/;
                  var last = /^[A-Za-z, ,-]+$/;
                  var num = /^[0-9]*$/;
@@ -740,6 +742,8 @@
                  var add = /^[a-zA-z0-9 ]*$/gm;
                  var em = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                  var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+                 //Variables
                  let empt = document.getElementById("form-firstname").value;
                  let empt2 = document.getElementById("form-lastname").value;
                  let empt3 = document.getElementById("form-SSN").value;
@@ -749,18 +753,23 @@
                  let empt7 = document.getElementById("form-primphone").value;
                  let empt8 = document.getElementById("form-cemail").value;
                  let empt9 = document.getElementById("form-country").value;
-                 let empy10 = document.getElementById("form-state").value;
+                 let empt10 = document.getElementById("form-state").value;
                  let empt11 = document.getElementById("form-birthday").value;
                  let empt12 = document.getElementById("form-aptnum").value;
                  let empt13 = document.getElementById("form-middlename").value;
                  let empt14 = document.getElementById("form-streetaddress2").value;
                  let empt15 = document.getElementById("form-cphone").value;
                  let empt16 = document.getElementById("form-email").value;
-                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "" || empt9 == "-1" || empt11 == "" || empt16 == "") 
+                 let empt17 = document.getElementById("suffix").value;
+                 let empt18 = document.getElementById("prefcontact").value;
+                 let empt19 = document.getElementById("besttime").value;
+
+
+                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "" || empt9 == "-1" || empt10 == "-1" || empt11 == "" || empt16 == "") 
                  {   
                      
-                     alert("Please input a Value");
-                     return false;
+                      alert("Please input a Value");
+                      return false;
                   } 
                  else 
                  {   
@@ -1117,7 +1126,7 @@
         </div>
     </div>
 
-
+    <!--General Information-->
     <div class="page" id="four">
         <div class="column left">
             <p></p>
@@ -1157,10 +1166,10 @@
                     <label for="form-position">What position are you applying for?<span class="astrick">*</span></label><br>	
                     <select name="position" id="form-position">
                      <option value=""></option>
-                     <option value="stn" >Company Driver</options>
-                     <option value="sto" >Owner Operator</options>
-                     <option value="stot" >Fleet Owner</options>
-                     <option value="sttt">Driver for Owner Operator</option>
+                     <option value="Company Driver" >Company Driver</options>
+                     <option value="Owner Operator" >Owner Operator</options>
+                     <option value="Fleet Owner" >Fleet Owner</options>
+                     <option value="Driver for Owner Operator">Driver for Owner Operator</option>
                     </select>
 
                     <br>
@@ -1270,10 +1279,10 @@
 
                     <!--Are you legally eligable for emplyment in the United States-->
                     <p> Are you legally eligable for employment in the United States? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c1" name="eligUS" value="c1" required>
+                    <input type="checkbox" id="c1yes" name="eligUS" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c1" name="eligUS" value="c1">
+                    <input type="checkbox" id="c1no" name="eligUS" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1281,10 +1290,10 @@
 
                     <!--Are you currently employed-->
                     <p> Are you currently employed? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c2" name="curremployed" value="c2" required>
+                    <input type="checkbox" id="c2yes" name="curremployed" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c2" name="curremployed" value="c2">
+                    <input type="checkbox" id="c2no" name="curremployed" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1292,10 +1301,10 @@
 
                     <!--Do you read, write, and speak English-->
                     <p> Do you read, write, and speak English? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c3" name="speakEnglish" value="c3" required>
+                    <input type="checkbox" id="c3yes" name="speakEnglish" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c3" name="speakEnglish" value="c3">
+                    <input type="checkbox" id="c3no" name="speakEnglish" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1303,10 +1312,10 @@
 
                     <!--Have you ever worked for this company before-->
                     <p> Have you ever worked for this company before? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c4" name="Workedherebefore" value="c4" required>
+                    <input type="checkbox" id="c4yes" name="Workedherebefore" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c4" name="Workedherebefore" value="c4">
+                    <input type="checkbox" id="c4no" name="Workedherebefore" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1314,10 +1323,10 @@
 
                     <!--Do you have a current TWIC card-->
                     <p> Do you have a current TWIC card? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c5" name="TWICcard" value="c5" required>
+                    <input type="checkbox" id="c5yes" name="TWICcard" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c5" name="TWICcard" value="c5">
+                    <input type="checkbox" id="c5no" name="TWICcard" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1325,10 +1334,10 @@
 
                     <!--Have you ever been known by any other name-->
                     <p> Have you ever been known by any other name? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c6" name="othername" value="c6" required>
+                    <input type="checkbox" id="c6yes" name="othername" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c6" name="othername" value="c6">
+                    <input type="checkbox" id="c6no" name="othername" value="No">
                     <label for="No"> No </label>
 
                    
@@ -1337,15 +1346,15 @@
 
                     <!--How did you hear about us-->
                     <label for="form-howhear">How did you hear about us?</label><br>	
-                    <select name="howhear" id = "howhear">
+                    <select name="howhear" id="howhear">
                      <option value=""></option>
-                     <option value="hhdriver" >Driver Refferal</options>
-                     <option value="hhcraig" >Craigslist</options>
-                     <option value="hhfb" >Facebook</options>
-                     <option value="hhdriver">Driver Pulse</option>
-                     <option value="hhnews">Newspaper</option>
-                     <option value="hhweb">Web</option>
-                     <option value="hhother">Other</option>
+                     <option value="Driver Refferal" >Driver Refferal</options>
+                     <option value="Craigslist" >Craigslist</options>
+                     <option value="Facebook" >Facebook</options>
+                     <option value="Driver Pulse">Driver Pulse</option>
+                     <option value="Newspaper">Newspaper</option>
+                     <option value="Web">Web</option>
+                     <option value="Other">Other</option>
                     </select>
 
                     <br>
@@ -1367,10 +1376,10 @@
 
                     <!--Have you registered for the FMCSA Drug & Alcohol Clearinghouse-->
                     <p> Have you registered for the FMCS Drug & Alcohol Clearinghouse? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c7" name="FMCSAClearinghouse" value="c7" required>
+                    <input type="checkbox" id="c7yes" name="FMCSAClearinghouse" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c7" name="FMCSAClearinghouse" value="c6">
+                    <input type="checkbox" id="c7no" name="FMCSAClearinghouse" value="No">
                     <label for="No"> No </label>
 
                     <br>
@@ -1385,20 +1394,20 @@
 
                     <!--Straight Truck-->
                     <label for="form-strtruck">Straight Truck: <span class="astrick">*</span> </label><br>	
-                    <select name="strtruck" id="strtruck" required>
+                    <select name="strtruck" id = "strtruck" required>
                      <option value=""></option>
-                     <option value="stn" >None</options>
-                     <option value="sto" >Less than 1 year</options>
-                     <option value="stot" >1-2 years</options>
-                     <option value="sttt">2-3 years</option>
-                     <option value="sttf">3-4 years</option>
-                     <option value="stff">4-5 years</option>
-                     <option value="stfs">5-6 years</option>
-                     <option value="stss">6-7 years</option>
-                     <option value="stse">7-8 years</option>
-                     <option value="sten">8-9 years</option>
-                     <option value="stnt">9-10 years</option>
-                     <option value="stt">10+ years</option>
+                     <option value="None" >None</options>
+                     <option value="Less than 1 year" >Less than 1 year</options>
+                     <option value="1-2 years" >1-2 years</options>
+                     <option value="2-3 years">2-3 years</option>
+                     <option value="3-4 years">3-4 years</option>
+                     <option value="4-5 years">4-5 years</option>
+                     <option value="5-6 years">5-6 years</option>
+                     <option value="6-7 years">6-7 years</option>
+                     <option value="7-8 years">7-8 years</option>
+                     <option value="8-9 years">8-9 years</option>
+                     <option value="9-10 years">9-10 years</option>
+                     <option value="10+ years">10+ years</option>
                     </select>
 
                     <br>
@@ -1408,39 +1417,39 @@
                     <label for="form-tracsemi">Tractor and Semi-Trailer: <span class="astrick">*</span></label><br>	
                     <select name="tracsemi" id="tracsemi" required>
                      <option value=""></option>
-                     <option value="trn" >None</options>
-                     <option value="tro" >Less than 1 year</options>
-                     <option value="trot" >1-2 years</options>
-                     <option value="trtt">2-3 years</option>
-                     <option value="trtf">3-4 years</option>
-                     <option value="trff">4-5 years</option>
-                     <option value="trfs">5-6 years</option>
-                     <option value="trss">6-7 years</option>
-                     <option value="trse">7-8 years</option>
-                     <option value="tren">8-9 years</option>
-                     <option value="trnt">9-10 years</option>
-                     <option value="trt">10+ years</option>
+                     <option value="None" >None</options>
+                     <option value="Less than 1 year" >Less than 1 year</options>
+                     <option value="1-2 years" >1-2 years</options>
+                     <option value="2-3 years">2-3 years</option>
+                     <option value="3-4 years">3-4 years</option>
+                     <option value="4-5 years">4-5 years</option>
+                     <option value="5-6 years">5-6 years</option>
+                     <option value="6-7 years">6-7 years</option>
+                     <option value="7-8 years">7-8 years</option>
+                     <option value="8-9 years">8-9 years</option>
+                     <option value="9-10 years">9-10 years</option>
+                     <option value="10+ years">10+ years</option>
                     </select>
 
                     <br>
                     <br>
 
                     <!--Tractor - Two Trailers-->
-                    <label for="form-twotrac">Tractor - Two Trailers: <span class="astrick">*</span></label><br>	
-                    <select name="twotrac" id="twotrac" required>
+                    <label for="form-tractwo">Tractor - Two Trailers: <span class="astrick">*</span></label><br>	
+                    <select name="tractwo" id="tractwo"required>
                      <option value=""></option>
-                     <option value="ttn" >None</options>
-                     <option value="tto" >Less than 1 year</options>
-                     <option value="ttot" >1-2 years</options>
-                     <option value="tttt">2-3 years</option>
-                     <option value="tttf">3-4 years</option>
-                     <option value="ttff">4-5 years</option>
-                     <option value="ttfs">5-6 years</option>
-                     <option value="ttss">6-7 years</option>
-                     <option value="ttse">7-8 years</option>
-                     <option value="tten">8-9 years</option>
-                     <option value="ttnt">9-10 years</option>
-                     <option value="ttt">10+ years</option>
+                     <option value="None" >None</options>
+                      <option value="Less than 1 year" >Less than 1 year</options>
+                      <option value="1-2 years" >1-2 years</options>
+                      <option value="2-3 years">2-3 years</option>
+                      <option value="3-4 years">3-4 years</option>
+                      <option value="4-5 years">4-5 years</option>
+                      <option value="5-6 years">5-6 years</option>
+                      <option value="6-7 years">6-7 years</option>
+                      <option value="7-8 years">7-8 years</option>
+                      <option value="8-9 years">8-9 years</option>
+                      <option value="9-10 years">9-10 years</option>
+                      <option value="10+ years">10+ years</option>
                     </select>
 
                     <br>
@@ -1464,54 +1473,95 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#five" class="Next Button" onclick="return requiredpg2();"> Next</a>
+            <a href="#five"  class="Next Button" onclick="return pg2();" > Next</a>
             &ensp;
 
-            <script>
-            function requiredpg2()
-            {
-                var letters = /^[A-Za-z, ]+$/;
-                var letters = /^[A-Za-z, ]+$/;
-                var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 
-                let empt17 = document.getElementById("form-position").value;
-                let empt18 = document.getElementById("form-firstname").value;
-                let empt19 = document.getElementById("form-firstname").value;
-                let empt20 = document.getElementById("form-firstname").value;
-                let empt21 = document.getElementById("form-firstname").value;
-                let empt22 = document.getElementById("form-firstname").value;
-                let empt23 = document.getElementById("form-firstname").value;
-                let empt24 = document.getElementById("form-firstname").value;
-                let empt25 = document.getElementById("form-firstname").value;
-                let empt26 = document.getElementById("form-firstname").value;
-                let empt27 = document.getElementById("form-firstname").value;
-                let empy28 = document.getElementById("form-firstname").value;
-                let empt29 = document.getElementById("form-firstname").value;
-                let empt30 = document.getElementById("form-firstname").value;
-                let empt31 = document.getElementById("form-firstname").value;
-                let empt32 = document.getElementById("form-firstname").value;
-                let empt33 = document.getElementById("form-firstname").value;
-                let empt34 = document.getElementById("form-firstname").value;
-                let empt35 = document.getElementById("form-firstname").value;
-                let empt36 = document.getElementById("form-firstname").value;
-                let empt37 = document.getElementById("form-firstname").value;
-                let empt38 = document.getElementById("form-firstname").value;
-                let empt39 = document.getElementById("form-firstname").value;
-                let empt40 = document.getElementById("form-firstname").value;
-                let empt41 = document.getElementById("form-firstname").value;
-                let empt42 = document.getElementById("form-firstname").value;
-                let empt43 = document.getElementById("form-firstname").value;
-                let empt44 = document.getElementById("form-firstname").value;
+            
+            <script>
+            function pg2()
+            {
+                
+             
+
+                let gen20 = document.getElementById("form-position").value;
+                let gen22 = document.getElementById("form-tracttype").value;
+                let gen23 = document.getElementById("form-tractyear").value;
+                let gen24 = document.getElementById("form-tractmake").value;
+                let gen25 = document.getElementById("form-tractmodel").value;
+                let gen26 = document.getElementById("form-tractcolor").value;
+                let gen27 = document.getElementById("form-tractvin").value;
+                let gen28 = document.getElementById("form-tractweight").value;
+                let gen29 = document.getElementById("form-tractmileage").value;
+                let gen30 = document.getElementById("form-tractfifthheight").value;
+                let gen48 = document.getElementById("form-locapply").value;
+                let gen37 = document.getElementById("howhear").value;
+                let gen38 = document.getElementById("form-DriverRef").value;
+                let gen39 = document.getElementById("form-Other").value;
+                let gen41 = document.getElementById("strtruck").value;
+                let gen42 = document.getElementById("tracsemi").value;
+                let gen43 = document.getElementById("tractwo").value;
+                let gen44 = document.getElementById("form-OtherDriving").value;
+                
+
+                
+
+                //Displays options chosen for checkboxes
+                let c1checkboxes = document.querySelectorAll('input[name="eligUS"]:checked');
+                let gen31 = [];
+                c1checkboxes.forEach((checkbox) => {
+                   gen31.push(checkbox.value);
+                 });
+                 
+                 let c2checkboxes = document.querySelectorAll('input[name="curremployed"]:checked');
+                let gen32 = [];
+                c2checkboxes.forEach((checkbox) => {
+                   gen32.push(checkbox.value);
+                 });
+
+                 let c3checkboxes = document.querySelectorAll('input[name="speakEnglish"]:checked');
+                let gen33 = [];
+                c3checkboxes.forEach((checkbox) => {
+                   gen33.push(checkbox.value);
+                 });
+
+                 let c4checkboxes = document.querySelectorAll('input[name="Workedherebefore"]:checked');
+                let gen34 = [];
+                c4checkboxes.forEach((checkbox) => {
+                   gen34.push(checkbox.value);
+                 });
+
+                 let c5checkboxes = document.querySelectorAll('input[name="TWICcard"]:checked');
+                let gen35 = [];
+                c5checkboxes.forEach((checkbox) => {
+                   gen35.push(checkbox.value);
+                 });
+
+                 let c6checkboxes = document.querySelectorAll('input[name="othername"]:checked');
+                let gen36 = [];
+                c6checkboxes.forEach((checkbox) => {
+                   gen36.push(checkbox.value);
+                 });
+
+                 let c7checkboxes = document.querySelectorAll('input[name="FMCSAClearinghouse"]:checked');
+                let gen40 = [];
+                c7checkboxes.forEach((checkbox) => {
+                   gen40.push(checkbox.value);
+                 });
+                
+                
+               
             
             
             
             }
             </script>
+            
         </div>
     </div>
 
 
-
+    <!--License Details  (Complete)-->
     <div class="page" id="five">
         <div class="column left">
             <p></p>
@@ -1551,7 +1601,6 @@
                     <label for="form-licenseNum"> License Number <span class="astrick">*</span> </label><br>
                     <input type="text" name="licenseNum" id="form-licenseNum" required>
 
-                    <br>
                     <br>
 
                     <!--Country-->
@@ -1811,13 +1860,13 @@
                     <br>
                     <br>
 
-                <!--License State and Province-->
+                    <!--License State and Province-->
                     <label for="form-licstate">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-licstate" name="licstate" class="cascade" required >
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -1870,7 +1919,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -1923,41 +1972,32 @@
                     <br>
                     <br>
 
-                    <!--Physical Expiration-->
-                    <label for="form-licphexp">Physical Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licphexp" name="licphexp" placeholder = "mm/dd/yyyy" required>
-
-                    <br>
-                    <br>
-
                     <!--Is this your current driver license?-->
                     <p> Is this your current driver license? <span class="astrick">*</span></p>
                     <div class="currentlic required">
-                    <input type="checkbox" id="currentlic" name="currentlic" value="yes" required>
+                    <input type="checkbox" id="currentlicyes" name="currentlic" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="currentlic" name="currentlic" value="no">
+                    <input type="checkbox" id="currentlicno" name="currentlic" value="No">
                     <label for="No"> No </label>
                     </div>
 
-                    <br>
                     <br>
 
                     <!--Is this your commercial driver license-->
                     <div class="commlic required">
                     <p> Is this your commercial driver license? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="commlic" name="commlic" value="yes" required>
+                    <input type="checkbox" id="commlicyes" name="commlic" value="Yes" required>
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="commlic" name="commlic" value="no">
+                    <input type="checkbox" id="commlicno" name="commlic" value="No">
                     <label for="No"> No </label>
                     </div>
 
 
                     <br>
-                    <br>
 
-                    <label for="form-licclass">License Class<span class="astrick">*</span></label><br>	
+                    <label for="form-licclass">License Class <span class="astrick">*</span></label><br>	
                     <select name="licclass" id = "licclass" required>
                      <option value=""></option>
                      <option value="class a" >Class A</options>
@@ -1981,22 +2021,22 @@
 
                     <!--Endorsements-->
                     <p>Endorsements</p>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="None">
+                    <input type="checkbox" id="EndorsementNone" name="endorsements" value="None">
                     <label for="None"> None </label>
                     <br>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="Other">
+                    <input type="checkbox" id="EndorsementOther" name="endorsements" value="Other">
                     <label for="Other"> Other </label>
                     <br>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="Tanker">
+                    <input type="checkbox" id="EndorsementTanker" name="endorsements" value="Tanker">
                     <label for="Tanker"> Tanker </label>
                     <br>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="Doubles">
+                    <input type="checkbox" id="EndorsementDoublesTriples" name="endorsements" value="Doubles/Triples">
                     <label for="Doubles/Triples"> Doubles / Triples </label>
                     <br>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="XEndorsement">
+                    <input type="checkbox" id="EndorsementXEndorsement" name="endorsements" value="XEndorsement">
                     <label for="XEndorsement"> X Endorsement </label>
                     <br>
-                    <input type="checkbox" id="endorsements" name="endorsements" value="HaxMat">
+                    <input type="checkbox" id="EndorsementHazMat" name="endorsements" value="HazMat">
                     <label for="HazMat"> HazMat </label>
 
 
@@ -2019,13 +2059,14 @@
                               <div class="panel-body">
                                 <hr>
                                 <h2> 2nd License Details</h2>
-                    <hr>
+                                <hr>
 
                     <!--License Number-->
+                    <div class = "optreq">
                     <label for="form-licenseNum2"> License Number <span class="astrick">*</span> </label><br>
-                    <input type="text" name="licenseNum2" id="form-licenseNum2" required>
+                    <input type="text" name="licenseNum2" id="form-licenseNum2">
+                    </div>
 
-                    <br>
                     <br>
 
                     <!--Country-->
@@ -2033,7 +2074,7 @@
                        
 
                     <label for="form-liccountry2">Country <span class="astrick">*</span></label><br>
-                    <select name="liccountry2" id = "form-liccountry2" required>
+                    <select name="liccountry2" id = "form-liccountry2">
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -2287,11 +2328,11 @@
 
                 <!--License State and Province-->
                     <label for="form-licstate2">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-licstate2" name="licstate2" class="cascade" required >
+                    <select id="form-licstate2" name="licstate2" class="cascade">
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -2344,7 +2385,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -2391,47 +2432,40 @@
                     <br>
 
                     <!--License Expiration-->
+                    <div class = "optreq">
                     <label for="form-licexp2">License Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licexp2" name="licexp2" placeholder = "mm/dd/yyyy" required>
+                    <input type="text" id="form-licexp2" name="licexp2" placeholder = "mm/dd/yyyy">
+                    </div>
 
-                    <br>
-                    <br>
-
-                    <!--Physical Expiration-->
-                    <label for="form-licexp2">Physical Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licphexp2" name="licphexp2" placeholder = "mm/dd/yyyy" required>
-
-                    <br>
                     <br>
 
                     <!--Is this your current driver license?-->
                     <p> Is this your current driver license? <span class="astrick">*</span></p>
                     <div class="currentlic2 required">
-                    <input type="checkbox" id="currentlic2" name="currentlic2" value="yes" required>
+                    <input type="checkbox" id="currentlic2yes" name="currentlic2" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="currentlic2" name="currentlic2" value="no">
+                    <input type="checkbox" id="currentlic2no" name="currentlic2" value="No">
                     <label for="No"> No </label>
                     </div>
-                    <br>
+
                     <br>
 
                     <!--Is this your commercial driver license-->
                     <p> Is this your commercial driver license? <span class="astrick">*</span></p>
                     <div class="commlic2 required">
-                    <input type="checkbox" id="commlic2" name="commlic2" value="yes" required>
+                    <input type="checkbox" id="commlic2yes" name="commlic2" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="commlic2" name="commlic2" value="no">
+                    <input type="checkbox" id="commlic2no" name="commlic2" value="No">
                     <label for="No"> No </label>
                     </div>
 
 
                     <br>
-                    <br>
 
-                    <label for="form-licclass2">License Class<span class="astrick">*</span></label><br>	
-                    <select name="licclass2" id = "licclass2" required>
+                    <label for="form-licclass2">License Class <span class="astrick">*</span></label><br>	
+                    <select name="licclass2" id = "licclass2">
                      <option value=""></option>
                      <option value="class a" >Class A</options>
                      <option value="class az" >Class AZ</options>
@@ -2452,27 +2486,29 @@
                     <br>
                     <br>
 
+                  
+
                     <!--Endorsements-->
                     <p>Endorsements</p>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="None" >
+                    <input type="checkbox" id="EndorsementNone2" name="endorsements2" value="None">
                     <label for="None"> None </label>
                     <br>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Other">
+                    <input type="checkbox" id="EndorsementOther2" name="endorsements2" value="Other">
                     <label for="Other"> Other </label>
                     <br>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Tanker">
+                    <input type="checkbox" id="EndorsementTanker2" name="endorsements2" value="Tanker">
                     <label for="Tanker"> Tanker </label>
                     <br>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="Doubles">
+                    <input type="checkbox" id="EndorsementDoublesTriples2" name="endorsements2" value="Doubles/Triples">
                     <label for="Doubles/Triples"> Doubles / Triples </label>
                     <br>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="XEndorsement">
+                    <input type="checkbox" id="EndorsementXEndorsement2" name="endorsements2" value="XEndorsement">
                     <label for="XEndorsement"> X Endorsement </label>
                     <br>
-                    <input type="checkbox" id="endorsements2" name="endorsements2" value="HazMat">
+                    <input type="checkbox" id="EndorsementHazMat2" name="endorsements2" value="HazMat">
                     <label for="HazMat"> HazMat </label>
 
-
+                    <br>
 
                     <!--Do you own a third license-->
                   <div class="container">
@@ -2494,10 +2530,11 @@
                     <hr>
 
                     <!--License Number-->
+                    <div class = "optreq">
                     <label for="form-licenseNum3"> License Number <span class="astrick">*</span> </label><br>
-                    <input type="text" name="licenseNum3" id="form-licenseNum3" required>
+                    <input type="text" name="licenseNum3" id="form-licenseNum3">
+                    </div>
 
-                    <br>
                     <br>
 
                     <!--Country-->
@@ -2505,7 +2542,7 @@
                        
 
                     <label for="form-liccountry3">Country <span class="astrick">*</span></label><br>
-                    <select name="liccountry3" id = "form-liccountry3" required>
+                    <select name="liccountry3" id = "form-liccountry3">
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -2759,11 +2796,11 @@
 
                 <!--License State and Province-->
                     <label for="form-licstate3">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-licstate3" name="licstate3" class="cascade" required >
+                    <select id="form-licstate3" name="licstate3" class="cascade">
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -2816,7 +2853,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -2863,46 +2900,42 @@
                     <br>
 
                     <!--License Expiration-->
+                    <div class = "optreq">
                     <label for="form-licexp3">License Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licexp3" name="licexp3" placeholder = "mm/dd/yyyy" required>
+                    <input type="text" id="form-licexp3" name="licexp3" placeholder = "mm/dd/yyyy">
+                    </div>
 
                     <br>
-                    <br>
 
-                    <!--Physical Expiration-->
-                    <label for="form-licexp3">Physical Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licphexp3" name="licphexp3" placeholder = "mm/dd/yyyy" required>
-
-                    <br>
-                    <br>
 
                     <!--Is this your current driver license?-->
                     <p> Is this your current driver license? <span class="astrick">*</span></p>
                     <div class = "currentlic3 required">
-                    <input type="checkbox" id="currentlic3" name="currentlic3" value="yes" required>
+                    <input type="checkbox" id="currentlic3yes" name="currentlic3" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="currentlic3" name="currentlic3" value="no">
+                    <input type="checkbox" id="currentlic3no" name="currentlic3" value="No">
                     <label for="No"> No </label>
                     </div>
-                    <br>
+                    
                     <br>
 
                     <!--Is this your commercial driver license-->
                     <p> Is this your commercial driver license? <span class="astrick">*</span></p>
-                    <div class="commlic3 requied">
-                    <input type="checkbox" id="commlic3" name="commlic3" value="yes" required>
+                    <div class="commlic3 required">
+                    <input type="checkbox" id="commlic3yes" name="commlic3" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="commlic3" name="commlic3" value="no">
+                    <input type="checkbox" id="commlic3no" name="commlic3" value="No">
                     <label for="No"> No </label>
                     </div>
 
-                    <br>
+                  
                     <br>
 
-                    <label for="form-licclass3">License Class<span class="astrick">*</span></label><br>	
-                    <select name="licclass3" id = "licclass3" required>
+                    
+                    <label for="form-licclass3">License Class <span class="astrick">*</span></label><br>	
+                    <select name="licclass3" id = "licclass3">
                      <option value=""></option>
                      <option value="class a" >Class A</options>
                      <option value="class az" >Class AZ</options>
@@ -2919,28 +2952,29 @@
                      <option value="class 4" >Class 4</options>
                      <option value="class 5" >Class 5</options>
                     </select>
+                  
+                    <br>
+                    <br>
 
-                    <br>
-                    <br>
 
                     <!--Endorsements-->
                     <p>Endorsements</p>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="None" >
+                    <input type="checkbox" id="EndorsementNone3" name="endorsements3" value="None">
                     <label for="None"> None </label>
                     <br>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Other">
+                    <input type="checkbox" id="EndorsementOther3" name="endorsements3" value="Other">
                     <label for="Other"> Other </label>
                     <br>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Tanker">
+                    <input type="checkbox" id="EndorsementTanker3" name="endorsements3" value="Tanker">
                     <label for="Tanker"> Tanker </label>
                     <br>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="Doubles">
+                    <input type="checkbox" id="EndorsementDoublesTriples3" name="endorsements3" value="Doubles/Triples">
                     <label for="Doubles/Triples"> Doubles / Triples </label>
                     <br>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="XEndorsement">
+                    <input type="checkbox" id="EndorsementXEndorsement3" name="endorsements3" value="XEndorsement">
                     <label for="XEndorsement"> X Endorsement </label>
                     <br>
-                    <input type="checkbox" id="endorsements3" name="endorsements3" value="HazMat">
+                    <input type="checkbox" id="EndorsementHazMat3" name="endorsements3" value="HazMat">
                     <label for="HazMat"> HazMat </label>
 
                               </div>
@@ -3005,47 +3039,119 @@
                 var add = /^[a-zA-z0-9 ]*$/gm;
                 var birt = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 
+              //First License
               let lic = document.getElementById("form-licenseNum").value;
               let lic2 = document.getElementById("form-liccountry").value;
               let lic3 = document.getElementById("form-licstate").value;
               let lic4 = document.getElementById("form-licexp").value;
-              let lic5 = document.getElementById("form-licphexp").value;
-              let lic6 = document.getElementById("currentlic").value;
-              let lic7 = document.getElementById("commlic").value;
               let lic8 = document.getElementById("licclass").value;
-              let lic9 = document.getElementById("endorsements").value;
+             
+              //Second License
               let lic10 = document.getElementById("form-licenseNum2").value;
               let lic11 = document.getElementById("form-liccountry2").value;
               let lic12 = document.getElementById("form-licstate2").value;
               let lic13 = document.getElementById("form-licexp2").value;
-              let lic14 = document.getElementById("form-licphexp2").value;
-              let lic15 = document.getElementById("currentlic2").value;
-              let lic16 = document.getElementById("commlic2").value;
               let lic17 = document.getElementById("licclass2").value;
-              let lic18 = document.getElementById("endorsements2").value;
+              
+              //Third License
               let lic19 = document.getElementById("form-licenseNum3").value;
               let lic20 = document.getElementById("form-liccountry3").value;
               let lic21 = document.getElementById("form-licstate3").value;
               let lic22 = document.getElementById("form-licexp3").value;
-              let lic23 = document.getElementById("form-licphexp3").value;
-              let lic24 = document.getElementById("currentlic3").value;
-              let lic25 = document.getElementById("commlic3").value;
               let lic26 = document.getElementById("licclass3").value;
-              let lic27 = document.getElementById("endorsements3").value;
+             
+              //Collapsible Sections
               let lic28 = document.getElementsByName("collapseGroup2").value;
               let lic29 = document.getElementsByName("collapseGroup3").value;
-            
+              
+              //Checks if first license are clicked
               let lic30 = $('div.currentlic.required :checkbox:checked').length > 0;
               let lic31 =  $('div.commlic.required :checkbox:checked').length > 0;
+
+              //Checks if second license are clicked
               let lic32 =  $('div.license2.required :checkbox:checked').length > 0;
               let lic33 = $('div.currentlic2.required :checkbox:checked').length > 0;
               let lic34 =  $('div.commlic2.required :checkbox:checked').length > 0;
+
+              //Checks if third license are clicked
               let lic35 = $('div.currentlic3.required :checkbox:checked').length > 0;
               let lic36 =  $('div.commlic3.required :checkbox:checked').length > 0;
               let lic37 =  $('div.license3.required :checkbox:checked').length > 0;
+               
+              
+              //Collects values for first license endorsements
+              let checkboxes = document.querySelectorAll('input[name="endorsements"]:checked');
+              let values = [];
+              checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+              });
+
+              //Collects values of current driver license
+              let c8checkboxes = document.querySelectorAll('input[name="currentlic"]:checked');
+                let lic6 = [];
+                c8checkboxes.forEach((checkbox) => {
+                   lic6.push(checkbox.value);
+                 });
+
+
+              //Collects values of commercial driver license
+              let c9checkboxes = document.querySelectorAll('input[name="commlic"]:checked');
+                let lic7 = [];
+                c9checkboxes.forEach((checkbox) => {
+                   lic7.push(checkbox.value);
+                 });
+
+
+              //Collects values for second license endorsements
+              let checkboxes2 = document.querySelectorAll('input[name="endorsements2"]:checked');
+              let values2 = [];
+              checkboxes2.forEach((checkbox) => {
+                values2.push(checkbox.value);
+              });
+
+              //Collects values of current driver license 2
+              let c10checkboxes = document.querySelectorAll('input[name="currentlic2"]:checked');
+                let lic15 = [];
+                c10checkboxes.forEach((checkbox) => {
+                   lic15.push(checkbox.value);
+                 });
+
+
+              //Collects values of commercial driver license 2
+              let c11checkboxes = document.querySelectorAll('input[name="commlic2"]:checked');
+                let lic16 = [];
+                c11checkboxes.forEach((checkbox) => {
+                   lic16.push(checkbox.value);
+                 });
+
+
+              //Collects values for third license endorsements
+              let checkboxes3 = document.querySelectorAll('input[name="endorsements3"]:checked');
+              let values3 = [];
+              checkboxes3.forEach((checkbox) => {
+                values3.push(checkbox.value);
+              });
+
+              //Collects values of current driver license 3
+              let c12checkboxes = document.querySelectorAll('input[name="currentlic3"]:checked');
+                let lic24 = [];
+                c12checkboxes.forEach((checkbox) => {
+                   lic24.push(checkbox.value);
+                 });
+
+
+              //Collects values of commercial driver license 3
+              let c13checkboxes = document.querySelectorAll('input[name="commlic3"]:checked');
+                let lic25 = [];
+                c13checkboxes.forEach((checkbox) => {
+                   lic25.push(checkbox.value);
+                 });
+
+
+
               
               
-            if(lic == "" || lic2 == "" || lic3 == "" || lic4 == "" || lic5 == "" || lic30 == false || lic31 == false || lic8 == "")
+            if(lic == "" || lic2 == "-1" || lic3 == "-1" || lic4 == "" || lic30 == false || lic31 == false || lic8 == "")
             {
                 alert("Please input a Value");
                 return false;
@@ -3056,11 +3162,10 @@
                 {
                      if(lic4.match(birt))
                      {
-                           if(lic5.match(birt))
-                           {
+                           
                                  if(lic32 == true)
                                  {
-                                    if(lic10 == "" || lic11 == "" || lic12 == "" || lic13 == "" || lic14 == "" || lic33 == false || lic34 == false || lic17 == "")
+                                    if(lic10 == "" || lic11 == "-1" || lic12 == "-1" || lic13 == "" || lic33 == false || lic34 == false || lic17 == "")
                                     {
                                         alert("Please input a Value");
                                         return false;
@@ -3071,11 +3176,10 @@
                                         {
                                              if(lic13.match(birt))
                                              {
-                                                if(lic14.match(birt))
-                                                {
+                                                
                                                      if(lic37 == true)
                                                      {
-                                                        if(lic19 == "" || lic20 == "" || lic21 == "" || lic22 == "" || lic23 == "" || lic35 == false || lic36 == false || lic26 == "")
+                                                        if(lic19 == "" || lic20 == "-1" || lic21 == "-1" || lic22 == "" || lic35 == false || lic36 == false || lic26 == "")
                                                          {
                                                              alert("Please input a Value");
                                                              return false;
@@ -3086,15 +3190,9 @@
                                                             {
                                                                  if(lic22.match(birt))
                                                                  {
-                                                                    if(lic23.match(birt))
-                                                                    {
+                                                                    
                                                                         return true;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        alert("The 3rd physical license expiration date is in the improper format.");
-                                                                        return false;
-                                                                    }
+                                                                   
                                                                  }
                                                                  else
                                                                  {
@@ -3113,13 +3211,7 @@
                                                      {
                                                         return true;
                                                      }
-                                                }
-                                                else
-                                                {
-                                                    alert("The 2nd physical license expiration date is in the improper format.");
-                                                    return false;
-
-                                                }
+                                               
                                              }
                                              else
                                              {
@@ -3138,12 +3230,7 @@
                                  {
                                     return true;
                                  }
-                           }
-                           else
-                           {
-                              alert("This physical license expiration date is in the improper format.");
-                              return false;
-                           }
+                          
                      }
                      else
                      {
@@ -3163,7 +3250,7 @@
 
     </div>
 
-
+    <!--Military Service (Complete)-->
     <div class="page" id="six">
         <div class="column left">
             <p></p>
@@ -3217,8 +3304,9 @@
                                     <h3> U.S. Military Service</h3>
                                      <hr>
       
-                                     <label for="form-branchservice">Branch of Service<span class="astrick">*</span></label><br>	
-                                     <select name="branchservice" id = "branchservice" required>
+                                     <div class = "optreq">
+                                     <label for="form-branchservice">Branch of Service <span class="astrick">*</span></label><br>	
+                                     <select name="branchservice" id = "branchservice">
                                       <option value=""></option>
                                       <option value="army" >Army</options>
                                       <option value="army reserve" >Army Reserve</options>
@@ -3235,22 +3323,26 @@
                                       <option value="merchant marines" >Merchant Marines</options>
                                       <option value="national guard" >Narional Guard</options>
                                      </select>
+                                     </div>
       
       
                                      <br>
                                      <br>
                  
                                      <!--Start Date-->
+                                     <div class = "optreq">
                                      <label for="form-militarystart">Start Date <span class="astrick">*</span> </label>
-                                     <input type="text" id="form-militarystart" name="militarystart" placeholder = "mm/yyyy" required>
-      
+                                     <input type="text" id="form-militarystart" name="militarystart" placeholder = "mm/yyyy">
+                                     </div> 
+
                                      <br>
                                      <br>
       
                                      <!--End Date-->
+                                     <div class = "optreq">
                                      <label for="form-militaryend">End Date <span class="astrick">*</span> </label>
-                                     <input type="text" id="form-militaryend" name="militaryend" placeholder = "mm/yyyy" required>
-      
+                                     <input type="text" id="form-militaryend" name="militaryend" placeholder = "mm/yyyy">
+                                     </div>
                                      <br>
                                      <br>
       
@@ -3264,10 +3356,10 @@
                                      <!--Can you obtain your DD214?-->
                                      <div class="dd214 required">
                                         <p> Can you obtain your DD214?</p>
-                                        <input type="checkbox" id="dd214" name="dd214" value="yes">
+                                        <input type="checkbox" id="dd214yes" name="dd214" value="Yes">
                                         <label for="Yes"> Yes </label>
                                         <br>
-                                        <input type="checkbox" id="dd214" name="dd214" value="no">
+                                        <input type="checkbox" id="dd214no" name="dd214" value="No">
                                         <label for="No"> No </label>
                                         </div>
       
@@ -3312,22 +3404,32 @@
           <script>
                function requiredpg6()
                {
+                //Formatting
                 var add = /^[a-zA-z0-9 ]*$/gm;
                 var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
       
-                
+                //Variables
                 let mil = document.getElementById("branchservice").value;
                 let mil2 = document.getElementById("form-militarystart").value;
                 let mil3 = document.getElementById("form-militaryend").value;
                 let mil4 = document.getElementById("form-dischargerank").value;
-      
+                
+                //Make sure box is checked
                 let mil5 =  $('div.military.required :checkbox:checked').length > 0;
+
+                //Displays values that were checked
+                let milcheckboxes = document.querySelectorAll('input[name="dd214"]:checked');
+                let mil6 = [];
+                milcheckboxes.forEach((checkbox) => {
+                mil6.push(checkbox.value);
+              });
       
                 if (mil5 == true)
                 {
                     if(mil == "" || mil2 == "" || mil3 == "")
                     {
                         alert("Please input a Value");
+
                         return false;
                     }
                     else
@@ -3377,7 +3479,7 @@
         </div>
       </div>
       
-
+    <!--Employer Contract Information-->
     <div class="page" id="seven">
         <div class="column left">
             <p></p>
@@ -5590,6 +5692,7 @@
         </div>
     </div>
 
+    <!--Drivers Training School-->
     <div class="page" id="eight">
         <div class="column left">
             <p></p>
@@ -6743,6 +6846,7 @@
         </div>
     </div>
 
+    <!--Schooling-->
     <div class="page" id="nine">
         <div class="column left">
             <p></p>
@@ -7697,6 +7801,7 @@
         </div>
     </div>
 
+    <!--Unemployment (Complete)-->
     <div class="page" id="ten">
         <div class="column left">
             <p></p>
@@ -7718,7 +7823,7 @@
                 <br>
                 <br>
 
-                <!--Javascript to make this picture the right one-->
+                
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:63%" alt="Progress Bar 63%">63%</div>
@@ -7753,18 +7858,21 @@
     
                     
                                    <br>
-                                   <br>
                
                                    <!--Start Date-->
+                                   <div class = "optreq">
                                    <label for="form-unemploymentstart">Start Date <span class="astrick">*</span> </label>
-                                   <input type="text" id="form-unemploymentstart" name="unemploymentstart" placeholder = "mm/yyyy" required>
+                                   <input type="text" id="form-unemploymentstart" name="unemploymentstart" placeholder = "mm/yyyy">
+                                   </div>
     
                                    <br>
                                    <br>
     
                                    <!--End Date-->
+                                   <div class = "optreq">
                                    <label for="form-unemploymentend">End Date <span class="astrick">*</span> </label>
-                                   <input type="text" id="form-unemploymentend" name="unemploymentend" placeholder = "mm/yyyy" required>
+                                   <input type="text" id="form-unemploymentend" name="unemploymentend" placeholder = "mm/yyyy">
+                                   </div>
     
                                    <br>
                                    <br>
@@ -7810,15 +7918,71 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#eleven" class="Next Button" onclick="return rquiredpg10();"> Next</a>
+            <a href="#eleven" class="Next Button" onclick="return pg10();"> Next</a>
             &ensp;
 
             <script>
+              function pg10()
+              {
+                var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+                var la = /^[a-zA-Z0-9 \.]*$/;
 
+                let une = document.getElementById("form-unemploymentstart").value;
+                let une2 = document.getElementById("form-unemploymentend").value;
+                let une3 = document.getElementById("form-unemploymentcomments").value;
+                
+
+                let une4 = $('div.unemployment.required :checkbox:checked').length > 0;
+
+                if(une4 == true)
+                {
+                    if(une == "" || une2 == "")
+                    {
+                      alert("Please input a Value");
+                      return false;
+                    }
+                    else
+                    {
+                       if(une.match(rel))
+                       {
+                          if(une2.match(rel))
+                          {
+                              if(une3.match(la))
+                              {
+                                 return true;
+                              }
+                              else
+                              {
+                                alert("The comments section contains an unallowed character. Only letters, numbers, spaces, and periods are allowed for this input.")
+                                return false;
+                              }
+                          }
+                          else
+                          {
+                            alert("The unemployment end time is in the improper format");
+                            return false;
+                          }
+                       }
+                       else
+                       {
+                          alert("The unemployment start time is in the improper format");
+                          return false;
+                       }
+                    }
+                }
+                else
+                {
+                  return true;
+                }
+                
+
+              }
             </script>
         </div>
     </div>
 
+
+    <!--FMSCR-->
     <div class="page" id="eleven">
         <div class="column left">
             <p></p>
@@ -8139,6 +8303,7 @@
         </div>
     </div>
 
+    <!--Traffic Violations/Convictions-->
     <div class="page" id="twelve">
         <div class="column left">
             <p></p>
@@ -8623,6 +8788,8 @@
         </div>
     </div>
 
+
+    <!--Criminal Record-->
     <div class="page" id="thirteen">
         <div class="column left">
             <p></p>
@@ -8651,7 +8818,7 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
+                
               
 
                     <br>
@@ -8961,6 +9128,7 @@
         </div>
     </div>
 
+    <!--Review Information-->
     <div class="page" id="fourteen">
         <div class="column left">
             <p></p>
@@ -8990,13 +9158,187 @@
 
                 <br>
                 <!--Replace with email given after testing-->
-               
+                
 
                     <br>
                     <br>
                     <br>
 
                     <h2>Review Information</h2>
+                    <a  class="Next Button" onclick="return display();" > Display</a>
+                    <script>
+                      function display()
+                      {
+                        //Remember everything has to be redeclared in this section or nothing will be pulled up
+                      //Personal Information
+                      document.write("First Name");
+                      document.write(empt);
+                      document.write("Middle Name");
+                      document.write(empt13);
+                      document.write("Last Name");
+                      document.write(empt2);
+                      document.write("Suffix");
+                      document.write(empt17);
+                      document.write("SSN");
+                      document.write(empt3);
+                      document.write("Birthday");
+                      document.write(empt11);
+                      document.write("Address 1");
+                      document.write(empt4);
+                      document.write("Address 2");
+                      document.write(empt14);
+                      document.write("Apartment");
+                      document.write(empt12);
+                      document.write("Country");
+                      document.write(empt9);
+                      document.write("City");
+                      document.write(empt5);
+                      document.write("State/Province");
+                      document.write(empt10);
+                      document.write("Zip/Postal");
+                      document.write(empt6);
+                      document.write("Primary Phone");
+                      document.write(empt7);
+                      document.write("Cell Phone");
+                      document.write(empt15);
+                      document.write("Email");
+                      document.write(empt16);
+                      document.write("Preferred method of contact");
+                      document.write(empt18);
+                      document.write("Best time to contact you");
+                      document.write(empt19);
+
+                      //General Information
+                      document.write("Postion");
+                document.write(gen20);
+                document.write("Tractor Type");
+                document.write(gen22);
+                document.write("Tractor Year");
+                document.write(gen23);
+                document.write("Tractor Make");
+                document.write(gen24);
+                document.write("Tracotr Model");
+                document.write(gen25);
+                document.write("Tractor Color");
+                document.write(gen26);
+                document.write("Tractor VIN");
+                document.write(gen27);
+                document.write("Tractor Weight");
+                document.write(gen28);
+                document.write("Tractor Mileage");
+                document.write(gen29);
+                document.write("Fifth Wheel Height");
+                document.write(gen30);
+                document.write("Apply Location");
+                document.write(gen48);
+                document.write("Eligable");
+                document.write(gen31);
+                document.write("Employmnet");
+                document.write(gen32);
+                document.write("English");
+                document.write(gen33);
+                document.write("Before");
+                document.write(gen34);
+                document.write("TWIC");
+                document.write(gen35);
+                document.write("Other");
+                document.write(gen36);
+                document.write("How");
+                document.write(gen37);
+                document.write("Driv");
+                document.write(gen38);
+                document.write("Other");
+                document.write(gen39);
+                document.write("FMSCR");
+                document.write(gen40);
+                document.write("st");
+                document.write(gen41);
+                document.write("t");
+                document.write(gen42);
+                document.write("tt");
+                document.write(gen43);
+                document.write("o");
+                document.write(gen44);
+                
+
+                      //License
+                       //First License
+                document.write("License Number");
+                document.write(lic);
+                document.write("Country");
+                document.write(lic2);
+                document.write("State");
+                document.write(lic3);
+                document.write("License Expiration");
+                document.write(lic4);
+                document.write("Physical Expiration");
+                document.write(lic5);
+                document.write("Current License");
+                document.write(lic6);
+                document.write("Commercial License");
+                document.write(lic7);
+                document.write("License Class");
+                document.write(lic8);
+                document.write("Endorsements");
+                document.write(values);
+                //Second License
+                document.write("License Number 2");
+                document.write(lic10);
+                document.write("Country 2");
+                document.write(lic11);
+                document.write("State 2");
+                document.write(lic12);
+                document.write("License Expiration 2");
+                document.write(lic13);
+                document.write("Physical Expiration 2");
+                document.write(lic14);
+                document.write("Current License 2");
+                document.write(lic15);
+                document.write("Commercial License 2");
+                document.write(lic16);
+                document.write("License Class 2");
+                document.write(lic17);
+                document.write("Endorsements 2");
+                document.write(values2);
+                //Third License
+                document.write("License Number 3");
+                document.write(lic19);
+                document.write("Country 3");
+                document.write(lic20);
+                document.write("State 3");
+                document.write(lic21);
+                document.write("License Expiration 3");
+                document.write(lic22);
+                document.write("Physical Expiration 3");
+                document.write(lic23);
+                document.write("Current License 3");
+                document.write(lic24);
+                document.write("Commercial License 3");
+                document.write(lic25);
+                document.write("License Class 3");
+                document.write(lic26);
+                document.write("Endorsements 3");
+                document.write(values3);
+
+                //Military
+                document.write("Branch of Service");
+                        document.write(mil);
+                        document.write("Military Start");
+                        document.write(mil2);
+                        document.write("Military End");
+                        document.write(mil3);
+                        document.write("Rank at Discharge");
+                        document.write(mil4);
+                        document.write("dd214");
+                        document.write(mil6);
+
+                        //Unemployment
+                        document.write(une);
+                      document.write(une2);
+                      document.write(une3);
+                
+                      }
+                    </script>
                     <hr>
 
                     <br>
@@ -9015,69 +9357,13 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#fifteen" class="Next Button"> Next</a>
-            &ensp;
-        </div>
-    </div>
-
-    <div class="page" id="fifteen">
-        <div class="column left">
-            <p></p>
-        </div>
-        <div class="column middle">
-
-
-            <!--Application Starting Paragraph-->
-            <div class="Application Starting Paragraph">
-                <div class="logo">
-
-                    <!--Picture of Company Logo-->
-                    <img src="assets/extra small truck logo.png" alt="Assad Logistics Logo">
-                    <div class="tab">
-                        <h2>Assad Logistics</h2>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-
-                <!--Javascript to make this picture the right one-->
-                <!--Progress Bar-->
-                <div class="w3-light-grey">
-                    <div id="myBar" class="w3-container w3-blue" style="width:98%" alt="Progress Bar 98%">98%</div>
-                </div>
-
-                <br>
-                <!--Replace with email given after testing-->
-               
-
-                    <br>
-                    <br>
-                    <br>
-
-                    <h2>Disabilties</h2>
-                    <hr>
-
-                    <br>
-                    <br>
-
-
-
-
-                <br>
-                <br>
-
-            </div>
-            <!--Back Button-->
-            <a href="#fourteen" class="Back Button"> Back</a>
-            &ensp;
-
-            <!-- Next Button-->
             <a href="#sixteen" class="Next Button"> Next</a>
             &ensp;
         </div>
     </div>
 
+
+     <!--Success Page-->
     <div class="page" id="sixteen">
         <div class="column left">
             <p></p>
@@ -9127,7 +9413,7 @@
 
             </div>
             <!--Back Button-->
-            <a href="#fifteen" class="Back Button"> Back</a>
+            <a href="#fourteen" class="Back Button"> Back</a>
             &ensp;
 
 
