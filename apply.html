@@ -7924,14 +7924,16 @@
             <script>
               function pg10()
               {
+                //Formatting
                 var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
                 var la = /^[a-zA-Z0-9 \.]*$/;
 
+                //Variables
                 let une = document.getElementById("form-unemploymentstart").value;
                 let une2 = document.getElementById("form-unemploymentend").value;
                 let une3 = document.getElementById("form-unemploymentcomments").value;
                 
-
+                //Makes sure boxes are clicked
                 let une4 = $('div.unemployment.required :checkbox:checked').length > 0;
 
                 if(une4 == true)
@@ -8303,7 +8305,7 @@
         </div>
     </div>
 
-    <!--Traffic Violations/Convictions-->
+    <!--Traffic Violations/Convictions (Complete)-->
     <div class="page" id="twelve">
         <div class="column left">
             <p></p>
@@ -8325,7 +8327,7 @@
                 <br>
                 <br>
 
-                <!--Javascript to make this picture the right one-->
+                
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:77%" alt="Progress Bar 72%">77%</div>
@@ -8342,8 +8344,8 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-xs-12">
-                          <span>If you have any moving violations, traffic convictions within the last three years please click the Expand button, otherwise you are free to move on to the next page.</span>
-                          <div class ="military required">
+                          <span>If you have any moving violations or traffic convictions within the last three years please click the Expand button, otherwise you are free to move on to the next page.</span>
+                          <div class ="traffic required">
                           <input name="collapseGroup24" type="checkbox" value="yes"/> Expand
                           </div>
                           <div class="panel-group" id="accordion">
@@ -8358,18 +8360,18 @@
                                    <hr>
 
                                    <br>
-                                   <br>
 
                                      <!--Violation Date-->
-                                     <label for="form-violationdate">Start Date <span class="astrick">*</span> </label>
+                                     <div class = "optreq">
+                                     <label for="form-violationdate">Violation Date <span class="astrick">*</span> </label>
                                      <input type="text" id="form-violationdate" name="violationdate" placeholder = "mm/yyyy">
+                                     </div>
       
-                                     <br>
                                      <br>
     
                                      <!--Charge/Description-->
-                                   <label for="form-charge">Charge / Description<span class="astrick">*</span></label><br>	
-                                   <select name="charge" id = "charge" required>
+                                   <label for="form-charge">Charge/Description<span class="astrick">*</span></label><br>	
+                                   <select name="charge" id = "charge">
                                     <option value=""></option>
                                     <option value="careless/reckless" >Careless/Reckless</options>
                                     <option value="driving without a license" >Driving Without A License</options>
@@ -8407,11 +8409,9 @@
                                    
                                    <!--State/Province-->
                                    <label for="form-convictionstate">State/Province: <span class="astrick">*</span></label><br>
-                                   <select id="form-convictionstate" name="convictionstate" class="cascade" required >
+                                   <select id="form-convictionstate" name="convictionstate" class="cascade">
                                            <option value="-1">Select</option>
-                                           <option class="three" value = "-1"> Select</option>
-                                           <option class="three" value="oth"></option>
-                                           <option class="two" value = "-1"> Select</option>
+                                           <option class="three" value="oth">Other</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
                                            <option value="AR" class ="two">Arkansas</option>
@@ -8463,8 +8463,7 @@
                                            <option value="WA" class ="two">Washington</option>
                                            <option value="WI" class ="two">Wisconsin</option>
                                            <option value="WV" class ="two">West Virginia</option>
-                                           <option value="WY" class ="two">Wyoming</option>
-                                           <option class="one" value = "-1"> Select</option>    
+                                           <option value="WY" class ="two">Wyoming</option>   
                                            <option value="AB" class ="one">Alberta</option>
                                            <option value="BC" class ="one">British Columbia</option>
                                            <option value="MB" class ="one">Manitoba</option>
@@ -8490,35 +8489,37 @@
                                       <input type="checkbox" id="commercialvehicleyes" name="commercialvehicle" value="Yes">
                                       <label for="Yes"> Yes </label>
                                       <br>
-                                      <input type="checkbox" id="commericalvehicleno" name="commercialvehicle" value="No">
+                                      <input type="checkbox" id="commercialvehicleno" name="commercialvehicle" value="No">
                                       <label for="No"> No </label>
                                       </div>
     
-                                  
-                                    <!--Penalty/Fine-->
-                                     <p>Penalty/Fine (Check all that apply) <span class="astrick">*</span></p>
-                                      <input type="checkbox" id="penalty" name="penalty" value="fine">
-                                      <label for="fine"> Fine </label>
-                                      <br>
-                                      <input type="checkbox" id="penalty" name="penalty" value="suspension">
-                                      <label for="suspension"> Suspension </label>
-                                      <br>
-                                      <input type="checkbox" id="penalty" name="penalty" value="revocation">
-                                      <label for="revocation"> Revocation </label>
-                                      <br>
-                                      <input type="checkbox" id="penalty" name="penalty" value="community services">
-                                      <label for="community services"> Community Servies </label>
-                                      <br>
-                                      <input type="checkbox" id="penalty" name="penalty" value="other">
-                                      <label for="other"> Other </label>
                                       <br>
 
+                                    <!--Penalty/Fine-->
+                                    <div class = "penalty required">
+                                     <p>Penalty/Fine (Check all that apply) <span class="astrick">*</span></p>
+                                      <input type="checkbox" id="penalty Fine" name="penalty" value="fine">
+                                      <label for="fine"> Fine </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty Suspension" name="penalty" value="suspension">
+                                      <label for="suspension"> Suspension </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty Revocation" name="penalty" value="revocation">
+                                      <label for="revocation"> Revocation </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty Community Service" name="penalty" value="community services">
+                                      <label for="community services"> Community Servies </label>
+                                      <br>
+                                      <input type="checkbox" id="penalty Other" name="penalty" value="other">
+                                      <label for="other"> Other </label>
+                                      <br>
+                                    </div>
                                       <br>
                                      <br>
     
                                      <!--Fine Amount-->
                                    <label for="form-fineamount">Fine Amount (if applicable)</label><br>	
-                                   <select name="Fine Amount" id = "Fine Amount" required>
+                                   <select name="Fine Amount" id = "Fine Amount">
                                     <option value=""></option>
                                     <option value="$0-$99" >$0-$99</options>
                                     <option value="$100-$199" >$100-$199</options>
@@ -8528,6 +8529,9 @@
                                     <option value="$500+" >$500+</options>
                                     <option value="$1000+" >$1000+</options>
                                    </select>
+
+                                   <br>
+                                   <br>
 
                                    <!--Comments-->
                                    <label for="form-violationscomment"> Comments (If you answered "Other" to any of the above questions please elaborate here) </label><br>
@@ -8548,7 +8552,7 @@
                       <div class="row">
                         <div class="col-xs-12">
                           <span>If you had any accidents within the last five years please click the Expand button, otherwise you are free to move on to the next page.</span>
-                          <div class ="military required">
+                          <div class ="accident required">
                           <input name="collapseGroup25" type="checkbox" value="yes"/> Expand
                           </div>
                           <div class="panel-group" id="accordion">
@@ -8563,18 +8567,18 @@
                                    <hr>
 
                                    <br>
-                                   <br>
 
                                      <!--Date of Accident/Incident-->
+                                     <div class = "optreq">
                                      <label for="form-accidentdate">Date of Accident/Incident <span class="astrick">*</span> </label>
                                      <input type="text" id="form-accidentdate" name="accidentdate" placeholder = "mm/yyyy">
-      
-                                     <br>
+                                     </div>
+
                                      <br>
     
                                      <!--Charge/Description-->
                                    <label for="form-accidentcharge">Charge / Description<span class="astrick">*</span></label><br>	
-                                   <select name="accidentcharge" id = "accidentcharge" required>
+                                   <select name="accidentcharge" id = "accidentcharge">
                                     <option value=""></option>
                                     <option value="non-inquiry" >Non-inquiry</options>
                                     <option value="injury" >Injury</options>
@@ -8596,7 +8600,6 @@
 
     
                                    <br>
-                                   <br>
 
                                     <!--Was the Vehicle towed Away-->
                                     <div class="vehicletowed required">
@@ -8609,7 +8612,6 @@
                                       </div>
                                    
                                    <br>
-                                   <br>
 
                                     <!--City-->
                                     <label for="form-accidentcity"> City </label><br>
@@ -8620,11 +8622,9 @@
 
                                    <!--State/Province-->
                                    <label for="form-accidentstate">State/Province: <span class="astrick">*</span></label><br>
-                                   <select id="form-accidentstate" name="accidentstate" class="cascade" required >
+                                   <select id="form-accidentstate" name="accidentstate" class="cascade">
                                            <option value="-1">Select</option>
-                                           <option class="three" value = "-1"> Select</option>
-                                           <option class="three" value="oth"></option>
-                                           <option class="two" value = "-1"> Select</option>
+                                           <option class="three" value="oth">Other</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
                                            <option value="AR" class ="two">Arkansas</option>
@@ -8676,8 +8676,7 @@
                                            <option value="WA" class ="two">Washington</option>
                                            <option value="WI" class ="two">Wisconsin</option>
                                            <option value="WV" class ="two">West Virginia</option>
-                                           <option value="WY" class ="two">Wyoming</option>
-                                           <option class="one" value = "-1"> Select</option>    
+                                           <option value="WY" class ="two">Wyoming</option>    
                                            <option value="AB" class ="one">Alberta</option>
                                            <option value="BC" class ="one">British Columbia</option>
                                            <option value="MB" class ="one">Manitoba</option>
@@ -8694,6 +8693,7 @@
                
                                    </select>
                
+                                   
                                    <br>
                                    <br>
     
@@ -8709,7 +8709,6 @@
     
             
                                      <br>
-                                     <br>
     
                                       <!--Were you at fault?-->
                                    <div class="atfault required">
@@ -8722,7 +8721,6 @@
                                     </div>
 
                                     <br>
-                                    <br>
 
                                     <!--Were you ticketed?-->
                                    <div class="ticketed required">
@@ -8734,6 +8732,7 @@
                                     <label for="No"> No </label>
                                     </div>
                                     
+                                    <br>
 
                                    <!--Comments-->
                                    <label for="form-accidentcomments"> Please enter detailed information about this accident, whether this accident was chargable, recorable, reportable, or your fault </label><br>
@@ -8757,6 +8756,7 @@
                         }
                         });
                   </script>
+
                   <script>
                       $('[name="collapseGroup25"]').on('change', function(){  
                       if($(this).val()  === "yes"){
@@ -8783,17 +8783,354 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#thirteen" class="Next Button" onclick="return pg12();"> Next</a>
+            <a href="#thirteen" class="Next Button" onclick = "return pg12();"> Next</a>
             &ensp;
 
 
-
             <script>
-              function pg12()
-              {
-                  let empt = document.getElementById("form-violationdate").value;
-                  
-              }
+                  function pg12()
+                  {
+                    //Formatting
+                    var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+                    var la = /^[a-zA-Z0-9 \.]*$/;
+                    var letters = /^[A-Za-z, ]+$/;
+
+
+                    //Variables for Traffic Violations and Convictions
+                    let tvc = document.getElementById("form-violationdate").value;
+                    let tvc2 = document.getElementById("charge").value;
+                    let tvc3 = document.getElementById("form-convictionstate").value;
+                    let tvc4 = document.getElementById("Fine Amount").value;
+                    let tvc5 = document.getElementById("form-violationscomment").value;
+                   
+                    
+                    //Variables for Accidents
+                    let tvc6 = document.getElementById("form-accidentdate").value;
+                    let tvc7 = document.getElementById("accidentcharge").value;
+                    let tvc8 = document.getElementById("form-accidentcity").value;
+                    let tvc9 = document.getElementById("form-accidentstate").value;
+                    let tvc11 = document.getElementById("form-accidentcomment").value;
+                   
+
+                     //Make sure box is checked
+                      let tvc19 =  $('div.traffic.required :checkbox:checked').length > 0;
+                      let tvc21 =  $('div.commercialvehicle.required :checkbox:checked').length > 0;
+                      let tvc22 =  $('div.penalty.required :checkbox:checked').length > 0;
+
+                     //Make sure box is checked
+                     let tvc20 =  $('div.accident.required :checkbox:checked').length > 0;
+                     let tvc23 =  $('div.atfault.required :checkbox:checked').length > 0;
+                     let tvc24 =  $('div.ticketed.required :checkbox:checked').length > 0;
+                     let tvc25 =  $('div.acccommercialvehicle.required :checkbox:checked').length > 0;
+
+
+                    //Displays values that were checked
+                    let tvccheckboxes = document.querySelectorAll('input[name="commercialvehicle"]:checked');
+                    let tvc12 = [];
+                    tvccheckboxes.forEach((checkbox) => {
+                    tvc12.push(checkbox.value);
+                    });
+
+                    //Displays values that were checked
+                    let tvc2checkboxes = document.querySelectorAll('input[name="penalty"]:checked');
+                    let tvc13 = [];
+                    tvc2checkboxes.forEach((checkbox) => {
+                    tvc13.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc3checkboxes = document.querySelectorAll('input[name="hazmataccident"]:checked');
+                    let tvc14 = [];
+                    tvc3checkboxes.forEach((checkbox) => {
+                    tvc14.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc4checkboxes = document.querySelectorAll('input[name="vehicletowed"]:checked');
+                    let tvc15 = [];
+                    tvc4checkboxes.forEach((checkbox) => {
+                    tvc15.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc5checkboxes = document.querySelectorAll('input[name="acccommercialvehicle"]:checked');
+                    let tvc16 = [];
+                    tvc5checkboxes.forEach((checkbox) => {
+                    tvc16.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc6checkboxes = document.querySelectorAll('input[name="atfault"]:checked');
+                    let tvc17 = [];
+                    tvc6checkboxes.forEach((checkbox) => {
+                    tvc17.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc7checkboxes = document.querySelectorAll('input[name="ticketed"]:checked');
+                    let tvc18 = [];
+                    tvc7checkboxes.forEach((checkbox) => {
+                    tvc18.push(checkbox.value);
+                  });
+
+
+                  if(tvc19 == true && tvc20 == false)
+                  {
+                       if(tvc == "" || tvc2 == "" || tvc3 == "-1" || tvc21 == false || tvc22 == false)
+                       {
+                          alert("Please input a value");
+                          return false;
+                       }
+                       else
+                       {
+                          if(tvc.match(rel))
+                          {
+                                if(tvc5 == "")
+                                {
+                                  return true;
+                                }
+                                else
+                                {
+                                  if(tvc5.match(la))
+                                  {
+                                    return true;
+                                  }
+                                  else
+                                  {
+                                    alert("The traffic violations/convictions comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods.");
+                                    return false;
+                                  }
+                                }
+                          }
+                          else
+                          {
+                            alert("The traffic violations/convictions date is in the improper format.");
+                            return false;
+                            
+                          }
+                       }
+                  }
+                  else if (tvc19 == false && tvc20 == true)
+                  {
+                     if(tvc6 == "" || tvc7 == "" || tvc9 == "-1" || tvc23 == false || tvc24 == false || tvc25 == false)
+                     {
+                          alert("Please input a value");
+                          return false;
+                     }
+                     else
+                     {
+                          if(tvc6.match(rel))
+                          {
+                              if(tvc8 == "")
+                              {
+                                if(tvc11 == "")
+                                  {
+                                       //If city and comments are blank
+                                       return true;
+                                  }
+                                  else
+                                  {
+                                      if(tvc11.match(la))
+                                      {
+                                        //If city is blank and comment is not
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                        return false;
+                                      }
+                                  }
+                              }
+                              else
+                              {
+                                if(tvc8.match(letters))
+                                {
+                                  if(tvc11 == "")
+                                  {
+                                      //If city is not blank and comment is
+                                       return true;
+                                  }
+                                  else
+                                  {
+
+                                      if(tvc11.match(la))
+                                      {
+                                        //If city is not blank and comments is not blank
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                        return false;
+                                      }
+                                  }
+                                }
+                                else
+                                {
+                                  alert("The city where the accident took place is in the improper format.");
+                                  return false;
+                                }
+                              }
+                          }
+                          else
+                          {
+                            alert("The date of incident/accident is in the improper format.");
+                            return false;
+                          }
+
+                     }
+                  }
+                  else if(tvc19 == true && tvc20 == true)
+                  {
+                    if(tvc == "" || tvc2 == "" || tvc3 == "-1" || tvc21 == "false" || tvc22 == false || tvc6 == "" || tvc7 == "" || tvc9 == "-1" || tvc23 == false || tvc24 == false || tvc == false)
+                    {
+                           alert("Please input a value");
+                          return false;
+                    }
+                    else
+                    {
+                      if(tvc.match(rel))
+                          {
+
+                            if(tvc6.match(rel))
+                            {
+                                if(tvc5 == "")
+                                {
+                                  if(tvc8 == "")
+                              {
+                                if(tvc11 == "")
+                                  {
+                                       //If comment1, city and comments are blank
+                                       return true;
+                                  }
+                                  else
+                                  {
+                                      if(tvc11.match(la))
+                                      {
+                                        //If comment1 and city is blank and comment is not
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                        return false;
+                                      }
+                                  }
+                              }
+                              else
+                              {
+                                if(tvc8.match(letters))
+                                {
+                                  if(tvc11 == "")
+                                  {
+                                      //If comment 1 is blank city is not blank and comment is
+                                       return true;
+                                  }
+                                  else
+                                  {
+
+                                      if(tvc11.match(la))
+                                      {
+                                        //If comment1 is blank city is not blank and comments is not blank
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                      }
+                                  }
+                                }
+                                else
+                                {
+                                  alert("The city where the accident took place is in the improper format.");
+                                  return false;
+                                }
+                              }
+                                }
+                                else
+                                {
+                                  if(tvc5.match(la))
+                                  {
+                                    if(tvc8 == "")
+                              {
+                                if(tvc11 == "")
+                                  {
+                                       //If comment1 is not blank city and comments are blank
+                                       return true;
+                                  }
+                                  else
+                                  {
+                                      if(tvc11.match(la))
+                                      {
+                                        //If comment1 is not blank city is blank and comment is not
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                        return false;
+                                      }
+                                  }
+                              }
+                              else
+                              {
+                                if(tvc8.match(letters))
+                                {
+                                  if(tvc11 == "")
+                                  {
+                                      //If comment1 is not blank city is not blank and comment is
+                                       return true;
+                                  }
+                                  else
+                                  {
+
+                                      if(tvc11.match(la))
+                                      {
+                                        //If comment1 is not blank city is not blank and comments is not blank
+                                        return true;
+                                      }
+                                      else
+                                      {
+                                        alert("The accidents comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods. ")
+                                        return false;
+                                      }
+                                  }
+                                }
+                                else
+                                {
+                                  alert("The city where the accident took place is in the improper format.");
+                                  return false;
+                                }
+                              }
+                                  }
+                                  else
+                                  {
+                                    alert("The traffic violations/convictions comments contain unallowed characters. This input only allows letters, spaces, numbers, and periods.");
+                                    return false;
+                                  }
+                                }
+                            }
+                           //////////
+                            else
+                            {
+                              alert("The date of incident/accident is in the improper format.");
+                              return false;
+                            }
+                          }
+                          else
+                          {
+                            alert("The traffic violations/convictions date is in the improper format.");
+                            return false;
+                            
+                          }
+                    }
+                  }
+                  else
+                  {
+                    return true;
+                  }
+                  }
             </script>
         </div>
     </div>
@@ -9346,6 +9683,42 @@
                         document.write(une);
                       document.write(une2);
                       document.write(une3);
+
+                      //Taffic violations/convictions and Accidents
+                      document.write("Violation Date");
+                  document.write(tvc);
+                  document.write("Charge/Description");
+                  document.write(tvc2);
+                  document.write("State/Province");
+                  document.write(tvc3);
+                  document.write("Commercial Vehicle");
+                  document.write(tvc12);
+                  document.write("Penalty/Fine");
+                  document.write(tvc13);
+                  document.write("Fine Amount");
+                  document.write(tvc4);
+                  document.write("Comments");
+                  document.write(tvc5);
+                  document.write("Date of Accident");
+                  document.write(tvc6);
+                  document.write("CHarge/Description");
+                  document.write(tvc7);
+                  document.write("Hazmat Accident/Incident");
+                  document.write(tvc14);
+                  document.write("Vehicle towed");
+                  document.write(tvc15);
+                  document.write("City");
+                  document.write(tvc8);
+                  document.write("State/Province");
+                  document.write(tvc9);
+                  document.write("in a Commercial Vehicle");
+                  document.write(tvc16);
+                  document.write("Were you at fault");
+                  document.write(tvc17);
+                  document.write("Were you ticketed");
+                  document.write(tvc18);
+                  document.write("Comments");
+                  document.write(tvc11);
                 
                       }
                     </script>
