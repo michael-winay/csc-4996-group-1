@@ -6846,7 +6846,7 @@
         </div>
     </div>
 
-    <!--Schooling-->
+    <!--Schooling (Complete)-->
     <div class="page" id="nine">
         <div class="column left">
             <p></p>
@@ -6868,7 +6868,7 @@
                 <br>
                 <br>
 
-                <!--Javascript to make this picture the right one-->
+                
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:56%" alt="Progress Bar 56%">56%</div>
@@ -6901,22 +6901,26 @@
                                  <hr>
   
                                  <!--School Name-->
+                                 <div class = "optreq">
                                 <label for="form-schoolname"> School Name <span class="astrick">*</span></label><br>
                                 <input type="text" name="schoolname" id="form-schoolname">
+                                </div>
   
-                                 <br>
                                  <br>
              
                                  <!--Start Date-->
+                                 <div class = "optreq">
                                  <label for="form-schoolstart">Start Date <span class="astrick">*</span> </label>
                                  <input type="text" id="form-schoolstart" name="schoolstart" placeholder = "mm/yyyy" >
+                                 </div>
   
-                                 <br>
                                  <br>
   
                                  <!--End Date-->
+                                 <div class = "optreq">
                                  <label for="form-schoolend">End Date <span class="astrick">*</span> </label>
                                  <input type="text" id="form-schoolend" name="schoolend" placeholder = "mm/yyyy" >
+                                 </div>
   
                                  
                                     <!--Country-->
@@ -6924,7 +6928,7 @@
                        
 
                     <label for="form-schoolcountry">Country <span class="astrick">*</span></label><br>
-                    <select name="schoolcountry" id = "form-schoolcountry" required>
+                    <select name="schoolcountry" id = "form-schoolcountry" >
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -7176,19 +7180,20 @@
                                     <br>
 
                                     <!--City-->
+                                    <div class = "optreq">
                                     <label for="form-schoolcity"> City <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="schoolcity" id="form-schoolcity" placeholder = "New Haven" required>
+                                    <input type="text" name="schoolcity" id="form-schoolcity" placeholder = "New Haven" >
+                                    </div>
  
-                                    <br>
                                     <br>
 
                                     <!--State/Province-->
                                     <label for="form-schoolstate">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-schoolstate" name="schoolstate" class="cascade" required >
+                    <select id="form-schoolstate" name="schoolstate" class="cascade">
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -7241,7 +7246,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -7290,17 +7295,19 @@
                                     <br>
 
                                     <!--Telephone-->
+                                    <div class = "optreq">
                                     <label for="form-schooltelephone"> Telephone <span class="astrick">*</span> </label><br>
                                     <input type="text" name="schooltelephone" id="form-schooltelephone" placeholder = "784 872 8982">
+                                    </div>
 
-                                    <br>
                                     <br>
 
                                     <!--What did you study?-->
+                                    <div class = "optreq">
                                     <label for="form-schoolstudy"> What did you study? (business, finances, etc.) <span class="astrick">*</span></label><br>
                                     <input type="text" name="schoolstudy" id="form-schoolstudy">
+                                    </div>
 
-                                    <br>
                                     <br>
 
                                      <!--Graduation Date-->
@@ -7309,6 +7316,9 @@
   
                                      <br>
                                      <br>
+
+
+
                                  <!--Enter a second school-->
                    <div class="container">
                     <div class="row">
@@ -7329,22 +7339,26 @@
                                  <hr>
   
                                  <!--School Name-->
+                                 <div class = "optreq">
                                 <label for="form-schoolname2"> School Name <span class="astrick">*</span></label><br>
                                 <input type="text" name="schoolname2" id="form-schoolname2">
+                                </div>
   
-                                 <br>
                                  <br>
              
                                  <!--Start Date-->
+                                 <div class = "optreq">
                                  <label for="form-schoolstart2">Start Date <span class="astrick">*</span> </label>
                                  <input type="text" id="form-schoolstart2" name="schoolstart2" placeholder = "mm/yyyy" >
+                                 </div>
   
-                                 <br>
                                  <br>
   
                                  <!--End Date-->
+                                 <div class = "optreq">
                                  <label for="form-schoolend2">End Date <span class="astrick">*</span> </label>
                                  <input type="text" id="form-schoolend2" name="schoolend2" placeholder = "mm/yyyy" >
+                                 </div>
   
                                  
                                     <!--Country-->
@@ -7352,7 +7366,7 @@
                        
 
                     <label for="form-schoolcountry2">Country <span class="astrick">*</span></label><br>
-                    <select name="schoolcountry2" id = "form-schoolcountry2" required>
+                    <select name="schoolcountry2" id = "form-schoolcountry2">
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -7604,19 +7618,20 @@
                                     <br>
 
                                     <!--City-->
+                                    <div class = "optreq">
                                     <label for="form-schoolcity2"> City <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="schoolcity2" id="form-schoolcity2" placeholder = "New Haven" required>
+                                    <input type="text" name="schoolcity2" id="form-schoolcity2" placeholder = "New Haven">
+                                    </div>
  
-                                    <br>
                                     <br>
 
                                     <!--State/Province-->
                                     <label for="form-schoolstate2">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-schoolstate2" name="schoolstate2" class="cascade" required >
+                    <select id="form-schoolstate2" name="schoolstate2" class="cascade">
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -7669,7 +7684,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -7718,17 +7733,20 @@
                                     <br>
 
                                     <!--Telephone-->
+                                    <div class = "optreq">
                                     <label for="form-schooltelephone2"> Telephone <span class="astrick">*</span> </label><br>
                                     <input type="text" name="schooltelephone2" id="form-schooltelephone2" placeholder = "784 872 8982">
+                                    </div>
 
                                     <br>
                                     <br>
 
                                     <!--What did you study?-->
+                                    <div class = "optreq">
                                     <label for="form-schoolstudy2"> What did you study? (business, finances, etc.) <span class="astrick">*</span></label><br>
                                     <input type="text" name="schoolstudy2" id="form-schoolstudy2">
+                                    </div>
 
-                                    <br>
                                     <br>
 
                                      <!--Graduation Date-->
@@ -7792,11 +7810,221 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#ten" class="Next Button" onclick="return requiredpg9();"> Next</a>
+            <a href="#ten" class="Next Button" onclick="return pg9();"> Next</a>
             &ensp;
 
             <script>
+               function pg9()
+               {
+                 //Formatting
+                 var counter = 0;
+                 var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+                 var lamb = /^[a-zA-Z0-9 \.-]*$/;
+                 var letters = /^[A-Za-z, ]+$/;
+                 var numsp = /^[0-9 ]*$/;
 
+                 //Variables for first school
+                 let sch3 = document.getElementById("form-schoolname").value;
+                 let sch4 = document.getElementById("form-schoolstart").value;
+                 let sch5 = document.getElementById("form-schoolend").value;
+                 let sch6 = document.getElementById("form-schoolcountry").value;
+                 let sch7 = document.getElementById("form-schoolcity").value;
+                 let sch8 = document.getElementById("form-schoolstate").value;
+                 let sch9 = document.getElementById("form-schooltelephone").value;
+                 let sch10 = document.getElementById("form-schoolstudy").value;
+                 let sch11 = document.getElementById("form-graddate").value;
+
+                 //Variables for second school
+                 let sch12 = document.getElementById("form-schoolname2").value;
+                 let sch13 = document.getElementById("form-schoolstart2").value;
+                 let sch14 = document.getElementById("form-schoolend2").value;
+                 let sch15 = document.getElementById("form-schoolcountry2").value;
+                 let sch16 = document.getElementById("form-schoolcity2").value;
+                 let sch17 = document.getElementById("form-schoolstate2").value;
+                 let sch18 = document.getElementById("form-schooltelephone2").value;
+                 let sch19 = document.getElementById("form-schoolstudy2").value;
+                 let sch20 = document.getElementById("form-graddate2").value;
+
+                 //Make sure box is checked
+                 let sch =  $('div.school.required :checkbox:checked').length > 0;
+                 let sch2 =  $('div.school2.required :checkbox:checked').length > 0;
+
+
+                //Checks values for first school
+                 if(sch == true)
+                 {
+                     if(sch3 == "" || sch4 == "" || sch5 == "" || sch6 == "-1" || sch8 == "-1" || sch7 == "" || sch9 == "" || sch10 == "" )
+                     {
+                      alert("Please input a Value");
+                      return false;
+                     }
+                     else
+                     {
+                        if(sch3.match(lamb))
+                        {
+                            if(sch4.match(rel))
+                            {
+                                if(sch5.match(rel))
+                                {
+                                   if(sch7.match(letters))
+                                   {
+                                       if(sch9.match(numsp))
+                                       {
+                                           if(sch10.match(letters))
+                                           {
+                                               if(sch11 == "")
+                                               {
+                                                 counter++;
+                                               }
+                                               else
+                                               {
+                                                  if(sch11.match(rel))
+                                                  {
+                                                    counter++;
+                                                  }
+                                                  else
+                                                  {
+                                                    alert("The first school graduation date is in the improper format.");
+                                                    return false;
+                                                  }
+                                               }
+                                           }
+                                           else
+                                           {
+                                              alert("The first school study contains unaccepted characters.");
+                                              return false;
+                                           }
+                                       }
+                                       else
+                                       {
+                                         alert("The first school telephone contains unaccepted characters.");
+                                         return false;
+                                       }
+                                   }
+                                   else
+                                   {
+                                      alert("The first school city contains unaccepted characters.");
+                                      return false;
+                                   }
+                                }
+                                else
+                                {
+                                  alert("The first school end date is in the improper format.");
+                                  return false;
+                                }
+                            }
+                            else
+                            {
+                              alert("The first school start date is in the improper format.");
+                              return false;
+                            }
+                        }
+                        else
+                        {
+                           alert("The first school name contains unaccepted characters.");
+                           return false;
+                        }
+                     }
+
+                 }
+                 else
+                 {
+                    counter++;
+                 }
+
+               
+                 //Checks values for second school
+                 
+                 if(sch2 == true)
+                 {
+                     if(sch12 == "" || sch13 == "" || sch14 == "" || sch15 == "-1" || sch17 == "-1" || sch16 == "" || sch18 == "" || sch19 == "" )
+                     {
+                      alert("Please input a Value");
+                      return false;
+                     }
+                     else
+                     {
+                        if(sch12.match(lamb))
+                        {
+                            if(sch13.match(rel))
+                            {
+                                if(sch14.match(rel))
+                                {
+                                   if(sch16.match(letters))
+                                   {
+                                       if(sch18.match(numsp))
+                                       {
+                                           if(sch19.match(letters))
+                                           {
+                                               if(sch20 == "")
+                                               {
+                                                 counter++;
+                                               }
+                                               else
+                                               {
+                                                  if(sch20.match(rel))
+                                                  {
+                                                    counter++;
+                                                  }
+                                                  else
+                                                  {
+                                                    alert("The second school graduation date is in the improper format.");
+                                                    return false;
+                                                  }
+                                               }
+                                           }
+                                           else
+                                           {
+                                              alert("The second school study contains unaccepted characters.");
+                                              return false;
+                                           }
+                                       }
+                                       else
+                                       {
+                                         alert("The second school telephone contains unaccepted characters.");
+                                         return false;
+                                       }
+                                   }
+                                   else
+                                   {
+                                      alert("The second school city contains unaccepted characters.");
+                                      return false;
+                                   }
+                                }
+                                else
+                                {
+                                  alert("The second school end date is in the improper format.");
+                                  return false;
+                                }
+                            }
+                            else
+                            {
+                              alert("The second school start date is in the improper format.");
+                              return false;
+                            }
+                        }
+                        else
+                        {
+                           alert("The second school name contains unaccepted characters.");
+                           return false;
+                        }
+                     }
+
+                 }
+                 else
+                 {
+                    counter++;
+                 }
+
+                 if(counter == 2)
+                 {
+                    return true;
+                 }
+                 else
+                 {
+                    return false;
+                 }
+               }
             </script>
         </div>
     </div>
@@ -9969,6 +10197,44 @@
                         document.write(mil4);
                         document.write("dd214");
                         document.write(mil6);
+
+                        //Schooling
+                        document.write("School Name");
+                 document.write(sch3);
+                 document.write("School Start");
+                 document.write(sch4);
+                 document.write("School End");
+                 document.write(sch5);
+                 document.write("School Country");
+                 document.write(sch6);
+                 document.write("School City");
+                 document.write(sch7);
+                 document.write("School State");
+                 document.write(sch8);
+                 document.write("School Telephone");
+                 document.write(sch9);
+                 document.write("School Study");
+                 document.write(sch10);
+                 document.write("Graduation Date");
+                 document.write(sch11);
+                 document.write("School 2 Name");
+                 document.write(sch12);
+                 document.write("School 2 Start");
+                 document.write(sch13);
+                 document.write("School 2 End");
+                 document.write(sch14);
+                 document.write("School 2 Country");
+                 document.write(sch15);
+                 document.write("School 2 City");
+                 document.write(sch16);
+                 document.write("School 2 State");
+                 document.write(sch17);
+                 document.write("School 2 Telephone");
+                 document.write(sch18);
+                 document.write("School 2 Study");
+                 document.write(sch19);
+                 document.write("Graduation Date 2");
+                 document.write(sch20);
 
                         //Unemployment
                         document.write(une);
