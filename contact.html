@@ -88,22 +88,22 @@
 					</div>
 				</div>
 				<div class="col">
-					<form action="/action_page.php">
-					<label for="fname">Email</label>
-					<input type="text" id="email" name="emailaddress" placeholder="example@email.com..">
-					<label for="fname">First Name</label>
-					<input type="text" id="fname" name="firstname" placeholder="Your name..">
-					<label for="lname">Last Name</label>
-					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-					<label for="country">Country</label>
-					<select id="country" name="country">
-						<option value="australia">Australia</option>
-						<option value="canada">Canada</option>
-						<option value="usa">USA</option>
-					</select>
-					<label for="subject">Subject</label>
-					<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-					<input type="submit" value="Submit">
+					<form name="contact" id="contact" action="javascript:;" onsubmit="return sendContactForm()">
+						<label for="fname">Email</label>
+						<input type="text" id="email" name="emailaddress" placeholder="example@email.com..">
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+						<label for="country">Country</label>
+						<select id="country" name="country">
+							<option value="australia">Australia</option>
+							<option value="canada">Canada</option>
+							<option value="usa">USA</option>
+						</select>
+						<label for="subject">Subject</label>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+						<input type="submit" value="Submit">
 					</form>
 				</div>
 			</div>
@@ -116,6 +116,8 @@
 				<p>*Must be eligible to work in the United States</p>
 			</div>
 		</footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript" src="email.js"></script>
     </body>
 </html>
