@@ -9136,7 +9136,7 @@
     </div>
 
 
-    <!--Criminal Record-->
+    <!--Criminal Record (Complete)-->
     <div class="page" id="thirteen">
         <div class="column left">
             <p></p>
@@ -9175,7 +9175,7 @@
                     <h2>Criminal Record</h2>
                     <hr>
 
-                    <br>
+                    
                     <br>
 
                      <!--Criminal Record Question 1-->                                
@@ -9195,7 +9195,7 @@
                                 <div class="panel-body">
                                   
                                    <!--Please Explain-->
-                                  <label for="form-CriminalRecord1explain"> Please provide additional details such as whether it was a felony or misdemeanor, the date of conviction, the fine or sentence, if you were pardoned, etc.:</label><br>
+                                  <label for="form-CriminalRecord1explain"> Please provide additional details such as whether it was a felony or misdemeanor, the date of conviction, the location, the fine or sentence, if you were pardoned, etc.:</label><br>
                                   <input type="text" name="CriminalRecord1explain" id="form-CriminalRecord1explain">
                                   
                                   
@@ -9269,51 +9269,9 @@
                                   </script>
                   
                     
-                    <br>
-                    <br>
+                    
 
-                     <!--Criminal Record Question 3-->                                
-                     <div class="container">
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <span>If you have ever been convicted of a crime please press the expand button.</span>
-                          <div class ="CriminalRecord3 required">
-                          <input name="collapseGroup28" type="checkbox" value="yes"/> Expand
-                          </div>
-                          <div class="panel-group" id="accordion">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                 
-                              </div>
-                              <div id="collapseTwentyEight" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  
-                                   <!--Please Explain-->
-                                  <label for="form-CriminalRecord3explain"> Please provide additional details such as locations, dates, etc.:</label><br>
-                                  <input type="text" name="CriminalRecord3explain" id="form-CriminalRecord3explain">
-                                  
-                                  
-    
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                      
-                        </div>
-                      </div>
-                    </div>
-
-
-
-                                 <script>
-                                    $('[name="collapseGroup28"]').on('change', function(){  
-                                     if($(this).val()  === "yes"){
-                                        $('#collapseTwentyEight').collapse('show')
-                                        }else{
-                                          $('#collapseTwentyEight').collapse('hide')
-                                          }
-                                       });
-                                  </script>
 
                      <br>
                      <br>
@@ -9470,8 +9428,131 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#fourteen" class="Next Button"> Next</a>
+            <a href="#fourteen" class="Next Button" onclick="return pg13();"> Next</a>
             &ensp;
+
+            <script>
+              function pg13()
+              {
+                //Formatting
+                var lam = /^[a-zA-Z0-9 $-\.\/]*$/;
+                var counter = 0;
+
+                //Variables
+                let cr1 = document.getElementById("form-CriminalRecord1explain").value;
+                let cr2 = document.getElementById("form-CriminalRecord2explain").value;
+                let cr4 = document.getElementById("form-Felonies1explain").value;
+                let cr5 = document.getElementById("form-Felonies2explain").value;
+                let cr6 = document.getElementById("form-Misdemeanor1explain").value;
+
+                //Checks if the checkboxes are clicked
+                let cr7 =  $('div.CriminalRecord1.required :checkbox:checked').length > 0;
+                let cr8 =  $('div.CriminalRecord2.required :checkbox:checked').length > 0;
+                let cr10 =  $('div.Felonies1.required :checkbox:checked').length > 0;
+                let cr11 =  $('div.Felonies2.required :checkbox:checked').length > 0;
+                let cr12 =  $('div.Misdemeanor1.required :checkbox:checked').length > 0;
+
+
+                //Checks that the first section contains allowed characters
+                if(cr1 == "")
+                {
+                  counter++;
+                }
+                else
+                {
+                  if(cr1.match(lam))
+                  {
+                    counter++;
+                  }
+                  else
+                  {
+                    alert("The section asking if you have ever been convicted of a crime contains an unaccepted character. This input only allows letters, spaces, numbers, dollar signs, periods, and dashes.");
+                    return false;
+                  }
+                }
+
+                //Checks that the second section contains allowed characters
+                if(cr2 == "")
+                {
+                  counter++;
+                }
+                else
+                {
+                  if(cr2.match(lam))
+                  {
+                    counter++;
+                  }
+                  else
+                  {
+                    alert("The section asking if you have any deffered prosecutions contains an unaccepted character. This input only allows letters, spaces, numbers, dollar signs, periods, and dashes.");
+                    return false;
+                  }
+                }
+
+                //Checks that the third sections contains allowed characters
+                if(cr4 == "")
+                {
+                  counter++;
+                }
+                else
+                {
+                  if(cr4.match(lam))
+                  {
+                    counter++;
+                  }
+                  else
+                  {
+                    alert("The section asking if you have ever pled guilty to a felony contains an unaccepted character. This input only allows letters, spaces, numbers, dollar signs, periods, and dashes.");
+                    return false;
+                  }
+                }
+
+                //Checks that the fourth section contains allowed characters
+                if(cr5 == "")
+                {
+                  counter++;
+                }
+                else
+                {
+                  if(cr5.match(lam))
+                  {
+                    counter++;
+                  }
+                  else
+                  {
+                    alert("The section asking if you have a minister's permit contains an unaccepted character. This input only allows letters, spaces, numbers, dollar signs, periods, and dashes.");
+                    return false;
+                  }
+                }
+
+                if(cr6 == "")
+                {
+                  counter++;
+                }
+                else
+                {
+                  if(cr6.match(lam))
+                  {
+                    counter++;
+                  }
+                  else
+                  {
+                    alert("The section asking if you have ever been convicted of a misdemeanor contains an unaccepted character. This input only allows letters, spaces, numbers, dollar signs, periods, and dashes.");
+                    return false;
+                  }
+                }
+
+                if(counter == 5)
+                {
+                  return true;
+                }
+                else
+                {
+                  return false;
+                }
+                
+              }
+            </script>
         </div>
     </div>
 
@@ -9719,6 +9800,18 @@
                   document.write(tvc18);
                   document.write("Comments");
                   document.write(tvc11);
+
+                  //Criminal Record
+                  document.write("Convicted a Crime:");
+                document.write(cr1);
+                document.write("Deferred Prosectuion:");
+                document.write(cr2);
+                document.write("Pled guilty to a felony:");
+                document.write(cr4);
+                document.write("Have a minister's permit:");
+                document.write(cr5);
+                document.write("Convicted a misdemeanor:");
+                document.write(cr6);
                 
                       }
                     </script>
