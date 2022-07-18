@@ -118,7 +118,7 @@ body
   border: 2px dashed red;
 }
 
-input:invalid:required {
+input:invalid:required, textarea, select {
   background-image: linear-gradient(to right, pink, lightgreen);
 }
 

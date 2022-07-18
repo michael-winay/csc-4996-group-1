@@ -89,20 +89,20 @@
 				</div>
 				<div class="col">
 					<form name="contact" id="contact" action="javascript:;" onsubmit="return sendContactForm()">
-						<label for="fname">Email</label>
-						<input type="text" id="email" name="emailaddress" placeholder="example@email.com..">
-						<label for="fname">First Name</label>
-						<input type="text" id="fname" name="firstname" placeholder="Your name..">
-						<label for="lname">Last Name</label>
-						<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-						<label for="country">Country</label>
-						<select id="country" name="country">
+						<label for="fname">Email*</label>
+						<input type="text" id="email" name="emailaddress" placeholder="example@email.com.." required>
+						<label for="fname">First Name*</label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+						<label for="lname">Last Name*</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+						<label for="country">Country*</label>
+						<select id="country" name="country" required>
 							<option value="australia">Australia</option>
 							<option value="canada">Canada</option>
 							<option value="usa">USA</option>
 						</select>
-						<label for="subject">Subject</label>
-						<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+						<label for="subject">Subject*</label>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
 						<input type="submit" value="Submit">
 					</form>
 				</div>
