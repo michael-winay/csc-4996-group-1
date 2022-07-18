@@ -1126,7 +1126,7 @@
         </div>
     </div>
 
-    <!--General Information-->
+    <!--General Information  (Complete)-->
     <div class="page" id="four">
         <div class="column left">
             <p></p>
@@ -1148,7 +1148,7 @@
                 <br>
                 <br>
 
-                <!--Javascript to make this picture the right one-->
+                
                 <!--Progress Bar-->
                 <div class="w3-light-grey">
                     <div id="myBar" class="w3-container w3-blue" style="width:21%" alt="Progress Bar 21%">21%</div>
@@ -1156,7 +1156,7 @@
 
                 <br>
                 <br>
-                <!--Replace with email given after testing-->
+                
                
 
                     <h2>General Information</h2>
@@ -1179,12 +1179,13 @@
                     <div class="container">
                         <div class="row">
                           <div class="col-xs-12">
-                            <span>If you answered "Owner Operator" or "Fleet Owner", select yes <span class="astrick">*</span></span>
+                            <span>If you answered "Owner Operator" or "Fleet Owner", please click the Expand button.</span>
+                            <div class = "general required">
                        
-                              <input name="collapseGroup" type="radio" value="yes" required/> Yes
+                              <input name="collapseGroup" type="checkbox" value="yes"/> Expand
                        
-                              <input name="collapseGroup" type="radio"  checked value="no"/> No
-                       
+                              
+                            </div>
                             <div class="panel-group" id="accordion">
                               <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -1193,39 +1194,50 @@
                                 <div id="collapseOne" class="panel-collapse collapse">
                                   <div class="panel-body">
                                     <hr>
-                                    <h3>Equipment (Owner/Operators Only)</h3>
-                                    <h3>Equipment Description (Tractor):</h3>
+                                    <h4>Equipment (Owner/Operators Only)</h4>
+                                    <h4>Equipment Description (Tractor):</h4>
 
+                                    <div class = "optreq">
                                     <label for="form-tracttype"> Type: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tracttype" id="form-tracttype" >
+                                    </div>
 
                                     <br>
                                     <br>
 
+                                    <div class = "optreq">
                                     <label for="form-tractyear"> Year: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tractyear" id="form-tractyear" >
+                                    </div>
 
                                     <br>
                                     <br>
 
+                                    <div class = "optreq">
                                     <label for="form-tractmake"> Make: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tractmake" id="form-tractmake" >
+                                    </div>
 
                                     <br>
                                     <br>
 
+                                    <div class = "optreq">
                                     <label for="form-tractmodel"> Model: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tractmodel" id="form-tractmodel" >
+                                    </div>
 
                                     <br>
                                     <br>
 
+                                    <div class = "optreq">
                                     <label for="form-tractcolor"> Color: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tractcolor" id="form-tractcolor" >
+                                    </div>
 
                                     <br>
                                     <br>
 
+                                    
                                     <label for="form-tractvin"> VIN: </label><br>
                                     <input type="text" name="tractvin" id="form-tractvin">
 
@@ -1244,8 +1256,10 @@
                                     <br>
                                     <br>
 
+                                    <div class = "optreq">
                                     <label for="form-tractfifthheight"> Fifth Wheel Height: <span class="astrick">*</span> </label><br>
                                     <input type="text" name="tractfifthheight" id="form-tractfifthheight">
+                                    </div>
 
 
                                   </div>
@@ -1278,67 +1292,79 @@
                     <br>
 
                     <!--Are you legally eligable for emplyment in the United States-->
+                    <div class = "eligUS required">
                     <p> Are you legally eligable for employment in the United States? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c1yes" name="eligUS" value="Yes" required>
+                    <input type="checkbox" id="eligUSyes" name="eligUS" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c1no" name="eligUS" value="No">
+                    <input type="checkbox" id="eligUSno" name="eligUS" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Are you currently employed-->
+                    <div class = "curremployed required">
                     <p> Are you currently employed? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c2yes" name="curremployed" value="Yes" required>
+                    <input type="checkbox" id="curremployedyes" name="curremployed" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c2no" name="curremployed" value="No">
+                    <input type="checkbox" id="curremployedno" name="curremployed" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Do you read, write, and speak English-->
+                    <div class = "speakEnglish required">
                     <p> Do you read, write, and speak English? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c3yes" name="speakEnglish" value="Yes" required>
+                    <input type="checkbox" id="speakEnglishyes" name="speakEnglish" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c3no" name="speakEnglish" value="No">
+                    <input type="checkbox" id="speakEnglishno" name="speakEnglish" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Have you ever worked for this company before-->
+                    <div class = "Workedherebefore required">
                     <p> Have you ever worked for this company before? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c4yes" name="Workedherebefore" value="Yes" required>
+                    <input type="checkbox" id="Workedherebeforeyes" name="Workedherebefore" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c4no" name="Workedherebefore" value="No">
+                    <input type="checkbox" id="Workedherebeforeno" name="Workedherebefore" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Do you have a current TWIC card-->
+                    <div class = "TWICcard required">
                     <p> Do you have a current TWIC card? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c5yes" name="TWICcard" value="Yes" required>
+                    <input type="checkbox" id="TWICcardyes" name="TWICcard" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c5no" name="TWICcard" value="No">
+                    <input type="checkbox" id="TWICcardno" name="TWICcard" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Have you ever been known by any other name-->
+                    <div class = "othername required">
                     <p> Have you ever been known by any other name? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c6yes" name="othername" value="Yes" required>
+                    <input type="checkbox" id="othernameyes" name="othername" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c6no" name="othername" value="No">
+                    <input type="checkbox" id="othernameno" name="othername" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                    
                     <br>
@@ -1375,12 +1401,14 @@
                     <br>
 
                     <!--Have you registered for the FMCSA Drug & Alcohol Clearinghouse-->
+                    <div class = "FMCSAClearinghouse required">
                     <p> Have you registered for the FMCS Drug & Alcohol Clearinghouse? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="c7yes" name="FMCSAClearinghouse" value="Yes" required>
+                    <input type="checkbox" id="FMCSAClearinghouseyes" name="FMCSAClearinghouse" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
-                    <input type="checkbox" id="c7no" name="FMCSAClearinghouse" value="No">
+                    <input type="checkbox" id="FMCSAClearinghouseno" name="FMCSAClearinghouse" value="No">
                     <label for="No"> No </label>
+                    </div>
 
                     <br>
                     <br>
@@ -1394,7 +1422,7 @@
 
                     <!--Straight Truck-->
                     <label for="form-strtruck">Straight Truck: <span class="astrick">*</span> </label><br>	
-                    <select name="strtruck" id = "strtruck" required>
+                    <select name="strtruck" id = "strtruck">
                      <option value=""></option>
                      <option value="None" >None</options>
                      <option value="Less than 1 year" >Less than 1 year</options>
@@ -1415,7 +1443,7 @@
 
                     <!--Tractor and Semi-Trailer-->
                     <label for="form-tracsemi">Tractor and Semi-Trailer: <span class="astrick">*</span></label><br>	
-                    <select name="tracsemi" id="tracsemi" required>
+                    <select name="tracsemi" id="tracsemi">
                      <option value=""></option>
                      <option value="None" >None</options>
                      <option value="Less than 1 year" >Less than 1 year</options>
@@ -1436,7 +1464,7 @@
 
                     <!--Tractor - Two Trailers-->
                     <label for="form-tractwo">Tractor - Two Trailers: <span class="astrick">*</span></label><br>	
-                    <select name="tractwo" id="tractwo"required>
+                    <select name="tractwo" id="tractwo">
                      <option value=""></option>
                      <option value="None" >None</options>
                       <option value="Less than 1 year" >Less than 1 year</options>
@@ -1481,9 +1509,15 @@
             <script>
             function pg2()
             {
+              //Formatting
+              counter = 0;
+              var lamb = /^[a-zA-Z0-9 \.-]*$/;
+              var add = /^[a-zA-Z0-9 ]*$/gm;
+              var last = /^[A-Za-z, ,-]+$/;
+              var num = /^[0-9]*$/;
                 
              
-
+                //Variables
                 let gen20 = document.getElementById("form-position").value;
                 let gen22 = document.getElementById("form-tracttype").value;
                 let gen23 = document.getElementById("form-tractyear").value;
@@ -1550,7 +1584,347 @@
                  });
                 
                 
+               //Make sure box is checked
+               let gen49 =  $('div.general.required :checkbox:checked').length > 0;
+               let gen50 =  $('div.eligUS.required :checkbox:checked').length > 0;
+               let gen51 =  $('div.curremployed.required :checkbox:checked').length > 0;
+               let gen52 =  $('div.speakEnglish.required :checkbox:checked').length > 0;
+               let gen53 =  $('div.Workedherebefore.required :checkbox:checked').length > 0;
+               let gen54 =  $('div.TWICcard.required :checkbox:checked').length > 0;
+               let gen55 =  $('div.othername.required :checkbox:checked').length > 0;
+               let gen56 =  $('div.FMCSAClearinghouse.required :checkbox:checked').length > 0;
+
                
+
+               //Validates values for everything outside of the dropdown for the general page
+               if(gen20 == "" || gen50 == false || gen51 == false || gen52 == false || gen53 == false || gen54 == false || gen55 == false || gen56 == false || gen41 == "" || gen42 == "" || gen43 == "" || gen44 == "")
+               {
+                  alert("Please input a value.");
+                  return false;
+               }
+               else
+               {
+                   if(gen44.match(lamb))
+                   {
+                      if(gen48 == "")
+                      {
+                          //If position was blank drivers refferal was blank
+                          if(gen38 == "")
+                            {
+                               //Position, driers refferal, and other are blank
+                               if(gen39 == "")
+                               {
+                                  counter++;
+                               }
+                               else
+                               {
+                                  //Position blank drivers refferal blank other not blank
+                                  if(gen39.match(lamb))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The other input under how did you hear about us contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                            }
+                            else
+                            {
+                              //If position was blank refferal was not blank
+                              if(gen38.match(last))
+                              {
+                                 //Position was blank, driers refferal not blank, and other are blank
+                               if(gen39 == "")
+                               {
+                                  counter++;
+                               }
+                               else
+                               {
+                                  //Position blank drivers refferal not blank other not blank
+                                  if(gen39.match(lamb))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The other input under how did you hear about us contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                              }
+                              else
+                              {
+                                alert("The driver's refferal name input contains unaccepted characters.");
+                                return false;
+                              }
+                            }
+                      }
+                      else
+                      {
+                        
+                        if(gen48.match(add))
+                        {
+                            //If position was not blank drivers refferal was blank
+                            if(gen38 == "")
+                            {
+                                //Position not blank, driers refferal blank, and other are blank
+                               if(gen39 == "")
+                               {
+                                  counter++;
+                               }
+                               else
+                               {
+                                  //Position not blank drivers refferal blank other not blank
+                                  if(gen39.match(lamb))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The other input under how did you hear about us contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                            }
+                            else
+                            {
+                              //If position was not blank refferal was not blank
+                              if(gen38.match(last))
+                              {
+                                  //Position not blank, driers refferal not blank, and other are blank
+                               if(gen39 == "")
+                               {
+                                  counter++;
+                               }
+                               else
+                               {
+                                  //Position not blank drivers refferal not blank other not blank
+                                  if(gen39.match(lamb))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The other input under how did you hear about us contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                              }
+                              else
+                              {
+                                alert("The driver's refferal name input contains unaccepted characters.");
+                                return false;
+                              }
+                            }
+                        }
+                        else
+                        {
+                          alert("The location you are applying for input contains unaccepted characters.");
+                          return false;
+                        }
+                      }
+                   }
+                   else
+                   {
+                    alert("The other input for driving experience contains unaccepted characters.");
+                    return false;
+                   }
+               }
+
+               //Validates the dropdown for the general page
+               if(gen49 == false)
+               {
+                  counter++;
+               }
+               else
+               {
+                  if(gen22 == "" || gen23 == "" || gen24 == "" || gen25 == "" || gen26 == "" || gen30 == "")
+                  {
+                    alert("Please input a value");
+                    return false;
+                  }
+                  else
+                  {
+                    if(gen22.match(add))
+                    {
+                        if(gen23.match(num))
+                        {
+                            if(gen24.match(lamb))
+                            {
+                               if(gen25.match(lamb))
+                               {
+                                  if(gen26.match(add))
+                                  {
+                                     if(gen30.match(add))
+                                     {
+                                        //If VIN is blank
+                                        if(gen27 == "")
+                                        {
+                                          if(gen28 == "")
+                                            {
+                                              //If VIN is blank, weight is blank, and mileage is blank
+                                              if(gen29 == "")
+                                              {
+                                                counter++;
+                                              }
+                                              else
+                                              {
+                                                //If VIN is blank, weigt is blank, and mileage is not blank
+                                                if(gen29.match(add))
+                                                {
+                                                  counter++;
+                                                }
+                                                else
+                                                {
+                                                  alert("The equipment mileage contains unaccepted characters.");
+                                                  return false;
+                                                }
+                                              }
+                                            }
+                                            else
+                                            {
+                                              //If VIN is blank and weight is not blank
+                                              if(gen28.match(add))
+                                              {
+                                                    //If VIN is blank, weight is not blank, and mileage is blank
+                                                  if(gen29 == "")
+                                                  {
+                                                   counter++;
+                                                 }
+                                                  else
+                                                  {
+                                                   //If VIN is blank, weigt is not blank, and mileage is not blank
+                                                      if(gen29.match(add))
+                                                     {
+                                                     counter++;
+                                                     }
+                                                    else
+                                                     {
+                                                     alert("The equipment mileage contains unaccepted characters.");
+                                                     return false;
+                                                     }
+                                                   }
+                                                  }
+                                              else
+                                              {
+                                                alert("The equipment weight contains unaccepted characters.");
+                                                return false;
+                                              }
+                                            }
+                                        }
+                                        else
+                                        {
+                                          //If VIN is not blank
+                                          if(gen27.match(add))
+                                          {
+                                            //If VIN is not blank and weight is blank
+                                            if(gen28 == "")
+                                            {
+                                              //If VIN is not blank, weight is blank, and mileage is blank
+                                              if(gen29 == "")
+                                              {
+                                                counter++;
+                                              }
+                                              else
+                                              {
+                                                //If VIN is not blank, weigt is blank, and mileage is not blank
+                                                if(gen29.match(add))
+                                                {
+                                                  counter++;
+                                                }
+                                                else
+                                                {
+                                                  alert("The equipment mileage contains unaccepted characters.");
+                                                  return false;
+                                                }
+                                              }
+                                            }
+                                            else
+                                            {
+                                              //If VIN is not blank and weight is not blank
+                                              if(gen28.match(add))
+                                              {
+                                                    //If VIN is not blank, weight is not blank, and mileage is blank
+                                                  if(gen29 == "")
+                                                  {
+                                                   counter++;
+                                                 }
+                                                  else
+                                                  {
+                                                   //If VIN is not blank, weigt is not blank, and mileage is not blank
+                                                      if(gen29.match(add))
+                                                     {
+                                                     counter++;
+                                                     }
+                                                    else
+                                                     {
+                                                     alert("The equipment mileage contains unaccepted characters.");
+                                                     return false;
+                                                     }
+                                                   }
+                                                  }
+                                              else
+                                              {
+                                                alert("The equipment weight contains unaccepted characters.");
+                                                return false;
+                                              }
+                                            }
+                                          }
+                                          else
+                                          {
+                                            alert("The equipment VIN contains unaccepted characters.");
+                                            return false;
+                                          }
+                                        }
+                                     }
+                                     else
+                                     {
+                                      alert("The equipment fifth wheel height contains unaccepted characters.");
+                                      return false;
+                                     }
+                                  }
+                                  else
+                                  {
+                                    alert("The equipment color contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                               else
+                               {
+                                alert("The equipment model contains unaccepted characters.");
+                                return false;
+                               }
+                            }
+                            else
+                            {
+                              alert("The equipment make contains unaccepted characters.");
+                              return false;
+                            }
+                        }
+                        else
+                        {
+                          alert("The equipment year contains unaccepted characters.");
+                          return false;
+                        }
+                    }
+                    else
+                    {
+                      alert("The equipment type contains unaccepted characters.");
+                      return false;
+                    }
+                  }
+               }
+
+               if(counter == 2)
+               {
+                  return true;
+               }
+               else
+               {
+                 return false;
+               }
             
             
             
