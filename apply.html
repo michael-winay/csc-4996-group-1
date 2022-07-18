@@ -549,7 +549,7 @@
 
                     <!--State/Province-->
                     
-                    <label for="form-state">State/Province: <span class="astrick">*</span></label><br>
+                    <label for="form-state">State/Province <span class="astrick">*</span></label><br>
                     <select id="form-state" name="state" class="cascade" required >
                             <option value="-1">Select</option>
                             <option class="three" value = "-1"> Select</option>
@@ -3479,7 +3479,7 @@
         </div>
       </div>
       
-    <!--Employer Contract Information-->
+    <!--Employer Contract Information (Complete)-->
     <div class="page" id="seven">
         <div class="column left">
             <p></p>
@@ -3518,7 +3518,7 @@
                      <div class="container">
                         <div class="row">
                           <div class="col-xs-12">
-                            <span>If you have been employed, contracted, oor attended a company orientation within the last 10 years please press the expand button below, otherwise you are free to move on to the next page.</span>
+                            <span>If you have been employed, contracted, or attended a company orientation within the last 10 years please press the Expand button below, otherwise you are free to move on to the next page.</span>
                             <div class ="work required">
                             <input name="collapseGroup5" type="checkbox" value="yes"/> Expand
                             </div>
@@ -3529,44 +3529,52 @@
                                 </div>
                                 <div id="collapseFive" class="panel-collapse collapse">
                                   <div class="panel-body">
-                                    <h3>Employer/Contract Information</h3>
+                                    <h3>First Employer/Contract Information</h3>
                                     <hr>
 
                                     <br>
-                                    <br>
+                                   
 
                                     <!--Company Name-->
+                                    <div class = "optreq">
                                     <label for="form-companyname"> Company Name <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companyname" id="form-companyname" placeholder = "Company Name" required>
+                                    <input type="text" name="companyname" id="form-companyname">
+                                    </div>
 
-                                    <br>
+                                    
                                     <br>
 
                                     <!--Start Date-->
+                                    <div class = "optreq">
                                     <label for="form-companystart">Start Date <span class="astrick">*</span> </label>
-                                    <input type="text" id="form-companystart" name="companystart" placeholder = "mm/yyyy" required>
+                                    <input type="text" id="form-companystart" name="companystart" placeholder = "mm/yyyy">
+                                    </div>
 
 
-                                    <br>
+                                    
                                     <br>
 
                                     <!--End Date-->
+                                    <div class = "optreq">
                                     <label for="form-companyend">End Date <span class="astrick">*</span> </label>
-                                    <input type="text" id="form-companyend" name="companyend" placeholder = "mm/yyyy" required>
+                                    <input type="text" id="form-companyend" name="companyend" placeholder = "mm/yyyy">
+                                    </div>
 
-                                    <br>
-                                    <br>
-
-                                    <!--Street Address-->
-                                    <label for="form-companystreetaddress"> Street Address<span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companystreetaddress" id="form-companystreetaddress" placeholder = "123 Something Street"required>
-
-                                    <br>
+                                    
                                     <br>
 
                                     <!--Street Address-->
-                                    <label for="form-companystreetaddress2"> Street Address<span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companystreetaddress2" id="form-companystreetaddress2" placeholder = "123 Something Street"required>
+                                    <div class = "optreq">
+                                    <label for="form-companystreetaddress"> Street Address <span class="astrick">*</span> </label><br>
+                                    <input type="text" name="companystreetaddress" id="form-companystreetaddress" placeholder = "123 Something Street">
+                                    </div>
+
+                                    
+                                    <br>
+
+                                    <!--Street Address-->
+                                    <label for="form-companystreetaddress2">2nd Street Address </label><br>
+                                    <input type="text" name="companystreetaddress2" id="form-companystreetaddress2" placeholder = "123 Something Street">
 
                                     <br>
                                     <br>
@@ -3576,7 +3584,7 @@
                        
 
                     <label for="form-companycountry">Country <span class="astrick">*</span></label><br>
-                    <select name="companycountry" id = "form-companycountry" required>
+                    <select name="companycountry" id = "form-companycountry">
                         <option value="-1">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -3828,19 +3836,21 @@
                                     <br>
 
                                     <!--City-->
+                                    <div class = "optreq">
                                     <label for="form-companycity"> City <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companyCity" id="form-companycity" placeholder = "New Haven" required>
+                                    <input type="text" name="companyCity" id="form-companycity" placeholder = "New Haven">
+                                    </div>
  
                                     <br>
-                                    <br>
+                                    
 
                                     <!--State/Province-->
-                                    <label for="form-companystate">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-companystate" name="companystate" class="cascade" required >
+                                    <label for="form-companystate">State / Province <span class="astrick">*</span></label><br>
+                    <select id="form-companystate" name="companystate" class="cascade">
                             <option value="-1">Select</option>
-                            <option class="three" value = "NULL"> Select</option>
+                            <option class="three" value = "-1"> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "NULL"> Select</option>
+                            <option class="two" value = "-1"> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -3893,7 +3903,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "NULL"> Select</option>    
+                            <option class="one" value = "-1"> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -3940,18 +3950,22 @@
                                     <br>
 
                                     <!--Zip/Postal-->
-                                    <label for="form-companyzip"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companyZip" id="form-companyzip" placeholder="54309" required>
+                                    <div class = "optreq">
+                                    <label for="form-companyzip"> Zip / Postal Code <span class="astrick">*</span> </label><br>
+                                    <input type="text" name="companyZip" id="form-companyzip" placeholder="54309">
+                                    </div>
 
                                     <br>
-                                    <br>
+                                    
 
                                     <!--Telephone-->
+                                    <div class = "optreq">
                                     <label for="form-companytelephone"> Telephone <span class="astrick">*</span> </label><br>
-                                    <input type="text" name="companytelephone" id="form-companytelephone" placeholder = "784 872 8982"required>
+                                    <input type="text" name="companytelephone" id="form-companytelephone" placeholder = "784 872 8982">
+                                    </div>
 
                                     <br>
-                                    <br>
+                                    
 
                                     <!--Position Held-->
                                     <label for="form-companyposition"> Position Held </label><br>
@@ -3961,8 +3975,10 @@
                                     <br>
 
                                     <!--Reason for leaving?-->
+                                    <div class = "optreq">
                                     <label for="form-reasonforleaving"> Reason for leaving? <span class="astrick">*</span></label><br>
-                                    <input type="text" name="reasonforleaving" id="form-reasonforleaving" required>
+                                    <input type="text" name="reasonforleaving" id="form-reasonforleaving">
+                                    </div>
 
                                     <br>
                                     <br>
@@ -3972,7 +3988,7 @@
                      <div class="container">
                         <div class="row">
                           <div class="col-xs-12">
-                            <span>If you were terminated, discharged, laid off from this job please press the expand button, otherwise you are free to move on.</span>
+                            <span>If you were terminated, discharged, or laid off from this job please press the Expand button, otherwise you are free to move on.</span>
                             <div class ="terminated required">
                             <input name="collapseGroup6" type="checkbox" value="yes"/> Expand
                             </div>
@@ -3985,8 +4001,10 @@
                                   <div class="panel-body">
                                     
                                      <!--Please Explain-->
+                                     <div class = "optreq">
                                     <label for="form-termpleaseexplain"> Please Explain <span class="astrick">*</span></label><br>
-                                    <input type="text" name="termpleaseexplain" id="form-termpleaseexplain" required>
+                                    <input type="text" name="termpleaseexplain" id="form-termpleaseexplain">
+                                    </div>
                                     
                                     
       
@@ -4017,10 +4035,10 @@
                                     <!--Is this your current employer?-->
                                     <div class="currentemployer required">
                                         <p> Is this your current employer?</p>
-                                        <input type="checkbox" id="currentemployer" name="currentemployer" value="yes">
+                                        <input type="checkbox" id="currentemployeryes" name="currentemployer" value="Yes">
                                         <label for="Yes"> Yes </label>
                                         <br>
-                                        <input type="checkbox" id="currentemployer" name="currentemployer" value="no">
+                                        <input type="checkbox" id="currentemployerno" name="currentemployer" value="No">
                                         <label for="No"> No </label>
                                     </div>
 
@@ -4030,10 +4048,10 @@
                                     <!--May we contact this employer at this time-->
                                     <div class="cancontact required">
                                         <p> May we contact this employer at this time?</p>
-                                        <input type="checkbox" id="cancontact" name="cancontact" value="yes">
+                                        <input type="checkbox" id="cancontactyes" name="cancontact" value="Yes">
                                         <label for="Yes"> Yes </label>
                                         <br>
-                                        <input type="checkbox" id="cancontact" name="cancontact" value="no">
+                                        <input type="checkbox" id="cancontactno" name="cancontact" value="No">
                                         <label for="No"> No </label>
                                     </div>
 
@@ -4044,7 +4062,7 @@
                                     <div class="container">
                                         <div class="row">
                                           <div class="col-xs-12">
-                                            <span>If you operated a commercial motor vehicle at this job please press the expand button, otherwise you are free to move on.</span>
+                                            <span>If you operated a commercial motor vehicle at this job please press the Expand button, otherwise you are free to move on.</span>
                                             <div class ="opercommprev required">
                                             <input name="collapseGroup7" type="checkbox" value="yes"/> Expand
                                             </div>
@@ -4057,23 +4075,27 @@
                                                   <div class="panel-body">
                                                     
                                                     <!--Were you subject to the federal motor carrier or Transport Canada Safety Regulations?-->
-                                                    <p> Were you subject to the Federal Motor Carrier or Transport Canada Safety Regulations while mployed or contracted by this employer?<span class="astrick">*</span></p>
-                                                    <input type="checkbox" id="regulations" name="regulations" value="yes">
+                                                    <div class = "regulations required">
+                                                    <p> Were you subject to the Federal Motor Carrier or Transport of Canada Safety Regulations while employed or contracted by this employer?<span class="astrick">*</span></p>
+                                                    <input type="checkbox" id="regulationsyes" name="regulations" value="Yes">
                                                     <label for="Yes"> Yes </label>
                                                     <br>
-                                                    <input type="checkbox" id="regulations" name="regulations" value="no">
+                                                    <input type="checkbox" id="regulationsno" name="regulations" value="No">
                                                     <label for="No"> No </label>
+                                                    </div>
 
-                                                    <br>
+                                                   
                                                     <br>
 
+                                                    <div class = "drugandalcoholtesting required">
                                                     <!--Were you subject to drug and alcohol testing?-->
-                                                    <p> Did you perform any safety sensitive functions in this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
-                                                    <input type="checkbox" id="drugandalcoholtesting" name="drugandalcoholtesting" value="yes">
+                                                    <p> Did you perform any safety sensitive functions at this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
+                                                    <input type="checkbox" id="drugandalcoholtestingyes" name="drugandalcoholtesting" value="Yes">
                                                     <label for="Yes"> Yes </label>
                                                     <br>
-                                                    <input type="checkbox" id="drugandalcoholtesting" name="drugandalcoholtesting" value="no">
+                                                    <input type="checkbox" id="drugandalcoholtestingno" name="drugandalcoholtesting" value="No">
                                                     <label for="No"> No </label>
+                                                    </div>
 
                                                     <br>
                                                     <br>
@@ -4086,7 +4108,7 @@
                                                      <br>
 
                                                      <!--Miles driven weekly-->
-                                                     <label for="form-milesdriven">Miles driven weekly</label><br>	
+                                                     <label for="form-milesdriven">Miles Driven Weekly</label><br>	
                                                       <select name="milesdriven" id = "milesdriven">
                                                       <option value=""></option>
                                                       <option value="0-500" >0-500</options>
@@ -4110,14 +4132,14 @@
                                                      <br>
 
                                                      <!--Most common truck driven-->
-                                                     <label for="form-commonlydrivetruck">Most common truck driven<span class="astrick">*</span></label><br>	
+                                                     <label for="form-commonlydrivetruck">Most Common Truck Driven <span class="astrick">*</span></label><br>	
                                                      <select name="commonly drive truck" id = "commonly drive truck">
                                                      <option value=""></option>
                                                      <option value="Tanker" >Tanker</options>
                                                      <option value="Straight bus" >Bus - Straight</options>
                                                      <option value="Articulated bus" >Bus - Articulated</options>
                                                      <option value="Cab over tractor">Cabover Tractor</option>
-                                                     <option value="class b vehicle" >Class B Vehicle</options>
+                                                     <option value="Class B vehicle" >Class B Vehicle</options>
                                                      <option value="Conventional Tractor" >Conventional Tractor</options>
                                                      <option value="Tractor-Trailer" >Tractor-Trailer</options>
                                                      <option value="Day Cab" >Day Cab</options>
@@ -4133,7 +4155,7 @@
                                                      <br>
 
                                                      <!--Most common trailer-->
-                                                      <label for="form-commonlydrivetrailer">Most common trailer<span class="astrick">*</span></label><br>	
+                                                      <label for="form-commonlydrivetrailer">Most Common Trailer <span class="astrick">*</span></label><br>	
                                                       <select name="commonly drive trailer" id = "commonly drive trailer">
                                                       <option value=""></option>
                                                       <option value="Flatbed" >Flatbed</options>
@@ -4154,7 +4176,7 @@
                                                       <br>
 
                                                       <!--Trailer length-->
-                                                      <label for="form-trailerlength">Trailer Length<span class="astrick">*</span></label><br>	
+                                                      <label for="form-trailerlength">Trailer Length <span class="astrick">*</span></label><br>	
                                                       <select name="trailerlength" id = "trailerlength">
                                                       <option value=""></option>
                                                       <option value="31lt" >31 feet or less</options>
@@ -4191,7 +4213,7 @@
                                       <div class="container">
                                         <div class="row">
                                           <div class="col-xs-12">
-                                            <span>If you would like to enter a second job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
+                                            <span>If you would like to enter a second job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the Expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
                                             <div class ="work2 required">
                                             <input name="collapseGroup8" type="checkbox" value="yes"/> Expand
                                             </div>
@@ -4202,44 +4224,52 @@
                                                 </div>
                                                 <div id="collapseEight" class="panel-collapse collapse">
                                                   <div class="panel-body">
-                                                    <h3>Employer/Contract Information</h3>
+                                                    <h3>Second Employer/Contract Information</h3>
                                                     <hr>
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--Company Name-->
+                                                    <div class = "optreq">
                                                     <label for="form-companyname2"> Company Name <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyname2" id="form-companyname2" placeholder = "Company Name" required>
+                                                    <input type="text" name="companyname2" id="form-companyname2">
+                                                    </div>
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--Start Date-->
+                                                    <div class = "optreq">
                                                     <label for="form-companystart2">Start Date <span class="astrick">*</span> </label>
-                                                    <input type="text" id="form-companystart2" name="companystart2" placeholder = "mm/yyyy" required>
+                                                    <input type="text" id="form-companystart2" name="companystart2" placeholder = "mm/yyyy">
+                                                    </div>
                 
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--End Date-->
+                                                    <div class = "optreq">
                                                     <label for="form-companyend2">End Date <span class="astrick">*</span> </label>
-                                                    <input type="text" id="form-companyend2" name="companyend2" placeholder = "mm/yyyy" required>
+                                                    <input type="text" id="form-companyend2" name="companyend2" placeholder = "mm/yyyy">
+                                                    </div>
                 
-                                                    <br>
-                                                    <br>
-                
-                                                    <!--Street Address-->
-                                                    <label for="form-companystreetaddress3"> Street Address<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companystreetaddress3" id="form-companystreetaddress3" placeholder = "123 Something Street"required>
-                
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--Street Address-->
-                                                    <label for="form-companystreetaddress4"> Street Address<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companystreetaddress4" id="form-companystreetaddress4" placeholder = "123 Something Street"required>
+                                                    <div class = "optreq">
+                                                    <label for="form-companystreetaddress3"> Street Address <span class="astrick">*</span> </label><br>
+                                                    <input type="text" name="companystreetaddress3" id="form-companystreetaddress3" placeholder = "123 Something Street">
+                                                    </div>
+                
+                                                    <br>
+                                                    
+                
+                                                    <!--Street Address-->
+                                                    <label for="form-companystreetaddress4"> 2nd Street Address</label><br>
+                                                    <input type="text" name="companystreetaddress4" id="form-companystreetaddress4" placeholder = "123 Something Street">
                 
                                                     <br>
                                                     <br>
@@ -4249,7 +4279,7 @@
                                        
                 
                                     <label for="form-companycountry2">Country <span class="astrick">*</span></label><br>
-                                    <select name="companycountry2" id = "form-companycountry2" required>
+                                    <select name="companycountry2" id = "form-companycountry2">
                                         <option value="-1">Select</option>
                                         <option value="Afghanistan" rel="three">Afghanistan</option>
                                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -4501,19 +4531,21 @@
                                                     <br>
                 
                                                     <!--City-->
+                                                    <div class = "optreq">
                                                     <label for="form-companycity2"> City <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyCity2" id="form-companycity2" placeholder = "New Haven" required>
+                                                    <input type="text" name="companyCity2" id="form-companycity2" placeholder = "New Haven">
+                                                    </div>
                  
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--State/Province-->
-                                                    <label for="form-companystate2">State/Province: <span class="astrick">*</span></label><br>
-                                    <select id="form-companystate2" name="companystate2" class="cascade" required >
+                                                    <label for="form-companystate2">State/Province <span class="astrick">*</span></label><br>
+                                    <select id="form-companystate2" name="companystate2" class="cascade">
                                             <option value="-1">Select</option>
-                                            <option class="three" value = "NULL"> Select</option>
+                                            <option class="three" value = "-1"> Select</option>
                                             <option class="three" value="oth"></option>
-                                            <option class="two" value = "NULL"> Select</option>
+                                            <option class="two" value = "-1"> Select</option>
                                             <option value="AK" class="two">Alaska</option>
                                             <option value="AL" class ="two">Alabama</option>
                                             <option value="AR" class ="two">Arkansas</option>
@@ -4566,7 +4598,7 @@
                                             <option value="WI" class ="two">Wisconsin</option>
                                             <option value="WV" class ="two">West Virginia</option>
                                             <option value="WY" class ="two">Wyoming</option>
-                                            <option class="one" value = "NULL"> Select</option>    
+                                            <option class="one" value = "-1"> Select</option>    
                                             <option value="AB" class ="one">Alberta</option>
                                             <option value="BC" class ="one">British Columbia</option>
                                             <option value="MB" class ="one">Manitoba</option>
@@ -4613,17 +4645,21 @@
                                                     <br>
                 
                                                     <!--Zip/Postal-->
-                                                    <label for="form-companyzip2"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyZip2" id="form-companyzip2" placeholder="54309" required>
+                                                    <div class = "optreq">
+                                                    <label for="form-companyzip2"> Zip/Postal Code <span class="astrick">*</span> </label><br>
+                                                    <input type="text" name="companyZip2" id="form-companyzip2" placeholder="54309">
+                                                    </div>
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--Telephone-->
+                                                    <div class = "optreq">
                                                     <label for="form-companytelephone2"> Telephone <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companytelephone2" id="form-companytelephone2" placeholder = "784 872 8982"required>
+                                                    <input type="text" name="companytelephone2" id="form-companytelephone2" placeholder = "784 872 8982">
+                                                    </div>
                 
-                                                    <br>
+                                                   
                                                     <br>
                 
                                                     <!--Position Held-->
@@ -4634,8 +4670,10 @@
                                                     <br>
                 
                                                     <!--Reason for leaving?-->
+                                                    <div class = "optreq">
                                                     <label for="form-reasonforleaving2"> Reason for leaving? <span class="astrick">*</span></label><br>
-                                                    <input type="text" name="reasonforleaving2" id="form-reasonforleaving2" required>
+                                                    <input type="text" name="reasonforleaving2" id="form-reasonforleaving2">
+                                                    </div>
                 
                                                     <br>
                                                     <br>
@@ -4645,7 +4683,7 @@
                                      <div class="container">
                                         <div class="row">
                                           <div class="col-xs-12">
-                                            <span>If you were terminated, discharged, laid off from this job please press the expand button, otherwise you are free to move on.</span>
+                                            <span>If you were terminated, discharged, or laid off from this job please press the Expand button, otherwise you are free to move on.</span>
                                             <div class ="terminated2 required">
                                             <input name="collapseGroup9" type="checkbox" value="yes"/> Expand
                                             </div>
@@ -4658,8 +4696,10 @@
                                                   <div class="panel-body">
                                                     
                                                      <!--Please Explain-->
+                                                     <div class = "optreq">
                                                     <label for="form-termpleaseexplain2"> Please Explain <span class="astrick">*</span></label><br>
-                                                    <input type="text" name="termpleaseexplain2" id="form-termpleaseexplain2" required>
+                                                    <input type="text" name="termpleaseexplain2" id="form-termpleaseexplain2">
+                                                    </div>
                                                     
                                                     
                       
@@ -4690,10 +4730,10 @@
                                                     <!--Is this your current employer?-->
                                                     <div class="currentemployer2 required">
                                                         <p> Is this your current employer?</p>
-                                                        <input type="checkbox" id="currentemployer2" name="currentemployer2" value="yes">
+                                                        <input type="checkbox" id="currentemployer2yes" name="currentemployer2" value="Yes">
                                                         <label for="Yes"> Yes </label>
                                                         <br>
-                                                        <input type="checkbox" id="currentemployer2" name="currentemployer2" value="no">
+                                                        <input type="checkbox" id="currentemployer2no" name="currentemployer2" value="No">
                                                         <label for="No"> No </label>
                                                     </div>
                 
@@ -4703,10 +4743,10 @@
                                                     <!--May we contact this employer at this time-->
                                                     <div class="cancontact2 required">
                                                         <p> May we contact this employer at this time?</p>
-                                                        <input type="checkbox" id="cancontact2" name="cancontact2" value="yes">
+                                                        <input type="checkbox" id="cancontact2yes" name="cancontact2" value="Yes">
                                                         <label for="Yes"> Yes </label>
                                                         <br>
-                                                        <input type="checkbox" id="cancontact2" name="cancontact2" value="no">
+                                                        <input type="checkbox" id="cancontact2no" name="cancontact2" value="No">
                                                         <label for="No"> No </label>
                                                     </div>
                 
@@ -4717,7 +4757,7 @@
                                                     <div class="container">
                                                         <div class="row">
                                                           <div class="col-xs-12">
-                                                            <span>If you operated a commercial motor vehicle at this job please press the expand button, otherwise you are free to move on.</span>
+                                                            <span>If you operated a commercial motor vehicle at this job please press the Expand button, otherwise you are free to move on.</span>
                                                             <div class ="opercommprev2 required">
                                                             <input name="collapseGroup10" type="checkbox" value="yes"/> Expand
                                                             </div>
@@ -4730,23 +4770,27 @@
                                                                   <div class="panel-body">
                                                                     
                                                                     <!--Were you subject to the federal motor carrier or Transport Canada Safety Regulations?-->
-                                                                    <p> Were you subject to the Federal Motor Carrier or Transport Canada Safety Regulations while mployed or contracted by this employer?<span class="astrick">*</span></p>
-                                                                    <input type="checkbox" id="regulations2" name="regulations2" value="yes">
+                                                                    <div class = "regulations2 required">
+                                                                    <p> Were you subject to the Federal Motor Carrier or Transport of Canada Safety Regulations while employed or contracted by this employer?<span class="astrick">*</span></p>
+                                                                    <input type="checkbox" id="regulations2yes" name="regulations2" value="Yes">
                                                                     <label for="Yes"> Yes </label>
                                                                     <br>
-                                                                    <input type="checkbox" id="regulations2" name="regulations2" value="no">
+                                                                    <input type="checkbox" id="regulations2no" name="regulations2" value="No">
                                                                     <label for="No"> No </label>
+                                                                    </div>
                 
                                                                     <br>
                                                                     <br>
                 
                                                                     <!--Were you subject to drug and alcohol testing?-->
-                                                                    <p> Did you perform any safety sensitive functions in this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
-                                                                    <input type="checkbox" id="drugandalcoholtesting2" name="drugandalcoholtesting2" value="yes">
+                                                                    <div class = "drugandalcoholtesting2 required">
+                                                                    <p> Did you perform any safety sensitive functions at this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
+                                                                    <input type="checkbox" id="drugandalcoholtesting2yes" name="drugandalcoholtesting2" value="Yes">
                                                                     <label for="Yes"> Yes </label>
                                                                     <br>
-                                                                    <input type="checkbox" id="drugandalcoholtesting2" name="drugandalcoholtesting2" value="no">
+                                                                    <input type="checkbox" id="drugandalcoholtesting2no" name="drugandalcoholtesting2" value="No">
                                                                     <label for="No"> No </label>
+                                                                    </div>
                 
                                                                     <br>
                                                                     <br>
@@ -4759,7 +4803,7 @@
                                                                      <br>
                 
                                                                      <!--Miles driven weekly-->
-                                                                     <label for="form-milesdriven2">Miles driven weekly</label><br>	
+                                                                     <label for="form-milesdriven2">Miles Driven Weekly</label><br>	
                                                                       <select name="milesdriven2" id = "milesdriven2">
                                                                       <option value=""></option>
                                                                       <option value="0-500" >0-500</options>
@@ -4783,14 +4827,14 @@
                                                                      <br>
                 
                                                                      <!--Most common truck driven-->
-                                                                     <label for="form-commonlydrivetruck2">Most common truck driven<span class="astrick">*</span></label><br>	
+                                                                     <label for="form-commonlydrivetruck2">Most Common Truck Driven<span class="astrick">*</span></label><br>	
                                                                      <select name="commonly drive truck2" id = "commonly drive truck2">
                                                                      <option value=""></option>
                                                                      <option value="Tanker" >Tanker</options>
                                                                      <option value="Straight bus" >Bus - Straight</options>
                                                                      <option value="Articulated bus" >Bus - Articulated</options>
                                                                      <option value="Cab over tractor">Cabover Tractor</option>
-                                                                     <option value="class b vehicle" >Class B Vehicle</options>
+                                                                     <option value="Class B vehicle" >Class B Vehicle</options>
                                                                      <option value="Conventional Tractor" >Conventional Tractor</options>
                                                                      <option value="Tractor-Trailer" >Tractor-Trailer</options>
                                                                      <option value="Day Cab" >Day Cab</options>
@@ -4806,7 +4850,7 @@
                                                                      <br>
                 
                                                                      <!--Most common trailer-->
-                                                                      <label for="form-commonlydrivetrailer2">Most common trailer<span class="astrick">*</span></label><br>	
+                                                                      <label for="form-commonlydrivetrailer2">Most Common Trailer<span class="astrick">*</span></label><br>	
                                                                       <select name="commonly drive trailer2" id = "commonly drive trailer2">
                                                                       <option value=""></option>
                                                                       <option value="Flatbed" >Flatbed</options>
@@ -4866,7 +4910,7 @@
                                       <div class="container">
                                         <div class="row">
                                           <div class="col-xs-12">
-                                            <span>If you would like to enter a third job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
+                                            <span>If you would like to enter a third job that you have been employed at, contracted by, or attended a company orientation for within the last 10 years please press the Expand button. Otherwise you are free to press the Next button and move on to the following page.</span>
                                             <div class ="work3 required">
                                             <input name="collapseGroup11" type="checkbox" value="yes"/> Expand
                                             </div>
@@ -4877,44 +4921,52 @@
                                                 </div>
                                                 <div id="collapseEleven" class="panel-collapse collapse">
                                                   <div class="panel-body">
-                                                    <h3>Employer/Contract Information</h3>
+                                                    <h3>3rd Employer/Contract Information</h3>
                                                     <hr>
                 
                                                     <br>
-                                                    <br>
+                                                    
                 
                                                     <!--Company Name-->
+                                                    <div class = "optreq">
                                                     <label for="form-companyname3"> Company Name <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyname3" id="form-companyname3" placeholder = "Company Name" required>
+                                                    <input type="text" name="companyname3" id="form-companyname3">
+                                                    </div>
                 
                                                     <br>
-                                                    <br>
+                                                    
                 
                                                     <!--Start Date-->
+                                                    <div class = "optreq">
                                                     <label for="form-companystart3">Start Date <span class="astrick">*</span> </label>
-                                                    <input type="text" id="form-companystart3" name="companystart3" placeholder = "mm/yyyy" required>
+                                                    <input type="text" id="form-companystart3" name="companystart3" placeholder = "mm/yyyy">
+                                                    </div>
                 
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--End Date-->
+                                                    <div class = "optreq">
                                                     <label for="form-companyend3">End Date <span class="astrick">*</span> </label>
-                                                    <input type="text" id="form-companyend3" name="companyend3" placeholder = "mm/yyyy" required>
+                                                    <input type="text" id="form-companyend3" name="companyend3" placeholder = "mm/yyyy">
+                                                    </div>
                 
-                                                    <br>
-                                                    <br>
-                
-                                                    <!--Street Address-->
-                                                    <label for="form-companystreetaddress5"> Street Address<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companystreetaddress5" id="form-companystreetaddress5" placeholder = "123 Something Street"required>
-                
-                                                    <br>
+                                                   
                                                     <br>
                 
                                                     <!--Street Address-->
-                                                    <label for="form-companystreetaddress6"> Street Address<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companystreetaddress6" id="form-companystreetaddress6" placeholder = "123 Something Street"required>
+                                                    <div class = "optreq">
+                                                    <label for="form-companystreetaddress5"> Street Address <span class="astrick">*</span> </label><br>
+                                                    <input type="text" name="companystreetaddress5" id="form-companystreetaddress5" placeholder = "123 Something Street">
+                                                    </div>
+                
+                                                    <br>
+                                                    
+                
+                                                    <!--Street Address-->
+                                                    <label for="form-companystreetaddress6">2nd Street Address </label><br>
+                                                    <input type="text" name="companystreetaddress6" id="form-companystreetaddress6" placeholder = "123 Something Street">
                 
                                                     <br>
                                                     <br>
@@ -4924,7 +4976,7 @@
                                        
                 
                                     <label for="form-companycountry3">Country <span class="astrick">*</span></label><br>
-                                    <select name="companycountry3" id = "form-companycountry3" required>
+                                    <select name="companycountry3" id = "form-companycountry3">
                                         <option value="-1">Select</option>
                                         <option value="Afghanistan" rel="three">Afghanistan</option>
                                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -5176,19 +5228,21 @@
                                                     <br>
                 
                                                     <!--City-->
+                                                    <div class = "optreq">
                                                     <label for="form-companycity3"> City <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyCity3" id="form-companycity3" placeholder = "New Haven" required>
+                                                    <input type="text" name="companyCity3" id="form-companycity3" placeholder = "New Haven">
+                                                    </div>
                  
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--State/Province-->
-                                                    <label for="form-companystate3">State/Province: <span class="astrick">*</span></label><br>
-                                    <select id="form-companystate3" name="companystate3" class="cascade" required >
+                                                    <label for="form-companystate3">State/Province <span class="astrick">*</span></label><br>
+                                    <select id="form-companystate3" name="companystate3" class="cascade">
                                             <option value="-1">Select</option>
-                                            <option class="three" value = "NULL"> Select</option>
+                                            <option class="three" value = "-1"> Select</option>
                                             <option class="three" value="oth"></option>
-                                            <option class="two" value = "NULL"> Select</option>
+                                            <option class="two" value = "-1"> Select</option>
                                             <option value="AK" class="two">Alaska</option>
                                             <option value="AL" class ="two">Alabama</option>
                                             <option value="AR" class ="two">Arkansas</option>
@@ -5241,7 +5295,7 @@
                                             <option value="WI" class ="two">Wisconsin</option>
                                             <option value="WV" class ="two">West Virginia</option>
                                             <option value="WY" class ="two">Wyoming</option>
-                                            <option class="one" value = "NULL"> Select</option>    
+                                            <option class="one" value = "-1"> Select</option>    
                                             <option value="AB" class ="one">Alberta</option>
                                             <option value="BC" class ="one">British Columbia</option>
                                             <option value="MB" class ="one">Manitoba</option>
@@ -5288,17 +5342,21 @@
                                                     <br>
                 
                                                     <!--Zip/Postal-->
-                                                    <label for="form-companyzip3"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companyZip3" id="form-companyzip3" placeholder="54309" required>
+                                                    <div class = "optreq">
+                                                    <label for="form-companyzip3"> Zip/Postal Code <span class="astrick">*</span> </label><br>
+                                                    <input type="text" name="companyZip3" id="form-companyzip3" placeholder="54309">
+                                                    </div>
                 
                                                     <br>
-                                                    <br>
+                                                   
                 
                                                     <!--Telephone-->
+                                                    <div class = "optreq">
                                                     <label for="form-companytelephone3"> Telephone <span class="astrick">*</span> </label><br>
-                                                    <input type="text" name="companytelephone3" id="form-companytelephone3" placeholder = "784 872 8982"required>
+                                                    <input type="text" name="companytelephone3" id="form-companytelephone3" placeholder = "784 872 8982">
+                                                    </div>
                 
-                                                    <br>
+                                                    
                                                     <br>
                 
                                                     <!--Position Held-->
@@ -5309,8 +5367,10 @@
                                                     <br>
                 
                                                     <!--Reason for leaving?-->
+                                                    <div class = "optreq">
                                                     <label for="form-reasonforleaving3"> Reason for leaving? <span class="astrick">*</span></label><br>
-                                                    <input type="text" name="reasonforleaving3" id="form-reasonforleaving3" required>
+                                                    <input type="text" name="reasonforleaving3" id="form-reasonforleaving3">
+                                                    </div>
                 
                                                     <br>
                                                     <br>
@@ -5320,7 +5380,7 @@
                                      <div class="container">
                                         <div class="row">
                                           <div class="col-xs-12">
-                                            <span>If you were terminated, discharged, laid off from this job please press the expand button, otherwise you are free to move on.</span>
+                                            <span>If you were terminated, discharged, or laid off from this job please press the Expand button, otherwise you are free to move on.</span>
                                             <div class ="terminated3 required">
                                             <input name="collapseGroup12" type="checkbox" value="yes"/> Expand
                                             </div>
@@ -5333,8 +5393,10 @@
                                                   <div class="panel-body">
                                                     
                                                      <!--Please Explain-->
+                                                     <div class = "optreq">
                                                     <label for="form-termpleaseexplain3"> Please Explain <span class="astrick">*</span></label><br>
                                                     <input type="text" name="termpleaseexplain3" id="form-termpleaseexplain3">
+                                                    </div>
                                                     
                                                     
                       
@@ -5365,10 +5427,10 @@
                                                     <!--Is this your current employer?-->
                                                     <div class="currentemployer3 required">
                                                         <p> Is this your current employer?</p>
-                                                        <input type="checkbox" id="currentemployer3" name="currentemployer3" value="yes">
+                                                        <input type="checkbox" id="currentemployer3yes" name="currentemployer3" value="Yes">
                                                         <label for="Yes"> Yes </label>
                                                         <br>
-                                                        <input type="checkbox" id="currentemployer3" name="currentemployer3" value="no">
+                                                        <input type="checkbox" id="currentemployer3no" name="currentemployer3" value="No">
                                                         <label for="No"> No </label>
                                                     </div>
                 
@@ -5378,10 +5440,10 @@
                                                     <!--May we contact this employer at this time-->
                                                     <div class="cancontact3 required">
                                                         <p> May we contact this employer at this time?</p>
-                                                        <input type="checkbox" id="cancontact3" name="cancontact3" value="yes">
+                                                        <input type="checkbox" id="cancontact3yes" name="cancontact3" value="Yes">
                                                         <label for="Yes"> Yes </label>
                                                         <br>
-                                                        <input type="checkbox" id="cancontact3" name="cancontact3" value="no">
+                                                        <input type="checkbox" id="cancontact3no" name="cancontact3" value="No">
                                                         <label for="No"> No </label>
                                                     </div>
                 
@@ -5392,7 +5454,7 @@
                                                     <div class="container">
                                                         <div class="row">
                                                           <div class="col-xs-12">
-                                                            <span>If you operated a commercial motor vehicle at this job please press the expand button, otherwise you are free to move on.</span>
+                                                            <span>If you operated a commercial motor vehicle at this job please press the Expand button, otherwise you are free to move on.</span>
                                                             <div class ="opercommprev3 required">
                                                             <input name="collapseGroup13" type="checkbox" value="yes"/> Expand
                                                             </div>
@@ -5405,23 +5467,27 @@
                                                                   <div class="panel-body">
                                                                     
                                                                     <!--Were you subject to the federal motor carrier or Transport Canada Safety Regulations?-->
-                                                                    <p> Were you subject to the Federal Motor Carrier or Transport Canada Safety Regulations while mployed or contracted by this employer?<span class="astrick">*</span></p>
-                                                                    <input type="checkbox" id="regulations3" name="regulations3" value="yes">
+                                                                    <div class = "regulations3 required">
+                                                                    <p> Were you subject to the Federal Motor Carrier or Transport of Canada Safety Regulations while employed or contracted by this employer?<span class="astrick">*</span></p>
+                                                                    <input type="checkbox" id="regulations3yes" name="regulations3" value="Yes">
                                                                     <label for="Yes"> Yes </label>
                                                                     <br>
-                                                                    <input type="checkbox" id="regulations3" name="regulations3" value="no">
+                                                                    <input type="checkbox" id="regulations3no" name="regulations3" value="No">
                                                                     <label for="No"> No </label>
+                                                                    </div>
                 
                                                                     <br>
                                                                     <br>
                 
                                                                     <!--Were you subject to drug and alcohol testing?-->
-                                                                    <p> Did you perform any safety sensitive functions in this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
-                                                                    <input type="checkbox" id="drugandalcoholtesting3" name="drugandalcoholtesting3" value="yes">
+                                                                    <div class = "drugandalcoholtesting3 required">
+                                                                    <p> Did you perform any safety sensitive functions at this job, regulated by DOT, and subject to drug and alcohol testing?<span class="astrick">*</span></p>
+                                                                    <input type="checkbox" id="drugandalcoholtesting3yes" name="drugandalcoholtesting3" value="Yes">
                                                                     <label for="Yes"> Yes </label>
                                                                     <br>
-                                                                    <input type="checkbox" id="drugandalcoholtesting3" name="drugandalcoholtesting3" value="no">
+                                                                    <input type="checkbox" id="drugandalcoholtesting3no" name="drugandalcoholtesting3" value="No">
                                                                     <label for="No"> No </label>
+                                                                    </div>
                 
                                                                     <br>
                                                                     <br>
@@ -5434,7 +5500,7 @@
                                                                      <br>
                 
                                                                      <!--Miles driven weekly-->
-                                                                     <label for="form-milesdriven3">Miles driven weekly</label><br>	
+                                                                     <label for="form-milesdriven3">Miles Driven Weekly</label><br>	
                                                                       <select name="milesdriven3" id = "milesdriven3">
                                                                       <option value=""></option>
                                                                       <option value="0-500" >0-500</options>
@@ -5458,14 +5524,14 @@
                                                                      <br>
                 
                                                                      <!--Most common truck driven-->
-                                                                     <label for="form-commonlydrivetruck3">Most common truck driven<span class="astrick">*</span></label><br>	
+                                                                     <label for="form-commonlydrivetruck3">Most Common Truck Driven<span class="astrick">*</span></label><br>	
                                                                      <select name="commonly drive truck3" id = "commonly drive truck3">
                                                                      <option value=""></option>
                                                                      <option value="Tanker" >Tanker</options>
                                                                      <option value="Straight bus" >Bus - Straight</options>
                                                                      <option value="Articulated bus" >Bus - Articulated</options>
                                                                      <option value="Cab over tractor">Cabover Tractor</option>
-                                                                     <option value="class b vehicle" >Class B Vehicle</options>
+                                                                     <option value="Class B vehicle" >Class B Vehicle</options>
                                                                      <option value="Conventional Tractor" >Conventional Tractor</options>
                                                                      <option value="Tractor-Trailer" >Tractor-Trailer</options>
                                                                      <option value="Day Cab" >Day Cab</options>
@@ -5481,7 +5547,7 @@
                                                                      <br>
                 
                                                                      <!--Most common trailer-->
-                                                                      <label for="form-commonlydrivetrailer3">Most common trailer<span class="astrick">*</span></label><br>	
+                                                                      <label for="form-commonlydrivetrailer3">Most Common Trailer<span class="astrick">*</span></label><br>	
                                                                       <select name="commonly drive trailer3" id = "commonly drive trailer3">
                                                                       <option value=""></option>
                                                                       <option value="Flatbed" >Flatbed</options>
@@ -5612,12 +5678,23 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#eight" class="Next Button" onclick=""return requiredpg7();> Next</a>
+            <a href="#eight" class="Next Button" onclick="return pg7();"> Next</a>
             &ensp;
 
             <script>
-                function requriedpg7()
+                function pg7()
                 {
+                    //Formatting
+                    counter = 0;
+                    var rel = /^(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+                    var lamb = /^[a-zA-Z0-9 \.-]*$/;
+                    var lamp = /^[a-zA-Z0-9 $\.\/-]*$/;
+                    var letters = /^[A-Za-z, ]+$/;
+                    var numsp = /^[0-9 ]*$/;
+                    var add = /^[a-zA-Z0-9 ]*$/gm;
+                    var pr = /^[a-zA-Z0-9 $\/\.]*$/;
+
+                    //Variables for first job
                     let wor1 = document.getElementById("form-companyname").value;
                     let wor2 = document.getElementById("form-companystart").value;
                     let wor3 = document.getElementById("form-companyend").value;
@@ -5629,64 +5706,869 @@
                     let wor9 = document.getElementById("form-companyzip").value;
                     let wor10 = document.getElementById("form-companytelephone").value;
                     let wor11 = document.getElementById("form-companyposition").value;
-                    let wor12 = document.getElementById("form-readonforleaving").value;
+                    let wor12 = document.getElementById("form-reasonforleaving").value;
                     let wor13 = document.getElementById("form-termpleaseexplain").value;
-                    let wor14 = document.getElementById("currentemployer").value;
-                    let wor15 = document.getElementById("form-licenseNum").value;
-                    let wor16 = document.getElementById("form-licenseNum").value;
-                    let wor17 = document.getElementById("form-licenseNum").value;
-                    let wor18 = document.getElementById("form-licenseNum").value;
-                    let wor19 = document.getElementById("form-licenseNum").value;
-                    let wor20 = document.getElementById("form-licenseNum").value;
-                    let wor21 = document.getElementById("form-licenseNum").value;
-                    let wor22 = document.getElementById("form-licenseNum").value;
-                    let wor23 = document.getElementById("form-licenseNum").value;
-                    let wor24 = document.getElementById("form-licenseNum").value;
-                    let wor25 = document.getElementById("form-licenseNum").value;
-                    let wor26 = document.getElementById("form-licenseNum").value;
-                    let wor27 = document.getElementById("form-licenseNum").value;
-                    let wor28 = document.getElementById("form-licenseNum").value;
-                    let wor29 = document.getElementById("form-licenseNum").value;
-                    let wor30 = document.getElementById("form-licenseNum").value;
-                    let wor31 = document.getElementById("form-licenseNum").value;
-                    let wor32 = document.getElementById("form-licenseNum").value;
-                    let wor33 = document.getElementById("form-licenseNum").value;
-                    let wor34 = document.getElementById("form-licenseNum").value;
-                    let wor35 = document.getElementById("form-licenseNum").value;
-                    let wor36 = document.getElementById("form-licenseNum").value;
-                    let wor37 = document.getElementById("form-licenseNum").value;
-                    let wor38 = document.getElementById("form-licenseNum").value;
-                    let wor39 = document.getElementById("form-licenseNum").value;
-                    let wor40 = document.getElementById("form-licenseNum").value;
-                    let wor41 = document.getElementById("form-licenseNum").value;
-                    let wor42 = document.getElementById("form-licenseNum").value;
-                    let wor43 = document.getElementById("form-licenseNum").value;
-                    let wor44 = document.getElementById("form-licenseNum").value;
-                    let wor45 = document.getElementById("form-licenseNum").value;
-                    let wor46 = document.getElementById("form-licenseNum").value;
-                    let wor47 = document.getElementById("form-licenseNum").value;
-                    let wor48 = document.getElementById("form-licenseNum").value;
-                    let wor49 = document.getElementById("form-licenseNum").value;
-                    let wor50 = document.getElementById("form-licenseNum").value;
-                    let wor51 = document.getElementById("form-licenseNum").value;
-                    let wor52 = document.getElementById("form-licenseNum").value;
-                    let wor53 = document.getElementById("form-licenseNum").value;
-                    let wor54 = document.getElementById("form-licenseNum").value;
-                    let wor55 = document.getElementById("form-licenseNum").value;
-                    let wor56 = document.getElementById("form-licenseNum").value;
+                    let wor14 = document.getElementById("form-companyareasdriven").value;
+                    let wor15 = document.getElementById("milesdriven").value;
+                    let wor16 = document.getElementById("form-payrange").value;
+                    let wor17 = document.getElementById("commonly drive truck").value;
+                    let wor18 = document.getElementById("commonly drive trailer").value;
+                    let wor19 = document.getElementById("trailerlength").value;
+
+                    //Variables for second job
+                    let wor20 = document.getElementById("form-companyname2").value;
+                    let wor21 = document.getElementById("form-companystart2").value;
+                    let wor22 = document.getElementById("form-companyend2").value;
+                    let wor23 = document.getElementById("form-companystreetaddress3").value;
+                    let wor24 = document.getElementById("form-companystreetaddress4").value;
+                    let wor25 = document.getElementById("form-companycountry2").value;
+                    let wor26 = document.getElementById("form-companycity2").value;
+                    let wor27 = document.getElementById("form-companystate2").value;
+                    let wor28 = document.getElementById("form-companyzip2").value;
+                    let wor29 = document.getElementById("form-companytelephone2").value;
+                    let wor30 = document.getElementById("form-companyposition2").value;
+                    let wor31 = document.getElementById("form-reasonforleaving2").value;
+                    let wor32 = document.getElementById("form-termpleaseexplain2").value;
+                    let wor33 = document.getElementById("form-companyareasdriven2").value;
+                    let wor34 = document.getElementById("milesdriven2").value;
+                    let wor35 = document.getElementById("form-payrange2").value;
+                    let wor36 = document.getElementById("commonly drive truck2").value;
+                    let wor37 = document.getElementById("commonly drive trailer2").value;
+                    let wor38 = document.getElementById("trailerlength2").value;
+
+                    //Variables for third job
+                    let wor39 = document.getElementById("form-companyname3").value;
+                    let wor40 = document.getElementById("form-companystart3").value;
+                    let wor41 = document.getElementById("form-companyend3").value;
+                    let wor42 = document.getElementById("form-companystreetaddress5").value;
+                    let wor43 = document.getElementById("form-companystreetaddress6").value;
+                    let wor44 = document.getElementById("form-companycountry3").value;
+                    let wor45 = document.getElementById("form-companycity3").value;
+                    let wor46 = document.getElementById("form-companystate3").value;
+                    let wor47 = document.getElementById("form-companyzip3").value;
+                    let wor48 = document.getElementById("form-companytelephone3").value;
+                    let wor49 = document.getElementById("form-companyposition3").value;
+                    let wor50 = document.getElementById("form-reasonforleaving3").value;
+                    let wor51 = document.getElementById("form-termpleaseexplain3").value;
+                    let wor52 = document.getElementById("form-companyareasdriven3").value;
+                    let wor53 = document.getElementById("milesdriven3").value;
+                    let wor54 = document.getElementById("form-payrange3").value;
+                    let wor55 = document.getElementById("commonly drive truck3").value;
+                    let wor56 = document.getElementById("commonly drive trailer3").value;
+                    let wor57 = document.getElementById("trailerlength3").value;
+                   
                     
-                  
 
-                    let lic60 = $('div.terminated.required :checkbox:checked').length > 0;
-                    let lic61 = $('div.terminated2.required :checkbox:checked').length > 0;
-                    let lic62 = $('div.terminated3.required :checkbox:checked').length > 0;
-                    let lic63 = $('div.work.required :checkbox:checked').length > 0;
-                    let lic64 = $('div.work2.required :checkbox:checked').length > 0;
-                    let lic65 = $('div.work3.required :checkbox:checked').length > 0;
-                    let lic66 = $('div.opercommprev.required :checkbox:checked').length > 0;
-                    let lic67 = $('div.opercommprev2.required :checkbox:checked').length > 0;
-                    let lic68 = $('div.opercommprev3.required :checkbox:checked').length > 0;
+                    //Collects values for first employer checkboxes
+                    let worcheckboxes = document.querySelectorAll('input[name="currentemployer"]:checked');
+                    let wor73 = [];
+                    worcheckboxes.forEach((checkbox) => {
+                        wor73.push(checkbox.value);
+                    });
+              
 
+                    let wor2checkboxes = document.querySelectorAll('input[name="cancontact"]:checked');
+                    let wor74 = [];
+                    wor2checkboxes.forEach((checkbox) => {
+                        wor74.push(checkbox.value);
+                    });
+
+
+                    let wor3checkboxes = document.querySelectorAll('input[name="regulations"]:checked');
+                    let wor75 = [];
+                    wor3checkboxes.forEach((checkbox) => {
+                       wor75.push(checkbox.value);
+                    });
+
+
+
+                    let wor4checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting"]:checked');
+                    let wor76 = [];
+                    wor4checkboxes.forEach((checkbox) => {
+                       wor76.push(checkbox.value);
+                    });
+
+
+                    //Collects values for second employer checkboxes
+              
+                    let wor5checkboxes = document.querySelectorAll('input[name="currentemployer2"]:checked');
+                    let wor77 = [];
+                    wor5checkboxes.forEach((checkbox) => {
+                       wor77.push(checkbox.value);
+                    });
+              
+
+                    let wor6checkboxes = document.querySelectorAll('input[name="cancontact2"]:checked');
+                    let wor78 = [];
+                    wor6checkboxes.forEach((checkbox) => {
+                       wor78.push(checkbox.value);
+                    });
+              
+
+                    let wor7checkboxes = document.querySelectorAll('input[name="regulations2"]:checked');
+                    let wor79 = [];
+                    wor7checkboxes.forEach((checkbox) => {
+                       wor79.push(checkbox.value);
+                    });
+              
+
+                    let wor8checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting2"]:checked');
+                    let wor80 = [];
+                    wor8checkboxes.forEach((checkbox) => {
+                       wor80.push(checkbox.value);
+                    });
+
+
+                   //Collects values for third employer checkboxes
+                   let wor9checkboxes = document.querySelectorAll('input[name="currentemployer3"]:checked');
+                   let wor81 = [];
+                       wor9checkboxes.forEach((checkbox) => {
+                    wor81.push(checkbox.value);
+                    });
+
+
+                   let wor10checkboxes = document.querySelectorAll('input[name="cancontact3"]:checked');
+                   let wor82 = [];
+                   wor10checkboxes.forEach((checkbox) => {
+                       wor82.push(checkbox.value);
+                   });
+              
+
+                   let wor11checkboxes = document.querySelectorAll('input[name="regulations3"]:checked');
+                   let wor83 = [];
+                   wor11checkboxes.forEach((checkbox) => {
+                       wor83.push(checkbox.value);
+                    });
+              
+
+                   let wor12checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting3"]:checked');
+                   let wor84 = [];
+                   wor12checkboxes.forEach((checkbox) => {
+                       wor84.push(checkbox.value);
+                   });
+
+
+                    //Checks that the required checkboxes are clicked
+                    let wor67 = $('div.regulations.required :checkbox:checked').length > 0;
+                    let wor68 = $('div.drugandalcoholtesting.required :checkbox:checked').length > 0;
+                    let wor69 = $('div.regulations2.required :checkbox:checked').length > 0;
+                    let wor70 = $('div.drugandalcoholtesting2.required :checkbox:checked').length > 0;
+                    let wor71 = $('div.regulations3.required :checkbox:checked').length > 0;
+                    let wor72 = $('div.drugandalcoholtesting3.required :checkbox:checked').length > 0;
+                    
+
+                    //Makes sure the expand buttons are checked
+                    let wor58 = $('div.terminated.required :checkbox:checked').length > 0;
+                    let wor59 = $('div.terminated2.required :checkbox:checked').length > 0;
+                    let wor60 = $('div.terminated3.required :checkbox:checked').length > 0;
+                    let wor61 = $('div.work.required :checkbox:checked').length > 0;
+                    let wor62 = $('div.work2.required :checkbox:checked').length > 0;
+                    let wor63 = $('div.work3.required :checkbox:checked').length > 0;
+                    let wor64 = $('div.opercommprev.required :checkbox:checked').length > 0;
+                    let wor65 = $('div.opercommprev2.required :checkbox:checked').length > 0;
+                    let wor66 = $('div.opercommprev3.required :checkbox:checked').length > 0;
+                     
+
+                    //Checks first section
+                    if(wor61 == true)
+                    {
+                        if(wor1 == "" || wor2 == "" || wor3 == "" || wor4 == "" || wor6 == "-1" || wor7 == "" || wor8 == "-1" || wor9 == "" || wor10 == "" || wor12 == "")
+                        {
+                          alert("Please input a value in the first section.");
+                          return false;
+                        }
+                        else
+                        {
+                          if(wor1.match(lamb))
+                          {
+                            if(wor2.match(rel))
+                            {
+                               if(wor3.match(rel))
+                               {
+                                  if(wor4.match(add))
+                                  {
+                                       if(wor7.match(letters))
+                                       {
+                                          if(wor9.match(add))
+                                          {
+                                             if(wor10.match(numsp))
+                                             {
+                                                if(wor12.match(lamp))
+                                                {
+                                                    if(wor5 == "")
+                                                    {
+                                                       //2nd address is blank position is blank
+                                                       if(wor11 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //2nd address is blank position is not blank
+                                                             if(wor11.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The first company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                    }
+                                                    else
+                                                    {
+                                                      if(wor5.match(add))
+                                                      {
+                                                        //2nd address is not blank position is blank
+                                                         if(wor11 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //2nd address is not blank position is not blank
+                                                             if(wor11.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The first company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                      }
+                                                      else
+                                                      {
+                                                        alert("The first company 2nd address contains unaccepted characters.");
+                                                        return false;
+                                                      }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                  alert("The first company reason for leaving contains unaccepted characters.");
+                                                  return false;
+                                                }
+                                             }
+                                             else
+                                             {
+                                               alert("The first company telephone contains unaccepted characters.");
+                                               return false;
+                                             }
+                                          }
+                                          else
+                                          {
+                                            alert("The first company zip code contains unaccepted characters.");
+                                            return false;
+                                          }
+                                       }
+                                       else
+                                       {
+                                        alert("The first company city contains unaccepted characters.");
+                                        return false;
+                                       }
+                                  }
+                                  else
+                                  {
+                                    alert("The first street address for the first company contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                               else
+                               {
+                                alert("The end date in the first section is in the improper format.");
+                                return false;
+                               }
+                            }
+                            else
+                            {
+                              alert("The start date in the first section is in the improper format.");
+                              return false;
+                            }
+
+                          }
+                          else
+                          {
+                            alert("The company name in the first section contains unaccepted characters.");
+                            return false;
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks second section
+                    if(wor62 == true)
+                    {
+                      if(wor20 == "" || wor21 == "" || wor22 == "" || wor23 == "" || wor25 == "-1" || wor26 == "" || wor27 == "-1" || wor28 == "" || wor29 == "" || wor31 == "")
+                        {
+                          alert("Please input a value in the second section.");
+                          return false;
+                        }
+                        else
+                        {
+                          if(wor20.match(lamb))
+                          {
+                            if(wor21.match(rel))
+                            {
+                               if(wor22.match(rel))
+                               {
+                                  if(wor23.match(add))
+                                  {
+                                       if(wor26.match(letters))
+                                       {
+                                          if(wor28.match(add))
+                                          {
+                                             if(wor29.match(numsp))
+                                             {
+                                                if(wor31.match(lamp))
+                                                {
+                                                    if(wor24 == "")
+                                                    {
+                                                       //2nd address is blank position is blank
+                                                       if(wor30 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //2nd address is blank position is not blank
+                                                             if(wor30.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The second company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                    }
+                                                    else
+                                                    {
+                                                      if(wor24.match(add))
+                                                      {
+                                                        //2nd address is not blank position is blank
+                                                         if(wor30 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //2nd address is not blank position is not blank
+                                                             if(wor30.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The second company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                      }
+                                                      else
+                                                      {
+                                                        alert("The second company 2nd address contains unaccepted characters.");
+                                                        return false;
+                                                      }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                  alert("The second company reason for leaving contains unaccepted characters.");
+                                                  return false;
+                                                }
+                                             }
+                                             else
+                                             {
+                                               alert("The second company telephone contains unaccepted characters.");
+                                               return false;
+                                             }
+                                          }
+                                          else
+                                          {
+                                            alert("The second company zip code contains unaccepted characters.");
+                                            return false;
+                                          }
+                                       }
+                                       else
+                                       {
+                                        alert("The second company city contains unaccepted characters.");
+                                        return false;
+                                       }
+                                  }
+                                  else
+                                  {
+                                    alert("The first street address for the second company contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                               else
+                               {
+                                alert("The end date in the second section is in the improper format.");
+                                return false;
+                               }
+                            }
+                            else
+                            {
+                              alert("The start date in the second section is in the improper format.");
+                              return false;
+                            }
+
+                          }
+                          else
+                          {
+                            alert("The company name in the second section contains unaccepted characters.");
+                            return false;
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks third section
+                    if(wor63 == true)
+                    {
+                      if(wor39 == "" || wor40 == "" || wor41 == "" || wor42 == "" || wor44 == "-1" || wor45 == "" || wor46 == "-1" || wor47 == "" || wor48 == "" || wor50 == "")
+                        {
+                          alert("Please input a value in the third section.");
+                          return false;
+                        }
+                        else
+                        {
+                          if(wor39.match(lamb))
+                          {
+                            if(wor40.match(rel))
+                            {
+                               if(wor41.match(rel))
+                               {
+                                  if(wor42.match(add))
+                                  {
+                                       if(wor45.match(letters))
+                                       {
+                                          if(wor47.match(add))
+                                          {
+                                             if(wor48.match(numsp))
+                                             {
+                                                if(wor50.match(lamp))
+                                                {
+                                                    if(wor43 == "")
+                                                    {
+                                                       //2nd address is blank position is blank
+                                                       if(wor49 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //@nd address is blank position is not blank
+                                                             if(wor49.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The third company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                    }
+                                                    else
+                                                    {
+                                                      if(wor43.match(add))
+                                                      {
+                                                        //2nd address is not blank position is blank
+                                                         if(wor49 == "")
+                                                         {
+                                                            counter++;
+                                                         }
+                                                         else
+                                                         {
+                                                             //@nd address is not blank position is not blank
+                                                             if(wor49.match(add))
+                                                             {
+                                                               counter++;
+                                                             }
+                                                             else
+                                                             {
+                                                               alert("The third company position held contains unaccepted characters.");
+                                                               return false;
+                                                             }
+                                                         }
+                                                      }
+                                                      else
+                                                      {
+                                                        alert("The third company 2nd address contains unaccepted characters.");
+                                                        return false;
+                                                      }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                  alert("The third company reason for leaving contains unaccepted characters.");
+                                                  return false;
+                                                }
+                                             }
+                                             else
+                                             {
+                                               alert("The third company telephone contains unaccepted characters.");
+                                               return false;
+                                             }
+                                          }
+                                          else
+                                          {
+                                            alert("The third company zip code contains unaccepted characters.");
+                                            return false;
+                                          }
+                                       }
+                                       else
+                                       {
+                                        alert("The third company city contains unaccepted characters.");
+                                        return false;
+                                       }
+                                  }
+                                  else
+                                  {
+                                    alert("The first street address for the third company contains unaccepted characters.");
+                                    return false;
+                                  }
+                               }
+                               else
+                               {
+                                alert("The end date in the third section is in the improper format.");
+                                return false;
+                               }
+                            }
+                            else
+                            {
+                              alert("The start date in the third section is in the improper format.");
+                              return false;
+                            }
+
+                          }
+                          else
+                          {
+                            alert("The company name in the third section contains unaccepted characters.");
+                            return false;
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks first employment termination
+                    if(wor58 == true)
+                    {
+                         if(wor13 == "")
+                         {
+                                 alert("Please input a value in the first section.");
+                                 return false;
+                         }
+                         else
+                         {
+                            if(wor13.match(lamb))
+                            {
+                              counter++;
+                            }
+                            else
+                            {
+                                 alert("The first employment termination explanation contains unaccepted characters.");
+                                 return false;
+
+                            }
+                          }
+                         
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks second employment termination
+                    if(wor59 == true)
+                    {
+                      if(wor32 == "")
+                         {
+                                 alert("Please input a value in the first section.");
+                                 return false;
+                         }
+                         else
+                         {
+                            if(wor32.match(lamb))
+                            {
+                              counter++;
+                            }
+                            else
+                            {
+                                 alert("The second employment termination explanation contains unaccepted characters.");
+                                 return false;
+
+                            }
+                         }
+                         
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks third employment termination
+                    if(wor60 == true)
+                    {
+
+                      if(wor51 == "")
+                         {
+                                 alert("Please input a value in the first section.");
+                                 return false;
+                         }
+                         else
+                         {
+                            if(wor51.match(lamb))
+                            {
+                              counter++;
+                            }
+                            else
+                            {
+                                 alert("The third employment termination explanation contains unaccepted characters.");
+                                 return false;
+
+                            }
+                         }
+                         
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks first Operated Motor Vehicle
+                    if(wor64 == true)
+                    {
+                        if(wor67 == false || wor68 == false ||wor17 == "" || wor18 == "" || wor19 == "")
+                        {
+                           alert("Please input a value in the first section.");
+                           return false;
+                        }
+                        else
+                        {
+                          if(wor14 == "")
+                          {
+                            //Areas driven is blank pay range is blank
+                            if(wor16 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor16.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the first job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                          }
+                          else
+                          {
+                            if(wor14.match(lamb))
+                            {
+                              //Areas driven is not blank pay range is blank
+                              if(wor16 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor16.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the first job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                            }
+                            else
+                            {
+                              alert("The areas driven for the first job contains unaccepted characters.");
+                              return false;
+                            }
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks second Operated Motor Vehicle
+                    if(wor65 == true)
+                    {
+                      if(wor69 == false || wor70 == false ||wor36 == "" || wor37 == "" || wor38 == "")
+                        {
+                           alert("Please input a value in the second section.");
+                           return false;
+                        }
+                        else
+                        {
+                          if(wor33 == "")
+                          {
+                            //Areas driven is blank pay range is blank
+                            if(wor35 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor35.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the second job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                          }
+                          else
+                          {
+                            if(wor33.match(lamb))
+                            {
+                              //Areas driven is not blank pay range is blank
+                              if(wor35 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor35.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the second job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                            }
+                            else
+                            {
+                              alert("The areas driven for the second job contains unaccepted characters.");
+                              return false;
+                            }
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+                    //Checks third Operated Motor Vehicle
+                    if(wor66 == true)
+                    {
+                      if(wor71 == false || wor72 == false ||wor55 == "" || wor56 == "" || wor57 == "")
+                        {
+                           alert("Please input a value in the third section.");
+                           return false;
+                        }
+                        else
+                        {
+                          if(wor52 == "")
+                          {
+                            //Areas driven is blank pay range is blank
+                            if(wor54 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor54.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the third job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                          }
+                          else
+                          {
+                            if(wor52.match(lamb))
+                            {
+                              //Areas driven is not blank pay range is blank
+                              if(wor54 == "")
+                              {
+                                  counter++;
+                              }
+                              else
+                              {
+                                  //Areas driven is not blank pay range is not blank
+                                  if(wor54.match(pr))
+                                  {
+                                    counter++;
+                                  }
+                                  else
+                                  {
+                                    alert("The pay range for the third job contains unaccepted characters.");
+                                    return false;
+                                  }
+                              }
+                            }
+                            else
+                            {
+                              alert("The areas driven for the third job contains unaccepted characters.");
+                              return false;
+                            }
+                          }
+                        }
+                    }
+                    else
+                    {
+                      counter++;
+                    }
+
+
+
+                    if(counter == 9)
+                    {
+                      return true;
+                    }
+                    else
+                    {
+                      return false;
+                    }
                 }
             </script>
         </div>
@@ -10448,6 +11330,153 @@
                         document.write(mil4);
                         document.write("dd214");
                         document.write(mil6);
+
+
+                        //Past Work 1
+                        document.write("Company Name");
+                    document.write(wor1);
+                    document.write("Start Date");
+                    document.write(wor2);
+                    document.write("End Date");
+                    document.write(wor3);
+                    document.write("Street Address");
+                    document.write(wor4);
+                    document.write("Street Address 2");
+                    document.write(wor5);
+                    document.write("Country");
+                    document.write(wor6);
+                    document.write("City");
+                    document.write(wor7);
+                    document.write("State/Province");
+                    document.write(wor8);
+                    document.write("Zip/Postal Code");
+                    document.write(wor9);
+                    document.write("Telephone");
+                    document.write(wor10);
+                    document.write("Position Held");
+                    document.write(wor11);
+                    document.write("Reason for leaving");
+                    document.write(wor12);
+                    document.write("Please Explain Termination");
+                    document.write(wor13);
+                    document.write("Current Employer");
+                    document.write(wor73);
+                    document.write("Can contact");
+                    document.write(wor74);
+                    document.write("Subject to law");
+                    document.write(wor75);
+                    document.write("Safety Sensitive");
+                    document.write(wor76);
+                    document.write("Areas driven");
+                    document.write(wor14);
+                    document.write("Miles driven weekly");
+                    document.write(wor15);
+                    document.write("Pay range");
+                    document.write(wor16);
+                    document.write("Most common truck driven");
+                    document.write(wor17);
+                    document.write("Most common trailer");
+                    document.write(wor18);
+                    document.write("Trailer length");
+                    document.write(wor19);
+
+
+                    //Past employment 2
+                    document.write("Company Name2");
+                    document.write(wor20);
+                    document.write("Start Date2");
+                    document.write(wor21);
+                    document.write("End Date2");
+                    document.write(wor22);
+                    document.write("Street Address3");
+                    document.write(wor23);
+                    document.write("Street Address 4");
+                    document.write(wor24);
+                    document.write("Country2");
+                    document.write(wor25);
+                    document.write("City2");
+                    document.write(wor26);
+                    document.write("State/Province2");
+                    document.write(wor27);
+                    document.write("Zip/Postal Code2");
+                    document.write(wor28);
+                    document.write("Telephone2");
+                    document.write(wor29);
+                    document.write("Position Held2");
+                    document.write(wor30);
+                    document.write("Reason for leaving2");
+                    document.write(wor31);
+                    document.write("Please Explain Termination2");
+                    document.write(wor32);
+                    document.write("Current Employer2");
+                    document.write(wor77);
+                    document.write("Can contact2");
+                    document.write(wor78);
+                    document.write("Subject to law2");
+                    document.write(wor79);
+                    document.write("Safety Sensitive2");
+                    document.write(wor80);
+                    document.write("Areas driven2");
+                    document.write(wor33);
+                    document.write("Miles driven weekly2");
+                    document.write(wor34);
+                    document.write("Pay range2");
+                    document.write(wor35);
+                    document.write("Most common truck driven2");
+                    document.write(wor36);
+                    document.write("Most common trailer2");
+                    document.write(wor37);
+                    document.write("Trailer length2");
+                    document.write(wor38);
+
+
+                    //Past employment 3
+                    document.write("Company Name3");
+                    document.write(wor39);
+                    document.write("Start Date3");
+                    document.write(wor40);
+                    document.write("End Date3");
+                    document.write(wor41);
+                    document.write("Street Address5");
+                    document.write(wor42);
+                    document.write("Street Address 6");
+                    document.write(wor43);
+                    document.write("Country3");
+                    document.write(wor44);
+                    document.write("City3");
+                    document.write(wor45);
+                    document.write("State/Province3");
+                    document.write(wor46);
+                    document.write("Zip/Postal Code3");
+                    document.write(wor47);
+                    document.write("Telephone3");
+                    document.write(wor48);
+                    document.write("Position Held3");
+                    document.write(wor49);
+                    document.write("Reason for leaving3");
+                    document.write(wor50);
+                    document.write("Please Explain Termination3");
+                    document.write(wor51);
+                    document.write("Current Employer3");
+                    document.write(wor81);
+                    document.write("Can contact3");
+                    document.write(wor82);
+                    document.write("Subject to law3");
+                    document.write(wor83);
+                    document.write("Safety Sensitive3");
+                    document.write(wor84);
+                    document.write("Areas driven3");
+                    document.write(wor52);
+                    document.write("Miles driven weekly3");
+                    document.write(wor53);
+                    document.write("Pay range3");
+                    document.write(wor54);
+                    document.write("Most common truck driven3");
+                    document.write(wor55);
+                    document.write("Most common trailer3");
+                    document.write(wor56);
+                    document.write("Trailer length3");
+                    document.write(wor57);
 
                         //Drivers Training
                         document.write("Drivers School Start Date");
