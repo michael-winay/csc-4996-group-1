@@ -1402,7 +1402,7 @@
 
                     <!--Have you registered for the FMCSA Drug & Alcohol Clearinghouse-->
                     <div class = "FMCSAClearinghouse required">
-                    <p> Have you registered for the FMCS Drug & Alcohol Clearinghouse? <span class="astrick">*</span></p>
+                    <p> Have you registered for the FMCSA Drug & Alcohol Clearinghouse? <span class="astrick">*</span></p>
                     <input type="checkbox" id="FMCSAClearinghouseyes" name="FMCSAClearinghouse" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
@@ -11373,7 +11373,7 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#fourteen" class="Next Button" onclick="return pg13();"> Next</a>
+            <a href="#fourteen" class="Next Button" onclick="return pg13();" > Next</a>
             &ensp;
 
             <script>
@@ -11514,7 +11514,7 @@
                 <div class="logo">
 
                     <!--Picture of Company Logo-->
-                    <img src="assets/extra small truck logo.png" alt="Assad Logistics Logo">
+                    <img src="assets/extra small truck logo.png" alt="Assad Logistics Logo" >
                     <div class="tab">
                         <h2>Assad Logistics</h2>
                     </div>
@@ -11530,183 +11530,648 @@
                 </div>
 
                 <br>
-                <!--Replace with email given after testing-->
+                
                 
 
                     <br>
                     <br>
                     <br>
 
+                    <div class = "review" >
+
                     <h2>Review Information</h2>
-                    <a  class="Next Button" onclick="return display();" > Display</a>
+                    <a href="#fourteen" class="Next Button" onclick="display()" > Review Information</a>
+
+                    <h4>Personal Information: </h4>
+                    <hr>
+                    <p>First Name:                 <span id="val1"></span></p>
+                    <p>Middle Name:                <span id="val2"></span></p>
+                    <p>Last Name:                  <span id="val3"></span></p>
+                    <p>Suffix:                     <span id="val4"></span></p>
+                    <p>SSN/SIN:                    <span id="val5"></span></p>
+                    <p>Birthday:                   <span id="val6"></span></p>
+                    <p>Street Address:             <span id="val7"></span></p>
+                    <p>2nd Street Address:         <span id="val8"></span></p>
+                    <p>Apartment:                  <span id="val9"></span></p>
+                    <p>Country:                    <span id="val10"></span></p>
+                    <p>City:                       <span id="val11"></span></p>
+                    <p>State/Province:             <span id="val12"></span></p>
+                    <p>Zip/Postal Code:            <span id="val13"></span></p>
+                    <p>Primary Phone:              <span id="val14"></span></p>
+                    <p>Cell Phone:                 <span id="val15"></span></p>
+                    <p>Email:                      <span id="val16"></span></p>
+                    <p>Preferred Contact Method:   <span id="val17"></span></p>
+                    <p>Best time to Contact:       <span id="val18"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>General Information: </h4>
+                    <hr>
+                    <p>Applying for Position:                     <span id="val19"></span></p>
+                    <p>Tractor Type:                              <span id="val20"></span></p>
+                    <p>Tractor Year:                              <span id="val21"></span></p>
+                    <p>Tractor Make:                              <span id="val22"></span></p>
+                    <p>Tractor Model:                             <span id="val23"></span></p>
+                    <p>Tractor Color:                             <span id="val24"></span></p>
+                    <p>Tractor VIN:                               <span id="val25"></span></p>
+                    <p>Tractor Weight:                            <span id="val26"></span></p>
+                    <p>Tractor Mileage:                           <span id="val27"></span></p>
+                    <p>Tractor Fifth Wheel Height:                <span id="val28"></span></p>
+                    <p>Applying for Location:                     <span id="val29"></span></p>
+                    <p>Eligable in USA:                           <span id="val30"></span></p>
+                    <p>Currently Employed:                        <span id="val31"></span></p>
+                    <p>English:                                   <span id="val32"></span></p>
+                    <p>Worked Here Previously:                    <span id="val33"></span></p>
+                    <p>TWIC Card:                                 <span id="val34"></span></p>
+                    <p>Other Name:                                <span id="val35"></span></p>
+                    <p>How Hear About Us:                         <span id="val36"></span></p>
+                    <p>Driver Referral Name:                      <span id="val37"></span></p>
+                    <p>Other:                                     <span id="val38"></span></p>
+                    <p>FMCSR registered:                          <span id="val39"></span></p>
+                    <p>Straight Truck Experience:                 <span id="val40"></span></p>
+                    <p>Tractor and Semi-Trailer Experience:       <span id="val41"></span></p>
+                    <p>Tractor - Two Trailers Experience:         <span id="val42"></span></p>
+                    <p>Other Experience:                          <span id="val43"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>License Details (First License): </h4>
+                    <hr>
+                    <p>License Number:                     <span id="val44"></span></p>
+                    <p>License Country:                    <span id="val45"></span></p>
+                    <p>License State/Province:             <span id="val46"></span></p>
+                    <p>License Expiration:                 <span id="val47"></span></p>
+                    <p>Current License:                    <span id="val48"></span></p>
+                    <p>Commercial License:                 <span id="val49"></span></p>
+                    <p>License Class:                      <span id="val50"></span></p>
+                    <p>Endorsements:                       <span id="val51"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>License Details (Second License): </h4>
+                    <hr>
+                    <p>License Number:                     <span id="val52"></span></p>
+                    <p>License Country:                    <span id="val53"></span></p>
+                    <p>License State/Province:             <span id="val54"></span></p>
+                    <p>License Expiration:                 <span id="val55"></span></p>
+                    <p>Current License:                    <span id="val56"></span></p>
+                    <p>Commercial License:                 <span id="val57"></span></p>
+                    <p>License Class:                      <span id="val58"></span></p>
+                    <p>Endorsements:                       <span id="val59"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>License Details (Third License): </h4>
+                    <hr>
+                    <p>License Number:                     <span id="val60"></span></p>
+                    <p>License Country:                    <span id="val61"></span></p>
+                    <p>Liceense State/Province:            <span id="val62"></span></p>
+                    <p>License Expiration:                 <span id="val63"></span></p>
+                    <p>Current License:                    <span id="val64"></span></p>
+                    <p>Commercial License:                 <span id="val65"></span></p>
+                    <p>License Class:                      <span id="val66"></span></p>
+                    <p>Endorsements:                       <span id="val67"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>US Military Service: </h4>
+                    <hr>
+                    <p>Branch of Service:                   <span id="val68"></span></p>
+                    <p>Start Date:                          <span id="val69"></span></p>
+                    <p>End Date:                            <span id="val70"></span></p>
+                    <p>Rank at discharge:                   <span id="val71"></span></p>
+                    <p>Can Obtain DD214:                    <span id="val72"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Employer/Contractor Information (First Job): </h4>
+                    <hr>
+                    <p>Company Name:                               <span id="val73"></span></p>
+                    <p>Start Date:                                 <span id="val74"></span></p>
+                    <p>End Date:                                   <span id="val75"></span></p>
+                    <p>Street Address:                             <span id="val76"></span></p>
+                    <p>2nd Street Address:                         <span id="val77"></span></p>
+                    <p>Country:                                    <span id="val78"></span></p>
+                    <p>City:                                       <span id="val79"></span></p>
+                    <p>State/Province:                             <span id="val80"></span></p>
+                    <p>Zip/Postal Code:                            <span id="val81"></span></p>
+                    <p>Telephone:                                  <span id="val82"></span></p>
+                    <p>Position Held:                              <span id="val83"></span></p>
+                    <p>Reason for Leaving:                         <span id="val84"></span></p>
+                    <p>Explain Termination:                        <span id="val85"></span></p>
+                    <p>Current Employer:                           <span id="val86"></span></p>
+                    <p>Can We Contact:                             <span id="val87"></span></p>
+                    <p>Subject to Regulations:                     <span id="val88"></span></p>
+                    <p>Performed Safety Sensitive Function:        <span id="val89"></span></p>
+                    <p>Areas Driven:                               <span id="val90"></span></p>
+                    <p>Miles Driven Weekly:                        <span id="val91"></span></p>
+                    <p>Pay Range:                                  <span id="val92"></span></p>
+                    <p>Most Common Truck Driven:                   <span id="val93"></span></p>
+                    <p>Most Common Trailer:                        <span id="val94"></span></p>
+                    <p>Trailer Length:                             <span id="val95"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Employer/Contractor Information (Second Job): </h4>
+                    <hr>
+                    <p>Company Name:                               <span id="val96"></span></p>
+                    <p>Start Date:                                 <span id="val97"></span></p>
+                    <p>End Date:                                   <span id="val98"></span></p>
+                    <p>Street Address:                             <span id="val99"></span></p>
+                    <p>2nd Street Address:                         <span id="val100"></span></p>
+                    <p>Country:                                    <span id="val101"></span></p>
+                    <p>City:                                       <span id="val102"></span></p>
+                    <p>State/Province:                             <span id="val103"></span></p>
+                    <p>Zip/Postal Code:                            <span id="val104"></span></p>
+                    <p>Telephone:                                  <span id="val105"></span></p>
+                    <p>Position Held:                              <span id="val106"></span></p>
+                    <p>Reason for Leaving:                         <span id="val107"></span></p>
+                    <p>Explain Termination:                        <span id="val108"></span></p>
+                    <p>Current Employer:                           <span id="val109"></span></p>
+                    <p>Can We Contact:                             <span id="val110"></span></p>
+                    <p>Subject to Regulations:                     <span id="val111"></span></p>
+                    <p>Performed Safety Sensitive Function:        <span id="val112"></span></p>
+                    <p>Areas Driven:                               <span id="val113"></span></p>
+                    <p>Miles Driven Weekly:                        <span id="val114"></span></p>
+                    <p>Pay Range:                                  <span id="val115"></span></p>
+                    <p>Most Common Truck Driven:                   <span id="val116"></span></p>
+                    <p>Most Common Trailer:                        <span id="val117"></span></p>
+                    <p>Trailer Length:                             <span id="val118"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Employer/Contractor Information (Third Job): </h4>
+                    <hr>
+                    <p>Company Name:                               <span id="val119"></span></p>
+                    <p>Start Date:                                 <span id="val120"></span></p>
+                    <p>End Date:                                   <span id="val121"></span></p>
+                    <p>Street Address:                             <span id="val122"></span></p>
+                    <p>2nd Street Address:                         <span id="val123"></span></p>
+                    <p>Country:                                    <span id="val124"></span></p>
+                    <p>City:                                       <span id="val125"></span></p>
+                    <p>State/Province:                             <span id="val126"></span></p>
+                    <p>Zip/Postal Code:                            <span id="val127"></span></p>
+                    <p>Telephone:                                  <span id="val128"></span></p>
+                    <p>Position Held:                              <span id="val129"></span></p>
+                    <p>Reason for Leaving:                         <span id="val130"></span></p>
+                    <p>Explain Termination:                        <span id="val131"></span></p>
+                    <p>Current Employer:                           <span id="val132"></span></p>
+                    <p>Can We Contact:                             <span id="val133"></span></p>
+                    <p>Subject to Regulations:                     <span id="val134"></span></p>
+                    <p>Performed Safety Sensitive Function:        <span id="val135"></span></p>
+                    <p>Areas Driven:                               <span id="val136"></span></p>
+                    <p>Miles Driven Weekly:                        <span id="val137"></span></p>
+                    <p>Pay Range:                                  <span id="val138"></span></p>
+                    <p>Most Common Truck Driven:                   <span id="val139"></span></p>
+                    <p>Most Common Trailer:                        <span id="val140"></span></p>
+                    <p>Trailer Length:                             <span id="val141"></span></p>
+                    
+                    
+
+
+                    
+                   
+                   
+                    
+                     </div>
+
                     <script>
                       function display()
                       {
-                        //Remember everything has to be redeclared in this section or nothing will be pulled up
-                      //Personal Information
-                      document.write("First Name");
-                      document.write(empt);
-                      document.write("Middle Name");
-                      document.write(empt13);
-                      document.write("Last Name");
-                      document.write(empt2);
-                      document.write("Suffix");
-                      document.write(empt17);
-                      document.write("SSN");
-                      document.write(empt3);
-                      document.write("Birthday");
-                      document.write(empt11);
-                      document.write("Address 1");
-                      document.write(empt4);
-                      document.write("Address 2");
-                      document.write(empt14);
-                      document.write("Apartment");
-                      document.write(empt12);
-                      document.write("Country");
-                      document.write(empt9);
-                      document.write("City");
-                      document.write(empt5);
-                      document.write("State/Province");
-                      document.write(empt10);
-                      document.write("Zip/Postal");
-                      document.write(empt6);
-                      document.write("Primary Phone");
-                      document.write(empt7);
-                      document.write("Cell Phone");
-                      document.write(empt15);
-                      document.write("Email");
-                      document.write(empt16);
-                      document.write("Preferred method of contact");
-                      document.write(empt18);
-                      document.write("Best time to contact you");
-                      document.write(empt19);
+                        //Personal Information Variables for HTML
+                        let empt = document.getElementById("form-firstname").value;
+                        let empt2 = document.getElementById("form-lastname").value;
+                        let empt3 = document.getElementById("form-SSN").value;
+                        let empt4 = document.getElementById("form-streetaddress1").value;
+                        let empt5 = document.getElementById("form-city").value;
+                        let empt6 = document.getElementById("form-zip").value;
+                        let empt7 = document.getElementById("form-primphone").value;
+                        let empt9 = document.getElementById("form-country").value;
+                        let empt10 = document.getElementById("form-state").value;
+                        let empt11 = document.getElementById("form-birthday").value;
+                        let empt12 = document.getElementById("form-aptnum").value;
+                        let empt13 = document.getElementById("form-middlename").value;
+                        let empt14 = document.getElementById("form-streetaddress2").value;
+                        let empt15 = document.getElementById("form-cphone").value;
+                        let empt16 = document.getElementById("form-email").value;
+                        let empt17 = document.getElementById("suffix").value;
+                        let empt18 = document.getElementById("prefcontact").value;
+                        let empt19 = document.getElementById("besttime").value;
 
-                      //General Information
-                      document.write("Postion");
-                document.write(gen20);
-                document.write("Tractor Type");
-                document.write(gen22);
-                document.write("Tractor Year");
-                document.write(gen23);
-                document.write("Tractor Make");
-                document.write(gen24);
-                document.write("Tracotr Model");
-                document.write(gen25);
-                document.write("Tractor Color");
-                document.write(gen26);
-                document.write("Tractor VIN");
-                document.write(gen27);
-                document.write("Tractor Weight");
-                document.write(gen28);
-                document.write("Tractor Mileage");
-                document.write(gen29);
-                document.write("Fifth Wheel Height");
-                document.write(gen30);
-                document.write("Apply Location");
-                document.write(gen48);
-                document.write("Eligable");
-                document.write(gen31);
-                document.write("Employmnet");
-                document.write(gen32);
-                document.write("English");
-                document.write(gen33);
-                document.write("Before");
-                document.write(gen34);
-                document.write("TWIC");
-                document.write(gen35);
-                document.write("Other");
-                document.write(gen36);
-                document.write("How");
-                document.write(gen37);
-                document.write("Driv");
-                document.write(gen38);
-                document.write("Other");
-                document.write(gen39);
-                document.write("FMSCR");
-                document.write(gen40);
-                document.write("st");
-                document.write(gen41);
-                document.write("t");
-                document.write(gen42);
-                document.write("tt");
-                document.write(gen43);
-                document.write("o");
-                document.write(gen44);
-                
 
-                      //License
+                        //Personal Information Variables for JS
+                        document.getElementById("val1").innerHTML = empt;
+                        document.getElementById("val2").innerHTML = empt13;
+                        document.getElementById("val3").innerHTML = empt2;
+                        document.getElementById("val4").innerHTML = empt17;
+                        document.getElementById("val5").innerHTML = empt3;
+                        document.getElementById("val6").innerHTML = empt11;
+                        document.getElementById("val7").innerHTML = empt4;
+                        document.getElementById("val8").innerHTML = empt14;
+                        document.getElementById("val9").innerHTML = empt12;
+                        document.getElementById("val10").innerHTML = empt9;
+                        document.getElementById("val11").innerHTML = empt5;
+                        document.getElementById("val12").innerHTML = empt10;
+                        document.getElementById("val13").innerHTML = empt6;
+                        document.getElementById("val14").innerHTML = empt7;
+                        document.getElementById("val15").innerHTML = empt15;
+                        document.getElementById("val16").innerHTML = empt16;
+                        document.getElementById("val17").innerHTML = empt18;
+                        document.getElementById("val18").innerHTML = empt19;
+                        
+
+                        
+                      //General Information Variables for HTML
+                        let gen20 = document.getElementById("form-position").value;
+                        let gen22 = document.getElementById("form-tracttype").value;
+                        let gen23 = document.getElementById("form-tractyear").value;
+                        let gen24 = document.getElementById("form-tractmake").value;
+                        let gen25 = document.getElementById("form-tractmodel").value;
+                        let gen26 = document.getElementById("form-tractcolor").value;
+                        let gen27 = document.getElementById("form-tractvin").value;
+                        let gen28 = document.getElementById("form-tractweight").value;
+                        let gen29 = document.getElementById("form-tractmileage").value;
+                        let gen30 = document.getElementById("form-tractfifthheight").value;
+                        let gen48 = document.getElementById("form-locapply").value;
+                        let gen37 = document.getElementById("howhear").value;
+                        let gen38 = document.getElementById("form-DriverRef").value;
+                        let gen39 = document.getElementById("form-Other").value;
+                        let gen41 = document.getElementById("strtruck").value;
+                        let gen42 = document.getElementById("tracsemi").value;
+                        let gen43 = document.getElementById("tractwo").value;
+                        let gen44 = document.getElementById("form-OtherDriving").value;
+                        let c1checkboxes = document.querySelectorAll('input[name="eligUS"]:checked');
+                        let gen31 = [];
+                        c1checkboxes.forEach((checkbox) => {
+                          gen31.push(checkbox.value);
+                        });
+                        let c2checkboxes = document.querySelectorAll('input[name="curremployed"]:checked');
+                        let gen32 = [];
+                        c2checkboxes.forEach((checkbox) => {
+                          gen32.push(checkbox.value);
+                        });
+                        let c3checkboxes = document.querySelectorAll('input[name="speakEnglish"]:checked');
+                        let gen33 = [];
+                        c3checkboxes.forEach((checkbox) => {
+                          gen33.push(checkbox.value);
+                        });
+                        let c4checkboxes = document.querySelectorAll('input[name="Workedherebefore"]:checked');
+                        let gen34 = [];
+                        c4checkboxes.forEach((checkbox) => {
+                          gen34.push(checkbox.value);
+                        });
+                        let c5checkboxes = document.querySelectorAll('input[name="TWICcard"]:checked');
+                        let gen35 = [];
+                        c5checkboxes.forEach((checkbox) => {
+                          gen35.push(checkbox.value);
+                        });
+                        let c6checkboxes = document.querySelectorAll('input[name="othername"]:checked');
+                        let gen36 = [];
+                        c6checkboxes.forEach((checkbox) => {
+                          gen36.push(checkbox.value);
+                        });
+                        let c7checkboxes = document.querySelectorAll('input[name="FMCSAClearinghouse"]:checked');
+                        let gen40 = [];
+                        c7checkboxes.forEach((checkbox) => {
+                          gen40.push(checkbox.value);
+                        });
+
+
+                        //General Information Variables for JS
+                        document.getElementById("val19").innerHTML = gen20;
+                        document.getElementById("val20").innerHTML = gen22;
+                        document.getElementById("val21").innerHTML = gen23;
+                        document.getElementById("val22").innerHTML = gen24;
+                        document.getElementById("val23").innerHTML = gen25;
+                        document.getElementById("val24").innerHTML = gen26;
+                        document.getElementById("val25").innerHTML = gen27;
+                        document.getElementById("val26").innerHTML = gen28;
+                        document.getElementById("val27").innerHTML = gen29;
+                        document.getElementById("val28").innerHTML = gen30;
+                        document.getElementById("val29").innerHTML = gen48;
+                        document.getElementById("val30").innerHTML = gen31;
+                        document.getElementById("val31").innerHTML = gen32;
+                        document.getElementById("val32").innerHTML = gen33;
+                        document.getElementById("val33").innerHTML = gen34;
+                        document.getElementById("val34").innerHTML = gen35;
+                        document.getElementById("val35").innerHTML = gen36;
+                        document.getElementById("val36").innerHTML = gen37;
+                        document.getElementById("val37").innerHTML = gen38;
+                        document.getElementById("val38").innerHTML = gen39;
+                        document.getElementById("val39").innerHTML = gen40;
+                        document.getElementById("val40").innerHTML = gen41;
+                        document.getElementById("val41").innerHTML = gen42;
+                        document.getElementById("val42").innerHTML = gen43;
+                        document.getElementById("val43").innerHTML = gen44;
+
+                 
+                      
+                       //License Details Variables for HTML
                        //First License
-                document.write("License Number");
-                document.write(lic);
-                document.write("Country");
-                document.write(lic2);
-                document.write("State");
-                document.write(lic3);
-                document.write("License Expiration");
-                document.write(lic4);
-                document.write("Physical Expiration");
-                document.write(lic5);
-                document.write("Current License");
-                document.write(lic6);
-                document.write("Commercial License");
-                document.write(lic7);
-                document.write("License Class");
-                document.write(lic8);
-                document.write("Endorsements");
-                document.write(values);
-                //Second License
-                document.write("License Number 2");
-                document.write(lic10);
-                document.write("Country 2");
-                document.write(lic11);
-                document.write("State 2");
-                document.write(lic12);
-                document.write("License Expiration 2");
-                document.write(lic13);
-                document.write("Physical Expiration 2");
-                document.write(lic14);
-                document.write("Current License 2");
-                document.write(lic15);
-                document.write("Commercial License 2");
-                document.write(lic16);
-                document.write("License Class 2");
-                document.write(lic17);
-                document.write("Endorsements 2");
-                document.write(values2);
-                //Third License
-                document.write("License Number 3");
-                document.write(lic19);
-                document.write("Country 3");
-                document.write(lic20);
-                document.write("State 3");
-                document.write(lic21);
-                document.write("License Expiration 3");
-                document.write(lic22);
-                document.write("Physical Expiration 3");
-                document.write(lic23);
-                document.write("Current License 3");
-                document.write(lic24);
-                document.write("Commercial License 3");
-                document.write(lic25);
-                document.write("License Class 3");
-                document.write(lic26);
-                document.write("Endorsements 3");
-                document.write(values3);
+                       let lic = document.getElementById("form-licenseNum").value;
+                       let lic2 = document.getElementById("form-liccountry").value;
+                       let lic3 = document.getElementById("form-licstate").value;
+                       let lic4 = document.getElementById("form-licexp").value;
+                       let lic8 = document.getElementById("licclass").value;
+             
+                       //Second License
+                       let lic10 = document.getElementById("form-licenseNum2").value;
+                       let lic11 = document.getElementById("form-liccountry2").value;
+                       let lic12 = document.getElementById("form-licstate2").value;
+                       let lic13 = document.getElementById("form-licexp2").value;
+                       let lic17 = document.getElementById("licclass2").value;
+              
+                       //Third License
+                       let lic19 = document.getElementById("form-licenseNum3").value;
+                       let lic20 = document.getElementById("form-liccountry3").value;
+                       let lic21 = document.getElementById("form-licstate3").value;
+                       let lic22 = document.getElementById("form-licexp3").value;
+                       let lic26 = document.getElementById("licclass3").value;
+             
+              
+                       //Collects values for first license endorsements
+                       let checkboxes = document.querySelectorAll('input[name="endorsements"]:checked');
+                       let values = [];
+                       checkboxes.forEach((checkbox) => {
+                         values.push(checkbox.value);
+                       });
 
-                //Military
-                document.write("Branch of Service");
-                        document.write(mil);
-                        document.write("Military Start");
-                        document.write(mil2);
-                        document.write("Military End");
-                        document.write(mil3);
-                        document.write("Rank at Discharge");
-                        document.write(mil4);
-                        document.write("dd214");
-                        document.write(mil6);
+                       //Collects values of current driver license
+                       let c8checkboxes = document.querySelectorAll('input[name="currentlic"]:checked');
+                       let lic6 = [];
+                       c8checkboxes.forEach((checkbox) => {
+                         lic6.push(checkbox.value);
+                       });
 
 
-                        //Past Work 1
+                       //Collects values of commercial driver license
+                       let c9checkboxes = document.querySelectorAll('input[name="commlic"]:checked');
+                       let lic7 = [];
+                       c9checkboxes.forEach((checkbox) => {
+                         lic7.push(checkbox.value);
+                       });
+
+
+                       //Collects values for second license endorsements
+                       let checkboxes2 = document.querySelectorAll('input[name="endorsements2"]:checked');
+                       let values2 = [];
+                       checkboxes2.forEach((checkbox) => {
+                        values2.push(checkbox.value);
+                       });
+
+                       //Collects values of current driver license 2
+                       let c10checkboxes = document.querySelectorAll('input[name="currentlic2"]:checked');
+                       let lic15 = [];
+                       c10checkboxes.forEach((checkbox) => {
+                         lic15.push(checkbox.value);
+                       });
+
+
+                       //Collects values of commercial driver license 2
+                       let c11checkboxes = document.querySelectorAll('input[name="commlic2"]:checked');
+                       let lic16 = [];
+                       c11checkboxes.forEach((checkbox) => {
+                        lic16.push(checkbox.value);
+                       });
+
+
+                       //Collects values for third license endorsements
+                       let checkboxes3 = document.querySelectorAll('input[name="endorsements3"]:checked');
+                       let values3 = [];
+                       checkboxes3.forEach((checkbox) => {
+                        values3.push(checkbox.value);
+                       });
+
+                       //Collects values of current driver license 3
+                       let c12checkboxes = document.querySelectorAll('input[name="currentlic3"]:checked');
+                       let lic24 = [];
+                       c12checkboxes.forEach((checkbox) => {
+                        lic24.push(checkbox.value);
+                       });
+
+
+                      //Collects values of commercial driver license 3
+                      let c13checkboxes = document.querySelectorAll('input[name="commlic3"]:checked');
+                      let lic25 = [];
+                      c13checkboxes.forEach((checkbox) => {
+                        lic25.push(checkbox.value);
+                      });
+
+
+                      //License Details Variables for JS
+                      document.getElementById("val44").innerHTML = lic;
+                      document.getElementById("val45").innerHTML = lic2;
+                      document.getElementById("val46").innerHTML = lic3;
+                      document.getElementById("val47").innerHTML = lic4;
+                      document.getElementById("val48").innerHTML = lic6;
+                      document.getElementById("val49").innerHTML = lic7;
+                      document.getElementById("val50").innerHTML = lic8;
+                      document.getElementById("val51").innerHTML = values;
+                      document.getElementById("val52").innerHTML = lic10;
+                      document.getElementById("val53").innerHTML = lic11;
+                      document.getElementById("val54").innerHTML = lic12;
+                      document.getElementById("val55").innerHTML = lic13;
+                      document.getElementById("val56").innerHTML = lic15;
+                      document.getElementById("val57").innerHTML = lic16;
+                      document.getElementById("val58").innerHTML = lic17;
+                      document.getElementById("val59").innerHTML = values2;
+                      document.getElementById("val60").innerHTML = lic19;
+                      document.getElementById("val61").innerHTML = lic20;
+                      document.getElementById("val62").innerHTML = lic21;
+                      document.getElementById("val63").innerHTML = lic22;
+                      document.getElementById("val64").innerHTML = lic24;
+                      document.getElementById("val65").innerHTML = lic25;
+                      document.getElementById("val66").innerHTML = lic26;
+                      document.getElementById("val67").innerHTML = values3;
+                      
+                 
+                      
+
+                      //Military Variables for HTML
+                      let mil = document.getElementById("branchservice").value;
+                      let mil2 = document.getElementById("form-militarystart").value;
+                      let mil3 = document.getElementById("form-militaryend").value;
+                      let mil4 = document.getElementById("form-dischargerank").value;
+                      let milcheckboxes = document.querySelectorAll('input[name="dd214"]:checked');
+                      let mil6 = [];
+                      milcheckboxes.forEach((checkbox) => {
+                        mil6.push(checkbox.value);
+                      });
+      
+
+                      //Military Variables for JS
+                      document.getElementById("val68").innerHTML = mil;
+                      document.getElementById("val69").innerHTML = mil2;
+                      document.getElementById("val70").innerHTML = mil3;
+                      document.getElementById("val71").innerHTML = mil4;
+                      document.getElementById("val72").innerHTML = mil6;
+
+                      
+               
+
+                       //Previous Employment Variables for HTML
+                       //Job 1
+                        let wor1 = document.getElementById("form-companyname").value;
+                        let wor2 = document.getElementById("form-companystart").value;
+                        let wor3 = document.getElementById("form-companyend").value;
+                        let wor4 = document.getElementById("form-companystreetaddress").value;
+                        let wor5 = document.getElementById("form-companystreetaddress2").value;
+                        let wor6 = document.getElementById("form-companycountry").value;
+                        let wor7 = document.getElementById("form-companycity").value;
+                        let wor8 = document.getElementById("form-companystate").value;
+                        let wor9 = document.getElementById("form-companyzip").value;
+                        let wor10 = document.getElementById("form-companytelephone").value;
+                        let wor11 = document.getElementById("form-companyposition").value;
+                        let wor12 = document.getElementById("form-reasonforleaving").value;
+                        let wor13 = document.getElementById("form-termpleaseexplain").value;
+                        let wor14 = document.getElementById("form-companyareasdriven").value;
+                        let wor15 = document.getElementById("milesdriven").value;
+                        let wor16 = document.getElementById("form-payrange").value;
+                        let wor17 = document.getElementById("commonly drive truck").value;
+                        let wor18 = document.getElementById("commonly drive trailer").value;
+                        let wor19 = document.getElementById("trailerlength").value;
+
+                        //Job 2
+                        let wor20 = document.getElementById("form-companyname2").value;
+                        let wor21 = document.getElementById("form-companystart2").value;
+                        let wor22 = document.getElementById("form-companyend2").value;
+                        let wor23 = document.getElementById("form-companystreetaddress3").value;
+                        let wor24 = document.getElementById("form-companystreetaddress4").value;
+                        let wor25 = document.getElementById("form-companycountry2").value;
+                        let wor26 = document.getElementById("form-companycity2").value;
+                        let wor27 = document.getElementById("form-companystate2").value;
+                        let wor28 = document.getElementById("form-companyzip2").value;
+                        let wor29 = document.getElementById("form-companytelephone2").value;
+                        let wor30 = document.getElementById("form-companyposition2").value;
+                        let wor31 = document.getElementById("form-reasonforleaving2").value;
+                        let wor32 = document.getElementById("form-termpleaseexplain2").value;
+                        let wor33 = document.getElementById("form-companyareasdriven2").value;
+                        let wor34 = document.getElementById("milesdriven2").value;
+                        let wor35 = document.getElementById("form-payrange2").value;
+                        let wor36 = document.getElementById("commonly drive truck2").value;
+                        let wor37 = document.getElementById("commonly drive trailer2").value;
+                        let wor38 = document.getElementById("trailerlength2").value;
+
+                        //Job 3
+                        let wor39 = document.getElementById("form-companyname3").value;
+                        let wor40 = document.getElementById("form-companystart3").value;
+                        let wor41 = document.getElementById("form-companyend3").value;
+                        let wor42 = document.getElementById("form-companystreetaddress5").value;
+                        let wor43 = document.getElementById("form-companystreetaddress6").value;
+                        let wor44 = document.getElementById("form-companycountry3").value;
+                        let wor45 = document.getElementById("form-companycity3").value;
+                        let wor46 = document.getElementById("form-companystate3").value;
+                        let wor47 = document.getElementById("form-companyzip3").value;
+                        let wor48 = document.getElementById("form-companytelephone3").value;
+                        let wor49 = document.getElementById("form-companyposition3").value;
+                        let wor50 = document.getElementById("form-reasonforleaving3").value;
+                        let wor51 = document.getElementById("form-termpleaseexplain3").value;
+                        let wor52 = document.getElementById("form-companyareasdriven3").value;
+                        let wor53 = document.getElementById("milesdriven3").value;
+                        let wor54 = document.getElementById("form-payrange3").value;
+                        let wor55 = document.getElementById("commonly drive truck3").value;
+                        let wor56 = document.getElementById("commonly drive trailer3").value;
+                        let wor57 = document.getElementById("trailerlength3").value;
+                   
+                    
+
+                        //Collects values for first employer checkboxes
+                        let worcheckboxes = document.querySelectorAll('input[name="currentemployer"]:checked');
+                        let wor73 = [];
+                        worcheckboxes.forEach((checkbox) => {
+                          wor73.push(checkbox.value);
+                        });
+              
+
+                        let wor2checkboxes = document.querySelectorAll('input[name="cancontact"]:checked');
+                        let wor74 = [];
+                        wor2checkboxes.forEach((checkbox) => {
+                           wor74.push(checkbox.value);
+                        });
+
+
+                         let wor3checkboxes = document.querySelectorAll('input[name="regulations"]:checked');
+                         let wor75 = [];
+                         wor3checkboxes.forEach((checkbox) => {
+                            wor75.push(checkbox.value);
+                         });
+
+
+
+                          let wor4checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting"]:checked');
+                          let wor76 = [];
+                          wor4checkboxes.forEach((checkbox) => {
+                            wor76.push(checkbox.value);
+                         });
+
+
+                    //Collects values for second employer checkboxes
+              
+                    let wor5checkboxes = document.querySelectorAll('input[name="currentemployer2"]:checked');
+                    let wor77 = [];
+                    wor5checkboxes.forEach((checkbox) => {
+                       wor77.push(checkbox.value);
+                    });
+              
+
+                    let wor6checkboxes = document.querySelectorAll('input[name="cancontact2"]:checked');
+                    let wor78 = [];
+                    wor6checkboxes.forEach((checkbox) => {
+                       wor78.push(checkbox.value);
+                    });
+              
+
+                    let wor7checkboxes = document.querySelectorAll('input[name="regulations2"]:checked');
+                    let wor79 = [];
+                    wor7checkboxes.forEach((checkbox) => {
+                       wor79.push(checkbox.value);
+                    });
+              
+
+                    let wor8checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting2"]:checked');
+                    let wor80 = [];
+                    wor8checkboxes.forEach((checkbox) => {
+                       wor80.push(checkbox.value);
+                    });
+
+
+                   //Collects values for third employer checkboxes
+                   let wor9checkboxes = document.querySelectorAll('input[name="currentemployer3"]:checked');
+                   let wor81 = [];
+                       wor9checkboxes.forEach((checkbox) => {
+                    wor81.push(checkbox.value);
+                    });
+
+
+                   let wor10checkboxes = document.querySelectorAll('input[name="cancontact3"]:checked');
+                   let wor82 = [];
+                   wor10checkboxes.forEach((checkbox) => {
+                       wor82.push(checkbox.value);
+                   });
+              
+
+                   let wor11checkboxes = document.querySelectorAll('input[name="regulations3"]:checked');
+                   let wor83 = [];
+                   wor11checkboxes.forEach((checkbox) => {
+                       wor83.push(checkbox.value);
+                    });
+              
+
+                   let wor12checkboxes = document.querySelectorAll('input[name="drugandalcoholtesting3"]:checked');
+                   let wor84 = [];
+                   wor12checkboxes.forEach((checkbox) => {
+                       wor84.push(checkbox.value);
+                   });
+
+                      /*
                         document.write("Company Name");
                     document.write(wor1);
                     document.write("Start Date");
@@ -11853,6 +12318,68 @@
                     document.write(wor57);
 
                         //Drivers Training
+                        let dt = document.getElementById("form-driverstrainingstart").value;
+                let dt2 = document.getElementById("form-driverstrainingend").value;
+                let dt3 = document.getElementById("form-driversschoolname").value;
+                let dt4 = document.getElementById("form-driversschoolstreetaddress").value;
+                let dt5 = document.getElementById("form-driversschoolstreetaddress2").value;
+                let dt6 = document.getElementById("form-driversschoolcountry").value;
+                let dt7 = document.getElementById("form-driversschoolcity").value;
+                let dt8 = document.getElementById("form-driversschoolstate").value;
+                let dt9 = document.getElementById("form-driversschooltelephone").value;
+                let dt10 = document.getElementById("form-driversschool GPA").value;
+                let dt11 = document.getElementById("HoursofInstitution").value;
+               
+
+                //Variables for second driving school
+                let dt12 = document.getElementById("form-driverstrainingstart2").value;
+                let dt13 = document.getElementById("form-driverstrainingend2").value;
+                let dt14 = document.getElementById("form-driversschoolname2").value;
+                let dt15 = document.getElementById("form-driversschoolstreetaddress3").value;
+                let dt16 = document.getElementById("form-driversschoolstreetaddress4").value;
+                let dt17 = document.getElementById("form-driversschoolcountry2").value;
+                let dt18 = document.getElementById("form-driversschoolcity2").value;
+                let dt19 = document.getElementById("form-driversschoolstate2").value;
+                let dt20 = document.getElementById("form-driversschooltelephone2").value;
+                let dt21 = document.getElementById("form-driversschool GPA2").value;
+                let dt22 = document.getElementById("HoursofInstitution2").value;
+              
+
+                //Makes sure expands are checked
+                let dt23 = $('div.driverstraining.required :checkbox:checked').length > 0;
+                let dt24 = $('div.driverstraining2.required :checkbox:checked').length > 0;
+
+               
+
+
+
+                //Collects values for checkboxes
+              let dt1checkboxes = document.querySelectorAll('input[name="driversschool graduate"]:checked');
+              let dt29 = [];
+              dt1checkboxes.forEach((checkbox) => {
+                dt29.push(checkbox.value);
+              });
+
+
+              let dt4checkboxes = document.querySelectorAll('input[name="driverstrainingtopic"]:checked');
+              let dt32 = [];
+              dt4checkboxes.forEach((checkbox) => {
+                dt32.push(checkbox.value);
+              });
+
+              let dt5checkboxes = document.querySelectorAll('input[name="driversschool graduate2"]:checked');
+              let dt33 = [];
+              dt5checkboxes.forEach((checkbox) => {
+                dt33.push(checkbox.value);
+              });
+
+
+              let dt8checkboxes = document.querySelectorAll('input[name="driverstrainingtopic2"]:checked');
+              let dt36 = [];
+              dt8checkboxes.forEach((checkbox) => {
+                dt36.push(checkbox.value);
+              });
+
                         document.write("Drivers School Start Date");
               document.write(dt);
               document.write("Drivers School End Date");
@@ -11907,6 +12434,29 @@
               document.write(dt36);
 
                         //Schooling
+                        let sch3 = document.getElementById("form-schoolname").value;
+                 let sch4 = document.getElementById("form-schoolstart").value;
+                 let sch5 = document.getElementById("form-schoolend").value;
+                 let sch6 = document.getElementById("form-schoolcountry").value;
+                 let sch7 = document.getElementById("form-schoolcity").value;
+                 let sch8 = document.getElementById("form-schoolstate").value;
+                 let sch9 = document.getElementById("form-schooltelephone").value;
+                 let sch10 = document.getElementById("form-schoolstudy").value;
+                 let sch11 = document.getElementById("form-graddate").value;
+
+                 //Variables for second school
+                 let sch12 = document.getElementById("form-schoolname2").value;
+                 let sch13 = document.getElementById("form-schoolstart2").value;
+                 let sch14 = document.getElementById("form-schoolend2").value;
+                 let sch15 = document.getElementById("form-schoolcountry2").value;
+                 let sch16 = document.getElementById("form-schoolcity2").value;
+                 let sch17 = document.getElementById("form-schoolstate2").value;
+                 let sch18 = document.getElementById("form-schooltelephone2").value;
+                 let sch19 = document.getElementById("form-schoolstudy2").value;
+                 let sch20 = document.getElementById("form-graddate2").value;
+
+
+
                         document.write("School Name");
                  document.write(sch3);
                  document.write("School Start");
@@ -11945,11 +12495,35 @@
                  document.write(sch20);
 
                         //Unemployment
+                        let une = document.getElementById("form-unemploymentstart").value;
+                let une2 = document.getElementById("form-unemploymentend").value;
+                let une3 = document.getElementById("form-unemploymentcomments").value;
+
+
                         document.write(une);
                       document.write(une2);
                       document.write(une3);
 
                       //FMCSR
+
+                      let fmc = document.getElementById("form-FMCSR1explain").value;
+              let fmc2 = document.getElementById("form-FMCSR2explain").value;
+              let fmc3 = document.getElementById("form-FMCSR3explain").value;
+              let fmc4 = document.getElementById("form-FMCSR4explain").value;
+              let fmc5 = document.getElementById("form-FMCSR4date").value;
+              let fmc6 = document.getElementById("form-FMCSR5date").value;
+              let fmc7 = document.getElementById("form-FMCSR5explain").value;
+    
+            
+                               
+               //Displays values that were checked
+               let fmccheckboxes = document.querySelectorAll('input[name="conviction3years"]:checked');
+                    let fmc14 = [];
+                    fmccheckboxes.forEach((checkbox) => {
+                    fmc14.push(checkbox.value);
+                    });
+
+
                       document.write("FMCSR1");
                     document.write(fmc);
                     document.write("FMCSR2");
@@ -11968,6 +12542,84 @@
                     document.write(fmc14);
 
                       //Taffic violations/convictions and Accidents
+                      //Variables for Traffic Violations and Convictions
+                    let tvc = document.getElementById("form-violationdate").value;
+                    let tvc2 = document.getElementById("charge").value;
+                    let tvc3 = document.getElementById("form-convictionstate").value;
+                    let tvc4 = document.getElementById("Fine Amount").value;
+                    let tvc5 = document.getElementById("form-violationscomment").value;
+                   
+                    
+                    //Variables for Accidents
+                    let tvc6 = document.getElementById("form-accidentdate").value;
+                    let tvc7 = document.getElementById("accidentcharge").value;
+                    let tvc8 = document.getElementById("form-accidentcity").value;
+                    let tvc9 = document.getElementById("form-accidentstate").value;
+                    let tvc11 = document.getElementById("form-accidentcomment").value;
+                   
+
+                     //Make sure box is checked
+                      let tvc19 =  $('div.traffic.required :checkbox:checked').length > 0;
+                      let tvc21 =  $('div.commercialvehicle.required :checkbox:checked').length > 0;
+                      let tvc22 =  $('div.penalty.required :checkbox:checked').length > 0;
+
+                     //Make sure box is checked
+                     let tvc20 =  $('div.accident.required :checkbox:checked').length > 0;
+                     let tvc23 =  $('div.atfault.required :checkbox:checked').length > 0;
+                     let tvc24 =  $('div.ticketed.required :checkbox:checked').length > 0;
+                     let tvc25 =  $('div.acccommercialvehicle.required :checkbox:checked').length > 0;
+
+
+                    //Displays values that were checked
+                    let tvccheckboxes = document.querySelectorAll('input[name="commercialvehicle"]:checked');
+                    let tvc12 = [];
+                    tvccheckboxes.forEach((checkbox) => {
+                    tvc12.push(checkbox.value);
+                    });
+
+                    //Displays values that were checked
+                    let tvc2checkboxes = document.querySelectorAll('input[name="penalty"]:checked');
+                    let tvc13 = [];
+                    tvc2checkboxes.forEach((checkbox) => {
+                    tvc13.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc3checkboxes = document.querySelectorAll('input[name="hazmataccident"]:checked');
+                    let tvc14 = [];
+                    tvc3checkboxes.forEach((checkbox) => {
+                    tvc14.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc4checkboxes = document.querySelectorAll('input[name="vehicletowed"]:checked');
+                    let tvc15 = [];
+                    tvc4checkboxes.forEach((checkbox) => {
+                    tvc15.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc5checkboxes = document.querySelectorAll('input[name="acccommercialvehicle"]:checked');
+                    let tvc16 = [];
+                    tvc5checkboxes.forEach((checkbox) => {
+                    tvc16.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc6checkboxes = document.querySelectorAll('input[name="atfault"]:checked');
+                    let tvc17 = [];
+                    tvc6checkboxes.forEach((checkbox) => {
+                    tvc17.push(checkbox.value);
+                  });
+
+                    //Displays values that were checked
+                    let tvc7checkboxes = document.querySelectorAll('input[name="ticketed"]:checked');
+                    let tvc18 = [];
+                    tvc7checkboxes.forEach((checkbox) => {
+                    tvc18.push(checkbox.value);
+                  });
+
+
                       document.write("Violation Date");
                   document.write(tvc);
                   document.write("Charge/Description");
@@ -12004,6 +12656,12 @@
                   document.write(tvc11);
 
                   //Criminal Record
+                  let cr1 = document.getElementById("form-CriminalRecord1explain").value;
+                let cr2 = document.getElementById("form-CriminalRecord2explain").value;
+                let cr4 = document.getElementById("form-Felonies1explain").value;
+                let cr5 = document.getElementById("form-Felonies2explain").value;
+                let cr6 = document.getElementById("form-Misdemeanor1explain").value;
+
                   document.write("Convicted a Crime:");
                 document.write(cr1);
                 document.write("Deferred Prosectuion:");
@@ -12015,9 +12673,15 @@
                 document.write("Convicted a misdemeanor:");
                 document.write(cr6);
                 
-                      }
+                      
+
+
+                      */
+
+                     
+                }
                     </script>
-                    <hr>
+                    
 
                     <br>
                     <br>
