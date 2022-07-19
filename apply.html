@@ -212,8 +212,10 @@
                     <hr>
 
                     <!--First Name Input-->
+                    <div class = "optreq">
                     <label for="form-firstname"> First Name <span class="astrick">*</span> </label><br>
-                    <input type="text" name="FirstName" id="form-firstname" placeholder = "First Name" required>
+                    <input type="text" name="FirstName" id="form-firstname" placeholder = "First Name">
+                    </div>
 
                     <br>
                     <br>
@@ -226,8 +228,10 @@
                     <br>
 
                     <!--Last Name Input-->
+                    <div class = "optreq">
                     <label for="form-lastname"> Last Name <span class="astrick">*</span> </label><br>
-                    <input type="text" name="LastName" id="form-lastname" placeholder = "Last Name" required>
+                    <input type="text" name="LastName" id="form-lastname" placeholder = "Last Name">
+                    </div>
 
                     <br>
                     <br>
@@ -248,15 +252,19 @@
                     <br>
 
                     <!--SSN/SIN-->
+                    <div class = "optreq">
                     <label for="form-SSN"> SSN/SIN <span class="astrick">*</span> </label><br>
-                    <input type="text" name="SSN" id="form-SSN" placeholder = "### ## ####"required>
+                    <input type="text" name="SSN" id="form-SSN" placeholder = "### ## ####">
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Date of Birth-->
+                    <div class = "optreq">
                     <label for="form-birthday">Birthday: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-birthday" name="birthday" placeholder = "mm/dd/yyyy" required>
+                    <input type="text" id="form-birthday" name="birthday" placeholder = "mm/dd/yyyy">
+                    </div>
                     
                     <br>
                     <br>
@@ -265,8 +273,10 @@
                     <hr>
 
                     <!--Current Street Address (line 1)-->
+                    <div class = "optreq">
                     <label for="form-streetaddress1"> Current Street Address (line 1)<span class="astrick">*</span> </label><br>
-                    <input type="text" name="StreetAddress1" id="form-streetaddress1" placeholder = "123 Elizabeth Street" required>
+                    <input type="text" name="StreetAddress1" id="form-streetaddress1" placeholder = "123 Elizabeth Street">
+                    </div>
 
                     <br>
                     <br>
@@ -289,8 +299,9 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                        
 
+                    <div class = "optreq">
                     <label for="form-country">Country <span class="astrick">*</span></label><br>
-                    <select name="country" id = "form-country" required>
+                    <select name="country" id = "form-country" >
                         <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -537,22 +548,26 @@
                 <option value="Zambia" rel="three">Zambia</option>
                 <option value="Zimbabwe" rel="three">Zimbabwe</option>
                     </select>
+                    </div>
 
 
                     <br>
                     <br>
 
                     <!--City-->
+                    <div class = "optreq">
                     <label for="form-city"> City <span class="astrick">*</span> </label><br>
-                    <input type="text" name="City" id="form-city" placeholder = "New Haven" required>
+                    <input type="text" name="City" id="form-city" placeholder = "New Haven">
+                    </div>
 
                     <br>
                     <br>
 
                     <!--State/Province-->
                     
+                    <div class = "optreq">
                     <label for="form-state">State/Province <span class="astrick">*</span></label><br>
-                    <select id="form-state" name="state" class="cascade" required >
+                    <select id="form-state" name="state" class="cascade" >
                             <option value="">Select</option>
                             <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
@@ -625,6 +640,7 @@
                             <option value="YT" class ="one">Yukon Territory</option>
 
                     </select>
+                    </div>
                     
                     <!--Script for Cascading dropdown of Country and State/Province-->
                     <script>
@@ -655,8 +671,10 @@
                     <br>
 
                     <!--Zip/Postal Code-->
+                    <div class = "optreq">
                     <label for="form-zip"> Zip/Postal Code<span class="astrick">*</span> </label><br>
-                    <input type="text" name="Zip" id="form-zip" placeholder="54309" required>
+                    <input type="text" name="Zip" id="form-zip" placeholder="54309">
+                    </div>
 
                 
                     <br>
@@ -668,8 +686,10 @@
                     
 
                     <!--Primary Phone-->
+                    <div class = "optreq">
                     <label for="form-primphone"> Primary Phone <span class="astrick">*</span> </label><br>
-                    <input type="text" name="pphone" id="form-primphone" placeholder = "784 872 8982"required>
+                    <input type="text" name="pphone" id="form-primphone" placeholder = "784 872 8982">
+                    </div>
 
                     <br>
 
@@ -680,14 +700,18 @@
                     <br>
 
                     <!--Email Address-->
+                    <div class = "optreq">
                     <label for="form-email"> Email <span class="astrick">*</span></label><br>
-                    <input type="text" name="email" id="form-email" placeholder="somewhere@gmail.com" required>
+                    <input type="text" name="email" id="form-email" placeholder="somewhere@gmail.com">
+                    </div>
 
                     <br>
                     
                     <!--Confirm Email Address-->
+                    <div class = "optreq">
                     <label for="form-cemail"> Confirm Email Address <span class="astrick">*</span> </label><br>
-                    <input type="text" name="cemail" id="form-cemail" placeholder = "somewhere@gmail.com" required>
+                    <input type="text" name="cemail" id="form-cemail" placeholder = "somewhere@gmail.com">
+                    </div>
 
                     <br>
                     <br>
@@ -1486,8 +1510,10 @@
                     <br>
 
                     <!--Other-->
+                    <div class = "optreq">
                     <label for="form-Otherdriving"> Other <span class="astrick">*</span> </label><br>
-                    <input type="text" name="OtherDriving" id="form-OtherDriving" required>
+                    <input type="text" name="OtherDriving" id="form-OtherDriving">
+                    </div>
 
                     <br>
                     <br>
@@ -1974,8 +2000,10 @@
                     <hr>
 
                     <!--License Number-->
+                    <div class = "optreq">
                     <label for="form-licenseNum"> License Number <span class="astrick">*</span> </label><br>
-                    <input type="text" name="licenseNum" id="form-licenseNum" required>
+                    <input type="text" name="licenseNum" id="form-licenseNum">
+                    </div>
 
                     <br>
 
@@ -1983,8 +2011,9 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                        
 
+                    <div class = "optreq">
                     <label for="form-liccountry">Country <span class="astrick">*</span></label><br>
-                    <select name="liccountry" id = "form-liccountry" required>
+                    <select name="liccountry" id = "form-liccountry" >
                         <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
@@ -2231,14 +2260,16 @@
                 <option value="Zambia" rel="three">Zambia</option>
                 <option value="Zimbabwe" rel="three">Zimbabwe</option>
                     </select>
+                    </div>
 
 
                     <br>
                     <br>
 
                     <!--License State and Province-->
+                    <div class = "optreq">
                     <label for="form-licstate">State/Province: <span class="astrick">*</span></label><br>
-                    <select id="form-licstate" name="licstate" class="cascade" required >
+                    <select id="form-licstate" name="licstate" class="cascade">
                             <option value="">Select</option>
                             <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
@@ -2311,6 +2342,7 @@
                             <option value="YT" class ="one">Yukon Territory</option>
 
                     </select>
+                    </div>
                     
                     <!--Script for Cascading dropdown of Country and State/Province-->
                     <script>
@@ -2342,39 +2374,46 @@
                     <br>
 
                     <!--License Expiration-->
+                    <div class = "optreq">
                     <label for="form-licexp">License Expiration: <span class="astrick">*</span> </label>
-                    <input type="text" id="form-licexp" name="licexp" placeholder = "mm/dd/yyyy" required>
+                    <input type="text" id="form-licexp" name="licexp" placeholder = "mm/dd/yyyy">
+                    </div>
 
                     <br>
                     <br>
 
                     <!--Is this your current driver license?-->
+                    <div class = "optreq">
                     <p> Is this your current driver license? <span class="astrick">*</span></p>
                     <div class="currentlic required">
-                    <input type="checkbox" id="currentlicyes" name="currentlic" value="Yes" required>
+                    <input type="checkbox" id="currentlicyes" name="currentlic" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
                     <input type="checkbox" id="currentlicno" name="currentlic" value="No">
                     <label for="No"> No </label>
                     </div>
+                    </div>
 
                     <br>
 
                     <!--Is this your commercial driver license-->
+                    <div class = "optreq">
                     <div class="commlic required">
                     <p> Is this your commercial driver license? <span class="astrick">*</span></p>
-                    <input type="checkbox" id="commlicyes" name="commlic" value="Yes" required>
+                    <input type="checkbox" id="commlicyes" name="commlic" value="Yes">
                     <label for="Yes"> Yes </label>
                     <br>
                     <input type="checkbox" id="commlicno" name="commlic" value="No">
                     <label for="No"> No </label>
                     </div>
+                    </div>
 
 
                     <br>
 
+                    <div class = "optreq">
                     <label for="form-licclass">License Class <span class="astrick">*</span></label><br>	
-                    <select name="licclass" id = "licclass" required>
+                    <select name="licclass" id = "licclass">
                      <option value=""></option>
                      <option value="class a" >Class A</options>
                      <option value="class az" >Class AZ</options>
@@ -2391,6 +2430,7 @@
                      <option value="class 4" >Class 4</options>
                      <option value="class 5" >Class 5</options>
                     </select>
+                    </div>
 
                     <br>
                     <br>
@@ -12698,7 +12738,7 @@
             &ensp;
 
             <!-- Next Button-->
-            <input type="submit" value="Submit" href="#sixteen" class="Next Button"> Submit Application</input>
+            <input type="submit" value="Submit">
             &ensp;
         </div>
     </div>
