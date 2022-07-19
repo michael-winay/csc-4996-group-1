@@ -25,7 +25,7 @@ function sendContactForm() {
 }
 
 function sendApplyForm() {
-	emailjs.sendForm('service_zxu7w58', 'apply_template_id_here', '#form ID here')
+	emailjs.sendForm('service_zxu7w58', 'apply_template_id_here', '#apply')
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
 	   alert('Application successfully submitted!');
