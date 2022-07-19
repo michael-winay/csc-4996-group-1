@@ -49,7 +49,7 @@
 
 
 <!--Replace with email given after testing-->
-<form name = "form1" action="mailto: nighwalker876@gmail.com" method="get" enctype = "application/x-www-form-urlencoded" onselect="required()">  
+<form name = "apply" id="apply" action="javascript:;" onsubmit="return sendApplyForm()">  
       <div class="column left">
         <p></p>
       </div>
@@ -58,7 +58,9 @@
 
         <!--Address of Company-->
         <div class="Company Address">
-            <p>Hold for Company Address</p>
+            <p>  27265 Terrell <br>
+             Dearborn Heights, MI 48127 <br>
+             USA</p>
         </div>
 
         <!--Application Starting Paragraph-->
@@ -289,7 +291,7 @@
 
                     <label for="form-country">Country <span class="astrick">*</span></label><br>
                     <select name="country" id = "form-country" required>
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -551,10 +553,10 @@
                     
                     <label for="form-state">State/Province <span class="astrick">*</span></label><br>
                     <select id="form-state" name="state" class="cascade" required >
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -607,7 +609,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -765,7 +767,7 @@
                  let empt19 = document.getElementById("besttime").value;
 
 
-                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "" || empt9 == "-1" || empt10 == "-1" || empt11 == "" || empt16 == "") 
+                 if (empt == "" || empt2 == "" || empt3 == "" || empt4 == "" || empt5 == "" || empt6 == "" || empt7 == "" || empt8 == "" || empt9 == "" || empt10 == "" || empt11 == "" || empt16 == "") 
                  {   
                      
                       alert("Please input a Value");
@@ -1983,7 +1985,7 @@
 
                     <label for="form-liccountry">Country <span class="astrick">*</span></label><br>
                     <select name="liccountry" id = "form-liccountry" required>
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -2237,10 +2239,10 @@
                     <!--License State and Province-->
                     <label for="form-licstate">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-licstate" name="licstate" class="cascade" required >
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -2293,7 +2295,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -2449,7 +2451,7 @@
 
                     <label for="form-liccountry2">Country <span class="astrick">*</span></label><br>
                     <select name="liccountry2" id = "form-liccountry2">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -2703,10 +2705,10 @@
                 <!--License State and Province-->
                     <label for="form-licstate2">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-licstate2" name="licstate2" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -2759,7 +2761,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -2917,7 +2919,7 @@
 
                     <label for="form-liccountry3">Country <span class="astrick">*</span></label><br>
                     <select name="liccountry3" id = "form-liccountry3">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -3171,10 +3173,10 @@
                 <!--License State and Province-->
                     <label for="form-licstate3">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-licstate3" name="licstate3" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -3227,7 +3229,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -3525,7 +3527,7 @@
 
               
               
-            if(lic == "" || lic2 == "-1" || lic3 == "-1" || lic4 == "" || lic30 == false || lic31 == false || lic8 == "")
+            if(lic == "" || lic2 == "" || lic3 == "" || lic4 == "" || lic30 == false || lic31 == false || lic8 == "")
             {
                 alert("Please input a Value");
                 return false;
@@ -3539,7 +3541,7 @@
                            
                                  if(lic32 == true)
                                  {
-                                    if(lic10 == "" || lic11 == "-1" || lic12 == "-1" || lic13 == "" || lic33 == false || lic34 == false || lic17 == "")
+                                    if(lic10 == "" || lic11 == "" || lic12 == "" || lic13 == "" || lic33 == false || lic34 == false || lic17 == "")
                                     {
                                         alert("Please input a Value");
                                         return false;
@@ -3553,7 +3555,7 @@
                                                 
                                                      if(lic37 == true)
                                                      {
-                                                        if(lic19 == "" || lic20 == "-1" || lic21 == "-1" || lic22 == "" || lic35 == false || lic36 == false || lic26 == "")
+                                                        if(lic19 == "" || lic20 == "" || lic21 == "" || lic22 == "" || lic35 == false || lic36 == false || lic26 == "")
                                                          {
                                                              alert("Please input a Value");
                                                              return false;
@@ -3959,7 +3961,7 @@
 
                     <label for="form-companycountry">Country <span class="astrick">*</span></label><br>
                     <select name="companycountry" id = "form-companycountry">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -4221,10 +4223,10 @@
                                     <!--State/Province-->
                                     <label for="form-companystate">State / Province <span class="astrick">*</span></label><br>
                     <select id="form-companystate" name="companystate" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -4277,7 +4279,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -4654,7 +4656,7 @@
                 
                                     <label for="form-companycountry2">Country <span class="astrick">*</span></label><br>
                                     <select name="companycountry2" id = "form-companycountry2">
-                                        <option value="-1">Select</option>
+                                        <option value="">Select</option>
                                         <option value="Afghanistan" rel="three">Afghanistan</option>
                                    <option value="Åland Islands" rel="three">Åland Islands</option>
                                 <option value="Albania" rel="three">Albania</option>
@@ -4916,10 +4918,10 @@
                                                     <!--State/Province-->
                                                     <label for="form-companystate2">State/Province <span class="astrick">*</span></label><br>
                                     <select id="form-companystate2" name="companystate2" class="cascade">
-                                            <option value="-1">Select</option>
-                                            <option class="three" value = "-1"> Select</option>
+                                            <option value="">Select</option>
+                                            <option class="three" value = ""> Select</option>
                                             <option class="three" value="oth"></option>
-                                            <option class="two" value = "-1"> Select</option>
+                                            <option class="two" value = ""> Select</option>
                                             <option value="AK" class="two">Alaska</option>
                                             <option value="AL" class ="two">Alabama</option>
                                             <option value="AR" class ="two">Arkansas</option>
@@ -4972,7 +4974,7 @@
                                             <option value="WI" class ="two">Wisconsin</option>
                                             <option value="WV" class ="two">West Virginia</option>
                                             <option value="WY" class ="two">Wyoming</option>
-                                            <option class="one" value = "-1"> Select</option>    
+                                            <option class="one" value = ""> Select</option>    
                                             <option value="AB" class ="one">Alberta</option>
                                             <option value="BC" class ="one">British Columbia</option>
                                             <option value="MB" class ="one">Manitoba</option>
@@ -5351,7 +5353,7 @@
                 
                                     <label for="form-companycountry3">Country <span class="astrick">*</span></label><br>
                                     <select name="companycountry3" id = "form-companycountry3">
-                                        <option value="-1">Select</option>
+                                        <option value="">Select</option>
                                         <option value="Afghanistan" rel="three">Afghanistan</option>
                                    <option value="Åland Islands" rel="three">Åland Islands</option>
                                 <option value="Albania" rel="three">Albania</option>
@@ -5613,10 +5615,10 @@
                                                     <!--State/Province-->
                                                     <label for="form-companystate3">State/Province <span class="astrick">*</span></label><br>
                                     <select id="form-companystate3" name="companystate3" class="cascade">
-                                            <option value="-1">Select</option>
-                                            <option class="three" value = "-1"> Select</option>
+                                            <option value="">Select</option>
+                                            <option class="three" value = ""> Select</option>
                                             <option class="three" value="oth"></option>
-                                            <option class="two" value = "-1"> Select</option>
+                                            <option class="two" value = ""> Select</option>
                                             <option value="AK" class="two">Alaska</option>
                                             <option value="AL" class ="two">Alabama</option>
                                             <option value="AR" class ="two">Arkansas</option>
@@ -5669,7 +5671,7 @@
                                             <option value="WI" class ="two">Wisconsin</option>
                                             <option value="WV" class ="two">West Virginia</option>
                                             <option value="WY" class ="two">Wyoming</option>
-                                            <option class="one" value = "-1"> Select</option>    
+                                            <option class="one" value = ""> Select</option>    
                                             <option value="AB" class ="one">Alberta</option>
                                             <option value="BC" class ="one">British Columbia</option>
                                             <option value="MB" class ="one">Manitoba</option>
@@ -6246,7 +6248,7 @@
                     //Checks first section
                     if(wor61 == true)
                     {
-                        if(wor1 == "" || wor2 == "" || wor3 == "" || wor4 == "" || wor6 == "-1" || wor7 == "" || wor8 == "-1" || wor9 == "" || wor10 == "" || wor12 == "")
+                        if(wor1 == "" || wor2 == "" || wor3 == "" || wor4 == "" || wor6 == "" || wor7 == "" || wor8 == "" || wor9 == "" || wor10 == "" || wor12 == "")
                         {
                           alert("Please input a value in the first section.");
                           return false;
@@ -6379,7 +6381,7 @@
                     //Checks second section
                     if(wor62 == true)
                     {
-                      if(wor20 == "" || wor21 == "" || wor22 == "" || wor23 == "" || wor25 == "-1" || wor26 == "" || wor27 == "-1" || wor28 == "" || wor29 == "" || wor31 == "")
+                      if(wor20 == "" || wor21 == "" || wor22 == "" || wor23 == "" || wor25 == "" || wor26 == "" || wor27 == "" || wor28 == "" || wor29 == "" || wor31 == "")
                         {
                           alert("Please input a value in the second section.");
                           return false;
@@ -6512,7 +6514,7 @@
                     //Checks third section
                     if(wor63 == true)
                     {
-                      if(wor39 == "" || wor40 == "" || wor41 == "" || wor42 == "" || wor44 == "-1" || wor45 == "" || wor46 == "-1" || wor47 == "" || wor48 == "" || wor50 == "")
+                      if(wor39 == "" || wor40 == "" || wor41 == "" || wor42 == "" || wor44 == "" || wor45 == "" || wor46 == "" || wor47 == "" || wor48 == "" || wor50 == "")
                         {
                           alert("Please input a value in the third section.");
                           return false;
@@ -7000,7 +7002,7 @@
                                 <div id="collapseFourteen" class="panel-collapse collapse">
                                   <div class="panel-body">
                                     <br>
-                                    <h3>Drivers Training</h3>
+                                    <h3>Drivers Training (First School)</h3>
                                      <hr>
       
                                      
@@ -7044,7 +7046,7 @@
                                     
 
                                     <!--Street Address 2-->
-                                    <label for="form-driversschoolstreetaddress2"> Street Address </label><br>
+                                    <label for="form-driversschoolstreetaddress2">2nd Street Address </label><br>
                                     <input type="text" name="driversschoolstreetaddress2" id="form-driversschoolstreetaddress2" placeholder = "123 Something Street">
 
                                     <br>
@@ -7056,7 +7058,7 @@
 
                     <label for="form-driversschoolcountry">Country <span class="astrick">*</span></label><br>
                     <select name="driversschoolcountry" id = "form-driversschoolcountry">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -7318,10 +7320,10 @@
                                     <!--State/Province-->
                                     <label for="form-driversschoolstate">State/Province <span class="astrick">*</span></label><br>
                     <select id="form-driversschoolstate" name="driversschoolstate" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -7374,7 +7376,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -7522,7 +7524,7 @@
                                 <div id="collapseFifteen" class="panel-collapse collapse">
                                   <div class="panel-body">
                                     <br>
-                                    <h3>Drivers Training</h3>
+                                    <h3>Drivers Training (Second School)</h3>
                                      <hr>
       
                                      
@@ -7566,7 +7568,7 @@
                                     <br>
 
                                     <!--Street Address 2-->
-                                    <label for="form-driversschoolstreetaddress4"> Street Address </label><br>
+                                    <label for="form-driversschoolstreetaddress4">2nd Street Address </label><br>
                                     <input type="text" name="driversschoolstreetaddress4" id="form-driversschoolstreetaddress4" placeholder = "123 Something Street">
 
                                     <br>
@@ -7578,7 +7580,7 @@
 
                     <label for="form-driversschoolcountry2">Country <span class="astrick">*</span></label><br>
                     <select name="driversschoolcountry2" id = "form-driversschoolcountry2">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -7840,10 +7842,10 @@
                                     <!--State/Province-->
                                     <label for="form-driversschoolstate2">State/Province <span class="astrick">*</span></label><br>
                     <select id="form-driversschoolstate2" name="driversschoolstate2" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -7896,7 +7898,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -8163,7 +8165,7 @@
               //Validates for first driving school
               if(dt23 == true)
               {
-                 if(dt == "" || dt2 == "" || dt3 == "" || dt4 == "" || dt6 == "-1" || dt7 == "" || dt8 == "-1" || dt9 == "" || dt10 == "" )
+                 if(dt == "" || dt2 == "" || dt3 == "" || dt4 == "" || dt6 == "" || dt7 == "" || dt8 == "" || dt9 == "" || dt10 == "" )
                  {
                       alert("Please input a Value");
                       return false;
@@ -8252,7 +8254,7 @@
               //Validates for second driving school
               if(dt24 == true)
               {
-                 if(dt12 == "" || dt13 == "" || dt14 == "" || dt15 == "" || dt17 == "-1" || dt18 == "" || dt19 == "-1" || dt20 == "" || dt21 == "")
+                 if(dt12 == "" || dt13 == "" || dt14 == "" || dt15 == "" || dt17 == "" || dt18 == "" || dt19 == "" || dt20 == "" || dt21 == "")
                  {
                       alert("Please input a Value");
                       return false;
@@ -8404,7 +8406,7 @@
                             <div id="collapseSixteen" class="panel-collapse collapse">
                               <div class="panel-body">
                                 <br>
-                                <h3> Education Information</h3>
+                                <h3> Education Information (First School)</h3>
                                  <hr>
   
                                  <!--School Name-->
@@ -8436,7 +8438,7 @@
 
                     <label for="form-schoolcountry">Country <span class="astrick">*</span></label><br>
                     <select name="schoolcountry" id = "form-schoolcountry" >
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -8697,10 +8699,10 @@
                                     <!--State/Province-->
                                     <label for="form-schoolstate">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-schoolstate" name="schoolstate" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -8753,7 +8755,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -8842,7 +8844,7 @@
                             <div id="collapseSeventeen" class="panel-collapse collapse">
                               <div class="panel-body">
                                 <br>
-                                <h3> Education Information</h3>
+                                <h3> Education Information (Second School)</h3>
                                  <hr>
   
                                  <!--School Name-->
@@ -8874,7 +8876,7 @@
 
                     <label for="form-schoolcountry2">Country <span class="astrick">*</span></label><br>
                     <select name="schoolcountry2" id = "form-schoolcountry2">
-                        <option value="-1">Select</option>
+                        <option value="">Select</option>
                         <option value="Afghanistan" rel="three">Afghanistan</option>
                    <option value="Åland Islands" rel="three">Åland Islands</option>
                 <option value="Albania" rel="three">Albania</option>
@@ -9135,10 +9137,10 @@
                                     <!--State/Province-->
                                     <label for="form-schoolstate2">State/Province: <span class="astrick">*</span></label><br>
                     <select id="form-schoolstate2" name="schoolstate2" class="cascade">
-                            <option value="-1">Select</option>
-                            <option class="three" value = "-1"> Select</option>
+                            <option value="">Select</option>
+                            <option class="three" value = ""> Select</option>
                             <option class="three" value="oth"></option>
-                            <option class="two" value = "-1"> Select</option>
+                            <option class="two" value = ""> Select</option>
                             <option value="AK" class="two">Alaska</option>
                             <option value="AL" class ="two">Alabama</option>
                             <option value="AR" class ="two">Arkansas</option>
@@ -9191,7 +9193,7 @@
                             <option value="WI" class ="two">Wisconsin</option>
                             <option value="WV" class ="two">West Virginia</option>
                             <option value="WY" class ="two">Wyoming</option>
-                            <option class="one" value = "-1"> Select</option>    
+                            <option class="one" value = ""> Select</option>    
                             <option value="AB" class ="one">Alberta</option>
                             <option value="BC" class ="one">British Columbia</option>
                             <option value="MB" class ="one">Manitoba</option>
@@ -9360,7 +9362,7 @@
                 //Checks values for first school
                  if(sch == true)
                  {
-                     if(sch3 == "" || sch4 == "" || sch5 == "" || sch6 == "-1" || sch8 == "-1" || sch7 == "" || sch9 == "" || sch10 == "" )
+                     if(sch3 == "" || sch4 == "" || sch5 == "" || sch6 == "" || sch8 == "" || sch7 == "" || sch9 == "" || sch10 == "" )
                      {
                       alert("Please input a Value");
                       return false;
@@ -9444,7 +9446,7 @@
                  
                  if(sch2 == true)
                  {
-                     if(sch12 == "" || sch13 == "" || sch14 == "" || sch15 == "-1" || sch17 == "-1" || sch16 == "" || sch18 == "" || sch19 == "" )
+                     if(sch12 == "" || sch13 == "" || sch14 == "" || sch15 == "" || sch17 == "" || sch16 == "" || sch18 == "" || sch19 == "" )
                      {
                       alert("Please input a Value");
                       return false;
@@ -10355,7 +10357,7 @@
                                    <!--State/Province-->
                                    <label for="form-convictionstate">State/Province: <span class="astrick">*</span></label><br>
                                    <select id="form-convictionstate" name="convictionstate" class="cascade">
-                                           <option value="-1">Select</option>
+                                           <option value="">Select</option>
                                            <option class="three" value="oth">Other</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
@@ -10568,7 +10570,7 @@
                                    <!--State/Province-->
                                    <label for="form-accidentstate">State/Province: <span class="astrick">*</span></label><br>
                                    <select id="form-accidentstate" name="accidentstate" class="cascade">
-                                           <option value="-1">Select</option>
+                                           <option value="">Select</option>
                                            <option class="three" value="oth">Other</option>
                                            <option value="AK" class="two">Alaska</option>
                                            <option value="AL" class ="two">Alabama</option>
@@ -10821,7 +10823,7 @@
 
                   if(tvc19 == true && tvc20 == false)
                   {
-                       if(tvc == "" || tvc2 == "" || tvc3 == "-1" || tvc21 == false || tvc22 == false)
+                       if(tvc == "" || tvc2 == "" || tvc3 == "" || tvc21 == false || tvc22 == false)
                        {
                           alert("Please input a value");
                           return false;
@@ -10857,7 +10859,7 @@
                   }
                   else if (tvc19 == false && tvc20 == true)
                   {
-                     if(tvc6 == "" || tvc7 == "" || tvc9 == "-1" || tvc23 == false || tvc24 == false || tvc25 == false)
+                     if(tvc6 == "" || tvc7 == "" || tvc9 == "" || tvc23 == false || tvc24 == false || tvc25 == false)
                      {
                           alert("Please input a value");
                           return false;
@@ -11540,7 +11542,10 @@
                     <div class = "review" >
 
                     <h2>Review Information</h2>
-                    <a href="#fourteen" class="Next Button" onclick="display()" > Review Information</a>
+                    <a href="#fourteen" class="Center Button" onclick="display()" > Review Information</a>
+
+                    <br>
+                    <br>
 
                     <h4>Personal Information: </h4>
                     <hr>
@@ -11733,6 +11738,140 @@
                     <p>Most Common Truck Driven:                   <span id="val139"></span></p>
                     <p>Most Common Trailer:                        <span id="val140"></span></p>
                     <p>Trailer Length:                             <span id="val141"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Drivers Training (First School): </h4>
+                    <hr>
+                    <p>Start Date:                          <span id="val142"></span></p>
+                    <p>End Date:                            <span id="val143"></span></p>
+                    <p>School Name:                         <span id="val144"></span></p>
+                    <p>Street Address:                      <span id="val145"></span></p>
+                    <p>2nd Street Address:                  <span id="val146"></span></p>
+                    <p>Country:                             <span id="val147"></span></p>
+                    <p>City:                                <span id="val148"></span></p>
+                    <p>State/Province:                      <span id="val149"></span></p>
+                    <p>Telephone:                           <span id="val150"></span></p>
+                    <p>Did you Graduate:                    <span id="val151"></span></p>
+                    <p>GPA:                                 <span id="val152"></span></p>
+                    <p>Hours of Institution:                <span id="val153"></span></p>
+                    <p>Trained On:                          <span id="val154"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Drivers Training (Second School): </h4>
+                    <hr>
+                    <p>Start Date:                          <span id="val155"></span></p>
+                    <p>End Date:                            <span id="val156"></span></p>
+                    <p>School Name:                         <span id="val157"></span></p>
+                    <p>Street Address:                      <span id="val158"></span></p>
+                    <p>2nd Street Address:                  <span id="val159"></span></p>
+                    <p>Country:                             <span id="val160"></span></p>
+                    <p>City:                                <span id="val161"></span></p>
+                    <p>State/Province:                      <span id="val162"></span></p>
+                    <p>Telephone:                           <span id="val163"></span></p>
+                    <p>Did you Graduate:                    <span id="val164"></span></p>
+                    <p>GPA:                                 <span id="val165"></span></p>
+                    <p>Hours of Institution:                <span id="val166"></span></p>
+                    <p>Trained On:                          <span id="val167"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Education Information (First School): </h4>
+                    <hr>
+                    <p>School Name:                     <span id="val168"></span></p>
+                    <p>Start Date:                      <span id="val169"></span></p>
+                    <p>End Date:                        <span id="val170"></span></p>
+                    <p>Country:                         <span id="val171"></span></p>
+                    <p>City:                            <span id="val172"></span></p>
+                    <p>State/Province:                  <span id="val173"></span></p>
+                    <p>Telephone:                       <span id="val174"></span></p>
+                    <p>Studied:                         <span id="val175"></span></p>
+                    <p>Graduation Date:                 <span id="val176"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Education Information (Second School): </h4>
+                    <hr>
+                    <p>School Name:                     <span id="val177"></span></p>
+                    <p>Start Date:                      <span id="val178"></span></p>
+                    <p>End Date:                        <span id="val179"></span></p>
+                    <p>Country:                         <span id="val180"></span></p>
+                    <p>City:                            <span id="val181"></span></p>
+                    <p>State/Province:                  <span id="val182"></span></p>
+                    <p>Telephone:                       <span id="val183"></span></p>
+                    <p>Studied:                         <span id="val184"></span></p>
+                    <p>Graduation Date:                 <span id="val185"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Unemployment Information: </h4>
+                    <hr>
+                    <p>Start Date:                <span id="val186"></span></p>
+                    <p>End Date:                  <span id="val187"></span></p>
+                    <p>Comments:                  <span id="val188"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>FMCSR: </h4>
+                    <hr>
+                    <p>FMCSR 1 Details:                            <span id="val189"></span></p>
+                    <p>FMCSR 2 Details:                            <span id="val190"></span></p>
+                    <p>FMCSR 3 Details:                            <span id="val191"></span></p>
+                    <p>FMCSR 4 Details:                            <span id="val192"></span></p>
+                    <p>FMCSR 4 End Date:                           <span id="val193"></span></p>
+                    <p>Convicted on a Separate Occasion:           <span id="val194"></span></p>
+                    <p>FMCSR 5 Date:                               <span id="val195"></span></p>
+                    <p>FMCSR 5 Details:                            <span id="val196"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Traffic Violations/Convictions: </h4>
+                    <hr>
+                    <p>Violation Date:                      <span id="val197"></span></p>
+                    <p>Charge/Description:                  <span id="val198"></span></p>
+                    <p>State/Province:                      <span id="val199"></span></p>
+                    <p>Commercial Vehicle:                  <span id="val200"></span></p>
+                    <p>Penalty/Fine:                        <span id="val201"></span></p>
+                    <p>Fine Amount:                         <span id="val202"></span></p>
+                    <p>Comments:                            <span id="val203"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Accidents: </h4>
+                    <hr>
+                    <p>Date of Accident/Incident:           <span id="val204"></span></p>
+                    <p>Charge/Description:                  <span id="val205"></span></p>
+                    <p>Hazmat Accident/Incident:            <span id="val206"></span></p>
+                    <p>Vehicle Towed Away:                  <span id="val207"></span></p>
+                    <p>City:                                <span id="val208"></span></p>
+                    <p>State/Province:                      <span id="val209"></span></p>
+                    <p>In a Commercial Vehicle:             <span id="val210"></span></p>
+                    <p>At Fault:                            <span id="val211"></span></p>
+                    <p>Ticketed:                            <span id="val212"></span></p>
+                    <p>Details:                             <span id="val213"></span></p>
+
+                    <br>
+                    <br>
+
+                    <h4>Criminal Record: </h4>
+                    <hr>
+                    <p>Convicted of a Crime Details:            <span id="val214"></span></p>
+                    <p>Deffered Prosecutions Details:           <span id="val215"></span></p>
+                    <p>Felony Details:                          <span id="val216"></span></p>
+                    <p>Minister's Permit:                       <span id="val217"></span></p>
+                    <p>Misdemeanors Details:                    <span id="val218"></span></p>
+
+
+
                     
                     
 
@@ -12171,270 +12310,186 @@
                        wor84.push(checkbox.value);
                    });
 
-                      /*
-                        document.write("Company Name");
-                    document.write(wor1);
-                    document.write("Start Date");
-                    document.write(wor2);
-                    document.write("End Date");
-                    document.write(wor3);
-                    document.write("Street Address");
-                    document.write(wor4);
-                    document.write("Street Address 2");
-                    document.write(wor5);
-                    document.write("Country");
-                    document.write(wor6);
-                    document.write("City");
-                    document.write(wor7);
-                    document.write("State/Province");
-                    document.write(wor8);
-                    document.write("Zip/Postal Code");
-                    document.write(wor9);
-                    document.write("Telephone");
-                    document.write(wor10);
-                    document.write("Position Held");
-                    document.write(wor11);
-                    document.write("Reason for leaving");
-                    document.write(wor12);
-                    document.write("Please Explain Termination");
-                    document.write(wor13);
-                    document.write("Current Employer");
-                    document.write(wor73);
-                    document.write("Can contact");
-                    document.write(wor74);
-                    document.write("Subject to law");
-                    document.write(wor75);
-                    document.write("Safety Sensitive");
-                    document.write(wor76);
-                    document.write("Areas driven");
-                    document.write(wor14);
-                    document.write("Miles driven weekly");
-                    document.write(wor15);
-                    document.write("Pay range");
-                    document.write(wor16);
-                    document.write("Most common truck driven");
-                    document.write(wor17);
-                    document.write("Most common trailer");
-                    document.write(wor18);
-                    document.write("Trailer length");
-                    document.write(wor19);
 
 
-                    //Past employment 2
-                    document.write("Company Name2");
-                    document.write(wor20);
-                    document.write("Start Date2");
-                    document.write(wor21);
-                    document.write("End Date2");
-                    document.write(wor22);
-                    document.write("Street Address3");
-                    document.write(wor23);
-                    document.write("Street Address 4");
-                    document.write(wor24);
-                    document.write("Country2");
-                    document.write(wor25);
-                    document.write("City2");
-                    document.write(wor26);
-                    document.write("State/Province2");
-                    document.write(wor27);
-                    document.write("Zip/Postal Code2");
-                    document.write(wor28);
-                    document.write("Telephone2");
-                    document.write(wor29);
-                    document.write("Position Held2");
-                    document.write(wor30);
-                    document.write("Reason for leaving2");
-                    document.write(wor31);
-                    document.write("Please Explain Termination2");
-                    document.write(wor32);
-                    document.write("Current Employer2");
-                    document.write(wor77);
-                    document.write("Can contact2");
-                    document.write(wor78);
-                    document.write("Subject to law2");
-                    document.write(wor79);
-                    document.write("Safety Sensitive2");
-                    document.write(wor80);
-                    document.write("Areas driven2");
-                    document.write(wor33);
-                    document.write("Miles driven weekly2");
-                    document.write(wor34);
-                    document.write("Pay range2");
-                    document.write(wor35);
-                    document.write("Most common truck driven2");
-                    document.write(wor36);
-                    document.write("Most common trailer2");
-                    document.write(wor37);
-                    document.write("Trailer length2");
-                    document.write(wor38);
+                   //Previous Employment Variables for JS
+                   //For First Job
+                   document.getElementById("val73").innerHTML = wor1;
+                   document.getElementById("val74").innerHTML = wor2;
+                   document.getElementById("val75").innerHTML = wor3;
+                   document.getElementById("val76").innerHTML = wor4;
+                   document.getElementById("val77").innerHTML = wor5;
+                   document.getElementById("val78").innerHTML = wor6;
+                   document.getElementById("val79").innerHTML = wor7;
+                   document.getElementById("val80").innerHTML = wor8;
+                   document.getElementById("val81").innerHTML = wor9;
+                   document.getElementById("val82").innerHTML = wor10;
+                   document.getElementById("val83").innerHTML = wor11;
+                   document.getElementById("val84").innerHTML = wor12;
+                   document.getElementById("val85").innerHTML = wor13;
+                   document.getElementById("val86").innerHTML = wor73;
+                   document.getElementById("val87").innerHTML = wor74;
+                   document.getElementById("val88").innerHTML = wor75;
+                   document.getElementById("val89").innerHTML = wor76;
+                   document.getElementById("val90").innerHTML = wor14;
+                   document.getElementById("val91").innerHTML = wor15;
+                   document.getElementById("val92").innerHTML = wor16;
+                   document.getElementById("val93").innerHTML = wor17;
+                   document.getElementById("val94").innerHTML = wor18;
+                   document.getElementById("val95").innerHTML = wor19;
 
 
-                    //Past employment 3
-                    document.write("Company Name3");
-                    document.write(wor39);
-                    document.write("Start Date3");
-                    document.write(wor40);
-                    document.write("End Date3");
-                    document.write(wor41);
-                    document.write("Street Address5");
-                    document.write(wor42);
-                    document.write("Street Address 6");
-                    document.write(wor43);
-                    document.write("Country3");
-                    document.write(wor44);
-                    document.write("City3");
-                    document.write(wor45);
-                    document.write("State/Province3");
-                    document.write(wor46);
-                    document.write("Zip/Postal Code3");
-                    document.write(wor47);
-                    document.write("Telephone3");
-                    document.write(wor48);
-                    document.write("Position Held3");
-                    document.write(wor49);
-                    document.write("Reason for leaving3");
-                    document.write(wor50);
-                    document.write("Please Explain Termination3");
-                    document.write(wor51);
-                    document.write("Current Employer3");
-                    document.write(wor81);
-                    document.write("Can contact3");
-                    document.write(wor82);
-                    document.write("Subject to law3");
-                    document.write(wor83);
-                    document.write("Safety Sensitive3");
-                    document.write(wor84);
-                    document.write("Areas driven3");
-                    document.write(wor52);
-                    document.write("Miles driven weekly3");
-                    document.write(wor53);
-                    document.write("Pay range3");
-                    document.write(wor54);
-                    document.write("Most common truck driven3");
-                    document.write(wor55);
-                    document.write("Most common trailer3");
-                    document.write(wor56);
-                    document.write("Trailer length3");
-                    document.write(wor57);
+                   //For Second Job
+                   document.getElementById("val96").innerHTML = wor20;
+                   document.getElementById("val97").innerHTML = wor21;
+                   document.getElementById("val98").innerHTML = wor22;
+                   document.getElementById("val99").innerHTML = wor23;
+                   document.getElementById("val100").innerHTML = wor24;
+                   document.getElementById("val101").innerHTML = wor25;
+                   document.getElementById("val102").innerHTML = wor26;
+                   document.getElementById("val103").innerHTML = wor27;
+                   document.getElementById("val104").innerHTML = wor28;
+                   document.getElementById("val105").innerHTML = wor29;
+                   document.getElementById("val106").innerHTML = wor30;
+                   document.getElementById("val107").innerHTML = wor31;
+                   document.getElementById("val108").innerHTML = wor32;
+                   document.getElementById("val109").innerHTML = wor77;
+                   document.getElementById("val110").innerHTML = wor78;
+                   document.getElementById("val111").innerHTML = wor79;
+                   document.getElementById("val112").innerHTML = wor80;
+                   document.getElementById("val113").innerHTML = wor33;
+                   document.getElementById("val114").innerHTML = wor34;
+                   document.getElementById("val115").innerHTML = wor35;
+                   document.getElementById("val116").innerHTML = wor36;
+                   document.getElementById("val117").innerHTML = wor37;
+                   document.getElementById("val118").innerHTML = wor38;
 
-                        //Drivers Training
-                        let dt = document.getElementById("form-driverstrainingstart").value;
-                let dt2 = document.getElementById("form-driverstrainingend").value;
-                let dt3 = document.getElementById("form-driversschoolname").value;
-                let dt4 = document.getElementById("form-driversschoolstreetaddress").value;
-                let dt5 = document.getElementById("form-driversschoolstreetaddress2").value;
-                let dt6 = document.getElementById("form-driversschoolcountry").value;
-                let dt7 = document.getElementById("form-driversschoolcity").value;
-                let dt8 = document.getElementById("form-driversschoolstate").value;
-                let dt9 = document.getElementById("form-driversschooltelephone").value;
-                let dt10 = document.getElementById("form-driversschool GPA").value;
-                let dt11 = document.getElementById("HoursofInstitution").value;
+
+                   //For Third Job
+                   document.getElementById("val119").innerHTML = wor39;
+                   document.getElementById("val120").innerHTML = wor40;
+                   document.getElementById("val121").innerHTML = wor41;
+                   document.getElementById("val122").innerHTML = wor42;
+                   document.getElementById("val123").innerHTML = wor43;
+                   document.getElementById("val124").innerHTML = wor44;
+                   document.getElementById("val125").innerHTML = wor45;
+                   document.getElementById("val126").innerHTML = wor46;
+                   document.getElementById("val127").innerHTML = wor47;
+                   document.getElementById("val128").innerHTML = wor48;
+                   document.getElementById("val129").innerHTML = wor49;
+                   document.getElementById("val130").innerHTML = wor50;
+                   document.getElementById("val131").innerHTML = wor51;
+                   document.getElementById("val132").innerHTML = wor81;
+                   document.getElementById("val133").innerHTML = wor82;
+                   document.getElementById("val134").innerHTML = wor83;
+                   document.getElementById("val135").innerHTML = wor84;
+                   document.getElementById("val136").innerHTML = wor52;
+                   document.getElementById("val137").innerHTML = wor53;
+                   document.getElementById("val138").innerHTML = wor54;
+                   document.getElementById("val139").innerHTML = wor55;
+                   document.getElementById("val140").innerHTML = wor56;
+                   document.getElementById("val141").innerHTML = wor57;
+
+
+                      
+                        
+                   //Drivers Training Variables for HTML
+                   //First School
+                   let dt = document.getElementById("form-driverstrainingstart").value;
+                   let dt2 = document.getElementById("form-driverstrainingend").value;
+                   let dt3 = document.getElementById("form-driversschoolname").value;
+                   let dt4 = document.getElementById("form-driversschoolstreetaddress").value;
+                   let dt5 = document.getElementById("form-driversschoolstreetaddress2").value;
+                   let dt6 = document.getElementById("form-driversschoolcountry").value;
+                   let dt7 = document.getElementById("form-driversschoolcity").value;
+                   let dt8 = document.getElementById("form-driversschoolstate").value;
+                   let dt9 = document.getElementById("form-driversschooltelephone").value;
+                   let dt10 = document.getElementById("form-driversschool GPA").value;
+                   let dt11 = document.getElementById("HoursofInstitution").value;
                
 
-                //Variables for second driving school
-                let dt12 = document.getElementById("form-driverstrainingstart2").value;
-                let dt13 = document.getElementById("form-driverstrainingend2").value;
-                let dt14 = document.getElementById("form-driversschoolname2").value;
-                let dt15 = document.getElementById("form-driversschoolstreetaddress3").value;
-                let dt16 = document.getElementById("form-driversschoolstreetaddress4").value;
-                let dt17 = document.getElementById("form-driversschoolcountry2").value;
-                let dt18 = document.getElementById("form-driversschoolcity2").value;
-                let dt19 = document.getElementById("form-driversschoolstate2").value;
-                let dt20 = document.getElementById("form-driversschooltelephone2").value;
-                let dt21 = document.getElementById("form-driversschool GPA2").value;
-                let dt22 = document.getElementById("HoursofInstitution2").value;
+                   //Second School
+                   let dt12 = document.getElementById("form-driverstrainingstart2").value;
+                   let dt13 = document.getElementById("form-driverstrainingend2").value;
+                   let dt14 = document.getElementById("form-driversschoolname2").value;
+                   let dt15 = document.getElementById("form-driversschoolstreetaddress3").value;
+                   let dt16 = document.getElementById("form-driversschoolstreetaddress4").value;
+                   let dt17 = document.getElementById("form-driversschoolcountry2").value;
+                   let dt18 = document.getElementById("form-driversschoolcity2").value;
+                   let dt19 = document.getElementById("form-driversschoolstate2").value;
+                   let dt20 = document.getElementById("form-driversschooltelephone2").value;
+                   let dt21 = document.getElementById("form-driversschool GPA2").value;
+                   let dt22 = document.getElementById("HoursofInstitution2").value;
               
 
-                //Makes sure expands are checked
-                let dt23 = $('div.driverstraining.required :checkbox:checked').length > 0;
-                let dt24 = $('div.driverstraining2.required :checkbox:checked').length > 0;
+                
 
-               
-
-
-
-                //Collects values for checkboxes
-              let dt1checkboxes = document.querySelectorAll('input[name="driversschool graduate"]:checked');
-              let dt29 = [];
-              dt1checkboxes.forEach((checkbox) => {
-                dt29.push(checkbox.value);
-              });
+                 //Collects values for first school
+                 let dt1checkboxes = document.querySelectorAll('input[name="driversschool graduate"]:checked');
+                 let dt29 = [];
+                 dt1checkboxes.forEach((checkbox) => {
+                   dt29.push(checkbox.value);
+                 });
 
 
-              let dt4checkboxes = document.querySelectorAll('input[name="driverstrainingtopic"]:checked');
-              let dt32 = [];
-              dt4checkboxes.forEach((checkbox) => {
-                dt32.push(checkbox.value);
-              });
+                 let dt4checkboxes = document.querySelectorAll('input[name="driverstrainingtopic"]:checked');
+                 let dt32 = [];
+                 dt4checkboxes.forEach((checkbox) => {
+                   dt32.push(checkbox.value);
+                 });
 
-              let dt5checkboxes = document.querySelectorAll('input[name="driversschool graduate2"]:checked');
-              let dt33 = [];
-              dt5checkboxes.forEach((checkbox) => {
-                dt33.push(checkbox.value);
-              });
+                 //Collects values for second school
+                 let dt5checkboxes = document.querySelectorAll('input[name="driversschool graduate2"]:checked');
+                 let dt33 = [];
+                 dt5checkboxes.forEach((checkbox) => {
+                   dt33.push(checkbox.value);
+                 });
 
 
-              let dt8checkboxes = document.querySelectorAll('input[name="driverstrainingtopic2"]:checked');
-              let dt36 = [];
-              dt8checkboxes.forEach((checkbox) => {
-                dt36.push(checkbox.value);
-              });
+                 let dt8checkboxes = document.querySelectorAll('input[name="driverstrainingtopic2"]:checked');
+                 let dt36 = [];
+                 dt8checkboxes.forEach((checkbox) => {
+                   dt36.push(checkbox.value);
+                 });
 
-                        document.write("Drivers School Start Date");
-              document.write(dt);
-              document.write("Drivers School End Date");
-              document.write(dt2);
-              document.write("Drivers School Name");
-              document.write(dt3);
-              document.write("Drivers School Address 1");
-              document.write(dt4);
-              document.write("Drivers School Address 2");
-              document.write(dt5);
-              document.write("Drivers School Country");
-              document.write(dt6);
-              document.write("Drivers School City");
-              document.write(dt7);
-              document.write("Drivers School State/Province");
-              document.write(dt8);
-              document.write("Drivers School telephone");
-              document.write(dt9);
-              document.write("Drivers School GPA");
-              document.write(dt10);
-              document.write("Drivers School Hours of Instituion");
-              document.write(dt11);
-              document.write("Did you graduate");
-              document.write(dt29);
-              document.write("What did you study");
-              document.write(dt32);
-              document.write("Drivers School Start Date 2");
-              document.write(dt12);
-              document.write("Drivers School End Date 2");
-              document.write(dt13);
-              document.write("Drivers School Name 2");
-              document.write(dt14);
-              document.write("Drivers School Address 1 2");
-              document.write(dt15);
-              document.write("Drivers School Address 2 2");
-              document.write(dt16);
-              document.write("Drivers School Country 2");
-              document.write(dt17);
-              document.write("Drivers School City 2");
-              document.write(dt18);
-              document.write("Drivers School State/Province 2");
-              document.write(dt19);
-              document.write("Drivers School telephone 2");
-              document.write(dt20);
-              document.write("Drivers School GPA 2");
-              document.write(dt21);
-              document.write("Drivers School Hours of Instituion 2");
-              document.write(dt22);
-              document.write("Did you graduate 2");
-              document.write(dt33);
-              document.write("What did you study 2");
-              document.write(dt36);
 
-                        //Schooling
-                        let sch3 = document.getElementById("form-schoolname").value;
+                 //Drivers Training Variables for JS
+                 //First School
+                 document.getElementById("val142").innerHTML = dt;
+                 document.getElementById("val143").innerHTML = dt2;
+                 document.getElementById("val144").innerHTML = dt3;
+                 document.getElementById("val145").innerHTML = dt4;
+                 document.getElementById("val146").innerHTML = dt5;
+                 document.getElementById("val147").innerHTML = dt6;
+                 document.getElementById("val148").innerHTML = dt7;
+                 document.getElementById("val149").innerHTML = dt8;
+                 document.getElementById("val150").innerHTML = dt9;
+                 document.getElementById("val151").innerHTML = dt29;
+                 document.getElementById("val152").innerHTML = dt10;
+                 document.getElementById("val153").innerHTML = dt11;
+                 document.getElementById("val154").innerHTML = dt32;
+
+                 //Second School
+                 document.getElementById("val155").innerHTML = dt12;
+                 document.getElementById("val156").innerHTML = dt13;
+                 document.getElementById("val157").innerHTML = dt14;
+                 document.getElementById("val158").innerHTML = dt15;
+                 document.getElementById("val159").innerHTML = dt16;
+                 document.getElementById("val160").innerHTML = dt17;
+                 document.getElementById("val161").innerHTML = dt18;
+                 document.getElementById("val162").innerHTML = dt19;
+                 document.getElementById("val163").innerHTML = dt20;
+                 document.getElementById("val164").innerHTML = dt33;
+                 document.getElementById("val165").innerHTML = dt21;
+                 document.getElementById("val166").innerHTML = dt22;
+                 document.getElementById("val167").innerHTML = dt36;
+              
+
+                        
+
+                 //Schooling Variables for HTML
+                 //First School
+                 let sch3 = document.getElementById("form-schoolname").value;
                  let sch4 = document.getElementById("form-schoolstart").value;
                  let sch5 = document.getElementById("form-schoolend").value;
                  let sch6 = document.getElementById("form-schoolcountry").value;
@@ -12444,7 +12499,7 @@
                  let sch10 = document.getElementById("form-schoolstudy").value;
                  let sch11 = document.getElementById("form-graddate").value;
 
-                 //Variables for second school
+                 //Second School
                  let sch12 = document.getElementById("form-schoolname2").value;
                  let sch13 = document.getElementById("form-schoolstart2").value;
                  let sch14 = document.getElementById("form-schoolend2").value;
@@ -12456,227 +12511,171 @@
                  let sch20 = document.getElementById("form-graddate2").value;
 
 
+                 //Educational Information Variables for JS
+                 //First School
+                 document.getElementById("val168").innerHTML = sch3;
+                 document.getElementById("val169").innerHTML = sch4;
+                 document.getElementById("val170").innerHTML = sch5;
+                 document.getElementById("val171").innerHTML = sch6;
+                 document.getElementById("val172").innerHTML = sch7;
+                 document.getElementById("val173").innerHTML = sch8;
+                 document.getElementById("val174").innerHTML = sch9;
+                 document.getElementById("val175").innerHTML = sch10;
+                 document.getElementById("val176").innerHTML = sch11;
 
-                        document.write("School Name");
-                 document.write(sch3);
-                 document.write("School Start");
-                 document.write(sch4);
-                 document.write("School End");
-                 document.write(sch5);
-                 document.write("School Country");
-                 document.write(sch6);
-                 document.write("School City");
-                 document.write(sch7);
-                 document.write("School State");
-                 document.write(sch8);
-                 document.write("School Telephone");
-                 document.write(sch9);
-                 document.write("School Study");
-                 document.write(sch10);
-                 document.write("Graduation Date");
-                 document.write(sch11);
-                 document.write("School 2 Name");
-                 document.write(sch12);
-                 document.write("School 2 Start");
-                 document.write(sch13);
-                 document.write("School 2 End");
-                 document.write(sch14);
-                 document.write("School 2 Country");
-                 document.write(sch15);
-                 document.write("School 2 City");
-                 document.write(sch16);
-                 document.write("School 2 State");
-                 document.write(sch17);
-                 document.write("School 2 Telephone");
-                 document.write(sch18);
-                 document.write("School 2 Study");
-                 document.write(sch19);
-                 document.write("Graduation Date 2");
-                 document.write(sch20);
-
-                        //Unemployment
-                        let une = document.getElementById("form-unemploymentstart").value;
-                let une2 = document.getElementById("form-unemploymentend").value;
-                let une3 = document.getElementById("form-unemploymentcomments").value;
+                 //Second School
+                 document.getElementById("val177").innerHTML = sch12;
+                 document.getElementById("val178").innerHTML = sch13;
+                 document.getElementById("val179").innerHTML = sch14;
+                 document.getElementById("val180").innerHTML = sch15;
+                 document.getElementById("val181").innerHTML = sch16;
+                 document.getElementById("val182").innerHTML = sch17;
+                 document.getElementById("val183").innerHTML = sch18;
+                 document.getElementById("val184").innerHTML = sch19;
+                 document.getElementById("val185").innerHTML = sch20;
 
 
-                        document.write(une);
-                      document.write(une2);
-                      document.write(une3);
-
-                      //FMCSR
-
-                      let fmc = document.getElementById("form-FMCSR1explain").value;
-              let fmc2 = document.getElementById("form-FMCSR2explain").value;
-              let fmc3 = document.getElementById("form-FMCSR3explain").value;
-              let fmc4 = document.getElementById("form-FMCSR4explain").value;
-              let fmc5 = document.getElementById("form-FMCSR4date").value;
-              let fmc6 = document.getElementById("form-FMCSR5date").value;
-              let fmc7 = document.getElementById("form-FMCSR5explain").value;
-    
-            
-                               
-               //Displays values that were checked
-               let fmccheckboxes = document.querySelectorAll('input[name="conviction3years"]:checked');
-                    let fmc14 = [];
-                    fmccheckboxes.forEach((checkbox) => {
-                    fmc14.push(checkbox.value);
-                    });
+                 
+                 //Unemployment Information Variable for HTML
+                 let une = document.getElementById("form-unemploymentstart").value;
+                 let une2 = document.getElementById("form-unemploymentend").value;
+                 let une3 = document.getElementById("form-unemploymentcomments").value;
 
 
-                      document.write("FMCSR1");
-                    document.write(fmc);
-                    document.write("FMCSR2");
-                    document.write(fmc2);
-                    document.write("FMCSR3");
-                    document.write(fmc3);
-                    document.write("FMCSR4");
-                    document.write(fmc4);
-                    document.write("FMCSR4 date");
-                    document.write(fmc5);
-                    document.write("FMSCR5 date");
-                    document.write(fmc6);
-                    document.write("FMCSR5");
-                    document.write(fmc7);
-                    document.write("Conviction 3 years");
-                    document.write(fmc14);
+                 //Unemployment Information Variable for JS
+                 document.getElementById("val186").innerHTML = une;
+                 document.getElementById("val187").innerHTML = une2;
+                 document.getElementById("val188").innerHTML = une3;
 
-                      //Taffic violations/convictions and Accidents
-                      //Variables for Traffic Violations and Convictions
-                    let tvc = document.getElementById("form-violationdate").value;
-                    let tvc2 = document.getElementById("charge").value;
-                    let tvc3 = document.getElementById("form-convictionstate").value;
-                    let tvc4 = document.getElementById("Fine Amount").value;
-                    let tvc5 = document.getElementById("form-violationscomment").value;
+                       
+
+                 //FMCSR Variables for HTML
+                 let fmc = document.getElementById("form-FMCSR1explain").value;
+                 let fmc2 = document.getElementById("form-FMCSR2explain").value;
+                 let fmc3 = document.getElementById("form-FMCSR3explain").value;
+                 let fmc4 = document.getElementById("form-FMCSR4explain").value;
+                 let fmc5 = document.getElementById("form-FMCSR4date").value;
+                 let fmc6 = document.getElementById("form-FMCSR5date").value;
+                 let fmc7 = document.getElementById("form-FMCSR5explain").value;
+                 let fmccheckboxes = document.querySelectorAll('input[name="conviction3years"]:checked');
+                 let fmc14 = [];
+                 fmccheckboxes.forEach((checkbox) => {
+                   fmc14.push(checkbox.value);
+                 });
+
+
+                 //FMCSR Variables for JS
+                 document.getElementById("val189").innerHTML = fmc;
+                 document.getElementById("val190").innerHTML = fmc2;
+                 document.getElementById("val191").innerHTML = fmc3;
+                 document.getElementById("val192").innerHTML = fmc4;
+                 document.getElementById("val193").innerHTML = fmc5;
+                 document.getElementById("val194").innerHTML = fmc14;
+                 document.getElementById("val195").innerHTML = fmc6;
+                 document.getElementById("val196").innerHTML = fmc7;
+
+                    
+                      
+
+                 //Taffic Violations/Convictions and Accidents Variables for HTML
+                 //Traffic Violations
+                 let tvc = document.getElementById("form-violationdate").value;
+                 let tvc2 = document.getElementById("charge").value;
+                 let tvc3 = document.getElementById("form-convictionstate").value;
+                 let tvc4 = document.getElementById("Fine Amount").value;
+                 let tvc5 = document.getElementById("form-violationscomment").value;
+                 let tvccheckboxes = document.querySelectorAll('input[name="commercialvehicle"]:checked');
+                 let tvc12 = [];
+                 tvccheckboxes.forEach((checkbox) => {
+                   tvc12.push(checkbox.value);
+                 });
+                 let tvc2checkboxes = document.querySelectorAll('input[name="penalty"]:checked');
+                 let tvc13 = [];
+                 tvc2checkboxes.forEach((checkbox) => {
+                   tvc13.push(checkbox.value);
+                 });
                    
                     
-                    //Variables for Accidents
-                    let tvc6 = document.getElementById("form-accidentdate").value;
-                    let tvc7 = document.getElementById("accidentcharge").value;
-                    let tvc8 = document.getElementById("form-accidentcity").value;
-                    let tvc9 = document.getElementById("form-accidentstate").value;
-                    let tvc11 = document.getElementById("form-accidentcomment").value;
-                   
-
-                     //Make sure box is checked
-                      let tvc19 =  $('div.traffic.required :checkbox:checked').length > 0;
-                      let tvc21 =  $('div.commercialvehicle.required :checkbox:checked').length > 0;
-                      let tvc22 =  $('div.penalty.required :checkbox:checked').length > 0;
-
-                     //Make sure box is checked
-                     let tvc20 =  $('div.accident.required :checkbox:checked').length > 0;
-                     let tvc23 =  $('div.atfault.required :checkbox:checked').length > 0;
-                     let tvc24 =  $('div.ticketed.required :checkbox:checked').length > 0;
-                     let tvc25 =  $('div.acccommercialvehicle.required :checkbox:checked').length > 0;
-
-
-                    //Displays values that were checked
-                    let tvccheckboxes = document.querySelectorAll('input[name="commercialvehicle"]:checked');
-                    let tvc12 = [];
-                    tvccheckboxes.forEach((checkbox) => {
-                    tvc12.push(checkbox.value);
-                    });
-
-                    //Displays values that were checked
-                    let tvc2checkboxes = document.querySelectorAll('input[name="penalty"]:checked');
-                    let tvc13 = [];
-                    tvc2checkboxes.forEach((checkbox) => {
-                    tvc13.push(checkbox.value);
-                  });
-
-                    //Displays values that were checked
-                    let tvc3checkboxes = document.querySelectorAll('input[name="hazmataccident"]:checked');
-                    let tvc14 = [];
-                    tvc3checkboxes.forEach((checkbox) => {
-                    tvc14.push(checkbox.value);
-                  });
-
-                    //Displays values that were checked
-                    let tvc4checkboxes = document.querySelectorAll('input[name="vehicletowed"]:checked');
-                    let tvc15 = [];
-                    tvc4checkboxes.forEach((checkbox) => {
-                    tvc15.push(checkbox.value);
-                  });
-
-                    //Displays values that were checked
-                    let tvc5checkboxes = document.querySelectorAll('input[name="acccommercialvehicle"]:checked');
-                    let tvc16 = [];
-                    tvc5checkboxes.forEach((checkbox) => {
-                    tvc16.push(checkbox.value);
-                  });
-
-                    //Displays values that were checked
-                    let tvc6checkboxes = document.querySelectorAll('input[name="atfault"]:checked');
-                    let tvc17 = [];
-                    tvc6checkboxes.forEach((checkbox) => {
-                    tvc17.push(checkbox.value);
-                  });
-
-                    //Displays values that were checked
-                    let tvc7checkboxes = document.querySelectorAll('input[name="ticketed"]:checked');
-                    let tvc18 = [];
-                    tvc7checkboxes.forEach((checkbox) => {
-                    tvc18.push(checkbox.value);
-                  });
+                 //Accidents
+                 let tvc6 = document.getElementById("form-accidentdate").value;
+                 let tvc7 = document.getElementById("accidentcharge").value;
+                 let tvc8 = document.getElementById("form-accidentcity").value;
+                 let tvc9 = document.getElementById("form-accidentstate").value;
+                 let tvc11 = document.getElementById("form-accidentcomment").value;
+                 let tvc3checkboxes = document.querySelectorAll('input[name="hazmataccident"]:checked');
+                 let tvc14 = [];
+                 tvc3checkboxes.forEach((checkbox) => {
+                   tvc14.push(checkbox.value);
+                 });
+                 let tvc4checkboxes = document.querySelectorAll('input[name="vehicletowed"]:checked');
+                 let tvc15 = [];
+                 tvc4checkboxes.forEach((checkbox) => {
+                   tvc15.push(checkbox.value);
+                 });
+                 let tvc5checkboxes = document.querySelectorAll('input[name="acccommercialvehicle"]:checked');
+                 let tvc16 = [];
+                 tvc5checkboxes.forEach((checkbox) => {
+                   tvc16.push(checkbox.value);
+                 });
+                 let tvc6checkboxes = document.querySelectorAll('input[name="atfault"]:checked');
+                 let tvc17 = [];
+                 tvc6checkboxes.forEach((checkbox) => {
+                   tvc17.push(checkbox.value);
+                 });
+                 let tvc7checkboxes = document.querySelectorAll('input[name="ticketed"]:checked');
+                 let tvc18 = [];
+                 tvc7checkboxes.forEach((checkbox) => {
+                   tvc18.push(checkbox.value);
+                 });
 
 
-                      document.write("Violation Date");
-                  document.write(tvc);
-                  document.write("Charge/Description");
-                  document.write(tvc2);
-                  document.write("State/Province");
-                  document.write(tvc3);
-                  document.write("Commercial Vehicle");
-                  document.write(tvc12);
-                  document.write("Penalty/Fine");
-                  document.write(tvc13);
-                  document.write("Fine Amount");
-                  document.write(tvc4);
-                  document.write("Comments");
-                  document.write(tvc5);
-                  document.write("Date of Accident");
-                  document.write(tvc6);
-                  document.write("CHarge/Description");
-                  document.write(tvc7);
-                  document.write("Hazmat Accident/Incident");
-                  document.write(tvc14);
-                  document.write("Vehicle towed");
-                  document.write(tvc15);
-                  document.write("City");
-                  document.write(tvc8);
-                  document.write("State/Province");
-                  document.write(tvc9);
-                  document.write("in a Commercial Vehicle");
-                  document.write(tvc16);
-                  document.write("Were you at fault");
-                  document.write(tvc17);
-                  document.write("Were you ticketed");
-                  document.write(tvc18);
-                  document.write("Comments");
-                  document.write(tvc11);
+                  //Taffic Violations/Convictions and Accidents Variables for JS
+                  //Traffic Violations
+                  document.getElementById("val197").innerHTML = tvc;
+                  document.getElementById("val198").innerHTML = tvc2;
+                  document.getElementById("val199").innerHTML = tvc3;
+                  document.getElementById("val200").innerHTML = tvc12;
+                  document.getElementById("val201").innerHTML = tvc13;
+                  document.getElementById("val202").innerHTML = tvc4;
+                  document.getElementById("val203").innerHTML = tvc5;
 
-                  //Criminal Record
+
+                  //Accidents
+                  document.getElementById("val204").innerHTML = tvc6;
+                  document.getElementById("val205").innerHTML = tvc7;
+                  document.getElementById("val206").innerHTML = tvc14;
+                  document.getElementById("val207").innerHTML = tvc15;
+                  document.getElementById("val208").innerHTML = tvc8;
+                  document.getElementById("val209").innerHTML = tvc9;
+                  document.getElementById("val210").innerHTML = tvc16;
+                  document.getElementById("val211").innerHTML = tvc17;
+                  document.getElementById("val212").innerHTML = tvc18;
+                  document.getElementById("val213").innerHTML = tvc11;
+
+
+                      
+
+                  //Criminal Record for HTML
                   let cr1 = document.getElementById("form-CriminalRecord1explain").value;
-                let cr2 = document.getElementById("form-CriminalRecord2explain").value;
-                let cr4 = document.getElementById("form-Felonies1explain").value;
-                let cr5 = document.getElementById("form-Felonies2explain").value;
-                let cr6 = document.getElementById("form-Misdemeanor1explain").value;
+                  let cr2 = document.getElementById("form-CriminalRecord2explain").value;
+                  let cr4 = document.getElementById("form-Felonies1explain").value;
+                  let cr5 = document.getElementById("form-Felonies2explain").value;
+                  let cr6 = document.getElementById("form-Misdemeanor1explain").value;
 
-                  document.write("Convicted a Crime:");
-                document.write(cr1);
-                document.write("Deferred Prosectuion:");
-                document.write(cr2);
-                document.write("Pled guilty to a felony:");
-                document.write(cr4);
-                document.write("Have a minister's permit:");
-                document.write(cr5);
-                document.write("Convicted a misdemeanor:");
-                document.write(cr6);
+
+                  //Criminal Record for JS
+                  document.getElementById("val214").innerHTML = cr1;
+                  document.getElementById("val215").innerHTML = cr2;
+                  document.getElementById("val216").innerHTML = cr4;
+                  document.getElementById("val217").innerHTML = cr5;
+                  document.getElementById("val218").innerHTML = cr6;
+
+                  
                 
                       
 
 
-                      */
+                      
 
                      
                 }
@@ -12699,7 +12698,7 @@
             &ensp;
 
             <!-- Next Button-->
-            <a href="#sixteen" class="Next Button"> Next</a>
+            <input type="submit" value="Submit" href="#sixteen" class="Next Button"> Submit Application</input>
             &ensp;
         </div>
     </div>
@@ -12765,5 +12764,6 @@
         </div>
     </div>
 </form>
+<script type="text/javascript" src="email.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
