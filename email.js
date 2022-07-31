@@ -28,7 +28,7 @@ function sendApplyForm() {
 	emailjs.sendForm('service_zxu7w58', 'template_drg02gs', '#apply')
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
-	   alert('Application successfully submitted!');
+	   alert('Application successfully submitted! Please click the company name at the top of this page to return to the Home page.');
     }, function(error) {
        console.log('FAILED...', error);
 	   alert('Application send failure. Please try again later.');
