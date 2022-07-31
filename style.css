@@ -175,6 +175,29 @@ input:valid {
 	
 }
 
+.right
+{
+	box-sizing: border-box;
+  float: left;
+  text-align:center;
+  width:30%;
+  margin: 15px;
+}
+
+/*
+.appfooter {
+	
+	top: 0;
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 0px;
+	padding-left: 25px;
+	padding-top: 10px;
+	position: relative;
+	height: 100px;
+	background-color:rgb(212, 41, 41);
+}*/
+
 .page {
 	width: 100vw;
 	height: 100vh;
